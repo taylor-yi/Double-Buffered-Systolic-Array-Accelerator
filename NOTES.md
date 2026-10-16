@@ -1,0 +1,35 @@
+Levels:
+
+Systolic Top Level
+ > Controller
+ > Input Staging
+ > Array
+    > Processing Element x 9
+        > Adder
+        > Multiplier
+> Output Capture
+
+Specs:
+- Weight stationary architecture
+- 4 bit unsigned inputs
+- 9 bit output > CORRECTED: 10 bit output
+- 3x3 hardcoded at the top level, lower level modules can be parameterized
+
+- A and B matrices are loaded in when in_valid is asserted. Internal buffering and scheduling to feed data into the PEs in pipelined design will be designed.
+
+Assumptions and Optimizations to make: 
+- No infinity case
+- If an element is 0 the output can be forwarded
+- Direct load, at scale we might pipeline the weights but for this size it wouldn't save any time anyways
+
+Solution to back to back solves: 
+- Have 2 weight slots in each processing element
+- Start loading the next weights while the current one is still computing
+- When run 1 is done, flip weight slots, don't waste time loading the next weights in
+
+
+Processing Element Design:
+Inputs: clk, rst_n, A, B, in_valid, slot
+Outputs: C (A and B multiplication accumulator)
+
+Slot will be the signal that notates which register weights B will be written to. If 0, slot 1, if 1 slot 2. This should enable us to even do continuous matrix multiplications not just 2 in a row. We will have to have a clear feature that clears the other slot too.

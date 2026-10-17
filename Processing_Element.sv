@@ -1,12 +1,37 @@
 module PE(
-    input logic clk, rst_n, in_valid, slot;
+    input logic clk, rst_n, in_valid, slot, en, drain_en;
     input logic [3:0] a, b;
+    input logic [9:0] above_result;
     output logic [9:0] result;
 );
 
 logic [9:0] accumulator;
 logic [3:0] a, b1, b2;
 
+logic [9:0] mult_result;
+
+// adding a zero check can save heat by not firing a flip flop, right now it only checks if both are zero.
+// in full optimization it will also check if respective b1 or b2 is zero and make the whole sum zero
+logic zeroed;
+logic [3:0] temp;
+
+always_comb begin : check_zeroes
+    temp = (slot ? a | b1 : a | b2);
+    zeroed = (temp == '0);
+end
+
+// multiply a and b, but based on the slot signal
+always_comb begin : multiply
+    default:
+        mult_result = '0;
+    if(slot) begin
+        mult_result = a * b1;
+    end else begin
+        mult_result = a * b2;
+    end  
+end
+
+// b assignment based on slot
 always_ff @posedge(clk) begin
     if(!rst_n) begin
         result <= 10'b0000_0000_00;
@@ -17,9 +42,21 @@ always_ff @posedge(clk) begin
             if(slot) begin
                 b1 <= b;
             end else begin
-                b2 <=b;
+                b2 <= b;
             end
-        end 
+        end
     end
 end
+
+// add to the accumulator
+always_ff @posedge(clk) begin
+    if(!rst_n) begin
+        result <= '0;
+    end else begin
+        if(en) begin
+            result <= above_result + mult_result;
+        end
+    end
+end
+
 endmodule

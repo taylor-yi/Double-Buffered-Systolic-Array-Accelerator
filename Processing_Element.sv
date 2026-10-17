@@ -39,7 +39,7 @@ always_ff @posedge(clk) begin
         b2 <= 4'h0;
     end else begin
         if(in_valid) begin
-            if(slot) begin
+            if(!slot) begin
                 b1 <= b;
             end else begin
                 b2 <= b;

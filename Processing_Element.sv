@@ -34,7 +34,6 @@ end
 // b assignment based on slot
 always_ff @(posedge clk) begin
     if(!rst_n) begin
-        // result <= 10'b0000_0000_00;
         b1 <= 4'h0;
         b2 <= 4'h0;
     end else begin
@@ -90,18 +89,54 @@ module PE_tb ();
         rst_n = 1;
         #20
 
-        // 2 + 1 * 1 = 3
+        // Test 1: Check slot is working:
+        in_valid = 1; slot = 0;
+        b = 3;
+        #10
+        in_valid = 0;
+        if (dut.b1 == 3) begin $display("b1 loaded correctly. Value is %0d", dut.b1); end
+        #10
+        // keep in_valid low for a little bit to make sure it doesn't load too early
+        slot = 1;
+        b = 5;
+        #10
+        in_valid = 1;
+        #10
+        in_valid = 0;
+        if (dut.b2 == 5) begin $display("b2 loaded correctly. Value is %0d", dut.b2); end
+        #10
+
+        // Test 2: Is result receiving the output correctly?
+        // 2 + 1 * 3 = 5
+
+        rst_n = 0; en = 0; drain_en = 0; in_valid = 0; #10
+        
+        rst_n = 1;
+        #20
+
         in_valid = 1; slot = 0;
         above_result = 2;
-        a = 1; b = 1; en = 1;
-
+        a = 1; b = 3;
+        
+        #10
+        in_valid = 0;
+        en = 1;
         #20
+
+        if (result == 5) begin $display("Slot 1 calculated correctly, result correct. Result is %0d", result); end
+
+        en = 0;
         slot = 1;
-        b = 2; 
+        b = 2;
+        in_valid = 1;
+        #10
 
-        #40;
+        in_valid = 0;
+        en = 1;
+        #30
 
-        $display("result is %0d", result);
+        if (result == 4) begin $display("Slot 2 calculated correctly, result correct. Result is %0d", result); end
+
         $finish;
     end
 endmodule

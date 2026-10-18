@@ -33,7 +33,6 @@ VL_ATTR_COLD void VPE_tb___024root__trace_init_sub__TOP__0(VPE_tb___024root* vlS
     VL_TRACE_DECL_BUS(tracep,c+6,0,"b",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, 3,0);
     VL_TRACE_DECL_BUS(tracep,c+7,0,"above_result",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, 9,0);
     VL_TRACE_DECL_BUS(tracep,c+8,0,"result",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, 9,0);
-    VL_TRACE_DECL_BUS(tracep,c+15,0,"accumulator",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, 9,0);
     VL_TRACE_DECL_BUS(tracep,c+9,0,"b1",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, 3,0);
     VL_TRACE_DECL_BUS(tracep,c+10,0,"b2",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, 3,0);
     VL_TRACE_DECL_BUS(tracep,c+12,0,"mult_result",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, 9,0);
@@ -67,23 +66,11 @@ VL_ATTR_COLD void VPE_tb___024root__trace_register(VPE_tb___024root* vlSelf, Ver
     tracep->addCleanupCb(&VPE_tb___024root__trace_cleanup, vlSelf);
 }
 
-VL_ATTR_COLD void VPE_tb___024root__trace_const_0_sub_0(VPE_tb___024root* vlSelf, VerilatedVcd::Buffer* bufp);
-
 VL_ATTR_COLD void VPE_tb___024root__trace_const_0(void* voidSelf, VerilatedVcd::Buffer* bufp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VPE_tb___024root__trace_const_0\n"); );
     // Body
     VPE_tb___024root* const __restrict vlSelf VL_ATTR_UNUSED = static_cast<VPE_tb___024root*>(voidSelf);
     VPE_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VPE_tb___024root__trace_const_0_sub_0((&vlSymsp->TOP), bufp);
-}
-
-VL_ATTR_COLD void VPE_tb___024root__trace_const_0_sub_0(VPE_tb___024root* vlSelf, VerilatedVcd::Buffer* bufp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VPE_tb___024root__trace_const_0_sub_0\n"); );
-    VPE_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    auto& vlSelfRef = std::ref(*vlSelf).get();
-    // Body
-    uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode);
-    bufp->fullSData(oldp+15,(vlSelfRef.PE_tb__DOT__dut__DOT__accumulator),10);
 }
 
 VL_ATTR_COLD void VPE_tb___024root__trace_full_0_sub_0(VPE_tb___024root* vlSelf, VerilatedVcd::Buffer* bufp);

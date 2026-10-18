@@ -28,7 +28,6 @@ class alignas(VL_CACHE_LINE_BYTES) VPE_tb___024root final {
     CData/*0:0*/ __Vtrigprevexpr___TOP__PE_tb__DOT__clk__0;
     SData/*9:0*/ PE_tb__DOT__above_result;
     SData/*9:0*/ PE_tb__DOT__result;
-    SData/*9:0*/ PE_tb__DOT__dut__DOT__accumulator;
     IData/*31:0*/ __Vi;
     VlUnpacked<QData/*63:0*/, 1> __VstlTriggered;
     VlUnpacked<QData/*63:0*/, 1> __VicoTriggered;

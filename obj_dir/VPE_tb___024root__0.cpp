@@ -256,12 +256,12 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
     vlSelfRef.PE_tb__DOT__en = 0U;
     vlSelfRef.PE_tb__DOT__drain_en = 0U;
     vlSelfRef.PE_tb__DOT__in_valid = 0U;
-    co_await vlSelfRef.__VdlySched.delay(0x0000000000002710ULL, 
+    co_await vlSelfRef.__VdlySched.delay(0x0000000000004e20ULL, 
                                          nullptr, "Processing_Element.sv", 
                                          112);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.PE_tb__DOT__rst_n = 1U;
-    co_await vlSelfRef.__VdlySched.delay(0x0000000000004e20ULL, 
+    co_await vlSelfRef.__VdlySched.delay(0x0000000000002710ULL, 
                                          nullptr, "Processing_Element.sv", 
                                          115);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
@@ -276,14 +276,14 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.PE_tb__DOT__in_valid = 0U;
     vlSelfRef.PE_tb__DOT__en = 1U;
+    co_await vlSelfRef.__VdlySched.delay(0x0000000000002710ULL, 
+                                         nullptr, "Processing_Element.sv", 
+                                         124);
+    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     if (VL_UNLIKELY(((5U == (IData)(vlSelfRef.PE_tb__DOT__result))))) {
         VL_WRITEF_NX("Slot 1 calculated correctly, result correct. Result is %0d\n",1
                      , '#',10,vlSelfRef.PE_tb__DOT__result);
     }
-    co_await vlSelfRef.__VdlySched.delay(0x0000000000004e20ULL, 
-                                         nullptr, "Processing_Element.sv", 
-                                         127);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.PE_tb__DOT__en = 0U;
     vlSelfRef.PE_tb__DOT__slot = 1U;
     vlSelfRef.PE_tb__DOT__b = 2U;
@@ -294,14 +294,14 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.PE_tb__DOT__in_valid = 0U;
     vlSelfRef.PE_tb__DOT__en = 1U;
+    co_await vlSelfRef.__VdlySched.delay(0x0000000000002710ULL, 
+                                         nullptr, "Processing_Element.sv", 
+                                         136);
+    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     if (VL_UNLIKELY(((4U == (IData)(vlSelfRef.PE_tb__DOT__result))))) {
         VL_WRITEF_NX("Slot 2 calculated correctly, result correct. Result is %0d\n",1
                      , '#',10,vlSelfRef.PE_tb__DOT__result);
     }
-    co_await vlSelfRef.__VdlySched.delay(0x0000000000007530ULL, 
-                                         nullptr, "Processing_Element.sv", 
-                                         138);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_FINISH_MT("Processing_Element.sv", 140, "");
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     co_return;

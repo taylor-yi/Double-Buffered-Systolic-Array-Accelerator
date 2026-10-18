@@ -36,6 +36,7 @@ always_ff @(posedge clk) begin
     if(!rst_n) begin
         b1 <= 4'h0;
         b2 <= 4'h0;
+        a <= '0;
     end else begin
         if(in_valid) begin
             if(!slot) begin
@@ -109,10 +110,10 @@ module PE_tb ();
         // Test 2: Is result receiving the output correctly?
         // 2 + 1 * 3 = 5
 
-        rst_n = 0; en = 0; drain_en = 0; in_valid = 0; #10
+        rst_n = 0; en = 0; drain_en = 0; in_valid = 0; #20
         
         rst_n = 1;
-        #20
+        #10
 
         in_valid = 1; slot = 0;
         above_result = 2;
@@ -121,7 +122,7 @@ module PE_tb ();
         #10
         in_valid = 0;
         en = 1;
-        #20
+        #10
 
         if (result == 5) begin $display("Slot 1 calculated correctly, result correct. Result is %0d", result); end
 
@@ -133,7 +134,7 @@ module PE_tb ();
 
         in_valid = 0;
         en = 1;
-        #30
+        #10
 
         if (result == 4) begin $display("Slot 2 calculated correctly, result correct. Result is %0d", result); end
 

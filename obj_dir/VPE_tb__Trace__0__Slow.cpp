@@ -115,9 +115,9 @@ VL_ATTR_COLD void VPE_tb___024root__trace_full_0_sub_0(VPE_tb___024root* vlSelf,
     bufp->fullCData(oldp+10,(vlSelfRef.PE_tb__DOT__dut__DOT__b2),4);
     bufp->fullBit(oldp+11,(vlSelfRef.PE_tb__DOT__clk));
     bufp->fullSData(oldp+12,((0x000003ffU & ((IData)(vlSelfRef.PE_tb__DOT__slot)
-                                              ? ((IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b1) 
+                                              ? ((IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b2) 
                                                  * (IData)(vlSelfRef.PE_tb__DOT__a))
-                                              : ((IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b2) 
+                                              : ((IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b1) 
                                                  * (IData)(vlSelfRef.PE_tb__DOT__a))))),10);
     bufp->fullBit(oldp+13,((0U == ((IData)(vlSelfRef.PE_tb__DOT__slot)
                                     ? ((IData)(vlSelfRef.PE_tb__DOT__a) 

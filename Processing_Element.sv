@@ -8,7 +8,6 @@ module PE(
     output logic [9:0] result
 );
 
-logic [9:0] accumulator;
 logic [3:0] b1, b2;
 
 logic [9:0] mult_result;
@@ -25,7 +24,7 @@ end
 
 // multiply a and b, but based on the slot signal
 always_comb begin : multiply
-    if(slot) begin
+    if(!slot) begin
         mult_result = a * b1;
     end else begin
         mult_result = a * b2;
@@ -81,12 +80,27 @@ module PE_tb ();
     end
 
     initial begin
-        rst_n = 0; en = 0; drain_en = 0; in_valid = 0;
-        #20; rst_n = 1; en = 1;
-        a = 1; b = 1; 
-        above_result = 0;
+        rst_n = 0; 
+        en = 0; 
+        drain_en = 0; 
+        in_valid = 0;
+        a = 0; 
+        b = 0; 
+        #10
+        rst_n = 1;
+        #20
+
+        // 2 + 1 * 1 = 3
         in_valid = 1; slot = 0;
-        #20;
+        above_result = 2;
+        a = 1; b = 1; en = 1;
+
+        #20
+        slot = 1;
+        b = 2; 
+
+        #40;
+
         $display("result is %0d", result);
         $finish;
     end

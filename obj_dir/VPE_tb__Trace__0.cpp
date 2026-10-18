@@ -40,9 +40,9 @@ void VPE_tb___024root__trace_chg_0_sub_0(VPE_tb___024root* vlSelf, VerilatedVcd:
     }
     bufp->chgBit(oldp+11,(vlSelfRef.PE_tb__DOT__clk));
     bufp->chgSData(oldp+12,((0x000003ffU & ((IData)(vlSelfRef.PE_tb__DOT__slot)
-                                             ? ((IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b1) 
+                                             ? ((IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b2) 
                                                 * (IData)(vlSelfRef.PE_tb__DOT__a))
-                                             : ((IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b2) 
+                                             : ((IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b1) 
                                                 * (IData)(vlSelfRef.PE_tb__DOT__a))))),10);
     bufp->chgBit(oldp+13,((0U == ((IData)(vlSelfRef.PE_tb__DOT__slot)
                                    ? ((IData)(vlSelfRef.PE_tb__DOT__a) 

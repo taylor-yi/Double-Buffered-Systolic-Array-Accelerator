@@ -128,26 +128,26 @@ bool VPE_tb___024root___eval_nba(VPE_tb___024root* vlSelf) {
                                                   + 
                                                   ((IData)(vlSelfRef.PE_tb__DOT__slot)
                                                     ? 
-                                                   ((IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b1) 
+                                                   ((IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b2) 
                                                     * (IData)(vlSelfRef.PE_tb__DOT__a))
                                                     : 
-                                                   ((IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b2) 
+                                                   ((IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b1) 
                                                     * (IData)(vlSelfRef.PE_tb__DOT__a)))));
                         }
                         if (vlSelfRef.PE_tb__DOT__in_valid) {
-                            if ((1U & (~ (IData)(vlSelfRef.PE_tb__DOT__slot)))) {
-                                vlSelfRef.PE_tb__DOT__dut__DOT__b1 
-                                    = vlSelfRef.PE_tb__DOT__b;
-                            }
                             if (vlSelfRef.PE_tb__DOT__slot) {
                                 vlSelfRef.PE_tb__DOT__dut__DOT__b2 
+                                    = vlSelfRef.PE_tb__DOT__b;
+                            }
+                            if ((1U & (~ (IData)(vlSelfRef.PE_tb__DOT__slot)))) {
+                                vlSelfRef.PE_tb__DOT__dut__DOT__b1 
                                     = vlSelfRef.PE_tb__DOT__b;
                             }
                         }
                     } else {
                         vlSelfRef.PE_tb__DOT__result = 0U;
-                        vlSelfRef.PE_tb__DOT__dut__DOT__b1 = 0U;
                         vlSelfRef.PE_tb__DOT__dut__DOT__b2 = 0U;
+                        vlSelfRef.PE_tb__DOT__dut__DOT__b1 = 0U;
                     }
                 }
                 vlSelfRef.__Vm_traceActivity[3U] = 1U;
@@ -205,23 +205,35 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
     vlSelfRef.PE_tb__DOT__en = 0U;
     vlSelfRef.PE_tb__DOT__drain_en = 0U;
     vlSelfRef.PE_tb__DOT__in_valid = 0U;
-    co_await vlSelfRef.__VdlySched.delay(0x0000000000004e20ULL, 
+    vlSelfRef.PE_tb__DOT__a = 0U;
+    vlSelfRef.PE_tb__DOT__b = 0U;
+    co_await vlSelfRef.__VdlySched.delay(0x0000000000002710ULL, 
                                          nullptr, "Processing_Element.sv", 
-                                         85);
+                                         90);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.PE_tb__DOT__rst_n = 1U;
-    vlSelfRef.PE_tb__DOT__en = 1U;
-    vlSelfRef.PE_tb__DOT__a = 1U;
-    vlSelfRef.PE_tb__DOT__b = 1U;
-    vlSelfRef.PE_tb__DOT__above_result = 0U;
-    vlSelfRef.PE_tb__DOT__in_valid = 1U;
-    vlSelfRef.PE_tb__DOT__slot = 0U;
     co_await vlSelfRef.__VdlySched.delay(0x0000000000004e20ULL, 
                                          nullptr, "Processing_Element.sv", 
-                                         89);
+                                         92);
+    vlSelfRef.__Vm_traceActivity[2U] = 1U;
+    vlSelfRef.PE_tb__DOT__in_valid = 1U;
+    vlSelfRef.PE_tb__DOT__slot = 0U;
+    vlSelfRef.PE_tb__DOT__above_result = 2U;
+    vlSelfRef.PE_tb__DOT__a = 1U;
+    vlSelfRef.PE_tb__DOT__b = 1U;
+    vlSelfRef.PE_tb__DOT__en = 1U;
+    co_await vlSelfRef.__VdlySched.delay(0x0000000000004e20ULL, 
+                                         nullptr, "Processing_Element.sv", 
+                                         99);
+    vlSelfRef.__Vm_traceActivity[2U] = 1U;
+    vlSelfRef.PE_tb__DOT__slot = 1U;
+    vlSelfRef.PE_tb__DOT__b = 2U;
+    co_await vlSelfRef.__VdlySched.delay(0x0000000000009c40ULL, 
+                                         nullptr, "Processing_Element.sv", 
+                                         103);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("result is %0d\n",1, '#',10,vlSelfRef.PE_tb__DOT__result);
-    VL_FINISH_MT("Processing_Element.sv", 91, "");
+    VL_FINISH_MT("Processing_Element.sv", 106, "");
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     co_return;
 }

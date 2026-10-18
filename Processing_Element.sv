@@ -1,12 +1,15 @@
+`timescale 1ns/1ps
+// Linter line: verilator --lint-only Processing_Element.sv --top-module PE
+
 module PE(
-    input logic clk, rst_n, in_valid, slot, en, drain_en;
-    input logic [3:0] a, b;
-    input logic [9:0] above_result;
-    output logic [9:0] result;
+    input logic clk, rst_n, in_valid, slot, en, drain_en,
+    input logic [3:0] a, b,
+    input logic [9:0] above_result,
+    output logic [9:0] result
 );
 
 logic [9:0] accumulator;
-logic [3:0] a, b1, b2;
+logic [3:0] b1, b2;
 
 logic [9:0] mult_result;
 
@@ -22,8 +25,6 @@ end
 
 // multiply a and b, but based on the slot signal
 always_comb begin : multiply
-    default:
-        mult_result = '0;
     if(slot) begin
         mult_result = a * b1;
     end else begin
@@ -32,9 +33,9 @@ always_comb begin : multiply
 end
 
 // b assignment based on slot
-always_ff @posedge(clk) begin
+always_ff @(posedge clk) begin
     if(!rst_n) begin
-        result <= 10'b0000_0000_00;
+        // result <= 10'b0000_0000_00;
         b1 <= 4'h0;
         b2 <= 4'h0;
     end else begin
@@ -49,7 +50,7 @@ always_ff @posedge(clk) begin
 end
 
 // add to the accumulator
-always_ff @posedge(clk) begin
+always_ff @(posedge clk) begin
     if(!rst_n) begin
         result <= '0;
     end else begin
@@ -58,5 +59,32 @@ always_ff @posedge(clk) begin
         end
     end
 end
+
+endmodule
+
+module PE_tb ();
+    logic clk, rst_n, in_valid, slot, en, drain_en;
+    logic [3:0] a, b;
+    logic [9:0] above_result;
+    logic [9:0] result;
+
+    PE dut(.*);
+
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk;
+    end
+
+    initial begin
+        rst_n = 0; en = 0; drain_en = 0; in_valid = 0;
+        #20; rst_n = 1; en = 1;
+        a = 1; b = 1; 
+        above_result = 0;
+        in_valid = 1; slot = 0;
+        #20;
+        $display("result is %0d", result);
+        $finish;
+    end
+
 
 endmodule

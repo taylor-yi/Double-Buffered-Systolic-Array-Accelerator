@@ -36,7 +36,7 @@ always_ff @(posedge clk) begin
     if(!rst_n) begin
         b1 <= 4'h0;
         b2 <= 4'h0;
-        a <= '0;
+        // a <= '0;
     end else begin
         if(in_valid) begin
             if(!slot) begin

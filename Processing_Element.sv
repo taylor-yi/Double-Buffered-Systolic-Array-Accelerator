@@ -76,6 +76,11 @@ module PE_tb ();
     end
 
     initial begin
+        $dumpfile("dump.vcd");     // the output file's name
+        $dumpvars(0, PE_tb);    // depth 0 = this scope AND everything under it
+    end
+
+    initial begin
         rst_n = 0; en = 0; drain_en = 0; in_valid = 0;
         #20; rst_n = 1; en = 1;
         a = 1; b = 1; 
@@ -85,6 +90,4 @@ module PE_tb ();
         $display("result is %0d", result);
         $finish;
     end
-
-
 endmodule

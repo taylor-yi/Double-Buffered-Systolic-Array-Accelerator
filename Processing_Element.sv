@@ -18,8 +18,8 @@ logic zeroed;
 logic [3:0] temp;
 
 always_comb begin : check_zeroes
-    temp = (slot ? a | b1 : a | b2);
-    zeroed = (temp == '0);
+    temp = (slot ? (b2 == 0) : (b1 == 0));
+    zeroed = (temp == '0 || a == 0);
 end
 
 // multiply a and b, but based on the slot signal

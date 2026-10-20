@@ -55,11 +55,11 @@ module PE(
 endmodule
 
 module PE_tb ();
-    logic clk, rst_n, in_valid, load_slot, compute_slot, en;
-    logic [3:0] a, b;
-    logic [9:0] above_result;
-    logic [3:0] a_out, b_out;
-    logic [9:0] result;
+    logic clk, rst_n, in_valid, load_slot, compute_slot, en,
+    logic [3:0] a, b,
+    logic [9:0] above_result,
+    logic [3:0] a_out, b_out,
+    logic [9:0] result
 
     PE dut(.*);
 

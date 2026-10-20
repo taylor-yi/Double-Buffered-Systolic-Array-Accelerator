@@ -55,9 +55,10 @@ module PE(
 endmodule
 
 module PE_tb ();
-    logic clk, rst_n, in_valid, slot, en, drain_en;
+    logic clk, rst_n, in_valid, load_slot, compute_slot, en;
     logic [3:0] a, b;
     logic [9:0] above_result;
+    logic [3:0] a_out, b_out;
     logic [9:0] result;
 
     PE dut(.*);
@@ -83,8 +84,8 @@ module PE_tb ();
         rst_n = 1;
         #20
 
-        // Test 1: Check slot is working:
-        in_valid = 1; slot = 0;
+        // Test 1: Check load_slot is working:
+        in_valid = 1; load_slot = 0;
         b = 3;
         #10
         in_valid = 0;
@@ -108,7 +109,7 @@ module PE_tb ();
         rst_n = 1;
         #10
 
-        in_valid = 1; slot = 0;
+        in_valid = 1; load_slot = 0;
         above_result = 2;
         a = 1; b = 3;
         
@@ -120,7 +121,7 @@ module PE_tb ();
         if (result == 5) begin $display("Slot 1 calculated correctly, result correct. Result is %0d", result); end
 
         en = 0;
-        slot = 1;
+        load_slot = 1;
         b = 2;
         in_valid = 1;
         #10

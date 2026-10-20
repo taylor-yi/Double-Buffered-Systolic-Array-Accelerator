@@ -2,48 +2,47 @@
 // Linter line: verilator --lint-only Processing_Element.sv --top-module PE
 
 module PE(
-    input logic clk, rst_n, in_valid, slot, en, drain_en,
+    input logic clk, rst_n, in_valid, load_slot, compute_slot, en,
     input logic [3:0] a, b,
     input logic [9:0] above_result,
+    output logic [3:0] a_out, b_out,
     output logic [9:0] result
 );
 
-logic [3:0] b1, b2;
+logic [3:0] b1, b2, w; //w = weight
 
 logic [9:0] mult_result;
 
 // adding a zero check can save heat by not firing a flip flop, right now it only checks if both are zero.
 // in full optimization it will also check if respective b1 or b2 is zero and make the whole sum zero
 logic zeroed;
-logic [3:0] temp;
-
-always_comb begin : check_zeroes
-    temp = (slot ? (b2 == 0) : (b1 == 0));
-    zeroed = (temp == '0 || a == 0);
-end
+assign w = compute_slot ? b2 : b1;
+assign b_out = load_slot ? b2 : b1;
+assign zeroed = (a == '0) || (w == '0);
 
 // multiply a and b, but based on the slot signal
-always_comb begin : multiply
-    if(!slot) begin
-        mult_result = a * b1;
-    end else begin
-        mult_result = a * b2;
-    end  
-end
+// always_comb begin : multiply
+//     if(compute_slot) begin
+//         mult_result = a * b1;
+//     end else begin
+//         mult_result = a * b2;
+//     end  
+// end
 
 // b assignment based on slot
 always_ff @(posedge clk) begin
     if(!rst_n) begin
         b1 <= 4'h0;
         b2 <= 4'h0;
-        // a <= '0;
+        a_out <= '0;
     end else begin
         if(in_valid) begin
-            if(!slot) begin
+            if(load_slot) begin
                 b1 <= b;
             end else begin
                 b2 <= b;
             end
+            a_out <= a;
         end
     end
 end

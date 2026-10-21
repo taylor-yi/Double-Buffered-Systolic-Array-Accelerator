@@ -117,7 +117,7 @@ bool VPE_tb___024root___eval_inact(VPE_tb___024root* vlSelf) {
     // Body
     __VinactExecute = vlSelfRef.__VdlySched.awaitingZeroDelay();
     if (__VinactExecute) {
-        VL_FATAL_MT("Processing_Element.sv", 57, "", "ZERODLY: Design Verilated with '--no-sched-zero-delay', but #0 delay executed at runtime");
+        VL_FATAL_MT("PE_tb.sv", 1, "", "ZERODLY: Design Verilated with '--no-sched-zero-delay', but #0 delay executed at runtime");
     }
     return (__VinactExecute);
 }
@@ -224,8 +224,8 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__0(VPE_tb___024root* v
     while (true) {
         co_await vlSelfRef.__VdlySched.delay(0x0000000000001388ULL, 
                                              nullptr, 
-                                             "Processing_Element.sv", 
-                                             77);
+                                             "PE_tb.sv", 
+                                             21);
         vlSelfRef.PE_tb__DOT__clk = (1U & (~ (IData)(vlSelfRef.PE_tb__DOT__clk)));
     }
     co_return;
@@ -249,8 +249,8 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
     co_await vlSelfRef.__VtrigSched_h68bb2b13__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge PE_tb.clk)", 
-                                                         "Processing_Element.sv", 
-                                                         88);
+                                                         "PE_tb.sv", 
+                                                         32);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.PE_tb__DOT__rst_n = 0U;
     vlSelfRef.PE_tb__DOT__en = 0U;
@@ -264,8 +264,8 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
     co_await vlSelfRef.__VtrigSched_h68bb2b13__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge PE_tb.clk)", 
-                                                         "Processing_Element.sv", 
-                                                         98);
+                                                         "PE_tb.sv", 
+                                                         42);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.PE_tb__DOT__en = 1U;
     vlSelfRef.PE_tb__DOT__in_valid = 1U;
@@ -278,8 +278,8 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
     co_await vlSelfRef.__VtrigSched_h68bb2b13__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge PE_tb.clk)", 
-                                                         "Processing_Element.sv", 
-                                                         107);
+                                                         "PE_tb.sv", 
+                                                         51);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.PE_tb__DOT__checks = ((IData)(1U) + vlSelfRef.PE_tb__DOT__checks);
     vlSelfRef.PE_tb__DOT__in_valid = 1U;
@@ -292,33 +292,33 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
                       | (0U != (IData)(vlSelfRef.PE_tb__DOT__result)))))) {
         vlSelfRef.PE_tb__DOT__errors = ((IData)(1U) 
                                         + vlSelfRef.PE_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: Processing_Element.sv:112: Assertion failed in %m: [%0t] reset overridden (b1 side): a_out=%0d b_out=%0d result=%0d\n",7, 'M',vlSymsp->name(),"PE_tb", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: PE_tb.sv:56: Assertion failed in %m: [%0t] reset overridden (b1 side): a_out=%0d b_out=%0d result=%0d\n",7, 'M',vlSymsp->name(),"PE_tb", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',4,(IData)(vlSelfRef.PE_tb__DOT__a_out)
                      , '#',4,vlSelfRef.PE_tb__DOT__dut__DOT__b_out
                      , '#',10,(IData)(vlSelfRef.PE_tb__DOT__result));
-        VL_STOP_MT("Processing_Element.sv", 112, "");
+        VL_STOP_MT("PE_tb.sv", 56, "");
     }
     VPE_tb___024root____VbeforeTrig_h68bb2b13__0(vlSelf, 
                                                  "@(negedge PE_tb.clk)");
     co_await vlSelfRef.__VtrigSched_h68bb2b13__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge PE_tb.clk)", 
-                                                         "Processing_Element.sv", 
-                                                         121);
+                                                         "PE_tb.sv", 
+                                                         65);
     if (VL_UNLIKELY(((((0U != (IData)(vlSelfRef.PE_tb__DOT__a_out)) 
                        | (0U != (IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b_out))) 
                       | (0U != (IData)(vlSelfRef.PE_tb__DOT__result)))))) {
         vlSelfRef.PE_tb__DOT__errors = ((IData)(1U) 
                                         + vlSelfRef.PE_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: Processing_Element.sv:125: Assertion failed in %m: [%0t] reset overridden (b2 side): a_out=%0d b_out=%0d result=%0d\n",7, 'M',vlSymsp->name(),"PE_tb", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: PE_tb.sv:69: Assertion failed in %m: [%0t] reset overridden (b2 side): a_out=%0d b_out=%0d result=%0d\n",7, 'M',vlSymsp->name(),"PE_tb", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',4,(IData)(vlSelfRef.PE_tb__DOT__a_out)
                      , '#',4,vlSelfRef.PE_tb__DOT__dut__DOT__b_out
                      , '#',10,(IData)(vlSelfRef.PE_tb__DOT__result));
-        VL_STOP_MT("Processing_Element.sv", 125, "");
+        VL_STOP_MT("PE_tb.sv", 69, "");
     }
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.PE_tb__DOT__checks = ((IData)(1U) + vlSelfRef.PE_tb__DOT__checks);
@@ -336,18 +336,18 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
     co_await vlSelfRef.__VtrigSched_h68bb2b13__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge PE_tb.clk)", 
-                                                         "Processing_Element.sv", 
-                                                         140);
+                                                         "PE_tb.sv", 
+                                                         84);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.PE_tb__DOT__checks = ((IData)(1U) + vlSelfRef.PE_tb__DOT__checks);
     if (VL_UNLIKELY(((2U != (IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b1))))) {
         vlSelfRef.PE_tb__DOT__errors = ((IData)(1U) 
                                         + vlSelfRef.PE_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: Processing_Element.sv:144: Assertion failed in %m: [%0t] b1 loaded incorrectly: b1 expected: 0010, b1 was: %0d\n",5, 'M',vlSymsp->name(),"PE_tb", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: PE_tb.sv:88: Assertion failed in %m: [%0t] b1 loaded incorrectly: b1 expected: 0010, b1 was: %0d\n",5, 'M',vlSymsp->name(),"PE_tb", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',4,(IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b1));
-        VL_STOP_MT("Processing_Element.sv", 144, "");
+        VL_STOP_MT("PE_tb.sv", 88, "");
     }
     vlSelfRef.PE_tb__DOT__load_slot = 1U;
     vlSelfRef.PE_tb__DOT__b = 4U;
@@ -356,18 +356,18 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
     co_await vlSelfRef.__VtrigSched_h68bb2b13__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge PE_tb.clk)", 
-                                                         "Processing_Element.sv", 
-                                                         150);
+                                                         "PE_tb.sv", 
+                                                         94);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.PE_tb__DOT__checks = ((IData)(1U) + vlSelfRef.PE_tb__DOT__checks);
     if (VL_UNLIKELY(((4U != (IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b2))))) {
         vlSelfRef.PE_tb__DOT__errors = ((IData)(1U) 
                                         + vlSelfRef.PE_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: Processing_Element.sv:154: Assertion failed in %m: [%0t] b2 loaded incorrectly: b2 expected: 0010, b2 was: %0d\n",5, 'M',vlSymsp->name(),"PE_tb", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: PE_tb.sv:98: Assertion failed in %m: [%0t] b2 loaded incorrectly: b2 expected: 0010, b2 was: %0d\n",5, 'M',vlSymsp->name(),"PE_tb", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',4,(IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b2));
-        VL_STOP_MT("Processing_Element.sv", 154, "");
+        VL_STOP_MT("PE_tb.sv", 98, "");
     }
     vlSelfRef.PE_tb__DOT__b = 1U;
     vlSelfRef.PE_tb__DOT__load_slot = 0U;
@@ -381,45 +381,45 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
     co_await vlSelfRef.__VtrigSched_h68bb2b13__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge PE_tb.clk)", 
-                                                         "Processing_Element.sv", 
-                                                         164);
+                                                         "PE_tb.sv", 
+                                                         108);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     if (VL_UNLIKELY(((1U != (IData)(vlSelfRef.PE_tb__DOT__b))))) {
         vlSelfRef.PE_tb__DOT__errors = ((IData)(1U) 
                                         + vlSelfRef.PE_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: Processing_Element.sv:167: Assertion failed in %m: [%0t] b not reading correctly: b expected: 0001, b was: %0d\n",5, 'M',vlSymsp->name(),"PE_tb", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: PE_tb.sv:111: Assertion failed in %m: [%0t] b not reading correctly: b expected: 0001, b was: %0d\n",5, 'M',vlSymsp->name(),"PE_tb", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',4,(IData)(vlSelfRef.PE_tb__DOT__b));
-        VL_STOP_MT("Processing_Element.sv", 167, "");
+        VL_STOP_MT("PE_tb.sv", 111, "");
     }
     vlSelfRef.PE_tb__DOT__b = 2U;
     vlSelfRef.PE_tb__DOT__load_slot = 1U;
     if (VL_UNLIKELY(((2U != (IData)(vlSelfRef.PE_tb__DOT__b))))) {
         vlSelfRef.PE_tb__DOT__errors = ((IData)(1U) 
                                         + vlSelfRef.PE_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: Processing_Element.sv:175: Assertion failed in %m: [%0t] slot did not fire correctly: b expected: 0010, b was: %0d\n",5, 'M',vlSymsp->name(),"PE_tb", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: PE_tb.sv:119: Assertion failed in %m: [%0t] slot did not fire correctly: b expected: 0010, b was: %0d\n",5, 'M',vlSymsp->name(),"PE_tb", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',4,(IData)(vlSelfRef.PE_tb__DOT__b));
-        VL_STOP_MT("Processing_Element.sv", 175, "");
+        VL_STOP_MT("PE_tb.sv", 119, "");
     }
     VPE_tb___024root____VbeforeTrig_h68bb2b13__0(vlSelf, 
                                                  "@(negedge PE_tb.clk)");
     co_await vlSelfRef.__VtrigSched_h68bb2b13__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge PE_tb.clk)", 
-                                                         "Processing_Element.sv", 
-                                                         178);
+                                                         "PE_tb.sv", 
+                                                         122);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     if (VL_UNLIKELY(((2U != (IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b_out))))) {
         vlSelfRef.PE_tb__DOT__errors = ((IData)(1U) 
                                         + vlSelfRef.PE_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: Processing_Element.sv:181: Assertion failed in %m: [%0t] b_out: b_out expected: 0010, b was: %0d\n",5, 'M',vlSymsp->name(),"PE_tb", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: PE_tb.sv:125: Assertion failed in %m: [%0t] b_out: b_out expected: 0010, b was: %0d\n",5, 'M',vlSymsp->name(),"PE_tb", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',4,(IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b_out));
-        VL_STOP_MT("Processing_Element.sv", 181, "");
+        VL_STOP_MT("PE_tb.sv", 125, "");
     }
     vlSelfRef.PE_tb__DOT__rst_n = 0U;
     if ((vlSelfRef.PE_tb__DOT__errors == vlSelfRef.PE_tb__DOT__test_errors)) {
@@ -432,8 +432,8 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
     co_await vlSelfRef.__VtrigSched_h68bb2b13__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge PE_tb.clk)", 
-                                                         "Processing_Element.sv", 
-                                                         190);
+                                                         "PE_tb.sv", 
+                                                         134);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.PE_tb__DOT__en = 0U;
     vlSelfRef.PE_tb__DOT__in_valid = 1U;
@@ -446,8 +446,8 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
     co_await vlSelfRef.__VtrigSched_h68bb2b13__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge PE_tb.clk)", 
-                                                         "Processing_Element.sv", 
-                                                         198);
+                                                         "PE_tb.sv", 
+                                                         142);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.PE_tb__DOT__en = 1U;
     vlSelfRef.PE_tb__DOT__in_valid = 1U;
@@ -461,17 +461,17 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
     co_await vlSelfRef.__VtrigSched_h68bb2b13__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge PE_tb.clk)", 
-                                                         "Processing_Element.sv", 
-                                                         207);
+                                                         "PE_tb.sv", 
+                                                         151);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     if (VL_UNLIKELY(((8U != (IData)(vlSelfRef.PE_tb__DOT__result))))) {
         vlSelfRef.PE_tb__DOT__errors = ((IData)(1U) 
                                         + vlSelfRef.PE_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: Processing_Element.sv:210: Assertion failed in %m: [%0t] result computed incorrectly for compute slot 0: result expected: 8, b was: %0d\n",5, 'M',vlSymsp->name(),"PE_tb", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: PE_tb.sv:154: Assertion failed in %m: [%0t] result computed incorrectly for compute slot 0: result expected: 8, b was: %0d\n",5, 'M',vlSymsp->name(),"PE_tb", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',10,(IData)(vlSelfRef.PE_tb__DOT__result));
-        VL_STOP_MT("Processing_Element.sv", 210, "");
+        VL_STOP_MT("PE_tb.sv", 154, "");
     }
     vlSelfRef.PE_tb__DOT__compute_slot = 1U;
     VPE_tb___024root____VbeforeTrig_h68bb2b13__0(vlSelf, 
@@ -479,17 +479,17 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
     co_await vlSelfRef.__VtrigSched_h68bb2b13__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge PE_tb.clk)", 
-                                                         "Processing_Element.sv", 
-                                                         215);
+                                                         "PE_tb.sv", 
+                                                         159);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     if (VL_UNLIKELY(((0x000aU != (IData)(vlSelfRef.PE_tb__DOT__result))))) {
         vlSelfRef.PE_tb__DOT__errors = ((IData)(1U) 
                                         + vlSelfRef.PE_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: Processing_Element.sv:218: Assertion failed in %m: [%0t] result computed incorrectly for compute slot 1: result expected: 10, b was: %0d\n",5, 'M',vlSymsp->name(),"PE_tb", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: PE_tb.sv:162: Assertion failed in %m: [%0t] result computed incorrectly for compute slot 1: result expected: 10, b was: %0d\n",5, 'M',vlSymsp->name(),"PE_tb", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',10,(IData)(vlSelfRef.PE_tb__DOT__result));
-        VL_STOP_MT("Processing_Element.sv", 218, "");
+        VL_STOP_MT("PE_tb.sv", 162, "");
     }
     vlSelfRef.PE_tb__DOT__rst_n = 0U;
     if ((vlSelfRef.PE_tb__DOT__errors == vlSelfRef.PE_tb__DOT__test_errors)) {
@@ -502,8 +502,8 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
     co_await vlSelfRef.__VtrigSched_h68bb2b13__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge PE_tb.clk)", 
-                                                         "Processing_Element.sv", 
-                                                         227);
+                                                         "PE_tb.sv", 
+                                                         171);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.PE_tb__DOT__rst_n = 1U;
     PE_tb__DOT__unnamedblk1__DOT__s = 0U;
@@ -515,8 +515,8 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
             co_await vlSelfRef.__VtrigSched_h68bb2b13__0.trigger(0U, 
                                                                  nullptr, 
                                                                  "@(negedge PE_tb.clk)", 
-                                                                 "Processing_Element.sv", 
-                                                                 231);
+                                                                 "PE_tb.sv", 
+                                                                 175);
             vlSelfRef.__Vm_traceActivity[2U] = 1U;
             vlSelfRef.PE_tb__DOT__en = 0U;
             vlSelfRef.PE_tb__DOT__in_valid = 1U;
@@ -528,8 +528,8 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
             co_await vlSelfRef.__VtrigSched_h68bb2b13__0.trigger(0U, 
                                                                  nullptr, 
                                                                  "@(negedge PE_tb.clk)", 
-                                                                 "Processing_Element.sv", 
-                                                                 237);
+                                                                 "PE_tb.sv", 
+                                                                 181);
             vlSelfRef.__Vm_traceActivity[2U] = 1U;
             vlSelfRef.PE_tb__DOT__in_valid = 0U;
             vlSelfRef.PE_tb__DOT__compute_slot = (1U 
@@ -553,8 +553,8 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
                 co_await vlSelfRef.__VtrigSched_h68bb2b13__0.trigger(0U, 
                                                                      nullptr, 
                                                                      "@(negedge PE_tb.clk)", 
-                                                                     "Processing_Element.sv", 
-                                                                     247);
+                                                                     "PE_tb.sv", 
+                                                                     191);
                 vlSelfRef.__Vm_traceActivity[2U] = 1U;
                 vlSelfRef.PE_tb__DOT__checks = ((IData)(1U) 
                                                 + vlSelfRef.PE_tb__DOT__checks);
@@ -562,7 +562,7 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
                                   != (IData)(vlSelfRef.PE_tb__DOT__expected))))) {
                     vlSelfRef.PE_tb__DOT__errors = 
                         ((IData)(1U) + vlSelfRef.PE_tb__DOT__errors);
-                    VL_WRITEF_NX("[%0t] %%Error: Processing_Element.sv:251: Assertion failed in %m: [%0t] MAC slot=%0d a=%0d w=%0d above=%0d: got %0d, expected %0d\n",10, 'M',vlSymsp->name(),"PE_tb.unnamedblk1.unnamedblk2.unnamedblk3", 'T',-9
+                    VL_WRITEF_NX("[%0t] %%Error: PE_tb.sv:195: Assertion failed in %m: [%0t] MAC slot=%0d a=%0d w=%0d above=%0d: got %0d, expected %0d\n",10, 'M',vlSymsp->name(),"PE_tb.unnamedblk1.unnamedblk2.unnamedblk3", 'T',-9
                                  , '#',64,VL_TIME_UNITED_Q(1000)
                                  , '#',64,VL_TIME_UNITED_Q(1000)
                                  , '~',32,PE_tb__DOT__unnamedblk1__DOT__s
@@ -571,7 +571,7 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
                                  , '#',10,(IData)(vlSelfRef.PE_tb__DOT__above_result)
                                  , '#',10,vlSelfRef.PE_tb__DOT__result
                                  , '#',10,(IData)(vlSelfRef.PE_tb__DOT__expected));
-                    VL_STOP_MT("Processing_Element.sv", 251, "");
+                    VL_STOP_MT("PE_tb.sv", 195, "");
                 }
                 vlSelfRef.PE_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__unnamedblk3__DOT__av 
                     = ((IData)(1U) + vlSelfRef.PE_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__unnamedblk3__DOT__av);
@@ -594,8 +594,8 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
     co_await vlSelfRef.__VtrigSched_h68bb2b13__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge PE_tb.clk)", 
-                                                         "Processing_Element.sv", 
-                                                         264);
+                                                         "PE_tb.sv", 
+                                                         208);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.PE_tb__DOT__rst_n = 1U;
     vlSelfRef.PE_tb__DOT__en = 1U;
@@ -608,8 +608,8 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
         co_await vlSelfRef.__VtrigSched_h68bb2b13__0.trigger(0U, 
                                                              nullptr, 
                                                              "@(negedge PE_tb.clk)", 
-                                                             "Processing_Element.sv", 
-                                                             271);
+                                                             "PE_tb.sv", 
+                                                             215);
         vlSelfRef.__Vm_traceActivity[2U] = 1U;
         vlSelfRef.PE_tb__DOT__checks = ((IData)(1U) 
                                         + vlSelfRef.PE_tb__DOT__checks);
@@ -618,25 +618,25 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
                           != (IData)(vlSelfRef.PE_tb__DOT__prev_a))))) {
             vlSelfRef.PE_tb__DOT__errors = ((IData)(1U) 
                                             + vlSelfRef.PE_tb__DOT__errors);
-            VL_WRITEF_NX("[%0t] %%Error: Processing_Element.sv:275: Assertion failed in %m: [%0t] a_out=%0d, expected %0d (previous a)\n",6, 'M',vlSymsp->name(),"PE_tb.unnamedblk4", 'T',-9
+            VL_WRITEF_NX("[%0t] %%Error: PE_tb.sv:219: Assertion failed in %m: [%0t] a_out=%0d, expected %0d (previous a)\n",6, 'M',vlSymsp->name(),"PE_tb.unnamedblk4", 'T',-9
                          , '#',64,VL_TIME_UNITED_Q(1000)
                          , '#',64,VL_TIME_UNITED_Q(1000)
                          , '#',4,(IData)(vlSelfRef.PE_tb__DOT__a_out)
                          , '#',4,vlSelfRef.PE_tb__DOT__prev_a);
-            VL_STOP_MT("Processing_Element.sv", 275, "");
+            VL_STOP_MT("PE_tb.sv", 219, "");
         }
         co_await vlSelfRef.__VdlySched.delay(0x00000000000003e8ULL, 
                                              nullptr, 
-                                             "Processing_Element.sv", 
-                                             280);
+                                             "PE_tb.sv", 
+                                             224);
         if (VL_UNLIKELY((((IData)(vlSelfRef.PE_tb__DOT__a_out) 
                           != (IData)(vlSelfRef.PE_tb__DOT__prev_a))))) {
             vlSelfRef.PE_tb__DOT__errors = ((IData)(1U) 
                                             + vlSelfRef.PE_tb__DOT__errors);
-            VL_WRITEF_NX("[%0t] %%Error: Processing_Element.sv:284: Assertion failed in %m: [%0t] a_out changed before the clock edge (combinational path?)\n",4, 'M',vlSymsp->name(),"PE_tb.unnamedblk4", 'T',-9
+            VL_WRITEF_NX("[%0t] %%Error: PE_tb.sv:228: Assertion failed in %m: [%0t] a_out changed before the clock edge (combinational path?)\n",4, 'M',vlSymsp->name(),"PE_tb.unnamedblk4", 'T',-9
                          , '#',64,VL_TIME_UNITED_Q(1000)
                          , '#',64,VL_TIME_UNITED_Q(1000));
-            VL_STOP_MT("Processing_Element.sv", 284, "");
+            VL_STOP_MT("PE_tb.sv", 228, "");
         }
         vlSelfRef.__Vm_traceActivity[2U] = 1U;
         vlSelfRef.PE_tb__DOT__checks = ((IData)(1U) 
@@ -650,7 +650,7 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
     } else {
         VL_WRITEF_NX("Test 6 FAILED: activation forwarding\n",0);
     }
-    VL_FINISH_MT("Processing_Element.sv", 293, "");
+    VL_FINISH_MT("PE_tb.sv", 237, "");
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     co_return;
 }

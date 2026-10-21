@@ -49,17 +49,15 @@ Tests:
 4. active weight select
 5. MAC correctness
 6. zero gating
-7. boundary and overflow
 8. enable behavior
 9. activation forwarding
 10. back to back streaming
 11. load while computing
-12. hazard
-13. x propagation
-
 
 
 Systolic Array Design
+- a_in and b_in come in as 2D arrays of data x size
+    - Actually, above note is incorrect. We are running direct load for the weights, so b comes in as a matrix, a comes in as a vector
 - Have internal wire mesh
 - Wires need to have one extra column for activations and one extra row for weights so there is a buffer
 - Declare the ports using generate
@@ -69,3 +67,4 @@ Systolic Array Design
 A PE PE PE
 A PE PE PE
 A PE PE PE
+

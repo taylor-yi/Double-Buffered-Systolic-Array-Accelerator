@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 // Linter line: verilator --lint-only Processing_Element.sv --top-module PE
 
-module PE(
+module Processing_Element(
     input logic clk, rst_n, in_valid, load_slot, compute_slot, en,
     input logic [3:0] a, b,
     input logic [9:0] above_result,
@@ -10,8 +10,6 @@ module PE(
 );
 
     logic [3:0] b1, b2, w; //w = weight
-
-    logic [9:0] mult_result;
 
     // adding a zero check can save heat by not firing a flip flop, right now it only checks if both are zero.
     // in full optimization it will also check if respective b1 or b2 is zero and make the whole sum zero
@@ -51,5 +49,4 @@ module PE(
 
     // simulation safety check to make sure we aren't loading into the same slot we are computing from
     // assert property (@(posedge clk) disable iff (!rst_n) !(in_valid && en && (load_slot == compute_slot))) else $error("Loading into the compute slot.");
-
 endmodule

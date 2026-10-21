@@ -33,20 +33,23 @@ void VPE_tb___024root__trace_chg_0_sub_0(VPE_tb___024root* vlSelf, VerilatedVcd:
         bufp->chgCData(oldp+6,(vlSelfRef.PE_tb__DOT__b),4);
         bufp->chgSData(oldp+7,(vlSelfRef.PE_tb__DOT__above_result),10);
         bufp->chgIData(oldp+8,(vlSelfRef.PE_tb__DOT__test_errors),32);
+        bufp->chgSData(oldp+9,(vlSelfRef.PE_tb__DOT__expected),10);
+        bufp->chgCData(oldp+10,(vlSelfRef.PE_tb__DOT__prev_a),4);
     }
     if (VL_UNLIKELY((vlSelfRef.__Vm_traceActivity[3U]))) {
-        bufp->chgCData(oldp+9,(vlSelfRef.PE_tb__DOT__a_out),4);
-        bufp->chgSData(oldp+10,(vlSelfRef.PE_tb__DOT__result),10);
-        bufp->chgCData(oldp+11,(vlSelfRef.PE_tb__DOT__dut__DOT__b1),4);
-        bufp->chgCData(oldp+12,(vlSelfRef.PE_tb__DOT__dut__DOT__b2),4);
+        bufp->chgCData(oldp+11,(vlSelfRef.PE_tb__DOT__a_out),4);
+        bufp->chgSData(oldp+12,(vlSelfRef.PE_tb__DOT__result),10);
+        bufp->chgCData(oldp+13,(vlSelfRef.PE_tb__DOT__dut__DOT__b1),4);
+        bufp->chgCData(oldp+14,(vlSelfRef.PE_tb__DOT__dut__DOT__b2),4);
     }
-    bufp->chgBit(oldp+13,(vlSelfRef.PE_tb__DOT__clk));
-    bufp->chgCData(oldp+14,(((IData)(vlSelfRef.PE_tb__DOT__load_slot)
+    bufp->chgBit(oldp+15,(vlSelfRef.PE_tb__DOT__clk));
+    bufp->chgCData(oldp+16,(((IData)(vlSelfRef.PE_tb__DOT__load_slot)
                               ? (IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b2)
                               : (IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b1))),4);
-    bufp->chgIData(oldp+15,(vlSelfRef.PE_tb__DOT__errors),32);
-    bufp->chgCData(oldp+16,(vlSelfRef.PE_tb__DOT__dut__DOT__w),4);
-    bufp->chgBit(oldp+17,(((0U == (IData)(vlSelfRef.PE_tb__DOT__a)) 
+    bufp->chgIData(oldp+17,(vlSelfRef.PE_tb__DOT__errors),32);
+    bufp->chgIData(oldp+18,(vlSelfRef.PE_tb__DOT__checks),32);
+    bufp->chgCData(oldp+19,(vlSelfRef.PE_tb__DOT__dut__DOT__w),4);
+    bufp->chgBit(oldp+20,(((0U == (IData)(vlSelfRef.PE_tb__DOT__a)) 
                            | (0U == (IData)(vlSelfRef.PE_tb__DOT__dut__DOT__w)))));
 }
 

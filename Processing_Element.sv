@@ -67,6 +67,11 @@ module PE_tb ();
 
     int errors = 0, checks = 0, test_errors;
 
+    logic [9:0] expected;
+
+
+    logic [3:0] prev_a;
+
     initial begin
         clk = 0;
         forever #5 clk = ~clk;
@@ -177,7 +182,7 @@ module PE_tb ();
         end
 
         if (errors == test_errors) $display("Test 3 passed: weight shift chain");
-        else $display("Test 2 FAILED: weight shift chain");
+        else $display("Test 3 FAILED: weight shift chain");
 
         // Test 4: compute slot
         rst_n = 0;
@@ -214,7 +219,76 @@ module PE_tb ();
         end
 
         if (errors == test_errors) $display("Test 4 passed: compute slot verification");
-        else $display("Test 2 FAILED: compute slot verification");
+        else $display("Test 4 FAILED: compute slot verification");
+
+        //Test 5: MAC Correctness
+        rst_n = 0;
+
+        @(negedge clk);
+        rst_n = 1;
+        for (int s = 0; s < 2; s++) begin
+            for (int w = 0; w < 16; w++) begin
+                @(negedge clk);
+                en = 0;
+                in_valid = 1;
+                load_slot = s[0];
+                b = w[3:0];
+
+                @(negedge clk);
+                in_valid = 0;
+                compute_slot = s[0];
+
+                for (int av = 0; av < 16; av++) begin
+                    a = av[3:0];
+                    above_result = 10'($urandom_range(0, 450));
+                    expected = 10'(above_result + av * w);
+                    en = 1;
+
+                    @(negedge clk);
+                    checks++;
+                    if (result !== expected) begin
+                        errors++;
+                        $error("[%0t] MAC slot=%0d a=%0d w=%0d above=%0d: got %0d, expected %0d", $time, s, av, w, above_result, result, expected);
+                    end
+                end
+                en = 0;
+            end
+        end
+
+        if (errors == test_errors) $display("Test 5 passed: MAC verification");
+        else $display("Test 5 FAILED: MAC verification");
+
+        // Test 6: activation forwarding, check 1 cycle delay from a to a_out
+        rst_n = 0;
+
+        @(negedge clk);
+        rst_n = 1;
+        en = 1;
+        a = 4'hF;
+        prev_a = a;
+
+        for (int i = 0; i < 16; i++) begin
+            @(negedge clk);
+            checks++;
+            if (a_out !== prev_a) begin
+                errors++;
+                $error("[%0t] a_out=%0d, expected %0d (previous a)", $time, a_out, prev_a);
+            end
+
+            // drive the new value, then confirm a_out hasn't followed it yet
+            a = i[3:0];
+            #1;
+            checks++;
+            if (a_out !== prev_a) begin
+                errors++;
+                $error("[%0t] a_out changed before the clock edge (combinational path?)", $time);
+            end
+
+            prev_a = a;
+        end
+        
+        if (errors == test_errors) $display("Test 6 passed: activation forwarding");
+        else $display("Test 6 FAILED: activation forwarding");
 
         $finish;
     end

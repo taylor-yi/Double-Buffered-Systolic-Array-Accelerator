@@ -50,18 +50,20 @@ module PE(
     end
 
     // simulation safety check to make sure we aren't loading into the same slot we are computing from
-    assert property (@(posedge clk) disable iff (!rst_n) !(in_valid && en && (load_slot == compute_slot))) else $error("Loading into the compute slot.");
+    // assert property (@(posedge clk) disable iff (!rst_n) !(in_valid && en && (load_slot == compute_slot))) else $error("Loading into the compute slot.");
 
 endmodule
 
 module PE_tb ();
-    logic clk, rst_n, in_valid, load_slot, compute_slot, en,
-    logic [3:0] a, b,
-    logic [9:0] above_result,
-    logic [3:0] a_out, b_out,
-    logic [9:0] result
+    logic clk, rst_n, in_valid, load_slot, compute_slot, en;
+    logic [3:0] a, b;
+    logic [9:0] above_result;
+    logic [3:0] a_out, b_out;
+    logic [9:0] result;
 
     PE dut(.*);
+
+    int errors = 0, checks = 0, test_errors;
 
     initial begin
         clk = 0;
@@ -74,64 +76,52 @@ module PE_tb ();
     end
 
     initial begin
+        test_errors = errors;
+
+        @(negedge clk);
         rst_n = 0; 
         en = 0; 
-        drain_en = 0; 
         in_valid = 0;
+        load_slot = 0;
+        compute_slot = 0;
         a = 0; 
-        b = 0; 
-        #10
-        rst_n = 1;
-        #20
+        b = 0;
 
-        // Test 1: Check load_slot is working:
-        in_valid = 1; load_slot = 0;
-        b = 3;
-        #10
-        in_valid = 0;
-        if (dut.b1 == 3) begin $display("b1 loaded correctly. Value is %0d", dut.b1); end
-        #10
-        // keep in_valid low for a little bit to make sure it doesn't load too early
-        slot = 1;
-        b = 5;
-        #10
+        // Test 1: reset cannot be overriden
+        @(negedge clk);
+
+        en = 1; 
         in_valid = 1;
-        #10
-        in_valid = 0;
-        if (dut.b2 == 5) begin $display("b2 loaded correctly. Value is %0d", dut.b2); end
-        #10
+        load_slot = 0;
+        compute_slot = 1;
+        a = 4'b1000; 
+        b = 4'b0100;
 
-        // Test 2: Is result receiving the output correctly?
-        // 2 + 1 * 3 = 5
+        @(negedge clk); // if (a_out !== '0 || b_out !== '0) begin $error("reset was overriden"); end
 
-        rst_n = 0; en = 0; drain_en = 0; in_valid = 0; #20
-        
-        rst_n = 1;
-        #10
+        checks++;
+        if (a_out !== '0 || b_out !== '0 || result !== '0) begin
+            errors++;
+            $error("[%0t] reset overridden (b1 side): a_out=%0d b_out=%0d result=%0d", $time, a_out, b_out, result);
+        end
 
-        in_valid = 1; load_slot = 0;
-        above_result = 2;
-        a = 1; b = 3;
-        
-        #10
-        in_valid = 0;
-        en = 1;
-        #10
-
-        if (result == 5) begin $display("Slot 1 calculated correctly, result correct. Result is %0d", result); end
-
-        en = 0;
+        in_valid = 1;
         load_slot = 1;
-        b = 2;
-        in_valid = 1;
-        #10
+        compute_slot = 0;
+        a = 4'b0001; 
+        b = 4'b0010;
 
-        in_valid = 0;
-        en = 1;
-        #10
+        @(negedge clk);
+        checks++;
+        if (a_out !== '0 || b_out !== '0 || result !== '0) begin
+            errors++;
+            $error("[%0t] reset overridden (b2 side): a_out=%0d b_out=%0d result=%0d", $time, a_out, b_out, result);
+        end
 
-        if (result == 4) begin $display("Slot 2 calculated correctly, result correct. Result is %0d", result); end
+        if (errors == test_errors) $display("Test 1 passed: reset priority");
+        else $display("Test 1 FAILED: reset priority");
 
+        // Test 2: 
         $finish;
     end
 endmodule

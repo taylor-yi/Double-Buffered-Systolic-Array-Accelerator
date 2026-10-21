@@ -18,16 +18,23 @@ class alignas(VL_CACHE_LINE_BYTES) VPE_tb___024root final {
     CData/*0:0*/ PE_tb__DOT__clk;
     CData/*0:0*/ PE_tb__DOT__rst_n;
     CData/*0:0*/ PE_tb__DOT__in_valid;
-    CData/*0:0*/ PE_tb__DOT__slot;
+    CData/*0:0*/ PE_tb__DOT__load_slot;
+    CData/*0:0*/ PE_tb__DOT__compute_slot;
     CData/*0:0*/ PE_tb__DOT__en;
-    CData/*0:0*/ PE_tb__DOT__drain_en;
     CData/*3:0*/ PE_tb__DOT__a;
     CData/*3:0*/ PE_tb__DOT__b;
+    CData/*3:0*/ PE_tb__DOT__a_out;
+    CData/*3:0*/ PE_tb__DOT__dut__DOT__b_out;
     CData/*3:0*/ PE_tb__DOT__dut__DOT__b1;
     CData/*3:0*/ PE_tb__DOT__dut__DOT__b2;
+    CData/*3:0*/ PE_tb__DOT__dut__DOT__w;
     CData/*0:0*/ __Vtrigprevexpr___TOP__PE_tb__DOT__clk__0;
     SData/*9:0*/ PE_tb__DOT__above_result;
     SData/*9:0*/ PE_tb__DOT__result;
+    SData/*9:0*/ PE_tb__DOT__dut__DOT__mult_result;
+    IData/*31:0*/ PE_tb__DOT__errors;
+    IData/*31:0*/ PE_tb__DOT__checks;
+    IData/*31:0*/ PE_tb__DOT__test_errors;
     IData/*31:0*/ __Vi;
     VlUnpacked<QData/*63:0*/, 1> __VstlTriggered;
     VlUnpacked<QData/*63:0*/, 1> __VicoTriggered;
@@ -36,6 +43,7 @@ class alignas(VL_CACHE_LINE_BYTES) VPE_tb___024root final {
     VlUnpacked<QData/*63:0*/, 1> __VnbaTriggered;
     VlUnpacked<CData/*0:0*/, 4> __Vm_traceActivity;
     VlDelayScheduler __VdlySched;
+    VlTriggerScheduler __VtrigSched_h68bb2b13__0;
 
     // INTERNAL VARIABLES
     VPE_tb__Syms* vlSymsp;

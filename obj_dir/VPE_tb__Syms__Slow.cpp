@@ -12,7 +12,7 @@ VPE_tb__Syms::VPE_tb__Syms(VerilatedContext* contextp, const char* namep, VPE_tb
     , TOP{this, namep}
 {
     // Check resources
-    Verilated::stackCheck(193);
+    Verilated::stackCheck(242);
     // Setup sub module instances
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-9);

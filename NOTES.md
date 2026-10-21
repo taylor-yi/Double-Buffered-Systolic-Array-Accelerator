@@ -41,3 +41,18 @@ Slot will be the signal that notates which register weights B will be written to
         |_______|
             \/
         Result
+
+Tests:
+1. Reset priority
+2. Weight loading
+3. b_out weight shift chain
+4. active weight select
+5. MAC correctness
+6. zero gating
+7. boundary and overflow
+8. enable behavior
+9. activation forwarding
+10. back to back streaming
+11. load while computing
+12. hazard
+13. x propagation

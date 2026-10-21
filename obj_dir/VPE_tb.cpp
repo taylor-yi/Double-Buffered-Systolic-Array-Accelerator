@@ -224,6 +224,6 @@ VL_ATTR_COLD void VPE_tb::traceBaseModel(VerilatedTraceBaseC* tfp, int levels, i
             " use --trace-fst with VerilatedFst object, and --trace-vcd with VerilatedVcd object");
     }
     stfp->spTrace()->addModel(this);
-    stfp->spTrace()->addInitCb(&trace_init, &(vlSymsp->TOP), name(), false, 20);
+    stfp->spTrace()->addInitCb(&trace_init, &(vlSymsp->TOP), name(), false, 21);
     VPE_tb___024root__trace_register(&(vlSymsp->TOP), stfp->spTrace());
 }

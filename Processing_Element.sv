@@ -61,6 +61,8 @@ module PE_tb ();
     logic [3:0] a_out, b_out;
     logic [9:0] result;
 
+    logic new_test;
+
     PE dut(.*);
 
     int errors = 0, checks = 0, test_errors;
@@ -121,7 +123,99 @@ module PE_tb ();
         if (errors == test_errors) $display("Test 1 passed: reset priority");
         else $display("Test 1 FAILED: reset priority");
 
-        // Test 2: 
+        // repeat (2) @(negedge clk);
+
+        // Test 2: weight loading
+        rst_n = 1;
+
+        in_valid = 1;
+        load_slot = 0; // loading b1 register
+        b = 4'b0010;
+        
+        @(negedge clk);
+        checks++;
+        if (dut.b1 !== 4'b0010) begin
+            errors++;
+            $error("[%0t] b1 loaded incorrectly: b1 expected: 0010, b1 was: %0d", $time, dut.b1);
+        end
+
+        load_slot = 1; // loading b2 register
+        b = 4'b0100;
+
+        @(negedge clk);
+        checks++;
+        if (dut.b2 !== 4'b0100) begin
+            errors++;
+            $error("[%0t] b2 loaded incorrectly: b2 expected: 0010, b2 was: %0d", $time, dut.b2);
+        end
+
+        if (errors == test_errors) $display("Test 2 passed: weight loading");
+        else $display("Test 2 FAILED: weight loading");
+
+        // Test 3: weight shift chain
+        b = 4'b0001;
+        load_slot = 0;
+
+        @(negedge clk);
+        if (b !== 4'b0001) begin
+            errors++;
+            $error("[%0t] b not reading correctly: b expected: 0001, b was: %0d", $time, b);
+        end
+        
+        b = 4'b0010;
+        load_slot = 1;
+        
+        if (b !== 4'b0010) begin
+            errors++;
+            $error("[%0t] slot did not fire correctly: b expected: 0010, b was: %0d", $time, b);
+        end
+
+        @(negedge clk);
+        if (b_out !== 4'b0010) begin
+            errors++;
+            $error("[%0t] b_out: b_out expected: 0010, b was: %0d", $time, b_out);
+        end
+
+        if (errors == test_errors) $display("Test 3 passed: weight shift chain");
+        else $display("Test 2 FAILED: weight shift chain");
+
+        // Test 4: compute slot
+        rst_n = 0;
+        
+        @(negedge clk);
+        en = 0;
+        in_valid = 1;
+        rst_n = 1;
+        compute_slot = 1;
+        load_slot = 0;
+        b = 4'b0011;
+        
+        @(negedge clk);
+        en = 1;
+        in_valid = 1;
+        compute_slot = 0;
+        load_slot = 1;
+        a = 4'b0001;
+        b = 4'b0101;
+        above_result = 10'b00_0000_0101;
+
+        @(negedge clk);
+        if (result !== 8) begin
+            errors++;
+            $error("[%0t] result computed incorrectly for compute slot 0: result expected: 8, b was: %0d", $time, result);
+        end
+        
+        compute_slot = 1;
+
+        @(negedge clk);
+        if (result !== 10) begin
+            errors++;
+            $error("[%0t] result computed incorrectly for compute slot 1: result expected: 10, b was: %0d", $time, result);
+        end
+
+        if (errors == test_errors) $display("Test 4 passed: compute slot verification");
+        else $display("Test 2 FAILED: compute slot verification");
+
         $finish;
     end
 endmodule

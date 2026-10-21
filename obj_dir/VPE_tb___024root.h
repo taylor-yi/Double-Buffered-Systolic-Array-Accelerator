@@ -24,7 +24,7 @@ class alignas(VL_CACHE_LINE_BYTES) VPE_tb___024root final {
     CData/*3:0*/ PE_tb__DOT__a;
     CData/*3:0*/ PE_tb__DOT__b;
     CData/*3:0*/ PE_tb__DOT__a_out;
-    CData/*3:0*/ PE_tb__DOT__dut__DOT__b_out;
+    CData/*0:0*/ PE_tb__DOT__new_test;
     CData/*3:0*/ PE_tb__DOT__dut__DOT__b1;
     CData/*3:0*/ PE_tb__DOT__dut__DOT__b2;
     CData/*3:0*/ PE_tb__DOT__dut__DOT__w;
@@ -33,7 +33,6 @@ class alignas(VL_CACHE_LINE_BYTES) VPE_tb___024root final {
     SData/*9:0*/ PE_tb__DOT__result;
     SData/*9:0*/ PE_tb__DOT__dut__DOT__mult_result;
     IData/*31:0*/ PE_tb__DOT__errors;
-    IData/*31:0*/ PE_tb__DOT__checks;
     IData/*31:0*/ PE_tb__DOT__test_errors;
     IData/*31:0*/ __Vi;
     VlUnpacked<QData/*63:0*/, 1> __VstlTriggered;

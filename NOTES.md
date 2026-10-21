@@ -34,13 +34,13 @@ Outputs: C (A and B multiplication accumulator)
 
 Slot will be the signal that notates which register weights B will be written to. If 0, slot 1, if 1 slot 2. This should enable us to even do continuous matrix multiplications not just 2 in a row. We will have to have a clear feature that clears the other slot too. A data passes "right" and accumulator result passes "down" (maybe hardwired drain too though).
         
-        Above Wire
-         _______
-        |       |
- A2>>   |  PE   | >> A1 (weights stream left to right)
-        |_______|
-            \/
-        Result
+         Above Wire
+          _______
+         |       |
+ A2 >>   |  PE   | >> A1 (weights stream left to right)
+         |_______|
+             \/
+           Result
 
 Tests:
 1. Reset priority
@@ -56,3 +56,16 @@ Tests:
 11. load while computing
 12. hazard
 13. x propagation
+
+
+
+Systolic Array Design
+- Have internal wire mesh
+- Wires need to have one extra column for activations and one extra row for weights so there is a buffer
+- Declare the ports using generate
+- Wire it all up
+
+   W  W  W
+A PE PE PE
+A PE PE PE
+A PE PE PE

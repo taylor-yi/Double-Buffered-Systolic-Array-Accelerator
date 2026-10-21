@@ -19,4 +19,20 @@ module Systolic_Array #(parameter SIZE = 3)(
     endgenerate
 
     logic [9:0] pe_result [SIZE-1:0][SIZE-1:0];
+    generate
+        for(r = 0; r < SIZE; r++) begin
+            for (c = 0; c < SIZE; c++) begin
+                Processing_Element PE (
+                    .clk(clk), .rst_n(rst_n), .in_valid(in_valid)
+                );
+
+                input logic clk, rst_n, in_valid, load_slot, compute_slot, en,
+                input logic [3:0] a, b,
+                input logic [9:0] above_result,
+                output logic [3:0] a_out, b_out,
+                output logic [9:0] result
+
+            end
+        end
+    endgenerate
 endmodule

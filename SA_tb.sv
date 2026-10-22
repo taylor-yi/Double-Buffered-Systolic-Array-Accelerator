@@ -9,14 +9,15 @@ module SA_tb ();
     Systolic_Array dut (.*);
 
     initial begin
-        clk = 0
+        clk = 0;
         forever #5 clk = ~clk;
     end
 
     int errors = 0, checks = 0, test_errors;
+    logic [3:0] hist [3][3];
 
     initial begin
-        $dumpfile(dump.vcd);
+        $dumpfile("dump.vcd");
         $dumpvars(0, SA_tb);
     end
 
@@ -35,46 +36,60 @@ module SA_tb ();
         in_valid = 0;
         load_slot = 0;
         compute_slot = 0;
-        a_in = '0;
-        b_in = '0;
+        a_in = '{default: '0};
+        b_in = '{default: '0};
         
         // Test 1: check a_in load correctly
         @(negedge clk);
         rst_n = 1;
-        in_valid = 1;
+        en = 1;
+        in_valid = 0;
         load_slot = 1;
-        compute_slot = 1;
-        a_in = '0;
-        @(negedge clk);
-        for(int i = 0; i < 3; i ++)begin
-            for(int j = 0; j < 3; j++)begin
-                if(pe_a[i][j] != 0) begin
-                    $error("[%0t] Mismatch in loading activation 0s. Expected: 0, 'a' was: %0d.", $time, pe_a[i][j]);
+        compute_slot = 0; // different slots, avoids the hazard assertion
+        a_in = '{default: '0};
+
+        // let zeros flush through all 3 columns, then check
+        repeat (3) @(negedge clk);
+        for (int i = 0; i < 3; i++) begin
+            for (int j = 0; j < 3; j++) begin
+                checks++;
+                if (pe_a[i][j] !== 4'h0) begin
                     errors++;
+                    $error("[%0t] PE[%0d][%0d].a: expected 0, got %0d", $time, i, j, pe_a[i][j]);
                 end
             end
         end
 
-        @(negedge clk);
+        // stream a new distinct value into every row each cycle
+        // hist[k][r] = value driven into a_in[r] k cycles ago
+        for (int t = 0; t < 5; t++) begin
+            @(negedge clk);
+            hist[2] = hist[1];
+            hist[1] = hist[0];
+            for (int r = 0; r < 3; r++)
+                hist[0][r] = 4'(t*3 + r + 1);   // 1..15, all distinct
+            a_in = hist[0];
 
-        a_in = '{'{0, 1, 2},
-                 '{3, 4, 5},
-                 '{6, 7, 8}};
-        
-        @(negedge clk);
-        for(int i = 0; i < 3; i ++)begin
-            for(int j = 0; j < 3; j++)begin
-                if(pe_a[i][j] != a_in[i][j]) begin
-                    $error("[%0t] Mismatch in loading 'a'. Expected: %0d, 'a' was: %0d.", $time, a_in[i][j], pe_a[i][j]);
-                    errors++;
+            #1; // let the combinational input settle before checking
+
+            if (t >= 2) begin // after 3 drives, history is full
+                for (int i = 0; i < 3; i++) begin
+                    for (int j = 0; j < 3; j++) begin
+                        checks++;
+                        if (pe_a[i][j] !== hist[j][i]) begin
+                            errors++;
+                            $error("[%0t] PE[%0d][%0d].a: expected %0d, got %0d", $time, i, j, hist[j][i], pe_a[i][j]);
+                        end
+                    end
                 end
             end
         end
-        @(negedge clk);
-        if(errors == test_errors) begin $display("Test 1 Passed correctly. Activations loaded correctly.") end
-        else begin $display("Test 1 Failed. Activations loaded incorrectly.") end
+
+        if (errors == test_errors) $display("Test 1 passed: activations propagate correctly");
+        else $display("Test 1 FAILED: activation propagation");
+
         
-        $finish
+        $finish;
 
     end
 endmodule

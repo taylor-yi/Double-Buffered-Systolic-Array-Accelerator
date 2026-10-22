@@ -1,9 +1,9 @@
 `timescale 1ns/1ps
 module Systolic_Array #(parameter SIZE = 3)(
     input logic clk, rst_n, en, in_valid, load_slot, compute_slot,
-    input logic [3:0] a_in [SIZE - 1:0],
-    input logic [3:0] b_in [SIZE - 1:0][SIZE - 1:0],
-    output logic [9:0] result_matrix [SIZE - 1:0]
+    input logic [3:0] a_in [SIZE],
+    input logic [3:0] b_in [SIZE][SIZE],
+    output logic [9:0] result_matrix [SIZE] // Switched from [SIZE-1:0] to [SIZE] so matrices can be written in the natrual order
 );
 
     logic [3:0] a_wire [SIZE - 1:0][SIZE - 1:0]; //row, col

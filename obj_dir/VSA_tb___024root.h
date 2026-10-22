@@ -83,6 +83,8 @@ class alignas(VL_CACHE_LINE_BYTES) VSA_tb___024root final {
         VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__pe_a;
     };
     struct {
+        VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__pe_b1;
+        VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__pe_b2;
         VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__dut__DOT__a_wire;
         VlUnpacked<VlUnpacked<SData/*9:0*/, 3>, 3> SA_tb__DOT__dut__DOT__p_wire;
         VlUnpacked<QData/*63:0*/, 1> __VstlTriggered;

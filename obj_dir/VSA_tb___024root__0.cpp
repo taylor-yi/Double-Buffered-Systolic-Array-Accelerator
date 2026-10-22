@@ -205,7 +205,7 @@ VlCoroutine VSA_tb___024root___eval_initial__TOP__Vtiming__1(VSA_tb___024root* v
                                                          nullptr, 
                                                          "@(negedge SA_tb.clk)", 
                                                          "SA_tb.sv", 
-                                                         43);
+                                                         54);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.SA_tb__DOT__rst_n = 1U;
     vlSelfRef.SA_tb__DOT__en = 1U;
@@ -223,7 +223,7 @@ VlCoroutine VSA_tb___024root___eval_initial__TOP__Vtiming__1(VSA_tb___024root* v
                                                              nullptr, 
                                                              "@(negedge SA_tb.clk)", 
                                                              "SA_tb.sv", 
-                                                             52);
+                                                             63);
         vlSelfRef.__Vm_traceActivity[2U] = 1U;
         SA_tb__DOT__unnamedblk1_1__DOT____Vrepeat0 
             = (SA_tb__DOT__unnamedblk1_1__DOT____Vrepeat0 
@@ -233,91 +233,91 @@ VlCoroutine VSA_tb___024root___eval_initial__TOP__Vtiming__1(VSA_tb___024root* v
     if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_a[0U][0U])))) {
         vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
                                         + vlSelfRef.SA_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:58: Assertion failed in %m: [%0t] PE[0][0].a: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk1.unnamedblk2", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:69: Assertion failed in %m: [%0t] PE[0][0].a: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk1.unnamedblk2", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',4,vlSelfRef.SA_tb__DOT__pe_a[0U][0U]);
-        VL_STOP_MT("SA_tb.sv", 58, "");
+        VL_STOP_MT("SA_tb.sv", 69, "");
     }
     vlSelfRef.SA_tb__DOT__checks = ((IData)(1U) + vlSelfRef.SA_tb__DOT__checks);
     if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_a[0U][1U])))) {
         vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
                                         + vlSelfRef.SA_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:58: Assertion failed in %m: [%0t] PE[0][1].a: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk1.unnamedblk2", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:69: Assertion failed in %m: [%0t] PE[0][1].a: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk1.unnamedblk2", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',4,vlSelfRef.SA_tb__DOT__pe_a[0U][1U]);
-        VL_STOP_MT("SA_tb.sv", 58, "");
+        VL_STOP_MT("SA_tb.sv", 69, "");
     }
     vlSelfRef.SA_tb__DOT__checks = ((IData)(1U) + vlSelfRef.SA_tb__DOT__checks);
     if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_a[0U][2U])))) {
         vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
                                         + vlSelfRef.SA_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:58: Assertion failed in %m: [%0t] PE[0][2].a: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk1.unnamedblk2", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:69: Assertion failed in %m: [%0t] PE[0][2].a: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk1.unnamedblk2", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',4,vlSelfRef.SA_tb__DOT__pe_a[0U][2U]);
-        VL_STOP_MT("SA_tb.sv", 58, "");
+        VL_STOP_MT("SA_tb.sv", 69, "");
     }
     vlSelfRef.SA_tb__DOT__checks = ((IData)(1U) + vlSelfRef.SA_tb__DOT__checks);
     if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_a[1U][0U])))) {
         vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
                                         + vlSelfRef.SA_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:58: Assertion failed in %m: [%0t] PE[1][0].a: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk1.unnamedblk2", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:69: Assertion failed in %m: [%0t] PE[1][0].a: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk1.unnamedblk2", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',4,vlSelfRef.SA_tb__DOT__pe_a[1U][0U]);
-        VL_STOP_MT("SA_tb.sv", 58, "");
+        VL_STOP_MT("SA_tb.sv", 69, "");
     }
     vlSelfRef.SA_tb__DOT__checks = ((IData)(1U) + vlSelfRef.SA_tb__DOT__checks);
     if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_a[1U][1U])))) {
         vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
                                         + vlSelfRef.SA_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:58: Assertion failed in %m: [%0t] PE[1][1].a: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk1.unnamedblk2", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:69: Assertion failed in %m: [%0t] PE[1][1].a: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk1.unnamedblk2", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',4,vlSelfRef.SA_tb__DOT__pe_a[1U][1U]);
-        VL_STOP_MT("SA_tb.sv", 58, "");
+        VL_STOP_MT("SA_tb.sv", 69, "");
     }
     vlSelfRef.SA_tb__DOT__checks = ((IData)(1U) + vlSelfRef.SA_tb__DOT__checks);
     if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_a[1U][2U])))) {
         vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
                                         + vlSelfRef.SA_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:58: Assertion failed in %m: [%0t] PE[1][2].a: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk1.unnamedblk2", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:69: Assertion failed in %m: [%0t] PE[1][2].a: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk1.unnamedblk2", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',4,vlSelfRef.SA_tb__DOT__pe_a[1U][2U]);
-        VL_STOP_MT("SA_tb.sv", 58, "");
+        VL_STOP_MT("SA_tb.sv", 69, "");
     }
     vlSelfRef.SA_tb__DOT__checks = ((IData)(1U) + vlSelfRef.SA_tb__DOT__checks);
     if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_a[2U][0U])))) {
         vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
                                         + vlSelfRef.SA_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:58: Assertion failed in %m: [%0t] PE[2][0].a: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk1.unnamedblk2", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:69: Assertion failed in %m: [%0t] PE[2][0].a: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk1.unnamedblk2", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',4,vlSelfRef.SA_tb__DOT__pe_a[2U][0U]);
-        VL_STOP_MT("SA_tb.sv", 58, "");
+        VL_STOP_MT("SA_tb.sv", 69, "");
     }
     vlSelfRef.SA_tb__DOT__checks = ((IData)(1U) + vlSelfRef.SA_tb__DOT__checks);
     if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_a[2U][1U])))) {
         vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
                                         + vlSelfRef.SA_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:58: Assertion failed in %m: [%0t] PE[2][1].a: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk1.unnamedblk2", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:69: Assertion failed in %m: [%0t] PE[2][1].a: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk1.unnamedblk2", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',4,vlSelfRef.SA_tb__DOT__pe_a[2U][1U]);
-        VL_STOP_MT("SA_tb.sv", 58, "");
+        VL_STOP_MT("SA_tb.sv", 69, "");
     }
     vlSelfRef.SA_tb__DOT__checks = ((IData)(1U) + vlSelfRef.SA_tb__DOT__checks);
     if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_a[2U][2U])))) {
         vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
                                         + vlSelfRef.SA_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:58: Assertion failed in %m: [%0t] PE[2][2].a: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk1.unnamedblk2", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:69: Assertion failed in %m: [%0t] PE[2][2].a: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk1.unnamedblk2", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',4,vlSelfRef.SA_tb__DOT__pe_a[2U][2U]);
-        VL_STOP_MT("SA_tb.sv", 58, "");
+        VL_STOP_MT("SA_tb.sv", 69, "");
     }
     SA_tb__DOT__unnamedblk3__DOT__t = 0U;
     while (VL_GTS_III(32, 5U, SA_tb__DOT__unnamedblk3__DOT__t)) {
@@ -327,7 +327,7 @@ VlCoroutine VSA_tb___024root___eval_initial__TOP__Vtiming__1(VSA_tb___024root* v
                                                              nullptr, 
                                                              "@(negedge SA_tb.clk)", 
                                                              "SA_tb.sv", 
-                                                             66);
+                                                             77);
         vlSelfRef.__Vm_traceActivity[2U] = 1U;
         vlSelfRef.SA_tb__DOT__hist[2U][0U] = vlSelfRef.SA_tb__DOT__hist[1U][0U];
         vlSelfRef.SA_tb__DOT__hist[2U][1U] = vlSelfRef.SA_tb__DOT__hist[1U][1U];
@@ -353,7 +353,7 @@ VlCoroutine VSA_tb___024root___eval_initial__TOP__Vtiming__1(VSA_tb___024root* v
         co_await vlSelfRef.__VdlySched.delay(0x00000000000003e8ULL, 
                                              nullptr, 
                                              "SA_tb.sv", 
-                                             73);
+                                             84);
         vlSelfRef.__Vm_traceActivity[2U] = 1U;
         if (VL_LTES_III(32, 2U, SA_tb__DOT__unnamedblk3__DOT__t)) {
             vlSelfRef.SA_tb__DOT__checks = ((IData)(1U) 
@@ -362,12 +362,12 @@ VlCoroutine VSA_tb___024root___eval_initial__TOP__Vtiming__1(VSA_tb___024root* v
                               != vlSelfRef.SA_tb__DOT__hist[0U][0U])))) {
                 vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
                                                 + vlSelfRef.SA_tb__DOT__errors);
-                VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:81: Assertion failed in %m: [%0t] PE[0][0].a: expected %0d, got %0d\n",6, 'M',vlSymsp->name(),"SA_tb.unnamedblk3.unnamedblk5.unnamedblk6", 'T',-9
+                VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:92: Assertion failed in %m: [%0t] PE[0][0].a: expected %0d, got %0d\n",6, 'M',vlSymsp->name(),"SA_tb.unnamedblk3.unnamedblk5.unnamedblk6", 'T',-9
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',4,vlSelfRef.SA_tb__DOT__hist[0U][0U]
                              , '#',4,vlSelfRef.SA_tb__DOT__pe_a[0U][0U]);
-                VL_STOP_MT("SA_tb.sv", 81, "");
+                VL_STOP_MT("SA_tb.sv", 92, "");
             }
             vlSelfRef.SA_tb__DOT__checks = ((IData)(1U) 
                                             + vlSelfRef.SA_tb__DOT__checks);
@@ -375,12 +375,12 @@ VlCoroutine VSA_tb___024root___eval_initial__TOP__Vtiming__1(VSA_tb___024root* v
                               != vlSelfRef.SA_tb__DOT__hist[1U][0U])))) {
                 vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
                                                 + vlSelfRef.SA_tb__DOT__errors);
-                VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:81: Assertion failed in %m: [%0t] PE[0][1].a: expected %0d, got %0d\n",6, 'M',vlSymsp->name(),"SA_tb.unnamedblk3.unnamedblk5.unnamedblk6", 'T',-9
+                VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:92: Assertion failed in %m: [%0t] PE[0][1].a: expected %0d, got %0d\n",6, 'M',vlSymsp->name(),"SA_tb.unnamedblk3.unnamedblk5.unnamedblk6", 'T',-9
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',4,vlSelfRef.SA_tb__DOT__hist[1U][0U]
                              , '#',4,vlSelfRef.SA_tb__DOT__pe_a[0U][1U]);
-                VL_STOP_MT("SA_tb.sv", 81, "");
+                VL_STOP_MT("SA_tb.sv", 92, "");
             }
             vlSelfRef.SA_tb__DOT__checks = ((IData)(1U) 
                                             + vlSelfRef.SA_tb__DOT__checks);
@@ -388,12 +388,12 @@ VlCoroutine VSA_tb___024root___eval_initial__TOP__Vtiming__1(VSA_tb___024root* v
                               != vlSelfRef.SA_tb__DOT__hist[2U][0U])))) {
                 vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
                                                 + vlSelfRef.SA_tb__DOT__errors);
-                VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:81: Assertion failed in %m: [%0t] PE[0][2].a: expected %0d, got %0d\n",6, 'M',vlSymsp->name(),"SA_tb.unnamedblk3.unnamedblk5.unnamedblk6", 'T',-9
+                VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:92: Assertion failed in %m: [%0t] PE[0][2].a: expected %0d, got %0d\n",6, 'M',vlSymsp->name(),"SA_tb.unnamedblk3.unnamedblk5.unnamedblk6", 'T',-9
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',4,vlSelfRef.SA_tb__DOT__hist[2U][0U]
                              , '#',4,vlSelfRef.SA_tb__DOT__pe_a[0U][2U]);
-                VL_STOP_MT("SA_tb.sv", 81, "");
+                VL_STOP_MT("SA_tb.sv", 92, "");
             }
             vlSelfRef.SA_tb__DOT__checks = ((IData)(1U) 
                                             + vlSelfRef.SA_tb__DOT__checks);
@@ -401,12 +401,12 @@ VlCoroutine VSA_tb___024root___eval_initial__TOP__Vtiming__1(VSA_tb___024root* v
                               != vlSelfRef.SA_tb__DOT__hist[0U][1U])))) {
                 vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
                                                 + vlSelfRef.SA_tb__DOT__errors);
-                VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:81: Assertion failed in %m: [%0t] PE[1][0].a: expected %0d, got %0d\n",6, 'M',vlSymsp->name(),"SA_tb.unnamedblk3.unnamedblk5.unnamedblk6", 'T',-9
+                VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:92: Assertion failed in %m: [%0t] PE[1][0].a: expected %0d, got %0d\n",6, 'M',vlSymsp->name(),"SA_tb.unnamedblk3.unnamedblk5.unnamedblk6", 'T',-9
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',4,vlSelfRef.SA_tb__DOT__hist[0U][1U]
                              , '#',4,vlSelfRef.SA_tb__DOT__pe_a[1U][0U]);
-                VL_STOP_MT("SA_tb.sv", 81, "");
+                VL_STOP_MT("SA_tb.sv", 92, "");
             }
             vlSelfRef.SA_tb__DOT__checks = ((IData)(1U) 
                                             + vlSelfRef.SA_tb__DOT__checks);
@@ -414,12 +414,12 @@ VlCoroutine VSA_tb___024root___eval_initial__TOP__Vtiming__1(VSA_tb___024root* v
                               != vlSelfRef.SA_tb__DOT__hist[1U][1U])))) {
                 vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
                                                 + vlSelfRef.SA_tb__DOT__errors);
-                VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:81: Assertion failed in %m: [%0t] PE[1][1].a: expected %0d, got %0d\n",6, 'M',vlSymsp->name(),"SA_tb.unnamedblk3.unnamedblk5.unnamedblk6", 'T',-9
+                VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:92: Assertion failed in %m: [%0t] PE[1][1].a: expected %0d, got %0d\n",6, 'M',vlSymsp->name(),"SA_tb.unnamedblk3.unnamedblk5.unnamedblk6", 'T',-9
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',4,vlSelfRef.SA_tb__DOT__hist[1U][1U]
                              , '#',4,vlSelfRef.SA_tb__DOT__pe_a[1U][1U]);
-                VL_STOP_MT("SA_tb.sv", 81, "");
+                VL_STOP_MT("SA_tb.sv", 92, "");
             }
             vlSelfRef.SA_tb__DOT__checks = ((IData)(1U) 
                                             + vlSelfRef.SA_tb__DOT__checks);
@@ -427,12 +427,12 @@ VlCoroutine VSA_tb___024root___eval_initial__TOP__Vtiming__1(VSA_tb___024root* v
                               != vlSelfRef.SA_tb__DOT__hist[2U][1U])))) {
                 vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
                                                 + vlSelfRef.SA_tb__DOT__errors);
-                VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:81: Assertion failed in %m: [%0t] PE[1][2].a: expected %0d, got %0d\n",6, 'M',vlSymsp->name(),"SA_tb.unnamedblk3.unnamedblk5.unnamedblk6", 'T',-9
+                VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:92: Assertion failed in %m: [%0t] PE[1][2].a: expected %0d, got %0d\n",6, 'M',vlSymsp->name(),"SA_tb.unnamedblk3.unnamedblk5.unnamedblk6", 'T',-9
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',4,vlSelfRef.SA_tb__DOT__hist[2U][1U]
                              , '#',4,vlSelfRef.SA_tb__DOT__pe_a[1U][2U]);
-                VL_STOP_MT("SA_tb.sv", 81, "");
+                VL_STOP_MT("SA_tb.sv", 92, "");
             }
             vlSelfRef.SA_tb__DOT__checks = ((IData)(1U) 
                                             + vlSelfRef.SA_tb__DOT__checks);
@@ -440,12 +440,12 @@ VlCoroutine VSA_tb___024root___eval_initial__TOP__Vtiming__1(VSA_tb___024root* v
                               != vlSelfRef.SA_tb__DOT__hist[0U][2U])))) {
                 vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
                                                 + vlSelfRef.SA_tb__DOT__errors);
-                VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:81: Assertion failed in %m: [%0t] PE[2][0].a: expected %0d, got %0d\n",6, 'M',vlSymsp->name(),"SA_tb.unnamedblk3.unnamedblk5.unnamedblk6", 'T',-9
+                VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:92: Assertion failed in %m: [%0t] PE[2][0].a: expected %0d, got %0d\n",6, 'M',vlSymsp->name(),"SA_tb.unnamedblk3.unnamedblk5.unnamedblk6", 'T',-9
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',4,vlSelfRef.SA_tb__DOT__hist[0U][2U]
                              , '#',4,vlSelfRef.SA_tb__DOT__pe_a[2U][0U]);
-                VL_STOP_MT("SA_tb.sv", 81, "");
+                VL_STOP_MT("SA_tb.sv", 92, "");
             }
             vlSelfRef.SA_tb__DOT__checks = ((IData)(1U) 
                                             + vlSelfRef.SA_tb__DOT__checks);
@@ -453,12 +453,12 @@ VlCoroutine VSA_tb___024root___eval_initial__TOP__Vtiming__1(VSA_tb___024root* v
                               != vlSelfRef.SA_tb__DOT__hist[1U][2U])))) {
                 vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
                                                 + vlSelfRef.SA_tb__DOT__errors);
-                VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:81: Assertion failed in %m: [%0t] PE[2][1].a: expected %0d, got %0d\n",6, 'M',vlSymsp->name(),"SA_tb.unnamedblk3.unnamedblk5.unnamedblk6", 'T',-9
+                VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:92: Assertion failed in %m: [%0t] PE[2][1].a: expected %0d, got %0d\n",6, 'M',vlSymsp->name(),"SA_tb.unnamedblk3.unnamedblk5.unnamedblk6", 'T',-9
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',4,vlSelfRef.SA_tb__DOT__hist[1U][2U]
                              , '#',4,vlSelfRef.SA_tb__DOT__pe_a[2U][1U]);
-                VL_STOP_MT("SA_tb.sv", 81, "");
+                VL_STOP_MT("SA_tb.sv", 92, "");
             }
             vlSelfRef.SA_tb__DOT__checks = ((IData)(1U) 
                                             + vlSelfRef.SA_tb__DOT__checks);
@@ -466,12 +466,12 @@ VlCoroutine VSA_tb___024root___eval_initial__TOP__Vtiming__1(VSA_tb___024root* v
                               != vlSelfRef.SA_tb__DOT__hist[2U][2U])))) {
                 vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
                                                 + vlSelfRef.SA_tb__DOT__errors);
-                VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:81: Assertion failed in %m: [%0t] PE[2][2].a: expected %0d, got %0d\n",6, 'M',vlSymsp->name(),"SA_tb.unnamedblk3.unnamedblk5.unnamedblk6", 'T',-9
+                VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:92: Assertion failed in %m: [%0t] PE[2][2].a: expected %0d, got %0d\n",6, 'M',vlSymsp->name(),"SA_tb.unnamedblk3.unnamedblk5.unnamedblk6", 'T',-9
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',4,vlSelfRef.SA_tb__DOT__hist[2U][2U]
                              , '#',4,vlSelfRef.SA_tb__DOT__pe_a[2U][2U]);
-                VL_STOP_MT("SA_tb.sv", 81, "");
+                VL_STOP_MT("SA_tb.sv", 92, "");
             }
         }
         SA_tb__DOT__unnamedblk3__DOT__t = ((IData)(1U) 
@@ -482,7 +482,402 @@ VlCoroutine VSA_tb___024root___eval_initial__TOP__Vtiming__1(VSA_tb___024root* v
     } else {
         VL_WRITEF_NX("Test 1 FAILED: activation propagation\n",0);
     }
-    VL_FINISH_MT("SA_tb.sv", 92, "");
+    VSA_tb___024root____VbeforeTrig_h81bc4b78__0(vlSelf, 
+                                                 "@(negedge SA_tb.clk)");
+    co_await vlSelfRef.__VtrigSched_h81bc4b78__0.trigger(0U, 
+                                                         nullptr, 
+                                                         "@(negedge SA_tb.clk)", 
+                                                         "SA_tb.sv", 
+                                                         103);
+    vlSelfRef.__Vm_traceActivity[2U] = 1U;
+    vlSelfRef.SA_tb__DOT__rst_n = 1U;
+    vlSelfRef.SA_tb__DOT__en = 1U;
+    vlSelfRef.SA_tb__DOT__in_valid = 1U;
+    vlSelfRef.SA_tb__DOT__load_slot = 0U;
+    vlSelfRef.SA_tb__DOT__compute_slot = 1U;
+    vlSelfRef.SA_tb__DOT__b_in[2U][2U] = 1U;
+    vlSelfRef.SA_tb__DOT__b_in[2U][1U] = 1U;
+    vlSelfRef.SA_tb__DOT__b_in[2U][0U] = 1U;
+    vlSelfRef.SA_tb__DOT__b_in[1U][2U] = 1U;
+    vlSelfRef.SA_tb__DOT__b_in[1U][1U] = 1U;
+    vlSelfRef.SA_tb__DOT__b_in[1U][0U] = 1U;
+    vlSelfRef.SA_tb__DOT__b_in[0U][2U] = 1U;
+    vlSelfRef.SA_tb__DOT__b_in[0U][1U] = 1U;
+    vlSelfRef.SA_tb__DOT__b_in[0U][0U] = 1U;
+    VSA_tb___024root____VbeforeTrig_h81bc4b78__0(vlSelf, 
+                                                 "@(negedge SA_tb.clk)");
+    co_await vlSelfRef.__VtrigSched_h81bc4b78__0.trigger(0U, 
+                                                         nullptr, 
+                                                         "@(negedge SA_tb.clk)", 
+                                                         "SA_tb.sv", 
+                                                         113);
+    vlSelfRef.__Vm_traceActivity[2U] = 1U;
+    vlSelfRef.SA_tb__DOT__load_slot = 1U;
+    vlSelfRef.SA_tb__DOT__compute_slot = 0U;
+    if (VL_UNLIKELY(((1U != vlSelfRef.SA_tb__DOT__pe_b1[0U][0U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:120: Assertion failed in %m: [%0t] PE[0][0].b1: expected 1, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk7.unnamedblk8", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b1[0U][0U]);
+        VL_STOP_MT("SA_tb.sv", 120, "");
+    }
+    if (VL_UNLIKELY(((1U != vlSelfRef.SA_tb__DOT__pe_b1[0U][1U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:120: Assertion failed in %m: [%0t] PE[0][1].b1: expected 1, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk7.unnamedblk8", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b1[0U][1U]);
+        VL_STOP_MT("SA_tb.sv", 120, "");
+    }
+    if (VL_UNLIKELY(((1U != vlSelfRef.SA_tb__DOT__pe_b1[0U][2U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:120: Assertion failed in %m: [%0t] PE[0][2].b1: expected 1, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk7.unnamedblk8", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b1[0U][2U]);
+        VL_STOP_MT("SA_tb.sv", 120, "");
+    }
+    if (VL_UNLIKELY(((1U != vlSelfRef.SA_tb__DOT__pe_b1[1U][0U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:120: Assertion failed in %m: [%0t] PE[1][0].b1: expected 1, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk7.unnamedblk8", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b1[1U][0U]);
+        VL_STOP_MT("SA_tb.sv", 120, "");
+    }
+    if (VL_UNLIKELY(((1U != vlSelfRef.SA_tb__DOT__pe_b1[1U][1U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:120: Assertion failed in %m: [%0t] PE[1][1].b1: expected 1, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk7.unnamedblk8", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b1[1U][1U]);
+        VL_STOP_MT("SA_tb.sv", 120, "");
+    }
+    if (VL_UNLIKELY(((1U != vlSelfRef.SA_tb__DOT__pe_b1[1U][2U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:120: Assertion failed in %m: [%0t] PE[1][2].b1: expected 1, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk7.unnamedblk8", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b1[1U][2U]);
+        VL_STOP_MT("SA_tb.sv", 120, "");
+    }
+    if (VL_UNLIKELY(((1U != vlSelfRef.SA_tb__DOT__pe_b1[2U][0U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:120: Assertion failed in %m: [%0t] PE[2][0].b1: expected 1, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk7.unnamedblk8", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b1[2U][0U]);
+        VL_STOP_MT("SA_tb.sv", 120, "");
+    }
+    if (VL_UNLIKELY(((1U != vlSelfRef.SA_tb__DOT__pe_b1[2U][1U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:120: Assertion failed in %m: [%0t] PE[2][1].b1: expected 1, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk7.unnamedblk8", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b1[2U][1U]);
+        VL_STOP_MT("SA_tb.sv", 120, "");
+    }
+    if (VL_UNLIKELY(((1U != vlSelfRef.SA_tb__DOT__pe_b1[2U][2U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:120: Assertion failed in %m: [%0t] PE[2][2].b1: expected 1, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk7.unnamedblk8", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b1[2U][2U]);
+        VL_STOP_MT("SA_tb.sv", 120, "");
+    }
+    VSA_tb___024root____VbeforeTrig_h81bc4b78__0(vlSelf, 
+                                                 "@(negedge SA_tb.clk)");
+    co_await vlSelfRef.__VtrigSched_h81bc4b78__0.trigger(0U, 
+                                                         nullptr, 
+                                                         "@(negedge SA_tb.clk)", 
+                                                         "SA_tb.sv", 
+                                                         125);
+    vlSelfRef.__Vm_traceActivity[2U] = 1U;
+    vlSelfRef.SA_tb__DOT__load_slot = 0U;
+    vlSelfRef.SA_tb__DOT__compute_slot = 1U;
+    vlSelfRef.SA_tb__DOT__b_in[2U][2U] = 0U;
+    vlSelfRef.SA_tb__DOT__b_in[2U][1U] = 0U;
+    vlSelfRef.SA_tb__DOT__b_in[2U][0U] = 0U;
+    vlSelfRef.SA_tb__DOT__b_in[1U][2U] = 0U;
+    vlSelfRef.SA_tb__DOT__b_in[1U][1U] = 0U;
+    vlSelfRef.SA_tb__DOT__b_in[1U][0U] = 0U;
+    vlSelfRef.SA_tb__DOT__b_in[0U][2U] = 0U;
+    vlSelfRef.SA_tb__DOT__b_in[0U][1U] = 0U;
+    vlSelfRef.SA_tb__DOT__b_in[0U][0U] = 0U;
+    if (VL_UNLIKELY(((1U != vlSelfRef.SA_tb__DOT__pe_b2[0U][0U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:135: Assertion failed in %m: [%0t] PE[0][0].b2: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk9.unnamedblk10", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b2[0U][0U]);
+        VL_STOP_MT("SA_tb.sv", 135, "");
+    }
+    if (VL_UNLIKELY(((1U != vlSelfRef.SA_tb__DOT__pe_b2[0U][1U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:135: Assertion failed in %m: [%0t] PE[0][1].b2: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk9.unnamedblk10", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b2[0U][1U]);
+        VL_STOP_MT("SA_tb.sv", 135, "");
+    }
+    if (VL_UNLIKELY(((1U != vlSelfRef.SA_tb__DOT__pe_b2[0U][2U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:135: Assertion failed in %m: [%0t] PE[0][2].b2: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk9.unnamedblk10", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b2[0U][2U]);
+        VL_STOP_MT("SA_tb.sv", 135, "");
+    }
+    if (VL_UNLIKELY(((1U != vlSelfRef.SA_tb__DOT__pe_b2[1U][0U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:135: Assertion failed in %m: [%0t] PE[1][0].b2: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk9.unnamedblk10", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b2[1U][0U]);
+        VL_STOP_MT("SA_tb.sv", 135, "");
+    }
+    if (VL_UNLIKELY(((1U != vlSelfRef.SA_tb__DOT__pe_b2[1U][1U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:135: Assertion failed in %m: [%0t] PE[1][1].b2: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk9.unnamedblk10", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b2[1U][1U]);
+        VL_STOP_MT("SA_tb.sv", 135, "");
+    }
+    if (VL_UNLIKELY(((1U != vlSelfRef.SA_tb__DOT__pe_b2[1U][2U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:135: Assertion failed in %m: [%0t] PE[1][2].b2: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk9.unnamedblk10", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b2[1U][2U]);
+        VL_STOP_MT("SA_tb.sv", 135, "");
+    }
+    if (VL_UNLIKELY(((1U != vlSelfRef.SA_tb__DOT__pe_b2[2U][0U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:135: Assertion failed in %m: [%0t] PE[2][0].b2: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk9.unnamedblk10", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b2[2U][0U]);
+        VL_STOP_MT("SA_tb.sv", 135, "");
+    }
+    if (VL_UNLIKELY(((1U != vlSelfRef.SA_tb__DOT__pe_b2[2U][1U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:135: Assertion failed in %m: [%0t] PE[2][1].b2: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk9.unnamedblk10", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b2[2U][1U]);
+        VL_STOP_MT("SA_tb.sv", 135, "");
+    }
+    if (VL_UNLIKELY(((1U != vlSelfRef.SA_tb__DOT__pe_b2[2U][2U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:135: Assertion failed in %m: [%0t] PE[2][2].b2: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk9.unnamedblk10", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b2[2U][2U]);
+        VL_STOP_MT("SA_tb.sv", 135, "");
+    }
+    VSA_tb___024root____VbeforeTrig_h81bc4b78__0(vlSelf, 
+                                                 "@(negedge SA_tb.clk)");
+    co_await vlSelfRef.__VtrigSched_h81bc4b78__0.trigger(0U, 
+                                                         nullptr, 
+                                                         "@(negedge SA_tb.clk)", 
+                                                         "SA_tb.sv", 
+                                                         140);
+    vlSelfRef.__Vm_traceActivity[2U] = 1U;
+    vlSelfRef.SA_tb__DOT__load_slot = 1U;
+    vlSelfRef.SA_tb__DOT__compute_slot = 0U;
+    if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_b1[0U][0U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:147: Assertion failed in %m: [%0t] PE[0][0].b1: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk11.unnamedblk12", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b1[0U][0U]);
+        VL_STOP_MT("SA_tb.sv", 147, "");
+    }
+    if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_b1[0U][1U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:147: Assertion failed in %m: [%0t] PE[0][1].b1: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk11.unnamedblk12", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b1[0U][1U]);
+        VL_STOP_MT("SA_tb.sv", 147, "");
+    }
+    if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_b1[0U][2U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:147: Assertion failed in %m: [%0t] PE[0][2].b1: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk11.unnamedblk12", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b1[0U][2U]);
+        VL_STOP_MT("SA_tb.sv", 147, "");
+    }
+    if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_b1[1U][0U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:147: Assertion failed in %m: [%0t] PE[1][0].b1: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk11.unnamedblk12", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b1[1U][0U]);
+        VL_STOP_MT("SA_tb.sv", 147, "");
+    }
+    if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_b1[1U][1U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:147: Assertion failed in %m: [%0t] PE[1][1].b1: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk11.unnamedblk12", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b1[1U][1U]);
+        VL_STOP_MT("SA_tb.sv", 147, "");
+    }
+    if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_b1[1U][2U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:147: Assertion failed in %m: [%0t] PE[1][2].b1: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk11.unnamedblk12", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b1[1U][2U]);
+        VL_STOP_MT("SA_tb.sv", 147, "");
+    }
+    if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_b1[2U][0U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:147: Assertion failed in %m: [%0t] PE[2][0].b1: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk11.unnamedblk12", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b1[2U][0U]);
+        VL_STOP_MT("SA_tb.sv", 147, "");
+    }
+    if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_b1[2U][1U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:147: Assertion failed in %m: [%0t] PE[2][1].b1: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk11.unnamedblk12", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b1[2U][1U]);
+        VL_STOP_MT("SA_tb.sv", 147, "");
+    }
+    if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_b1[2U][2U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:147: Assertion failed in %m: [%0t] PE[2][2].b1: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk11.unnamedblk12", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b1[2U][2U]);
+        VL_STOP_MT("SA_tb.sv", 147, "");
+    }
+    VSA_tb___024root____VbeforeTrig_h81bc4b78__0(vlSelf, 
+                                                 "@(negedge SA_tb.clk)");
+    co_await vlSelfRef.__VtrigSched_h81bc4b78__0.trigger(0U, 
+                                                         nullptr, 
+                                                         "@(negedge SA_tb.clk)", 
+                                                         "SA_tb.sv", 
+                                                         152);
+    vlSelfRef.__Vm_traceActivity[2U] = 1U;
+    vlSelfRef.SA_tb__DOT__load_slot = 1U;
+    vlSelfRef.SA_tb__DOT__compute_slot = 0U;
+    if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_b2[0U][0U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:159: Assertion failed in %m: [%0t] PE[0][0].b2: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk13.unnamedblk14", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b2[0U][0U]);
+        VL_STOP_MT("SA_tb.sv", 159, "");
+    }
+    if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_b2[0U][1U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:159: Assertion failed in %m: [%0t] PE[0][1].b2: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk13.unnamedblk14", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b2[0U][1U]);
+        VL_STOP_MT("SA_tb.sv", 159, "");
+    }
+    if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_b2[0U][2U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:159: Assertion failed in %m: [%0t] PE[0][2].b2: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk13.unnamedblk14", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b2[0U][2U]);
+        VL_STOP_MT("SA_tb.sv", 159, "");
+    }
+    if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_b2[1U][0U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:159: Assertion failed in %m: [%0t] PE[1][0].b2: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk13.unnamedblk14", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b2[1U][0U]);
+        VL_STOP_MT("SA_tb.sv", 159, "");
+    }
+    if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_b2[1U][1U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:159: Assertion failed in %m: [%0t] PE[1][1].b2: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk13.unnamedblk14", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b2[1U][1U]);
+        VL_STOP_MT("SA_tb.sv", 159, "");
+    }
+    if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_b2[1U][2U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:159: Assertion failed in %m: [%0t] PE[1][2].b2: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk13.unnamedblk14", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b2[1U][2U]);
+        VL_STOP_MT("SA_tb.sv", 159, "");
+    }
+    if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_b2[2U][0U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:159: Assertion failed in %m: [%0t] PE[2][0].b2: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk13.unnamedblk14", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b2[2U][0U]);
+        VL_STOP_MT("SA_tb.sv", 159, "");
+    }
+    if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_b2[2U][1U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:159: Assertion failed in %m: [%0t] PE[2][1].b2: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk13.unnamedblk14", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b2[2U][1U]);
+        VL_STOP_MT("SA_tb.sv", 159, "");
+    }
+    if (VL_UNLIKELY(((0U != vlSelfRef.SA_tb__DOT__pe_b2[2U][2U])))) {
+        vlSelfRef.SA_tb__DOT__errors = ((IData)(1U) 
+                                        + vlSelfRef.SA_tb__DOT__errors);
+        VL_WRITEF_NX("[%0t] %%Error: SA_tb.sv:159: Assertion failed in %m: [%0t] PE[2][2].b2: expected 0, got %0d\n",5, 'M',vlSymsp->name(),"SA_tb.unnamedblk13.unnamedblk14", 'T',-9
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',64,VL_TIME_UNITED_Q(1000)
+                     , '#',4,vlSelfRef.SA_tb__DOT__pe_b2[2U][2U]);
+        VL_STOP_MT("SA_tb.sv", 159, "");
+    }
+    VL_FINISH_MT("SA_tb.sv", 209, "");
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     co_return;
 }
@@ -753,6 +1148,24 @@ void VSA_tb___024root___nba_sequent__TOP__0(VSA_tb___024root* vlSelf) {
         vlSelfRef.SA_tb__DOT__dut__DOT____Vcellout__row__BRA__1__KET____DOT__col__BRA__2__KET____DOT__PE__result = 0U;
         vlSelfRef.SA_tb__DOT__dut__DOT____Vcellout__row__BRA__1__KET____DOT__col__BRA__1__KET____DOT__PE__result = 0U;
     }
+    vlSelfRef.SA_tb__DOT__pe_b1[2U][2U] = vlSelfRef.SA_tb__DOT__dut__DOT__row__BRA__2__KET____DOT__col__BRA__2__KET____DOT__PE__DOT__b1;
+    vlSelfRef.SA_tb__DOT__pe_b2[2U][2U] = vlSelfRef.SA_tb__DOT__dut__DOT__row__BRA__2__KET____DOT__col__BRA__2__KET____DOT__PE__DOT__b2;
+    vlSelfRef.SA_tb__DOT__pe_b1[2U][1U] = vlSelfRef.SA_tb__DOT__dut__DOT__row__BRA__2__KET____DOT__col__BRA__1__KET____DOT__PE__DOT__b1;
+    vlSelfRef.SA_tb__DOT__pe_b2[2U][1U] = vlSelfRef.SA_tb__DOT__dut__DOT__row__BRA__2__KET____DOT__col__BRA__1__KET____DOT__PE__DOT__b2;
+    vlSelfRef.SA_tb__DOT__pe_b1[2U][0U] = vlSelfRef.SA_tb__DOT__dut__DOT__row__BRA__2__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b1;
+    vlSelfRef.SA_tb__DOT__pe_b2[2U][0U] = vlSelfRef.SA_tb__DOT__dut__DOT__row__BRA__2__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b2;
+    vlSelfRef.SA_tb__DOT__pe_b1[1U][2U] = vlSelfRef.SA_tb__DOT__dut__DOT__row__BRA__1__KET____DOT__col__BRA__2__KET____DOT__PE__DOT__b1;
+    vlSelfRef.SA_tb__DOT__pe_b2[1U][2U] = vlSelfRef.SA_tb__DOT__dut__DOT__row__BRA__1__KET____DOT__col__BRA__2__KET____DOT__PE__DOT__b2;
+    vlSelfRef.SA_tb__DOT__pe_b1[1U][1U] = vlSelfRef.SA_tb__DOT__dut__DOT__row__BRA__1__KET____DOT__col__BRA__1__KET____DOT__PE__DOT__b1;
+    vlSelfRef.SA_tb__DOT__pe_b2[1U][1U] = vlSelfRef.SA_tb__DOT__dut__DOT__row__BRA__1__KET____DOT__col__BRA__1__KET____DOT__PE__DOT__b2;
+    vlSelfRef.SA_tb__DOT__pe_b1[1U][0U] = vlSelfRef.SA_tb__DOT__dut__DOT__row__BRA__1__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b1;
+    vlSelfRef.SA_tb__DOT__pe_b2[1U][0U] = vlSelfRef.SA_tb__DOT__dut__DOT__row__BRA__1__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b2;
+    vlSelfRef.SA_tb__DOT__pe_b1[0U][2U] = vlSelfRef.SA_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__2__KET____DOT__PE__DOT__b1;
+    vlSelfRef.SA_tb__DOT__pe_b2[0U][2U] = vlSelfRef.SA_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__2__KET____DOT__PE__DOT__b2;
+    vlSelfRef.SA_tb__DOT__pe_b1[0U][1U] = vlSelfRef.SA_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__1__KET____DOT__PE__DOT__b1;
+    vlSelfRef.SA_tb__DOT__pe_b2[0U][1U] = vlSelfRef.SA_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__1__KET____DOT__PE__DOT__b2;
+    vlSelfRef.SA_tb__DOT__pe_b1[0U][0U] = vlSelfRef.SA_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b1;
+    vlSelfRef.SA_tb__DOT__pe_b2[0U][0U] = vlSelfRef.SA_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b2;
     vlSelfRef.SA_tb__DOT__dut__DOT__p_wire[0U][0U] 
         = vlSelfRef.SA_tb__DOT__dut__DOT____Vcellout__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__result;
     vlSelfRef.SA_tb__DOT__dut__DOT__a_wire[2U][0U] 
@@ -955,6 +1368,11 @@ void VSA_tb___024root____VbeforeTrig_h81bc4b78__0(VSA_tb___024root* vlSelf, cons
     vlSelfRef.__Vtrigprevexpr___TOP__SA_tb__DOT__clk__0 
         = vlSelfRef.SA_tb__DOT__clk;
     if ((4ULL & __VTmp[0U])) {
+        vlSelfRef.__VtrigSched_h81bc4b78__0.ready(__VeventDescription);
+        vlSelfRef.__VtrigSched_h81bc4b78__0.ready(__VeventDescription);
+        vlSelfRef.__VtrigSched_h81bc4b78__0.ready(__VeventDescription);
+        vlSelfRef.__VtrigSched_h81bc4b78__0.ready(__VeventDescription);
+        vlSelfRef.__VtrigSched_h81bc4b78__0.ready(__VeventDescription);
         vlSelfRef.__VtrigSched_h81bc4b78__0.ready(__VeventDescription);
         vlSelfRef.__VtrigSched_h81bc4b78__0.ready(__VeventDescription);
         vlSelfRef.__VtrigSched_h81bc4b78__0.ready(__VeventDescription);

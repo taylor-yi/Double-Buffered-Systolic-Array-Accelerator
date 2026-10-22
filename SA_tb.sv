@@ -2,9 +2,9 @@
 // Systolic Array Testbench
 module SA_tb ();
     logic clk, rst_n, en, in_valid, load_slot, compute_slot;
-    logic [3:0] a_in [2:0];
-    logic [3:0] b_in [2:0][2:0];
-    logic [9:0] result_matrix [2:0];
+    logic [3:0] a_in [3];
+    logic [3:0] b_in [3][3];
+    logic [9:0] result_matrix [3];
 
     Systolic_Array dut (.*);
 
@@ -23,10 +23,21 @@ module SA_tb ();
 
     // Hook up copy systolic array to iterate over constant variables
     logic [3:0] pe_a [3][3];
-    
+    //Copy a
     for (genvar i = 0; i < 3; i++) begin : tap_r
         for (genvar j = 0; j < 3; j++) begin : tap_c
             assign pe_a[i][j] = dut.row[i].col[j].PE.a;
+        end
+    end
+
+    //Copy b, slots 1 and 2
+    logic [3:0] pe_b1 [3][3];
+    logic [3:0] pe_b2 [3][3];
+
+    for (genvar i = 0; i < 3; i++) begin : tap_b_r
+        for (genvar j = 0; j < 3; j++) begin : tap_b_c
+            assign pe_b1[i][j] = dut.row[i].col[j].PE.b1;
+            assign pe_b2[i][j] = dut.row[i].col[j].PE.b2;
         end
     end
 
@@ -87,6 +98,71 @@ module SA_tb ();
 
         if (errors == test_errors) $display("Test 1 passed: activations propagate correctly");
         else $display("Test 1 FAILED: activation propagation");
+
+        // Test 2, check b is loading correctly
+        @(negedge clk);
+        rst_n = 1;
+        en = 1;
+        in_valid = 1; 
+        load_slot = 0; // load b1 with 1s
+        compute_slot = 1; // different slots, avoids the hazard assertion
+        b_in = '{'{4'h1, 4'h1, 4'h1},
+                '{4'h1, 4'h1, 4'h1},
+                '{4'h1, 4'h1, 4'h1}};
+        
+        @(negedge clk); 
+        load_slot = 1; //load b2 with 1s
+        compute_slot = 0;
+        for (int i = 0; i < 3; i++) begin
+            for (int j = 0; j < 3; j++) begin
+                if (pe_b1[i][j] !== 4'h1) begin //check b1
+                    errors++;
+                    $error("[%0t] PE[%0d][%0d].b1: expected 1, got %0d", $time, i, j, pe_b1[i][j]);
+                end
+            end
+        end
+
+        @(negedge clk);
+        load_slot = 0; //load b1 with 0s
+        compute_slot = 1;
+        b_in = '{'{4'h0, 4'h0, 4'h0},
+                '{4'h0, 4'h0, 4'h0},
+                '{4'h0, 4'h0, 4'h0}};
+        for (int i = 0; i < 3; i++) begin
+            for (int j = 0; j < 3; j++) begin
+                if (pe_b2[i][j] !== 4'h1) begin //check b2
+                    errors++;
+                    $error("[%0t] PE[%0d][%0d].b2: expected 0, got %0d", $time, i, j, pe_b2[i][j]);
+                end
+            end
+        end
+
+        @(negedge clk);
+        load_slot = 1; //load b2 with 0s
+        compute_slot = 0;
+        for (int i = 0; i < 3; i++) begin
+            for (int j = 0; j < 3; j++) begin
+                if (pe_b1[i][j] !== 4'h0) begin //check b1
+                    errors++;
+                    $error("[%0t] PE[%0d][%0d].b1: expected 0, got %0d", $time, i, j, pe_b1[i][j]);
+                end
+            end
+        end
+
+        @(negedge clk);
+        load_slot = 1; //load b2 with 0s
+        compute_slot = 0;
+        for (int i = 0; i < 3; i++) begin
+            for (int j = 0; j < 3; j++) begin
+                if (pe_b2[i][j] !== 4'h0) begin //check b1
+                    errors++;
+                    $error("[%0t] PE[%0d][%0d].b2: expected 0, got %0d", $time, i, j, pe_b2[i][j]);
+                end
+            end
+        end
+
+        if (errors == test_errors) $display("Test 2 passed: b1 and b2 loaded correctly with both 1s and 0s");
+        else $display("Test 2 FAILED: b registers not loaded correctly");
 
         
         $finish;

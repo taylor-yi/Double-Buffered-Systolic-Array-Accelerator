@@ -80,9 +80,12 @@ class alignas(VL_CACHE_LINE_BYTES) VSA_tb___024root final {
         VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT____Vcellinp__dut__b_in;
         VlUnpacked<CData/*3:0*/, 3> SA_tb__DOT____Vcellinp__dut__a_in;
         VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__hist;
-        VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__pe_a;
+        VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__A;
     };
     struct {
+        VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__W;
+        VlUnpacked<VlUnpacked<IData/*31:0*/, 3>, 3> SA_tb__DOT__C_exp;
+        VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__pe_a;
         VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__pe_b1;
         VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__pe_b2;
         VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__dut__DOT__a_wire;
@@ -92,10 +95,11 @@ class alignas(VL_CACHE_LINE_BYTES) VSA_tb___024root final {
         VlUnpacked<QData/*63:0*/, 1> __VactTriggered;
         VlUnpacked<QData/*63:0*/, 1> __VactTriggeredAcc;
         VlUnpacked<QData/*63:0*/, 1> __VnbaTriggered;
-        VlUnpacked<CData/*0:0*/, 7> __Vm_traceActivity;
+        VlUnpacked<CData/*0:0*/, 6> __Vm_traceActivity;
     };
     VlDelayScheduler __VdlySched;
     VlTriggerScheduler __VtrigSched_h81bc4b78__0;
+    VlTriggerScheduler __VtrigSched_h81bc4bb7__0;
 
     // INTERNAL VARIABLES
     VSA_tb__Syms* vlSymsp;

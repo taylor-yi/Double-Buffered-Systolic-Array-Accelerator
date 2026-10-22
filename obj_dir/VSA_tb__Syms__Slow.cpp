@@ -12,7 +12,7 @@ VSA_tb__Syms::VSA_tb__Syms(VerilatedContext* contextp, const char* namep, VSA_tb
     , TOP{this, namep}
 {
     // Check resources
-    Verilated::stackCheck(286);
+    Verilated::stackCheck(378);
     // Setup sub module instances
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-9);

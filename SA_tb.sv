@@ -15,6 +15,9 @@ module SA_tb ();
 
     int errors = 0, checks = 0, test_errors;
     logic [3:0] hist [3][3];
+    logic [3:0] A [3][3];
+    logic [3:0] W [3][3];
+    int C_exp [3][3]; //result reference
 
     initial begin
         $dumpfile("dump.vcd");
@@ -99,6 +102,8 @@ module SA_tb ();
         if (errors == test_errors) $display("Test 1 passed: activations propagate correctly");
         else $display("Test 1 FAILED: activation propagation");
 
+        repeat(3) @(posedge clk);
+
         // Test 2, check b is loading correctly
         @(negedge clk);
         rst_n = 1;
@@ -164,7 +169,72 @@ module SA_tb ();
         if (errors == test_errors) $display("Test 2 passed: b1 and b2 loaded correctly with both 1s and 0s");
         else $display("Test 2 FAILED: b registers not loaded correctly");
 
+        repeat(3) @(posedge clk);
+
+        // Test 3: basic mat mult
+        @(negedge clk);
+        A = '{'{4'h1, 4'h2, 4'h3},
+            '{4'h4, 4'h5, 4'h6},
+            '{4'h7, 4'h8, 4'h9}};
+
+        W = '{'{4'h1, 4'h0, 4'h2},
+            '{4'h3, 4'h1, 4'h0},
+            '{4'h0, 4'h2, 4'h1}};
+
+        for (int i = 0; i < 3; i++) begin
+            for (int j = 0; j < 3; j++) begin
+                C_exp[i][j] = 0;
+                for (int r = 0; r < 3; r++)
+                    C_exp[i][j] += A[i][r] * W[r][j];
+            end
+        end
+
+        // hold compute while loading with en low
+        @(negedge clk);
+        en = 0;
+        in_valid = 1;
+        load_slot = 0;
+        compute_slot = 1;
+        for (int i = 0; i < 3; i++)
+            for (int j = 0; j < 3; j++)
+                b_in[i][j] = W[i][j];
+
+                @(negedge clk);
+                in_valid = 0;
+                load_slot = 1;
+                compute_slot = 0;
+                en = 1;
+                a_in = '{default: '0};
+
+                repeat(3) @(negedge clk);
+
+                // stream A in with skew: row r of the array gets A[i][r] at cycle i + r
+                // C[i][c] comes out the bottom of column c at cycle i + c + 3
+                for (int k = 0; k < 8; k++) begin
+                    @(negedge clk);
+
+                    // check outputs registered on the last edge
+                    for (int c = 0; c < 3; c++) begin
+                        if (k - 3 - c >= 0 && k - 3 - c < 3) begin
+                            checks++;
+                            if (result_matrix[c] !== 10'(C_exp[k-3-c][c])) begin
+                                errors++;
+                                $error("[%0t] C[%0d][%0d]: expected %0d, got %0d",
+                                    $time, k-3-c, c, C_exp[k-3-c][c], result_matrix[c]);
+                            end
+                        end
+                    end
+
+                    // drive the next skewed column of inputs
+                    for (int r = 0; r < 3; r++)
+                        a_in[r] = (k - r >= 0 && k - r < 3) ? A[k-r][r] : 4'h0;
+                end
+
+        if (errors == test_errors) $display("Test 3 passed: 3x3 matrix multiply correct");
+        else $display("Test 3 FAILED: matrix multiply");
         
+        repeat(3) @(negedge clk);
+
         $finish;
 
     end

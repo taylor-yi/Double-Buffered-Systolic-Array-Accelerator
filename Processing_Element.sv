@@ -5,7 +5,7 @@ module Processing_Element(
     input logic clk, rst_n, in_valid, load_slot, compute_slot, en,
     input logic [3:0] a, b,
     input logic [9:0] above_result,
-    output logic [3:0] a_out, b_out,
+    output logic [3:0] a_out,
     output logic [9:0] result
 );
 
@@ -15,7 +15,6 @@ module Processing_Element(
     // in full optimization it will also check if respective b1 or b2 is zero and make the whole sum zero
     logic zeroed;
     assign w = compute_slot ? b2 : b1;
-    assign b_out = load_slot ? b2 : b1;
     assign zeroed = (a == '0) || (w == '0);
 
     // b assignment based on slot

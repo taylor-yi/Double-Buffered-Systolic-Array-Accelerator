@@ -1,13 +1,15 @@
+`timescale 1ns/1ps
+// Processing Element Testbench
 module PE_tb ();
     logic clk, rst_n, in_valid, load_slot, compute_slot, en;
     logic [3:0] a, b;
     logic [9:0] above_result;
-    logic [3:0] a_out, b_out;
+    logic [3:0] a_out;
     logic [9:0] result;
 
     logic new_test;
 
-    PE dut(.*);
+    Processing_Element dut(.*);
 
     int errors = 0, checks = 0, test_errors;
 
@@ -51,9 +53,9 @@ module PE_tb ();
         @(negedge clk); // if (a_out !== '0 || b_out !== '0) begin $error("reset was overriden"); end
 
         checks++;
-        if (a_out !== '0 || b_out !== '0 || result !== '0) begin
+        if (a_out !== '0 || dut.b1 !== '0 || result !== '0) begin
             errors++;
-            $error("[%0t] reset overridden (b1 side): a_out=%0d b_out=%0d result=%0d", $time, a_out, b_out, result);
+            $error("[%0t] reset overridden (b1 side): a_out=%0d dut.b1=%0d result=%0d", $time, a_out, dut.b1, result);
         end
 
         in_valid = 1;
@@ -64,9 +66,9 @@ module PE_tb ();
 
         @(negedge clk);
         checks++;
-        if (a_out !== '0 || b_out !== '0 || result !== '0) begin
+        if (a_out !== '0 || dut.b2 !== '0 || result !== '0) begin
             errors++;
-            $error("[%0t] reset overridden (b2 side): a_out=%0d b_out=%0d result=%0d", $time, a_out, b_out, result);
+            $error("[%0t] reset overridden (b2 side): a_out=%0d dut.b2=%0d result=%0d", $time, a_out, dut.b2, result);
         end
 
         if (errors == test_errors) $display("Test 1 passed: reset priority");
@@ -120,9 +122,9 @@ module PE_tb ();
         end
 
         @(negedge clk);
-        if (b_out !== 4'b0010) begin
+        if (dut.b !== 4'b0010) begin
             errors++;
-            $error("[%0t] b_out: b_out expected: 0010, b was: %0d", $time, b_out);
+            $error("[%0t] dut.b: dut.b expected: 0010, b was: %0d", $time, dut.b);
         end
 
         if (errors == test_errors) $display("Test 3 passed: weight shift chain");

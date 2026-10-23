@@ -105,5 +105,7 @@ always_comb begin
                 c_next_state = IDLE;
             end
         end
+    endcase
+end
 
 endmodule

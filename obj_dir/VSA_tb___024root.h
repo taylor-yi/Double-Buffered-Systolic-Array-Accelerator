@@ -23,6 +23,7 @@ class alignas(VL_CACHE_LINE_BYTES) VSA_tb___024root final {
         CData/*0:0*/ SA_tb__DOT__in_valid;
         CData/*0:0*/ SA_tb__DOT__load_slot;
         CData/*0:0*/ SA_tb__DOT__compute_slot;
+        CData/*3:0*/ SA_tb__DOT__expected_temp;
         CData/*3:0*/ SA_tb__DOT__dut__DOT____Vcellout__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__a_out;
         CData/*3:0*/ SA_tb__DOT__dut__DOT____Vcellout__row__BRA__0__KET____DOT__col__BRA__1__KET____DOT__PE__a_out;
         CData/*3:0*/ SA_tb__DOT__dut__DOT____Vcellout__row__BRA__0__KET____DOT__col__BRA__2__KET____DOT__PE__a_out;
@@ -72,22 +73,27 @@ class alignas(VL_CACHE_LINE_BYTES) VSA_tb___024root final {
         IData/*31:0*/ SA_tb__DOT__errors;
         IData/*31:0*/ SA_tb__DOT__checks;
         IData/*31:0*/ SA_tb__DOT__test_errors;
+        IData/*31:0*/ SA_tb__DOT__m;
+        IData/*31:0*/ SA_tb__DOT__test_num;
         IData/*31:0*/ __Vi;
         VlUnpacked<CData/*3:0*/, 3> SA_tb__DOT__a_in;
         VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__b_in;
         VlUnpacked<SData/*9:0*/, 3> SA_tb__DOT__result_matrix;
         VlUnpacked<SData/*9:0*/, 3> SA_tb__DOT____Vcellout__dut__result_matrix;
         VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT____Vcellinp__dut__b_in;
+    };
+    struct {
         VlUnpacked<CData/*3:0*/, 3> SA_tb__DOT____Vcellinp__dut__a_in;
         VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__hist;
         VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__A;
-    };
-    struct {
         VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__W;
         VlUnpacked<VlUnpacked<IData/*31:0*/, 3>, 3> SA_tb__DOT__C_exp;
         VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__pe_a;
         VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__pe_b1;
         VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__pe_b2;
+        VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__A2;
+        VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__W2;
+        VlUnpacked<VlUnpacked<IData/*31:0*/, 3>, 3> SA_tb__DOT__C_exp2;
         VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__dut__DOT__a_wire;
         VlUnpacked<VlUnpacked<SData/*9:0*/, 3>, 3> SA_tb__DOT__dut__DOT__p_wire;
         VlUnpacked<QData/*63:0*/, 1> __VstlTriggered;

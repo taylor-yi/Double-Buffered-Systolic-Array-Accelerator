@@ -15,6 +15,7 @@ VL_ATTR_COLD void VSA_tb___024root___eval_static(VSA_tb___024root* vlSelf) {
         // Inlined CFunc: _eval_static__TOP
         vlSelfRef.SA_tb__DOT__errors = 0U;
         vlSelfRef.SA_tb__DOT__checks = 0U;
+        vlSelfRef.SA_tb__DOT__test_num = 0U;
     }
     vlSelfRef.__Vtrigprevexpr___TOP__SA_tb__DOT__clk__0 
         = vlSelfRef.SA_tb__DOT__clk;
@@ -410,6 +411,23 @@ VL_ATTR_COLD void VSA_tb___024root___ctor_var_reset(VSA_tb___024root* vlSelf) {
             vlSelf->SA_tb__DOT__pe_b2[__Vi0][__Vi1] = VL_SCOPED_RAND_RESET_I(4, __VscopeHash, 15527897916713061422ull);
         }
     }
+    vlSelf->SA_tb__DOT__expected_temp = VL_SCOPED_RAND_RESET_I(4, __VscopeHash, 3967798650738167132ull);
+    for (int __Vi0 = 0; __Vi0 < 3; ++__Vi0) {
+        for (int __Vi1 = 0; __Vi1 < 3; ++__Vi1) {
+            vlSelf->SA_tb__DOT__A2[__Vi0][__Vi1] = VL_SCOPED_RAND_RESET_I(4, __VscopeHash, 16640598853857071760ull);
+        }
+    }
+    for (int __Vi0 = 0; __Vi0 < 3; ++__Vi0) {
+        for (int __Vi1 = 0; __Vi1 < 3; ++__Vi1) {
+            vlSelf->SA_tb__DOT__W2[__Vi0][__Vi1] = VL_SCOPED_RAND_RESET_I(4, __VscopeHash, 1386105824099030213ull);
+        }
+    }
+    for (int __Vi0 = 0; __Vi0 < 3; ++__Vi0) {
+        for (int __Vi1 = 0; __Vi1 < 3; ++__Vi1) {
+            vlSelf->SA_tb__DOT__C_exp2[__Vi0][__Vi1] = 0;
+        }
+    }
+    vlSelf->SA_tb__DOT__m = 0;
     for (int __Vi0 = 0; __Vi0 < 3; ++__Vi0) {
         for (int __Vi1 = 0; __Vi1 < 3; ++__Vi1) {
             vlSelf->SA_tb__DOT__dut__DOT__a_wire[__Vi0][__Vi1] = VL_SCOPED_RAND_RESET_I(4, __VscopeHash, 12294323925784714138ull);

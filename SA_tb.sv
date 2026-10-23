@@ -37,6 +37,9 @@ module SA_tb ();
     logic [3:0] pe_b1 [3][3];
     logic [3:0] pe_b2 [3][3];
 
+    //Test 3 temp vars
+    logic [3:0] expected_temp;
+
     for (genvar i = 0; i < 3; i++) begin : tap_b_r
         for (genvar j = 0; j < 3; j++) begin : tap_b_c
             assign pe_b1[i][j] = dut.row[i].col[j].PE.b1;
@@ -44,7 +47,15 @@ module SA_tb ();
         end
     end
 
+    logic [3:0] A2 [3][3];
+    logic [3:0] W2 [3][3];
+    int C_exp2 [3][3];
+    int m;
+    int test_num = 0;
+
     initial begin
+        test_errors = errors;
+
         rst_n = 0;
         en = 0;
         in_valid = 0;
@@ -55,6 +66,7 @@ module SA_tb ();
         
         // Test 1: check a_in load correctly
         @(negedge clk);
+        test_num += 1;
         rst_n = 1;
         en = 1;
         in_valid = 0;
@@ -106,6 +118,7 @@ module SA_tb ();
 
         // Test 2, check b is loading correctly
         @(negedge clk);
+        test_num += 1;
         rst_n = 1;
         en = 1;
         in_valid = 1; 
@@ -172,6 +185,7 @@ module SA_tb ();
         repeat(3) @(posedge clk);
 
         // Test 3: basic mat mult
+        test_num += 1;
         @(negedge clk);
         A = '{'{4'h1, 4'h2, 4'h3},
             '{4'h4, 4'h5, 4'h6},
@@ -229,10 +243,333 @@ module SA_tb ();
                     for (int r = 0; r < 3; r++)
                         a_in[r] = (k - r >= 0 && k - r < 3) ? A[k-r][r] : 4'h0;
                 end
-
         if (errors == test_errors) $display("Test 3 passed: 3x3 matrix multiply correct");
         else $display("Test 3 FAILED: matrix multiply");
         
+        repeat(3) @(negedge clk);
+
+        // Test 4: Distinct weight loading
+        test_num += 1;
+        en = 0;
+        in_valid = 1; 
+        load_slot = 0; // load b1
+        compute_slot = 1; // different slots, avoids the hazard assertion
+        b_in = '{'{4'b0000, 4'b0001, 4'b0010}, //distinction: row col, {row, col}, in 2 bit notations.
+                '{4'b0100, 4'b0101, 4'b0110},
+                '{4'b1000, 4'b1001, 4'b1010}};
+        
+        @(negedge clk);
+        for (int i = 0; i < 3; i++) begin
+            for (int j = 0; j < 3; j++) begin
+                expected_temp = {i[1:0], j[1:0]};
+                b_in[i][j] = ~b_in[i][j]; //in same breath, invert bits to get a different set of unique bits
+                if (pe_b1[i][j] !== expected_temp) begin //check b1
+                    errors++;
+                    $error("[%0t] PE[%0d][%0d].b1: expected %0d, got %0d", $time, i, j, expected_temp, pe_b1[i][j]);
+                end
+            end
+        end
+
+        load_slot = 1;
+        compute_slot = 0;
+
+        @(negedge clk);
+        for(int i = 0; i < 3; i++) begin
+            for(int j = 0; j < 3; j++) begin
+                expected_temp = {i[1:0], j[1:0]};
+                expected_temp = ~expected_temp;
+                if (pe_b2[i][j] !== expected_temp) begin //check b1
+                    errors++;
+                    $error("[%0t] PE[%0d][%0d].b2: expected %0d, got %0d", $time, i, j, expected_temp, pe_b1[i][j]);
+                end
+            end
+        end
+        
+        if (errors == test_errors) $display("Test 4 passed: b1 and b2 loaded distinct values");
+        else $display("Test 2 FAILED: b registers not loaded correctly");
+
+        repeat(3) @(negedge clk);
+        rst_n = 0;
+        // Test 5: Max values
+        test_num += 1;
+        @(negedge clk);
+        rst_n = 1;
+        en = 0;
+        A = '{'{4'hf, 4'hf, 4'hf},
+            '{4'hf, 4'hf, 4'hf},
+            '{4'hf, 4'hf, 4'hf}};
+
+        W = '{'{4'hf, 4'hf, 4'hf},
+            '{4'hf, 4'hf, 4'hf},
+            '{4'hf, 4'hf, 4'hf}};
+
+        for (int i = 0; i < 3; i++) begin
+            for (int j = 0; j < 3; j++) begin
+                C_exp[i][j] = 0;
+                for (int r = 0; r < 3; r++)
+                    C_exp[i][j] += A[i][r] * W[r][j];
+            end
+        end
+        @(negedge clk);
+        in_valid = 1;
+        load_slot = 0;
+        compute_slot = 1;
+        for (int i = 0; i < 3; i++) begin
+            for (int j = 0; j < 3; j++) begin
+                b_in[i][j] = W[i][j];
+
+            end
+        end
+
+        @(negedge clk);
+        in_valid = 0;
+        load_slot = 1;
+        compute_slot = 0;
+        en = 1;
+        a_in = '{default: '0};
+
+        repeat(3) @(negedge clk);
+
+        // stream A in with skew: row r of the array gets A[i][r] at cycle i + r
+        // C[i][c] comes out the bottom of column c at cycle i + c + 3
+        for (int k = 0; k < 8; k++) begin
+            @(negedge clk);
+
+            // check outputs registered on the last edge
+            for (int c = 0; c < 3; c++) begin
+                if (k - 3 - c >= 0 && k - 3 - c < 3) begin
+                    checks++;
+                    if (result_matrix[c] !== 10'(C_exp[k-3-c][c])) begin
+                        errors++;
+                        $error("[%0t] C[%0d][%0d]: expected %0d, got %0d", $time, k-3-c, c, C_exp[k-3-c][c], result_matrix[c]);
+                    end
+                end
+            end
+
+                    // drive the next skewed column of inputs
+            for (int r = 0; r < 3; r++) begin
+                a_in[r] = (k - r >= 0 && k - r < 3) ? A[k-r][r] : 4'h0;
+            end
+        end
+
+        if (errors == test_errors) $display("Test 5 passed: Max matrix multiply correct");
+        else $display("Test 5 FAILED: Max matrix multiply");
+
+        repeat(3) @(negedge clk);
+
+        // Test 6: back to back
+        test_num += 1;
+        test_errors = errors;
+
+        A = '{'{4'h1, 4'h2, 4'h3},
+              '{4'h4, 4'h5, 4'h6},
+              '{4'h7, 4'h8, 4'h9}};
+
+        W = '{'{4'h1, 4'h0, 4'h2},
+              '{4'h3, 4'h1, 4'h0},
+              '{4'h0, 4'h2, 4'h1}};
+
+        W2 = '{'{4'h2, 4'h1, 4'h0},
+               '{4'h0, 4'h3, 4'h1},
+               '{4'h1, 4'h0, 4'h2}};
+
+        for (int i = 0; i < 3; i++) begin
+            for (int j = 0; j < 3; j++) begin
+                C_exp[i][j] = 0;
+                C_exp2[i][j] = 0;
+                for (int r = 0; r < 3; r++) begin
+                    C_exp[i][j] += A[i][r] * W[r][j];
+                    C_exp2[i][j] += A[i][r] * W2[r][j];
+                end
+            end
+        end
+
+        // load W into slot 0, en low
+        @(negedge clk);
+        en = 0;
+        in_valid = 1;
+        load_slot = 0;
+        compute_slot = 1;
+        for (int i = 0; i < 3; i++) begin
+            for (int j = 0; j < 3; j++) begin
+                b_in[i][j] = W[i][j];
+            end
+        end
+
+        @(negedge clk);
+        in_valid = 0;
+        load_slot = 1;
+        compute_slot = 0;
+        en = 1;
+        a_in = '{default: '0};
+
+        repeat(3) @(negedge clk);
+
+        // compute A x W with slot 0, load W2 into slot 1 partway through
+        for (int k = 0; k < 8; k++) begin
+            @(negedge clk);
+
+            for (int c = 0; c < 3; c++) begin
+                if (k - 3 - c >= 0 && k - 3 - c < 3) begin
+                    checks++;
+                    if (result_matrix[c] !== 10'(C_exp[k-3-c][c])) begin
+                        errors++;
+                        $error("[%0t] slot 0 C[%0d][%0d]: expected %0d, got %0d", $time, k-3-c, c, C_exp[k-3-c][c], result_matrix[c]);
+                    end
+                end
+            end
+
+            for (int r = 0; r < 3; r++) begin
+                a_in[r] = (k - r >= 0 && k - r < 3) ? A[k-r][r] : 4'h0;
+            end
+
+            // load W2 mid stream
+            if (k == 1) begin
+                in_valid = 1;
+                load_slot = 1;
+                for (int i = 0; i < 3; i++) begin
+                    for (int j = 0; j < 3; j++) begin
+                        b_in[i][j] = W2[i][j];
+                    end
+                end
+            end
+            if (k == 2) in_valid = 0;
+        end
+
+        // both slots should have their own weights
+        for (int i = 0; i < 3; i++) begin
+            for (int j = 0; j < 3; j++) begin
+                checks++;
+                if (pe_b1[i][j] !== W[i][j]) begin
+                    errors++;
+                    $error("[%0t] PE[%0d][%0d].b1: expected %0d, got %0d", $time, i, j, W[i][j], pe_b1[i][j]);
+                end
+                checks++;
+                if (pe_b2[i][j] !== W2[i][j]) begin
+                    errors++;
+                    $error("[%0t] PE[%0d][%0d].b2: expected %0d, got %0d", $time, i, j, W2[i][j], pe_b2[i][j]);
+                end
+            end
+        end
+
+        // swap and compute A x W2 with slot 1
+        compute_slot = 1;
+        load_slot = 0;
+        a_in = '{default: '0};
+
+        repeat(3) @(negedge clk);
+
+        for (int k = 0; k < 8; k++) begin
+            @(negedge clk);
+
+            for (int c = 0; c < 3; c++) begin
+                if (k - 3 - c >= 0 && k - 3 - c < 3) begin
+                    checks++;
+                    if (result_matrix[c] !== 10'(C_exp2[k-3-c][c])) begin
+                        errors++;
+                        $error("[%0t] slot 1 C[%0d][%0d]: expected %0d, got %0d", $time, k-3-c, c, C_exp2[k-3-c][c], result_matrix[c]);
+                    end
+                end
+            end
+
+            for (int r = 0; r < 3; r++) begin
+                a_in[r] = (k - r >= 0 && k - r < 3) ? A[k-r][r] : 4'h0;
+            end
+        end
+
+        if (errors == test_errors) $display("Test 6 passed: ping pong load during compute");
+        else $display("Test 6 FAILED: ping pong");
+
+        repeat(3) @(negedge clk);
+
+        // Test 7: back to back. A x W from slot 0, 4 empty rows, then A2 x W2 from slot 1.
+        // stream rows: 0-2 are A, 3-6 are empty, 7-9 are A2
+        // compute_slot flips at k = 7 when A2's first row hits PE[0][0]
+        test_errors = errors;
+        test_num += 1;
+
+        A2 = '{'{4'h9, 4'h8, 4'h7},
+               '{4'h6, 4'h5, 4'h4},
+               '{4'h3, 4'h2, 4'h1}};
+
+        for (int i = 0; i < 3; i++) begin
+            for (int j = 0; j < 3; j++) begin
+                C_exp2[i][j] = 0;
+                for (int r = 0; r < 3; r++)
+                    C_exp2[i][j] += A2[i][r] * W2[r][j];
+            end
+        end
+
+        // load W into slot 0, en low
+        @(negedge clk);
+        en = 0;
+        in_valid = 1;
+        load_slot = 0;
+        compute_slot = 1;
+        for (int i = 0; i < 3; i++) begin
+            for (int j = 0; j < 3; j++) begin
+                b_in[i][j] = W[i][j];
+            end
+        end
+
+        @(negedge clk);
+        in_valid = 0;
+        load_slot = 1;
+        compute_slot = 0;
+        en = 1;
+        a_in = '{default: '0};
+
+        // repeat(3) @(negedge clk);
+
+        for (int k = 0; k < 15; k++) begin
+            @(negedge clk);
+
+            // check, stream row m comes out of column c at k = m + c + 3
+            for (int c = 0; c < 3; c++) begin
+                m = k - 3 - c;
+                if (m >= 0 && m < 3) begin
+                    checks++;
+                    if (result_matrix[c] !== 10'(C_exp[m][c])) begin
+                        errors++;
+                        $error("[%0t] A C[%0d][%0d]: expected %0d, got %0d", $time, m, c, C_exp[m][c], result_matrix[c]);
+                    end
+                end
+                else if (m >= 7 && m < 10) begin
+                    checks++;
+                    if (result_matrix[c] !== 10'(C_exp2[m-7][c])) begin
+                        errors++;
+                        $error("[%0t] A2 C[%0d][%0d]: expected %0d, got %0d", $time, m-7, c, C_exp2[m-7][c], result_matrix[c]);
+                    end
+                end
+            end
+
+            // drive, row r gets stream row k - r
+            for (int r = 0; r < 3; r++) begin
+                m = k - r;
+                if (m >= 0 && m < 3) a_in[r] = A[m][r];
+                else if (m >= 7 && m < 10) a_in[r] = A2[m-7][r];
+                else a_in[r] = 4'h0;
+            end
+
+            // load W2 into slot 1 early
+            if (k == 1) begin
+                in_valid = 1;
+                load_slot = 1;
+                for (int i = 0; i < 3; i++) begin
+                    for (int j = 0; j < 3; j++) begin
+                        b_in[i][j] = W2[i][j];
+                    end
+                end
+            end
+            if (k == 2) in_valid = 0;
+
+            // flip slots when A2 starts
+            compute_slot = (k >= 7) ? 1 : 0;
+        end
+
+        if (errors == test_errors) $display("Test 7 passed: back to back with 4 cycle gap");
+        else $display("Test 7 FAILED: back to back");
+
         repeat(3) @(negedge clk);
 
         $finish;

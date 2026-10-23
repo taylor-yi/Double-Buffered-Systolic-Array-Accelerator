@@ -48,26 +48,43 @@ always_ff @(posedge clk) begin
             load_slot <= ~load_slot; // inver the load slot right before loading
         end
 
-        if (c_next_state == COMPUTE && l_next_state == C_IDLE) begin
+        if (c_next_state == COMPUTE && l_next_state == L_IDLE) begin
             compute_slot <= load_slot;
         end
 
     end
 end
 
-always_ff @(posedge clk) begin //count for how many matrix mults completed
+//count for how many matrix mults completed
+always_ff @(posedge clk) begin 
     if (!rst_n) begin
         mat_compl <= '0;
     end else if (start) begin
         mat_compl <= '0;
     end else if (c_state == C_DONE) begin
         mat_compl <= mat_compl + 1;
+        if(mat_compl + 1 < NUM_MATR) begin
+            start_again <= 1'b1;
+        end else begin
+            start_again <= 1'b0;
+        end
+    end else begin
+        start_again <= 1'b0;
     end
 end 
 
+// cycle_count
+always_ff @(posedge clk) begin
+    if(!rst_n || done) begin
+        cycle_count = '0;
+    end else begin
+        cycle_count <= cycle_count + 1;
+    end
+end
+
 // FSM to load
 always_comb begin
-    case (l_state)
+    case (l_state) load_state_machine
         default:
             in_valid = 1'b0; 
             l_next_state = L_IDLE;
@@ -92,7 +109,7 @@ always_comb begin
 end
 
 always_comb begin
-    case(c_state)
+    case(c_state) compute_state_machine
         default:
             en = 1'b0; 
             c_next_state = C_IDLE;

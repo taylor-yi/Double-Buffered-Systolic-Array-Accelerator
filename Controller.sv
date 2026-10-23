@@ -84,10 +84,11 @@ end
 
 // FSM to load
 always_comb begin
-    case (l_state) load_state_machine
-        default:
+    case (l_state)
+        default: begin
             in_valid = 1'b0; 
             l_next_state = L_IDLE;
+        end
         L_IDLE: begin
             in_valid = 1'b0;
             
@@ -109,10 +110,11 @@ always_comb begin
 end
 
 always_comb begin
-    case(c_state) compute_state_machine
-        default:
+    case(c_state)
+        default: begin
             en = 1'b0; 
             c_next_state = C_IDLE;
+        end
         C_IDLE: begin
             en = 1'b0;
             if((start || start_again) && cycle_count[3:0] >= 4'b0001) begin // must make start maintain high then

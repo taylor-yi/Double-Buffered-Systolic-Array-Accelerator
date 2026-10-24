@@ -1,10 +1,11 @@
 `timescale 1ns/1ps
 // Linter line: verilator --lint-only Processing_Element.sv --top-module PE
-
+// compute slot being replaced by slot_in and slot_out
 module Processing_Element(
-    input logic clk, rst_n, in_valid, load_slot, compute_slot, en,
+    input logic clk, rst_n, in_valid, load_slot, slot_in, en,
     input logic [3:0] a, b,
     input logic [9:0] above_result,
+    output logic slot_out,
     output logic [3:0] a_out,
     output logic [9:0] result
 );
@@ -14,7 +15,7 @@ module Processing_Element(
     // adding a zero check can save heat by not firing a flip flop, right now it only checks if both are zero.
     // in full optimization it will also check if respective b1 or b2 is zero and make the whole sum zero
     logic zeroed;
-    assign w = compute_slot ? b2 : b1;
+    assign w = slot_in ? b2 : b1;
     assign zeroed = (a == '0) || (w == '0);
 
     // b assignment based on slot
@@ -38,9 +39,11 @@ module Processing_Element(
         if(!rst_n) begin
             result <= '0;
             a_out <= '0;
+            slot_out <= 1'b0;
         end else begin
             if(en) begin
                 a_out <= a;
+                slot_out <= slot_in;
                 result <= zeroed ? above_result : above_result + (a * w) ;
             end
         end

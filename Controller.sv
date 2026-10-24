@@ -48,7 +48,7 @@ always_ff @(posedge clk) begin
             load_slot <= ~load_slot; // inver the load slot right before loading
         end
 
-        if (c_next_state == COMPUTE && l_next_state == L_IDLE) begin
+        if (c_next_state == COMPUTE && c_state == C_IDLE) begin
             compute_slot <= load_slot;
         end
 
@@ -59,6 +59,7 @@ end
 always_ff @(posedge clk) begin 
     if (!rst_n) begin
         mat_compl <= '0;
+        start_again <= '0;
     end else if (start) begin
         mat_compl <= '0;
     end else if (c_state == C_DONE) begin
@@ -71,12 +72,12 @@ always_ff @(posedge clk) begin
     end else begin
         start_again <= 1'b0;
     end
-end 
+end
 
 // cycle_count
 always_ff @(posedge clk) begin
     if(!rst_n || done) begin
-        cycle_count = '0;
+        cycle_count <= '0;
     end else begin
         cycle_count <= cycle_count + 1;
     end

@@ -1,7 +1,8 @@
 `timescale 1ns/1ps
 // Systolic Array Testbench
 module SA_tb ();
-    logic clk, rst_n, en, in_valid, load_slot, compute_slot;
+    logic clk, rst_n, en, in_valid, load_slot;
+    logic slot_in [3];
     logic [3:0] a_in [3];
     logic [3:0] b_in [3][3];
     logic [9:0] result_matrix [3];
@@ -60,7 +61,7 @@ module SA_tb ();
         en = 0;
         in_valid = 0;
         load_slot = 0;
-        compute_slot = 0;
+        slot_in = '{default: 1'b0};
         a_in = '{default: '0};
         b_in = '{default: '0};
         
@@ -71,7 +72,7 @@ module SA_tb ();
         en = 1;
         in_valid = 0;
         load_slot = 1;
-        compute_slot = 0; // different slots, avoids the hazard assertion
+        slot_in = '{default: 1'b0}; // different slots, avoids the hazard assertion
         a_in = '{default: '0};
 
         // let zeros flush through all 3 columns, then check
@@ -120,17 +121,17 @@ module SA_tb ();
         @(negedge clk);
         test_num += 1;
         rst_n = 1;
-        en = 1;
+        en = 0;
         in_valid = 1; 
         load_slot = 0; // load b1 with 1s
-        compute_slot = 1; // different slots, avoids the hazard assertion
+        slot_in = '{default: 1'b1}; // different slots, avoids the hazard assertion
         b_in = '{'{4'h1, 4'h1, 4'h1},
                 '{4'h1, 4'h1, 4'h1},
                 '{4'h1, 4'h1, 4'h1}};
         
         @(negedge clk); 
         load_slot = 1; //load b2 with 1s
-        compute_slot = 0;
+        slot_in = '{default: 1'b0};
         for (int i = 0; i < 3; i++) begin
             for (int j = 0; j < 3; j++) begin
                 if (pe_b1[i][j] !== 4'h1) begin //check b1
@@ -142,7 +143,7 @@ module SA_tb ();
 
         @(negedge clk);
         load_slot = 0; //load b1 with 0s
-        compute_slot = 1;
+        slot_in = '{default: 1'b1};
         b_in = '{'{4'h0, 4'h0, 4'h0},
                 '{4'h0, 4'h0, 4'h0},
                 '{4'h0, 4'h0, 4'h0}};
@@ -157,7 +158,7 @@ module SA_tb ();
 
         @(negedge clk);
         load_slot = 1; //load b2 with 0s
-        compute_slot = 0;
+        slot_in = '{default: 1'b0};
         for (int i = 0; i < 3; i++) begin
             for (int j = 0; j < 3; j++) begin
                 if (pe_b1[i][j] !== 4'h0) begin //check b1
@@ -169,7 +170,7 @@ module SA_tb ();
 
         @(negedge clk);
         load_slot = 1; //load b2 with 0s
-        compute_slot = 0;
+        slot_in = '{default: 1'b0};
         for (int i = 0; i < 3; i++) begin
             for (int j = 0; j < 3; j++) begin
                 if (pe_b2[i][j] !== 4'h0) begin //check b1
@@ -208,7 +209,7 @@ module SA_tb ();
         en = 0;
         in_valid = 1;
         load_slot = 0;
-        compute_slot = 1;
+        slot_in = '{default: 1'b1};
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++)
                 b_in[i][j] = W[i][j];
@@ -216,7 +217,7 @@ module SA_tb ();
                 @(negedge clk);
                 in_valid = 0;
                 load_slot = 1;
-                compute_slot = 0;
+                slot_in = '{default: 1'b0};
                 en = 1;
                 a_in = '{default: '0};
 
@@ -253,7 +254,7 @@ module SA_tb ();
         en = 0;
         in_valid = 1; 
         load_slot = 0; // load b1
-        compute_slot = 1; // different slots, avoids the hazard assertion
+        slot_in = '{default: 1'b1}; // different slots, avoids the hazard assertion
         b_in = '{'{4'b0000, 4'b0001, 4'b0010}, //distinction: row col, {row, col}, in 2 bit notations.
                 '{4'b0100, 4'b0101, 4'b0110},
                 '{4'b1000, 4'b1001, 4'b1010}};
@@ -271,7 +272,7 @@ module SA_tb ();
         end
 
         load_slot = 1;
-        compute_slot = 0;
+        slot_in = '{default: 1'b0};
 
         @(negedge clk);
         for(int i = 0; i < 3; i++) begin
@@ -313,7 +314,7 @@ module SA_tb ();
         @(negedge clk);
         in_valid = 1;
         load_slot = 0;
-        compute_slot = 1;
+        slot_in = '{default: 1'b1};
         for (int i = 0; i < 3; i++) begin
             for (int j = 0; j < 3; j++) begin
                 b_in[i][j] = W[i][j];
@@ -324,7 +325,7 @@ module SA_tb ();
         @(negedge clk);
         in_valid = 0;
         load_slot = 1;
-        compute_slot = 0;
+        slot_in = '{default: 1'b0};
         en = 1;
         a_in = '{default: '0};
 
@@ -389,7 +390,7 @@ module SA_tb ();
         en = 0;
         in_valid = 1;
         load_slot = 0;
-        compute_slot = 1;
+        slot_in = '{default: 1'b1};
         for (int i = 0; i < 3; i++) begin
             for (int j = 0; j < 3; j++) begin
                 b_in[i][j] = W[i][j];
@@ -399,7 +400,7 @@ module SA_tb ();
         @(negedge clk);
         in_valid = 0;
         load_slot = 1;
-        compute_slot = 0;
+        slot_in = '{default: 1'b0};
         en = 1;
         a_in = '{default: '0};
 
@@ -453,7 +454,7 @@ module SA_tb ();
         end
 
         // swap and compute A x W2 with slot 1
-        compute_slot = 1;
+        slot_in = '{default: 1'b1};
         load_slot = 0;
         a_in = '{default: '0};
 
@@ -482,9 +483,9 @@ module SA_tb ();
 
         repeat(3) @(negedge clk);
 
-        // Test 7: back to back. A x W from slot 0, 4 empty rows, then A2 x W2 from slot 1.
-        // stream rows: 0-2 are A, 3-6 are empty, 7-9 are A2
-        // compute_slot flips at k = 7 when A2's first row hits PE[0][0]
+        // Test 7: back to back. A x W from slot 0, then A2 x W2 from slot 1, no gap.
+        // stream rows: 0-2 are A, 3-5 are A2
+        // slot_in goes in with each row, so each PE switches when A2's first row reaches it
         test_errors = errors;
         test_num += 1;
 
@@ -505,7 +506,7 @@ module SA_tb ();
         en = 0;
         in_valid = 1;
         load_slot = 0;
-        compute_slot = 1;
+        slot_in = '{default: 1'b1};
         for (int i = 0; i < 3; i++) begin
             for (int j = 0; j < 3; j++) begin
                 b_in[i][j] = W[i][j];
@@ -515,13 +516,13 @@ module SA_tb ();
         @(negedge clk);
         in_valid = 0;
         load_slot = 1;
-        compute_slot = 0;
+        slot_in = '{default: 1'b0};
         en = 1;
         a_in = '{default: '0};
 
         // repeat(3) @(negedge clk);
 
-        for (int k = 0; k < 15; k++) begin
+        for (int k = 0; k < 11; k++) begin
             @(negedge clk);
 
             // check, stream row m comes out of column c at k = m + c + 3
@@ -534,21 +535,30 @@ module SA_tb ();
                         $error("[%0t] A C[%0d][%0d]: expected %0d, got %0d", $time, m, c, C_exp[m][c], result_matrix[c]);
                     end
                 end
-                else if (m >= 7 && m < 10) begin
+                else if (m >= 3 && m < 6) begin
                     checks++;
-                    if (result_matrix[c] !== 10'(C_exp2[m-7][c])) begin
+                    if (result_matrix[c] !== 10'(C_exp2[m-3][c])) begin
                         errors++;
-                        $error("[%0t] A2 C[%0d][%0d]: expected %0d, got %0d", $time, m-7, c, C_exp2[m-7][c], result_matrix[c]);
+                        $error("[%0t] A2 C[%0d][%0d]: expected %0d, got %0d", $time, m-3, c, C_exp2[m-3][c], result_matrix[c]);
                     end
                 end
             end
 
-            // drive, row r gets stream row k - r
+            // drive, row r gets stream row k - r, slot goes with it
             for (int r = 0; r < 3; r++) begin
                 m = k - r;
-                if (m >= 0 && m < 3) a_in[r] = A[m][r];
-                else if (m >= 7 && m < 10) a_in[r] = A2[m-7][r];
-                else a_in[r] = 4'h0;
+                if (m >= 0 && m < 3) begin
+                    a_in[r] = A[m][r];
+                    slot_in[r] = 1'b0;
+                end
+                else if (m >= 3 && m < 6) begin
+                    a_in[r] = A2[m-3][r];
+                    slot_in[r] = 1'b1;
+                end
+                else begin
+                    a_in[r] = 4'h0;
+                    slot_in[r] = (m >= 6) ? 1'b1 : 1'b0;
+                end
             end
 
             // load W2 into slot 1 early
@@ -562,12 +572,9 @@ module SA_tb ();
                 end
             end
             if (k == 2) in_valid = 0;
-
-            // flip slots when A2 starts
-            compute_slot = (k >= 7) ? 1 : 0;
         end
 
-        if (errors == test_errors) $display("Test 7 passed: back to back with 4 cycle gap");
+        if (errors == test_errors) $display("Test 7 passed: back to back, zero gap");
         else $display("Test 7 FAILED: back to back");
 
         repeat(3) @(negedge clk);

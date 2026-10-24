@@ -1,10 +1,11 @@
 `timescale 1ns/1ps
 // Processing Element Testbench
 module PE_tb ();
-    logic clk, rst_n, in_valid, load_slot, compute_slot, en;
+    logic clk, rst_n, in_valid, load_slot, slot_in, en;
     logic [3:0] a, b;
     logic [9:0] above_result;
     logic [3:0] a_out;
+    logic slot_out;
     logic [9:0] result;
 
     logic new_test;
@@ -36,7 +37,7 @@ module PE_tb ();
         en = 0; 
         in_valid = 0;
         load_slot = 0;
-        compute_slot = 0;
+        slot_in = 0;
         a = 0; 
         b = 0;
 
@@ -46,7 +47,7 @@ module PE_tb ();
         en = 1; 
         in_valid = 1;
         load_slot = 0;
-        compute_slot = 1;
+        slot_in = 1;
         a = 4'b1000; 
         b = 4'b0100;
 
@@ -60,7 +61,7 @@ module PE_tb ();
 
         in_valid = 1;
         load_slot = 1;
-        compute_slot = 0;
+        slot_in = 0;
         a = 4'b0001; 
         b = 4'b0010;
 
@@ -137,14 +138,14 @@ module PE_tb ();
         en = 0;
         in_valid = 1;
         rst_n = 1;
-        compute_slot = 1;
+        slot_in = 1;
         load_slot = 0;
         b = 4'b0011;
         
         @(negedge clk);
         en = 1;
         in_valid = 1;
-        compute_slot = 0;
+        slot_in = 0;
         load_slot = 1;
         a = 4'b0001;
         b = 4'b0101;
@@ -156,7 +157,7 @@ module PE_tb ();
             $error("[%0t] result computed incorrectly for compute slot 0: result expected: 8, b was: %0d", $time, result);
         end
         
-        compute_slot = 1;
+        slot_in = 1;
 
         @(negedge clk);
         if (result !== 10) begin
@@ -182,7 +183,7 @@ module PE_tb ();
 
                 @(negedge clk);
                 in_valid = 0;
-                compute_slot = s[0];
+                slot_in = s[0];
 
                 for (int av = 0; av < 16; av++) begin
                     a = av[3:0];

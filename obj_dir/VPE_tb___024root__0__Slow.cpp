@@ -54,7 +54,7 @@ VL_ATTR_COLD bool VPE_tb___024root___eval_stl(VPE_tb___024root* vlSelf, CData/*0
                 {
                     // Inlined CFunc: _act_comb__TOP__0
                     vlSelfRef.PE_tb__DOT__dut__DOT__w 
-                        = ((IData)(vlSelfRef.PE_tb__DOT__compute_slot)
+                        = ((IData)(vlSelfRef.PE_tb__DOT__slot_in)
                             ? (IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b2)
                             : (IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b1));
                 }
@@ -204,12 +204,13 @@ VL_ATTR_COLD void VPE_tb___024root___ctor_var_reset(VPE_tb___024root* vlSelf) {
     vlSelf->PE_tb__DOT__rst_n = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 8005540888764420902ull);
     vlSelf->PE_tb__DOT__in_valid = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 4061654438632992877ull);
     vlSelf->PE_tb__DOT__load_slot = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 8142543776924629239ull);
-    vlSelf->PE_tb__DOT__compute_slot = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 11538057834343898327ull);
+    vlSelf->PE_tb__DOT__slot_in = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 8426168843570183737ull);
     vlSelf->PE_tb__DOT__en = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 6182424404087487695ull);
     vlSelf->PE_tb__DOT__a = VL_SCOPED_RAND_RESET_I(4, __VscopeHash, 590285468412714985ull);
     vlSelf->PE_tb__DOT__b = VL_SCOPED_RAND_RESET_I(4, __VscopeHash, 17535757425702766766ull);
     vlSelf->PE_tb__DOT__above_result = VL_SCOPED_RAND_RESET_I(10, __VscopeHash, 18334131568242605850ull);
     vlSelf->PE_tb__DOT__a_out = VL_SCOPED_RAND_RESET_I(4, __VscopeHash, 3573998023596491252ull);
+    vlSelf->PE_tb__DOT__slot_out = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 6542690377981363245ull);
     vlSelf->PE_tb__DOT__result = VL_SCOPED_RAND_RESET_I(10, __VscopeHash, 2789053527543106787ull);
     vlSelf->PE_tb__DOT__new_test = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 17141662504652787407ull);
     vlSelf->PE_tb__DOT__test_errors = 0;

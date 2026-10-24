@@ -27,7 +27,7 @@ void VPE_tb___024root__trace_chg_0_sub_0(VPE_tb___024root* vlSelf, VerilatedVcd:
         bufp->chgBit(oldp+0,(vlSelfRef.PE_tb__DOT__rst_n));
         bufp->chgBit(oldp+1,(vlSelfRef.PE_tb__DOT__in_valid));
         bufp->chgBit(oldp+2,(vlSelfRef.PE_tb__DOT__load_slot));
-        bufp->chgBit(oldp+3,(vlSelfRef.PE_tb__DOT__compute_slot));
+        bufp->chgBit(oldp+3,(vlSelfRef.PE_tb__DOT__slot_in));
         bufp->chgBit(oldp+4,(vlSelfRef.PE_tb__DOT__en));
         bufp->chgCData(oldp+5,(vlSelfRef.PE_tb__DOT__a),4);
         bufp->chgCData(oldp+6,(vlSelfRef.PE_tb__DOT__b),4);
@@ -38,15 +38,16 @@ void VPE_tb___024root__trace_chg_0_sub_0(VPE_tb___024root* vlSelf, VerilatedVcd:
     }
     if (VL_UNLIKELY((vlSelfRef.__Vm_traceActivity[3U]))) {
         bufp->chgCData(oldp+11,(vlSelfRef.PE_tb__DOT__a_out),4);
-        bufp->chgSData(oldp+12,(vlSelfRef.PE_tb__DOT__result),10);
-        bufp->chgCData(oldp+13,(vlSelfRef.PE_tb__DOT__dut__DOT__b1),4);
-        bufp->chgCData(oldp+14,(vlSelfRef.PE_tb__DOT__dut__DOT__b2),4);
+        bufp->chgBit(oldp+12,(vlSelfRef.PE_tb__DOT__slot_out));
+        bufp->chgSData(oldp+13,(vlSelfRef.PE_tb__DOT__result),10);
+        bufp->chgCData(oldp+14,(vlSelfRef.PE_tb__DOT__dut__DOT__b1),4);
+        bufp->chgCData(oldp+15,(vlSelfRef.PE_tb__DOT__dut__DOT__b2),4);
     }
-    bufp->chgBit(oldp+15,(vlSelfRef.PE_tb__DOT__clk));
-    bufp->chgIData(oldp+16,(vlSelfRef.PE_tb__DOT__errors),32);
-    bufp->chgIData(oldp+17,(vlSelfRef.PE_tb__DOT__checks),32);
-    bufp->chgCData(oldp+18,(vlSelfRef.PE_tb__DOT__dut__DOT__w),4);
-    bufp->chgBit(oldp+19,(((0U == (IData)(vlSelfRef.PE_tb__DOT__a)) 
+    bufp->chgBit(oldp+16,(vlSelfRef.PE_tb__DOT__clk));
+    bufp->chgIData(oldp+17,(vlSelfRef.PE_tb__DOT__errors),32);
+    bufp->chgIData(oldp+18,(vlSelfRef.PE_tb__DOT__checks),32);
+    bufp->chgCData(oldp+19,(vlSelfRef.PE_tb__DOT__dut__DOT__w),4);
+    bufp->chgBit(oldp+20,(((0U == (IData)(vlSelfRef.PE_tb__DOT__a)) 
                            | (0U == (IData)(vlSelfRef.PE_tb__DOT__dut__DOT__w)))));
 }
 

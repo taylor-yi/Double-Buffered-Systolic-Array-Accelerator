@@ -19,11 +19,12 @@ class alignas(VL_CACHE_LINE_BYTES) VPE_tb___024root final {
     CData/*0:0*/ PE_tb__DOT__rst_n;
     CData/*0:0*/ PE_tb__DOT__in_valid;
     CData/*0:0*/ PE_tb__DOT__load_slot;
-    CData/*0:0*/ PE_tb__DOT__compute_slot;
+    CData/*0:0*/ PE_tb__DOT__slot_in;
     CData/*0:0*/ PE_tb__DOT__en;
     CData/*3:0*/ PE_tb__DOT__a;
     CData/*3:0*/ PE_tb__DOT__b;
     CData/*3:0*/ PE_tb__DOT__a_out;
+    CData/*0:0*/ PE_tb__DOT__slot_out;
     CData/*0:0*/ PE_tb__DOT__new_test;
     CData/*3:0*/ PE_tb__DOT__prev_a;
     CData/*3:0*/ PE_tb__DOT__dut__DOT__b1;

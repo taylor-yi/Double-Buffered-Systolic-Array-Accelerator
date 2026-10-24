@@ -39,11 +39,11 @@ always_comb begin
     next_state = state;
     in_valid = 1'b0;
     en = 1'b0;
-    load_slot 1'b0;
+    load_slot = 1'b0;
     row_slot = 1'b0;
     feed = 1'b0;
     done = 1'b0;
-    row_idx = $bits(row_idx)'(count);
+    row_idx = $bits(row_idx)'(cycle_count);
 
     case(state)
         IDLE: begin
@@ -52,11 +52,11 @@ always_comb begin
             end
         end
         LOAD: begin
-            in_valid 1'b1;
+            in_valid = 1'b1;
             load_slot = 1'b0;
             next_state = FEED_0;
         end
-        FEED_0: begin
+        FEED_0: begin // Matrix 1
             en = 1'b1;
             feed = 1'b1;
             row_slot = 1'b0;
@@ -72,7 +72,7 @@ always_comb begin
                 next_state = FEED_0;
             end
         end
-        FEED_1: begin
+        FEED_1: begin // Matrix 2
             en = 1'b1;
             feed = 1'b1;
             row_slot = 1'b1;
@@ -85,7 +85,7 @@ always_comb begin
             en = 1'b1;
             row_slot = 1'b1;
 
-            if (count == CW'DRAIN_CYCLES - 1) begin
+            if (count == CW'(DRAIN_CYCLES - 1)) begin
                 next_state = DONE;
             end
         end

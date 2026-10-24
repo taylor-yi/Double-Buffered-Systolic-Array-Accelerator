@@ -4,7 +4,7 @@ module Controller #(parameter SIZE = 3, parameter NUM_MATR = 2) (
 
     input logic start,
 
-    output logic in_valid, en, load_slot, compute_slot, done
+    output logic in_valid, en, load_slot, row_slot, done
 );
 
 typedef enum logic [1:0] {L_IDLE, LOAD, L_DONE} load_state;
@@ -45,7 +45,7 @@ always_ff @(posedge clk) begin
         c_state <= c_next_state;
 
         if(l_next_state == LOAD) begin
-            load_slot <= ~load_slot; // inver the load slot right before loading
+            load_slot <= ~load_slot; // invert the load slot right before loading
         end
 
         if (c_next_state == COMPUTE && c_state == C_IDLE) begin

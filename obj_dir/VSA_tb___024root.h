@@ -20,7 +20,7 @@ class alignas(VL_CACHE_LINE_BYTES) VSA_tb___024root final {
         CData/*0:0*/ SA_tb__DOT__clk;
         CData/*0:0*/ SA_tb__DOT__rst_n;
         CData/*0:0*/ SA_tb__DOT__en;
-        CData/*0:0*/ SA_tb__DOT__in_valid;
+        CData/*0:0*/ SA_tb__DOT__w_load;
         CData/*0:0*/ SA_tb__DOT__load_slot;
         CData/*3:0*/ SA_tb__DOT__expected_temp;
         CData/*3:0*/ SA_tb__DOT__dut__DOT____Vcellout__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__a_out;

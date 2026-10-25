@@ -24,7 +24,7 @@ void VPE___024root__trace_chg_0_sub_0(VPE___024root* vlSelf, VerilatedVcd::Buffe
     uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode + 0);
     bufp->chgBit(oldp+0,(vlSelfRef.clk));
     bufp->chgBit(oldp+1,(vlSelfRef.rst_n));
-    bufp->chgBit(oldp+2,(vlSelfRef.in_valid));
+    bufp->chgBit(oldp+2,(vlSelfRef.w_load));
     bufp->chgBit(oldp+3,(vlSelfRef.load_slot));
     bufp->chgBit(oldp+4,(vlSelfRef.compute_slot));
     bufp->chgBit(oldp+5,(vlSelfRef.en));

@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 module Systolic_Array #(parameter SIZE = 3)(
-    input logic clk, rst_n, en, in_valid, load_slot,
+    input logic clk, rst_n, en, w_load, load_slot,
     input logic slot_in [SIZE],
     input logic [3:0] a_in [SIZE],
     input logic [3:0] b_in [SIZE][SIZE],
@@ -16,7 +16,7 @@ module Systolic_Array #(parameter SIZE = 3)(
         for(genvar r = 0; r < SIZE; r++) begin : row
             for (genvar c = 0; c < SIZE; c++) begin : col
                 Processing_Element PE (
-                    .clk(clk), .rst_n(rst_n), .in_valid(in_valid), .load_slot(load_slot), 
+                    .clk(clk), .rst_n(rst_n), .w_load(w_load), .load_slot(load_slot), 
                     .slot_in(c == 0 ? slot_in[r] : slot_wire[r][c-1]), .en(en),
                     .a(c == 0 ? a_in[r] : a_wire[r][c-1]), // boundary hookup written directly in, if column is 0 a_in comes in, else stream the previous a
                     .b(b_in[r][c]),

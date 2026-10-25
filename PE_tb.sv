@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 // Processing Element Testbench
 module PE_tb ();
-    logic clk, rst_n, in_valid, load_slot, slot_in, en;
+    logic clk, rst_n, w_load, load_slot, slot_in, en;
     logic [3:0] a, b;
     logic [9:0] above_result;
     logic [3:0] a_out;
@@ -35,7 +35,7 @@ module PE_tb ();
         @(negedge clk);
         rst_n = 0; 
         en = 0; 
-        in_valid = 0;
+        w_load = 0;
         load_slot = 0;
         slot_in = 0;
         a = 0; 
@@ -45,7 +45,7 @@ module PE_tb ();
         @(negedge clk);
 
         en = 1; 
-        in_valid = 1;
+        w_load = 1;
         load_slot = 0;
         slot_in = 1;
         a = 4'b1000; 
@@ -59,7 +59,7 @@ module PE_tb ();
             $error("[%0t] reset overridden (b1 side): a_out=%0d dut.b1=%0d result=%0d", $time, a_out, dut.b1, result);
         end
 
-        in_valid = 1;
+        w_load = 1;
         load_slot = 1;
         slot_in = 0;
         a = 4'b0001; 
@@ -80,7 +80,7 @@ module PE_tb ();
         // Test 2: weight loading
         rst_n = 1;
 
-        in_valid = 1;
+        w_load = 1;
         load_slot = 0; // loading b1 register
         b = 4'b0010;
         
@@ -136,7 +136,7 @@ module PE_tb ();
         
         @(negedge clk);
         en = 0;
-        in_valid = 1;
+        w_load = 1;
         rst_n = 1;
         slot_in = 1;
         load_slot = 0;
@@ -144,7 +144,7 @@ module PE_tb ();
         
         @(negedge clk);
         en = 1;
-        in_valid = 1;
+        w_load = 1;
         slot_in = 0;
         load_slot = 1;
         a = 4'b0001;
@@ -177,12 +177,12 @@ module PE_tb ();
             for (int w = 0; w < 16; w++) begin
                 @(negedge clk);
                 en = 0;
-                in_valid = 1;
+                w_load = 1;
                 load_slot = s[0];
                 b = w[3:0];
 
                 @(negedge clk);
-                in_valid = 0;
+                w_load = 0;
                 slot_in = s[0];
 
                 for (int av = 0; av < 16; av++) begin

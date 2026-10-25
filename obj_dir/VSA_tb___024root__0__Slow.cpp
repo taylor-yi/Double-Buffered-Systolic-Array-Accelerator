@@ -371,7 +371,7 @@ VL_ATTR_COLD void VSA_tb___024root___ctor_var_reset(VSA_tb___024root* vlSelf) {
     vlSelf->SA_tb__DOT__clk = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 3997569300437417340ull);
     vlSelf->SA_tb__DOT__rst_n = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 17421915413369725284ull);
     vlSelf->SA_tb__DOT__en = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 993594287464268169ull);
-    vlSelf->SA_tb__DOT__in_valid = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 7735611772588347152ull);
+    vlSelf->SA_tb__DOT__w_load = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 7735611772588347152ull);
     vlSelf->SA_tb__DOT__load_slot = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 16987950063606348361ull);
     for (int __Vi0 = 0; __Vi0 < 3; ++__Vi0) {
         vlSelf->SA_tb__DOT__slot_in[__Vi0] = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 3167102969799550723ull);

@@ -513,7 +513,7 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                               [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
                               != ((0x0dU >= (0x0000000fU 
                                              & Controller_tb__DOT__unnamedblk7__DOT__t))
-                                   ? (1U & vlSelfRef.Controller_tb__DOT__e_in_valid
+                                   ? (1U & vlSelfRef.Controller_tb__DOT__e_w_load
                                       [(0x0000000fU 
                                         & Controller_tb__DOT__unnamedblk7__DOT__t)])
                                    : 0U)) | (VController_tb__ConstPool__TABLE_h8076f1af_0
@@ -560,7 +560,7 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                                   : 0U)))))) {
             vlSelfRef.Controller_tb__DOT__errors = 
                 ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
-            VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:131: Assertion failed in %m: [%0t] t=%0d: in_valid=%0d en=%0d feed=%0d row_slot=%0d done=%0d, expected %0d %0d %0d %0d %0d\n",15, 'M',vlSymsp->name(),"Controller_tb.unnamedblk7", 'T',-9
+            VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:131: Assertion failed in %m: [%0t] t=%0d: w_load=%0d en=%0d feed=%0d row_slot=%0d done=%0d, expected %0d %0d %0d %0d %0d\n",15, 'M',vlSymsp->name(),"Controller_tb.unnamedblk7", 'T',-9
                          , '#',64,VL_TIME_UNITED_Q(1000)
                          , '#',64,VL_TIME_UNITED_Q(1000)
                          , '~',32,Controller_tb__DOT__unnamedblk7__DOT__t
@@ -576,7 +576,7 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                          [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                          , '~',32,((0x0dU >= (0x0000000fU 
                                               & Controller_tb__DOT__unnamedblk7__DOT__t))
-                                    ? vlSelfRef.Controller_tb__DOT__e_in_valid
+                                    ? vlSelfRef.Controller_tb__DOT__e_w_load
                                    [(0x0000000fU & Controller_tb__DOT__unnamedblk7__DOT__t)]
                                     : 0U), '~',32,(
                                                    (0x0dU 
@@ -904,7 +904,7 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                               [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])))) {
                 vlSelfRef.Controller_tb__DOT__errors 
                     = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
-                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:206: Assertion failed in %m: [%0t] t=%0d: controller restarted, in_valid=%0d en=%0d\n",7, 'M',vlSymsp->name(),"Controller_tb.unnamedblk9", 'T',-9
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:206: Assertion failed in %m: [%0t] t=%0d: controller restarted, w_load=%0d en=%0d\n",7, 'M',vlSymsp->name(),"Controller_tb.unnamedblk9", 'T',-9
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '~',32,Controller_tb__DOT__unnamedblk9__DOT__t
@@ -1005,7 +1005,7 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                       [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])))) {
         vlSelfRef.Controller_tb__DOT__errors = ((IData)(1U) 
                                                 + vlSelfRef.Controller_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:237: Assertion failed in %m: [%0t] reset didn't clear outputs: in_valid=%0d en=%0d feed=%0d done=%0d\n",8, 'M',vlSymsp->name(),"Controller_tb", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:237: Assertion failed in %m: [%0t] reset didn't clear outputs: w_load=%0d en=%0d feed=%0d done=%0d\n",8, 'M',vlSymsp->name(),"Controller_tb", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',1,VController_tb__ConstPool__TABLE_h3240c103_0

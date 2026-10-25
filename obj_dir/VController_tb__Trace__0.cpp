@@ -42,7 +42,7 @@ void VController_tb___024root__trace_chg_0_sub_0(VController_tb___024root* vlSel
     // Body
     uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode + 0);
     if (VL_UNLIKELY((vlSelfRef.__Vm_traceActivity[1U]))) {
-        VController_tb___024root__trace_chg_dtype____0(vlSelf, bufp, 0, vlSelfRef.Controller_tb__DOT__e_in_valid);
+        VController_tb___024root__trace_chg_dtype____0(vlSelf, bufp, 0, vlSelfRef.Controller_tb__DOT__e_w_load);
         VController_tb___024root__trace_chg_dtype____1(vlSelf, bufp, 14, vlSelfRef.Controller_tb__DOT__e_load_slot);
         VController_tb___024root__trace_chg_dtype____2(vlSelf, bufp, 28, vlSelfRef.Controller_tb__DOT__e_en);
         VController_tb___024root__trace_chg_dtype____3(vlSelf, bufp, 42, vlSelfRef.Controller_tb__DOT__e_feed);

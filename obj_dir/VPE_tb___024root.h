@@ -17,7 +17,7 @@ class alignas(VL_CACHE_LINE_BYTES) VPE_tb___024root final {
     // DESIGN SPECIFIC STATE
     CData/*0:0*/ PE_tb__DOT__clk;
     CData/*0:0*/ PE_tb__DOT__rst_n;
-    CData/*0:0*/ PE_tb__DOT__in_valid;
+    CData/*0:0*/ PE_tb__DOT__w_load;
     CData/*0:0*/ PE_tb__DOT__load_slot;
     CData/*0:0*/ PE_tb__DOT__slot_in;
     CData/*0:0*/ PE_tb__DOT__en;

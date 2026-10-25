@@ -175,7 +175,7 @@ VL_ATTR_COLD void VProcessing_Element___024root___ctor_var_reset(VProcessing_Ele
     const uint64_t __VscopeHash = VL_MURMUR64_HASH(vlSelf->vlNamep);
     vlSelf->PE_tb__DOT__clk = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 11143928408294970508ull);
     vlSelf->PE_tb__DOT__rst_n = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 8005540888764420902ull);
-    vlSelf->PE_tb__DOT__in_valid = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 4061654438632992877ull);
+    vlSelf->PE_tb__DOT__w_load = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 4061654438632992877ull);
     vlSelf->PE_tb__DOT__slot = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 4460839808925681812ull);
     vlSelf->PE_tb__DOT__en = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 6182424404087487695ull);
     vlSelf->PE_tb__DOT__drain_en = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 16204537058027000232ull);

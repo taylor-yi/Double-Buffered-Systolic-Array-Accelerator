@@ -25,7 +25,7 @@ void VProcessing_Element___024root__trace_chg_0_sub_0(VProcessing_Element___024r
     if (VL_UNLIKELY(((vlSelfRef.__Vm_traceActivity[1U] 
                       | vlSelfRef.__Vm_traceActivity[2U])))) {
         bufp->chgBit(oldp+0,(vlSelfRef.PE_tb__DOT__rst_n));
-        bufp->chgBit(oldp+1,(vlSelfRef.PE_tb__DOT__in_valid));
+        bufp->chgBit(oldp+1,(vlSelfRef.PE_tb__DOT__w_load));
         bufp->chgBit(oldp+2,(vlSelfRef.PE_tb__DOT__slot));
         bufp->chgBit(oldp+3,(vlSelfRef.PE_tb__DOT__en));
         bufp->chgBit(oldp+4,(vlSelfRef.PE_tb__DOT__drain_en));

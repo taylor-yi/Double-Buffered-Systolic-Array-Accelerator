@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 module Controller_tb();
     logic clk, rst_n, start;
-    logic in_valid, en, load_slot, row_slot, done, feed; //group a: in_valid, en, feed / group b: load_slot, row_slot,
+    logic w_load, en, load_slot, row_slot, done, feed; //group a: w_load, en, feed / group b: load_slot, row_slot,
     logic [1:0] row_idx; // which row of A to feed this cycle
 
     logic slot_in [3];
@@ -36,8 +36,8 @@ module Controller_tb();
     // expected controller outputs, t = cycles after start
     // t: 0 idle, 1 load, 2-4 feed_0, 5-7 feed_1, 8-11 drain, 12 done, 13 idle
 
-    int e_in_valid[14] = '{0,1,0,1,0,0,0,0,0,0,0,0,0,0};
-    int e_load_slot[14] = '{0,0,0,1,0,0,0,0,0,0,0,0,0,0}; // only checked when in_valid is high
+    int e_w_load[14] = '{0,1,0,1,0,0,0,0,0,0,0,0,0,0};
+    int e_load_slot[14] = '{0,0,0,1,0,0,0,0,0,0,0,0,0,0}; // only checked when w_load is high
     int e_en[14] = '{0,0,1,1,1,1,1,1,1,1,1,1,0,0};
     int e_feed[14] = '{0,0,1,1,1,1,1,1,0,0,0,0,0,0};
     int e_row_slot[14] = '{0,0,0,0,0,1,1,1,1,1,1,1,0,0};
@@ -125,15 +125,15 @@ module Controller_tb();
 
             // control outputs
             checks++;
-            if (in_valid !== 1'(e_in_valid[t]) || en !== 1'(e_en[t]) || feed !== 1'(e_feed[t]) ||
+            if (w_load !== 1'(e_w_load[t]) || en !== 1'(e_en[t]) || feed !== 1'(e_feed[t]) ||
                 row_slot !== 1'(e_row_slot[t]) || done !== 1'(e_done[t])) begin
                 errors++;
-                $error("[%0t] t=%0d: in_valid=%0d en=%0d feed=%0d row_slot=%0d done=%0d, expected %0d %0d %0d %0d %0d",
-                       $time, t, in_valid, en, feed, row_slot, done,
-                       e_in_valid[t], e_en[t], e_feed[t], e_row_slot[t], e_done[t]);
+                $error("[%0t] t=%0d: w_load=%0d en=%0d feed=%0d row_slot=%0d done=%0d, expected %0d %0d %0d %0d %0d",
+                       $time, t, w_load, en, feed, row_slot, done,
+                       e_w_load[t], e_en[t], e_feed[t], e_row_slot[t], e_done[t]);
             end
 
-            if (in_valid) begin
+            if (w_load) begin
                 checks++;
                 if (load_slot !== 1'(e_load_slot[t])) begin
                     errors++;
@@ -201,9 +201,9 @@ module Controller_tb();
             // nothing should restart after done
             if (t > 12) begin
                 checks++;
-                if (in_valid !== 1'b0 || en !== 1'b0) begin
+                if (w_load !== 1'b0 || en !== 1'b0) begin
                     errors++;
-                    $error("[%0t] t=%0d: controller restarted, in_valid=%0d en=%0d", $time, t, in_valid, en);
+                    $error("[%0t] t=%0d: controller restarted, w_load=%0d en=%0d", $time, t, w_load, en);
                 end
             end
 
@@ -232,9 +232,9 @@ module Controller_tb();
         rst_n = 0;
         @(negedge clk);
         checks++;
-        if (in_valid !== 1'b0 || en !== 1'b0 || feed !== 1'b0 || done !== 1'b0) begin
+        if (w_load !== 1'b0 || en !== 1'b0 || feed !== 1'b0 || done !== 1'b0) begin
             errors++;
-            $error("[%0t] reset didn't clear outputs: in_valid=%0d en=%0d feed=%0d done=%0d", $time, in_valid, en, feed, done);
+            $error("[%0t] reset didn't clear outputs: w_load=%0d en=%0d feed=%0d done=%0d", $time, w_load, en, feed, done);
         end
 
         // after reset it should sit in idle until the next start
@@ -242,7 +242,7 @@ module Controller_tb();
         repeat(3) begin
             @(negedge clk);
             checks++;
-            if (in_valid !== 1'b0 || en !== 1'b0 || feed !== 1'b0 || done !== 1'b0) begin
+            if (w_load !== 1'b0 || en !== 1'b0 || feed !== 1'b0 || done !== 1'b0) begin
                 errors++;
                 $error("[%0t] controller left idle without start", $time);
             end

@@ -34,7 +34,7 @@ class alignas(VL_CACHE_LINE_BYTES) VPE VL_NOT_FINAL : public VerilatedModel {
     // propagate new values into/out from the Verilated model.
     VL_IN8(&clk,0,0);
     VL_IN8(&rst_n,0,0);
-    VL_IN8(&in_valid,0,0);
+    VL_IN8(&w_load,0,0);
     VL_IN8(&load_slot,0,0);
     VL_IN8(&compute_slot,0,0);
     VL_IN8(&en,0,0);

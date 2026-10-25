@@ -15,7 +15,7 @@ Specs:
 - 9 bit output > CORRECTED: 10 bit output
 - 3x3 hardcoded at the top level, lower level modules can be parameterized
 
-- A and B matrices are loaded in when in_valid is asserted. Internal buffering and scheduling to feed data into the PEs in pipelined design will be designed.
+- A and B matrices are loaded in when w_load is asserted. Internal buffering and scheduling to feed data into the PEs in pipelined design will be designed.
 
 Assumptions and Optimizations to make: 
 - No infinity or NaN cases
@@ -29,7 +29,7 @@ Solution to back to back solves:
 
 
 Processing Element Design:
-Inputs: clk, rst_n, A, B, in_valid, slot
+Inputs: clk, rst_n, A, B, w_load, slot
 Outputs: C (A and B multiplication accumulator)
 
 Slot will be the signal that notates which register weights B will be written to. If 0, slot 1, if 1 slot 2. This should enable us to even do continuous matrix multiplications not just 2 in a row. We will have to have a clear feature that clears the other slot too. A data passes "right" and accumulator result passes "down" (maybe hardwired drain too though).

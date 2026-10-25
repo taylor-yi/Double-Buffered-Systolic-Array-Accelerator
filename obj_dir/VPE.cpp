@@ -13,7 +13,7 @@ VPE::VPE(VerilatedContext* _vcontextp__, const char* _vcname__)
     , m_evalLoop{*this, /*convergeLimit:*/ 10000}
     , clk{vlSymsp->TOP.clk}
     , rst_n{vlSymsp->TOP.rst_n}
-    , in_valid{vlSymsp->TOP.in_valid}
+    , w_load{vlSymsp->TOP.w_load}
     , load_slot{vlSymsp->TOP.load_slot}
     , compute_slot{vlSymsp->TOP.compute_slot}
     , en{vlSymsp->TOP.en}

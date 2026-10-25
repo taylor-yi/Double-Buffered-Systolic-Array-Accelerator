@@ -134,7 +134,7 @@ bool VProcessing_Element___024root___eval_nba(VProcessing_Element___024root* vlS
                                                    ((IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b1) 
                                                     * (IData)(vlSelfRef.PE_tb__DOT__a)))));
                         }
-                        if (vlSelfRef.PE_tb__DOT__in_valid) {
+                        if (vlSelfRef.PE_tb__DOT__w_load) {
                             if (vlSelfRef.PE_tb__DOT__slot) {
                                 vlSelfRef.PE_tb__DOT__dut__DOT__b2 
                                     = vlSelfRef.PE_tb__DOT__b;
@@ -204,7 +204,7 @@ VlCoroutine VProcessing_Element___024root___eval_initial__TOP__Vtiming__1(VProce
     vlSelfRef.PE_tb__DOT__rst_n = 0U;
     vlSelfRef.PE_tb__DOT__en = 0U;
     vlSelfRef.PE_tb__DOT__drain_en = 0U;
-    vlSelfRef.PE_tb__DOT__in_valid = 0U;
+    vlSelfRef.PE_tb__DOT__w_load = 0U;
     vlSelfRef.PE_tb__DOT__a = 0U;
     vlSelfRef.PE_tb__DOT__b = 0U;
     co_await vlSelfRef.__VdlySched.delay(0x0000000000002710ULL, 
@@ -216,14 +216,14 @@ VlCoroutine VProcessing_Element___024root___eval_initial__TOP__Vtiming__1(VProce
                                          nullptr, "Processing_Element.sv", 
                                          91);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.PE_tb__DOT__in_valid = 1U;
+    vlSelfRef.PE_tb__DOT__w_load = 1U;
     vlSelfRef.PE_tb__DOT__slot = 0U;
     vlSelfRef.PE_tb__DOT__b = 3U;
     co_await vlSelfRef.__VdlySched.delay(0x0000000000002710ULL, 
                                          nullptr, "Processing_Element.sv", 
                                          96);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.PE_tb__DOT__in_valid = 0U;
+    vlSelfRef.PE_tb__DOT__w_load = 0U;
     if (VL_UNLIKELY(((3U == (IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b1))))) {
         VL_WRITEF_NX("b1 loaded correctly. Value is %0d\n",1
                      , '#',4,vlSelfRef.PE_tb__DOT__dut__DOT__b1);
@@ -238,12 +238,12 @@ VlCoroutine VProcessing_Element___024root___eval_initial__TOP__Vtiming__1(VProce
                                          nullptr, "Processing_Element.sv", 
                                          103);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.PE_tb__DOT__in_valid = 1U;
+    vlSelfRef.PE_tb__DOT__w_load = 1U;
     co_await vlSelfRef.__VdlySched.delay(0x0000000000002710ULL, 
                                          nullptr, "Processing_Element.sv", 
                                          105);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.PE_tb__DOT__in_valid = 0U;
+    vlSelfRef.PE_tb__DOT__w_load = 0U;
     if (VL_UNLIKELY(((5U == (IData)(vlSelfRef.PE_tb__DOT__dut__DOT__b2))))) {
         VL_WRITEF_NX("b2 loaded correctly. Value is %0d\n",1
                      , '#',4,vlSelfRef.PE_tb__DOT__dut__DOT__b2);
@@ -255,7 +255,7 @@ VlCoroutine VProcessing_Element___024root___eval_initial__TOP__Vtiming__1(VProce
     vlSelfRef.PE_tb__DOT__rst_n = 0U;
     vlSelfRef.PE_tb__DOT__en = 0U;
     vlSelfRef.PE_tb__DOT__drain_en = 0U;
-    vlSelfRef.PE_tb__DOT__in_valid = 0U;
+    vlSelfRef.PE_tb__DOT__w_load = 0U;
     co_await vlSelfRef.__VdlySched.delay(0x0000000000004e20ULL, 
                                          nullptr, "Processing_Element.sv", 
                                          113);
@@ -265,7 +265,7 @@ VlCoroutine VProcessing_Element___024root___eval_initial__TOP__Vtiming__1(VProce
                                          nullptr, "Processing_Element.sv", 
                                          116);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.PE_tb__DOT__in_valid = 1U;
+    vlSelfRef.PE_tb__DOT__w_load = 1U;
     vlSelfRef.PE_tb__DOT__slot = 0U;
     vlSelfRef.PE_tb__DOT__above_result = 2U;
     vlSelfRef.PE_tb__DOT__a = 1U;
@@ -274,7 +274,7 @@ VlCoroutine VProcessing_Element___024root___eval_initial__TOP__Vtiming__1(VProce
                                          nullptr, "Processing_Element.sv", 
                                          122);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.PE_tb__DOT__in_valid = 0U;
+    vlSelfRef.PE_tb__DOT__w_load = 0U;
     vlSelfRef.PE_tb__DOT__en = 1U;
     co_await vlSelfRef.__VdlySched.delay(0x0000000000002710ULL, 
                                          nullptr, "Processing_Element.sv", 
@@ -287,12 +287,12 @@ VlCoroutine VProcessing_Element___024root___eval_initial__TOP__Vtiming__1(VProce
     vlSelfRef.PE_tb__DOT__en = 0U;
     vlSelfRef.PE_tb__DOT__slot = 1U;
     vlSelfRef.PE_tb__DOT__b = 2U;
-    vlSelfRef.PE_tb__DOT__in_valid = 1U;
+    vlSelfRef.PE_tb__DOT__w_load = 1U;
     co_await vlSelfRef.__VdlySched.delay(0x0000000000002710ULL, 
                                          nullptr, "Processing_Element.sv", 
                                          133);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.PE_tb__DOT__in_valid = 0U;
+    vlSelfRef.PE_tb__DOT__w_load = 0U;
     vlSelfRef.PE_tb__DOT__en = 1U;
     co_await vlSelfRef.__VdlySched.delay(0x0000000000002710ULL, 
                                          nullptr, "Processing_Element.sv", 

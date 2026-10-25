@@ -25,7 +25,7 @@ void VPE_tb___024root__trace_chg_0_sub_0(VPE_tb___024root* vlSelf, VerilatedVcd:
     if (VL_UNLIKELY(((vlSelfRef.__Vm_traceActivity[1U] 
                       | vlSelfRef.__Vm_traceActivity[2U])))) {
         bufp->chgBit(oldp+0,(vlSelfRef.PE_tb__DOT__rst_n));
-        bufp->chgBit(oldp+1,(vlSelfRef.PE_tb__DOT__in_valid));
+        bufp->chgBit(oldp+1,(vlSelfRef.PE_tb__DOT__w_load));
         bufp->chgBit(oldp+2,(vlSelfRef.PE_tb__DOT__load_slot));
         bufp->chgBit(oldp+3,(vlSelfRef.PE_tb__DOT__slot_in));
         bufp->chgBit(oldp+4,(vlSelfRef.PE_tb__DOT__en));

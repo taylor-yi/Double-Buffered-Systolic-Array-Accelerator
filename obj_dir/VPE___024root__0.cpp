@@ -9,7 +9,7 @@ void VPE___024root___eval_sample(VPE___024root* vlSelf) {
     VPE__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    vlSelfRef.__Vsampled_TOP__in_valid = vlSelfRef.in_valid;
+    vlSelfRef.__Vsampled_TOP__w_load = vlSelfRef.w_load;
     vlSelfRef.__Vsampled_TOP__en = vlSelfRef.en;
     vlSelfRef.__Vsampled_TOP__load_slot = vlSelfRef.load_slot;
     vlSelfRef.__Vsampled_TOP__compute_slot = vlSelfRef.compute_slot;
@@ -51,8 +51,8 @@ bool VPE___024root___eval_ico(VPE___024root* vlSelf, CData/*0:0*/ firstIteration
                                                             | (((((IData)(vlSelfRef.load_slot) 
                                                                   != (IData)(vlSelfRef.__Vtrigprevexpr___TOP__load_slot__0)) 
                                                                  << 3U) 
-                                                                | (((IData)(vlSelfRef.in_valid) 
-                                                                    != (IData)(vlSelfRef.__Vtrigprevexpr___TOP__in_valid__0)) 
+                                                                | (((IData)(vlSelfRef.w_load) 
+                                                                    != (IData)(vlSelfRef.__Vtrigprevexpr___TOP__w_load__0)) 
                                                                    << 2U)) 
                                                                | ((((IData)(vlSelfRef.rst_n) 
                                                                     != (IData)(vlSelfRef.__Vtrigprevexpr___TOP__rst_n__0)) 
@@ -61,8 +61,8 @@ bool VPE___024root___eval_ico(VPE___024root* vlSelf, CData/*0:0*/ firstIteration
                                                                      != (IData)(vlSelfRef.__Vtrigprevexpr___TOP__clk__0))))))));
         vlSelfRef.__Vtrigprevexpr___TOP__clk__0 = vlSelfRef.clk;
         vlSelfRef.__Vtrigprevexpr___TOP__rst_n__0 = vlSelfRef.rst_n;
-        vlSelfRef.__Vtrigprevexpr___TOP__in_valid__0 
-            = vlSelfRef.in_valid;
+        vlSelfRef.__Vtrigprevexpr___TOP__w_load__0 
+            = vlSelfRef.w_load;
         vlSelfRef.__Vtrigprevexpr___TOP__load_slot__0 
             = vlSelfRef.load_slot;
         vlSelfRef.__Vtrigprevexpr___TOP__compute_slot__0 
@@ -238,7 +238,7 @@ void VPE___024root___nba_sequent__TOP__0(VPE___024root* vlSelf) {
     if (vlSymsp->_vm_contextp__->assertCtlGet(VerilatedAssertCtlQuery::ASSERT_CTL_ON, 1, 1)) {
         if (vlSymsp->_vm_contextp__->assertCtlGet(VerilatedAssertCtlQuery::ASSERT_CTL_FAIL_ON, 1, 1)) {
             if (vlSelfRef.rst_n) {
-                if (VL_UNLIKELY(((((IData)(vlSelfRef.__Vsampled_TOP__in_valid) 
+                if (VL_UNLIKELY(((((IData)(vlSelfRef.__Vsampled_TOP__w_load) 
                                    & (IData)(vlSelfRef.__Vsampled_TOP__en)) 
                                   & ((IData)(vlSelfRef.__Vsampled_TOP__load_slot) 
                                      == (IData)(vlSelfRef.__Vsampled_TOP__compute_slot)))))) {
@@ -262,7 +262,7 @@ void VPE___024root___nba_sequent__TOP__0(VPE___024root* vlSelf) {
                                                    ((IData)(vlSelfRef.a) 
                                                     * (IData)(vlSelfRef.PE__DOT__w)))));
         }
-        if (vlSelfRef.in_valid) {
+        if (vlSelfRef.w_load) {
             if ((1U & (~ (IData)(vlSelfRef.load_slot)))) {
                 vlSelfRef.PE__DOT__b1 = vlSelfRef.b;
             }
@@ -320,8 +320,8 @@ void VPE___024root___eval_debug_assertions(VPE___024root* vlSelf) {
     if (VL_UNLIKELY(((vlSelfRef.rst_n & 0xfeU)))) {
         Verilated::overWidthError("rst_n");
     }
-    if (VL_UNLIKELY(((vlSelfRef.in_valid & 0xfeU)))) {
-        Verilated::overWidthError("in_valid");
+    if (VL_UNLIKELY(((vlSelfRef.w_load & 0xfeU)))) {
+        Verilated::overWidthError("w_load");
     }
     if (VL_UNLIKELY(((vlSelfRef.load_slot & 0xfeU)))) {
         Verilated::overWidthError("load_slot");

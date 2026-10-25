@@ -16,7 +16,7 @@ class alignas(VL_CACHE_LINE_BYTES) VPE___024root final {
     // DESIGN SPECIFIC STATE
     VL_IN8(clk,0,0);
     VL_IN8(rst_n,0,0);
-    VL_IN8(in_valid,0,0);
+    VL_IN8(w_load,0,0);
     VL_IN8(load_slot,0,0);
     VL_IN8(compute_slot,0,0);
     VL_IN8(en,0,0);
@@ -27,13 +27,13 @@ class alignas(VL_CACHE_LINE_BYTES) VPE___024root final {
     CData/*3:0*/ PE__DOT__b1;
     CData/*3:0*/ PE__DOT__b2;
     CData/*3:0*/ PE__DOT__w;
-    CData/*0:0*/ __Vsampled_TOP__in_valid;
+    CData/*0:0*/ __Vsampled_TOP__w_load;
     CData/*0:0*/ __Vsampled_TOP__en;
     CData/*0:0*/ __Vsampled_TOP__load_slot;
     CData/*0:0*/ __Vsampled_TOP__compute_slot;
     CData/*0:0*/ __Vtrigprevexpr___TOP__clk__0;
     CData/*0:0*/ __Vtrigprevexpr___TOP__rst_n__0;
-    CData/*0:0*/ __Vtrigprevexpr___TOP__in_valid__0;
+    CData/*0:0*/ __Vtrigprevexpr___TOP__w_load__0;
     CData/*0:0*/ __Vtrigprevexpr___TOP__load_slot__0;
     CData/*0:0*/ __Vtrigprevexpr___TOP__compute_slot__0;
     CData/*0:0*/ __Vtrigprevexpr___TOP__en__0;

@@ -2,7 +2,7 @@
 module Controller #(parameter SIZE = 3, parameter NUM_MATR = 2) (
     input logic clk, rst_n, start,
 
-    output logic in_valid, en, load_slot, row_slot, done, feed, //group a: in_valid, en, feed / group b: load_slot, row_slot,
+    output logic w_load, en, load_slot, row_slot, done, feed, //group a: en, row_slot, / group b: load_slot, w_load, 
     output logic [$clog2(SIZE) - 1:0] row_idx // which row of A to feed this cycle
 );
 
@@ -37,7 +37,7 @@ module Controller #(parameter SIZE = 3, parameter NUM_MATR = 2) (
     //FSM
     always_comb begin
         next_state = state;
-        in_valid = 1'b0;
+        w_load = 1'b0;
         en = 1'b0;
         load_slot = 1'b0;
         row_slot = 1'b0;
@@ -52,7 +52,7 @@ module Controller #(parameter SIZE = 3, parameter NUM_MATR = 2) (
                 end
             end
             LOAD: begin
-                in_valid = 1'b1;
+                w_load = 1'b1;
                 load_slot = 1'b0;
                 next_state = FEED_0;
             end
@@ -62,7 +62,7 @@ module Controller #(parameter SIZE = 3, parameter NUM_MATR = 2) (
                 row_slot = 1'b0;
 
                 if (cycle_count == CW'(PRELOAD_AT)) begin //case when you are preloading the NEXT cycle of weights
-                    in_valid = 1'b1;
+                    w_load = 1'b1;
                     load_slot = 1'b1;
                 end
 

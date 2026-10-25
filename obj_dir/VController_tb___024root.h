@@ -103,7 +103,7 @@ class alignas(VL_CACHE_LINE_BYTES) VController_tb___024root final {
         VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> Controller_tb__DOT__W2;
         VlUnpacked<VlUnpacked<IData/*31:0*/, 3>, 3> Controller_tb__DOT__C_exp;
         VlUnpacked<VlUnpacked<IData/*31:0*/, 3>, 3> Controller_tb__DOT__C_exp2;
-        VlUnpacked<IData/*31:0*/, 14> Controller_tb__DOT__e_in_valid;
+        VlUnpacked<IData/*31:0*/, 14> Controller_tb__DOT__e_w_load;
         VlUnpacked<IData/*31:0*/, 14> Controller_tb__DOT__e_load_slot;
         VlUnpacked<IData/*31:0*/, 14> Controller_tb__DOT__e_en;
         VlUnpacked<IData/*31:0*/, 14> Controller_tb__DOT__e_feed;

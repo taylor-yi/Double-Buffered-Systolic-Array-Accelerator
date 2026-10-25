@@ -2,7 +2,7 @@
 // Linter line: verilator --lint-only Processing_Element.sv --top-module PE
 // compute slot being replaced by slot_in and slot_out
 module Processing_Element(
-    input logic clk, rst_n, in_valid, load_slot, slot_in, en,
+    input logic clk, rst_n, w_load, load_slot, slot_in, en,
     input logic [3:0] a, b,
     input logic [9:0] above_result,
     output logic slot_out,
@@ -24,7 +24,7 @@ module Processing_Element(
             b1 <= 4'h0;
             b2 <= 4'h0;
         end else begin
-            if(in_valid) begin
+            if(w_load) begin
                 if(load_slot) begin
                     b2 <= b;
                 end else begin
@@ -50,5 +50,5 @@ module Processing_Element(
     end
 
     // simulation safety check to make sure we aren't loading into the same slot we are computing from
-    // assert property (@(posedge clk) disable iff (!rst_n) !(in_valid && en && (load_slot == compute_slot))) else $error("Loading into the compute slot.");
+    // assert property (@(posedge clk) disable iff (!rst_n) !(w_load && en && (load_slot == compute_slot))) else $error("Loading into the compute slot.");
 endmodule

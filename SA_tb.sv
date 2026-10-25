@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 // Systolic Array Testbench
 module SA_tb ();
-    logic clk, rst_n, en, in_valid, load_slot;
+    logic clk, rst_n, en, w_load, load_slot;
     logic slot_in [3];
     logic [3:0] a_in [3];
     logic [3:0] b_in [3][3];
@@ -59,7 +59,7 @@ module SA_tb ();
 
         rst_n = 0;
         en = 0;
-        in_valid = 0;
+        w_load = 0;
         load_slot = 0;
         slot_in = '{default: 1'b0};
         a_in = '{default: '0};
@@ -70,7 +70,7 @@ module SA_tb ();
         test_num += 1;
         rst_n = 1;
         en = 1;
-        in_valid = 0;
+        w_load = 0;
         load_slot = 1;
         slot_in = '{default: 1'b0}; // different slots, avoids the hazard assertion
         a_in = '{default: '0};
@@ -122,7 +122,7 @@ module SA_tb ();
         test_num += 1;
         rst_n = 1;
         en = 0;
-        in_valid = 1; 
+        w_load = 1; 
         load_slot = 0; // load b1 with 1s
         slot_in = '{default: 1'b1}; // different slots, avoids the hazard assertion
         b_in = '{'{4'h1, 4'h1, 4'h1},
@@ -207,7 +207,7 @@ module SA_tb ();
         // hold compute while loading with en low
         @(negedge clk);
         en = 0;
-        in_valid = 1;
+        w_load = 1;
         load_slot = 0;
         slot_in = '{default: 1'b1};
         for (int i = 0; i < 3; i++)
@@ -215,7 +215,7 @@ module SA_tb ();
                 b_in[i][j] = W[i][j];
 
                 @(negedge clk);
-                in_valid = 0;
+                w_load = 0;
                 load_slot = 1;
                 slot_in = '{default: 1'b0};
                 en = 1;
@@ -252,7 +252,7 @@ module SA_tb ();
         // Test 4: Distinct weight loading
         test_num += 1;
         en = 0;
-        in_valid = 1; 
+        w_load = 1; 
         load_slot = 0; // load b1
         slot_in = '{default: 1'b1}; // different slots, avoids the hazard assertion
         b_in = '{'{4'b0000, 4'b0001, 4'b0010}, //distinction: row col, {row, col}, in 2 bit notations.
@@ -312,7 +312,7 @@ module SA_tb ();
             end
         end
         @(negedge clk);
-        in_valid = 1;
+        w_load = 1;
         load_slot = 0;
         slot_in = '{default: 1'b1};
         for (int i = 0; i < 3; i++) begin
@@ -323,7 +323,7 @@ module SA_tb ();
         end
 
         @(negedge clk);
-        in_valid = 0;
+        w_load = 0;
         load_slot = 1;
         slot_in = '{default: 1'b0};
         en = 1;
@@ -388,7 +388,7 @@ module SA_tb ();
         // load W into slot 0, en low
         @(negedge clk);
         en = 0;
-        in_valid = 1;
+        w_load = 1;
         load_slot = 0;
         slot_in = '{default: 1'b1};
         for (int i = 0; i < 3; i++) begin
@@ -398,7 +398,7 @@ module SA_tb ();
         end
 
         @(negedge clk);
-        in_valid = 0;
+        w_load = 0;
         load_slot = 1;
         slot_in = '{default: 1'b0};
         en = 1;
@@ -426,7 +426,7 @@ module SA_tb ();
 
             // load W2 mid stream
             if (k == 1) begin
-                in_valid = 1;
+                w_load = 1;
                 load_slot = 1;
                 for (int i = 0; i < 3; i++) begin
                     for (int j = 0; j < 3; j++) begin
@@ -434,7 +434,7 @@ module SA_tb ();
                     end
                 end
             end
-            if (k == 2) in_valid = 0;
+            if (k == 2) w_load = 0;
         end
 
         // both slots should have their own weights
@@ -504,7 +504,7 @@ module SA_tb ();
         // load W into slot 0, en low
         @(negedge clk);
         en = 0;
-        in_valid = 1;
+        w_load = 1;
         load_slot = 0;
         slot_in = '{default: 1'b1};
         for (int i = 0; i < 3; i++) begin
@@ -514,7 +514,7 @@ module SA_tb ();
         end
 
         @(negedge clk);
-        in_valid = 0;
+        w_load = 0;
         load_slot = 1;
         slot_in = '{default: 1'b0};
         en = 1;
@@ -563,7 +563,7 @@ module SA_tb ();
 
             // load W2 into slot 1 early
             if (k == 1) begin
-                in_valid = 1;
+                w_load = 1;
                 load_slot = 1;
                 for (int i = 0; i < 3; i++) begin
                     for (int j = 0; j < 3; j++) begin
@@ -571,7 +571,7 @@ module SA_tb ();
                     end
                 end
             end
-            if (k == 2) in_valid = 0;
+            if (k == 2) w_load = 0;
         end
 
         if (errors == test_errors) $display("Test 7 passed: back to back, zero gap");

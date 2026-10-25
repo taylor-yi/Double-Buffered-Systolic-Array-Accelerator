@@ -4,7 +4,7 @@ $timescale 1ps $end
   $var wire 1 g# clk $end
   $var wire 1 4! rst_n $end
   $var wire 1 5! start $end
-  $var wire 1 n! in_valid $end
+  $var wire 1 n! w_load $end
   $var wire 1 o! en $end
   $var wire 1 p! load_slot $end
   $var wire 1 q! row_slot $end
@@ -87,20 +87,20 @@ $timescale 1ps $end
   $var wire 32 k! C_exp2[2][0] [31:0] $end
   $var wire 32 l! C_exp2[2][1] [31:0] $end
   $var wire 32 m! C_exp2[2][2] [31:0] $end
-  $var wire 32 " e_in_valid[0] [31:0] $end
-  $var wire 32 # e_in_valid[1] [31:0] $end
-  $var wire 32 $ e_in_valid[2] [31:0] $end
-  $var wire 32 % e_in_valid[3] [31:0] $end
-  $var wire 32 & e_in_valid[4] [31:0] $end
-  $var wire 32 ' e_in_valid[5] [31:0] $end
-  $var wire 32 ( e_in_valid[6] [31:0] $end
-  $var wire 32 ) e_in_valid[7] [31:0] $end
-  $var wire 32 * e_in_valid[8] [31:0] $end
-  $var wire 32 + e_in_valid[9] [31:0] $end
-  $var wire 32 , e_in_valid[10] [31:0] $end
-  $var wire 32 - e_in_valid[11] [31:0] $end
-  $var wire 32 . e_in_valid[12] [31:0] $end
-  $var wire 32 / e_in_valid[13] [31:0] $end
+  $var wire 32 " e_w_load[0] [31:0] $end
+  $var wire 32 # e_w_load[1] [31:0] $end
+  $var wire 32 $ e_w_load[2] [31:0] $end
+  $var wire 32 % e_w_load[3] [31:0] $end
+  $var wire 32 & e_w_load[4] [31:0] $end
+  $var wire 32 ' e_w_load[5] [31:0] $end
+  $var wire 32 ( e_w_load[6] [31:0] $end
+  $var wire 32 ) e_w_load[7] [31:0] $end
+  $var wire 32 * e_w_load[8] [31:0] $end
+  $var wire 32 + e_w_load[9] [31:0] $end
+  $var wire 32 , e_w_load[10] [31:0] $end
+  $var wire 32 - e_w_load[11] [31:0] $end
+  $var wire 32 . e_w_load[12] [31:0] $end
+  $var wire 32 / e_w_load[13] [31:0] $end
   $var wire 32 0 e_load_slot[0] [31:0] $end
   $var wire 32 1 e_load_slot[1] [31:0] $end
   $var wire 32 2 e_load_slot[2] [31:0] $end
@@ -217,7 +217,7 @@ $timescale 1ps $end
    $var wire 1 g# clk $end
    $var wire 1 4! rst_n $end
    $var wire 1 5! start $end
-   $var wire 1 n! in_valid $end
+   $var wire 1 n! w_load $end
    $var wire 1 o! en $end
    $var wire 1 p! load_slot $end
    $var wire 1 q! row_slot $end
@@ -236,7 +236,7 @@ $timescale 1ps $end
    $var wire 1 g# clk $end
    $var wire 1 4! rst_n $end
    $var wire 1 o! en $end
-   $var wire 1 n! in_valid $end
+   $var wire 1 n! w_load $end
    $var wire 1 p! load_slot $end
    $var wire 1 +" slot_in[0] $end
    $var wire 1 ," slot_in[1] $end
@@ -288,7 +288,7 @@ $timescale 1ps $end
      $scope module PE $end
       $var wire 1 g# clk $end
       $var wire 1 4! rst_n $end
-      $var wire 1 n! in_valid $end
+      $var wire 1 n! w_load $end
       $var wire 1 p! load_slot $end
       $var wire 1 :" slot_in $end
       $var wire 1 o! en $end
@@ -308,7 +308,7 @@ $timescale 1ps $end
      $scope module PE $end
       $var wire 1 g# clk $end
       $var wire 1 4! rst_n $end
-      $var wire 1 n! in_valid $end
+      $var wire 1 n! w_load $end
       $var wire 1 p! load_slot $end
       $var wire 1 !# slot_in $end
       $var wire 1 o! en $end
@@ -328,7 +328,7 @@ $timescale 1ps $end
      $scope module PE $end
       $var wire 1 g# clk $end
       $var wire 1 4! rst_n $end
-      $var wire 1 n! in_valid $end
+      $var wire 1 n! w_load $end
       $var wire 1 p! load_slot $end
       $var wire 1 *# slot_in $end
       $var wire 1 o! en $end
@@ -350,7 +350,7 @@ $timescale 1ps $end
      $scope module PE $end
       $var wire 1 g# clk $end
       $var wire 1 4! rst_n $end
-      $var wire 1 n! in_valid $end
+      $var wire 1 n! w_load $end
       $var wire 1 p! load_slot $end
       $var wire 1 A" slot_in $end
       $var wire 1 o! en $end
@@ -370,7 +370,7 @@ $timescale 1ps $end
      $scope module PE $end
       $var wire 1 g# clk $end
       $var wire 1 4! rst_n $end
-      $var wire 1 n! in_valid $end
+      $var wire 1 n! w_load $end
       $var wire 1 p! load_slot $end
       $var wire 1 9# slot_in $end
       $var wire 1 o! en $end
@@ -390,7 +390,7 @@ $timescale 1ps $end
      $scope module PE $end
       $var wire 1 g# clk $end
       $var wire 1 4! rst_n $end
-      $var wire 1 n! in_valid $end
+      $var wire 1 n! w_load $end
       $var wire 1 p! load_slot $end
       $var wire 1 C# slot_in $end
       $var wire 1 o! en $end
@@ -412,7 +412,7 @@ $timescale 1ps $end
      $scope module PE $end
       $var wire 1 g# clk $end
       $var wire 1 4! rst_n $end
-      $var wire 1 n! in_valid $end
+      $var wire 1 n! w_load $end
       $var wire 1 p! load_slot $end
       $var wire 1 H" slot_in $end
       $var wire 1 o! en $end
@@ -432,7 +432,7 @@ $timescale 1ps $end
      $scope module PE $end
       $var wire 1 g# clk $end
       $var wire 1 4! rst_n $end
-      $var wire 1 n! in_valid $end
+      $var wire 1 n! w_load $end
       $var wire 1 p! load_slot $end
       $var wire 1 S# slot_in $end
       $var wire 1 o! en $end
@@ -452,7 +452,7 @@ $timescale 1ps $end
      $scope module PE $end
       $var wire 1 g# clk $end
       $var wire 1 4! rst_n $end
-      $var wire 1 n! in_valid $end
+      $var wire 1 n! w_load $end
       $var wire 1 p! load_slot $end
       $var wire 1 ]# slot_in $end
       $var wire 1 o! en $end

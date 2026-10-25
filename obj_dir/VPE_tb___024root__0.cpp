@@ -153,7 +153,7 @@ bool VPE_tb___024root___eval_nba(VPE_tb___024root* vlSelf) {
                                                    ((IData)(vlSelfRef.PE_tb__DOT__a) 
                                                     * (IData)(vlSelfRef.PE_tb__DOT__dut__DOT__w)))));
                         }
-                        if (vlSelfRef.PE_tb__DOT__in_valid) {
+                        if (vlSelfRef.PE_tb__DOT__w_load) {
                             if ((1U & (~ (IData)(vlSelfRef.PE_tb__DOT__load_slot)))) {
                                 vlSelfRef.PE_tb__DOT__dut__DOT__b1 
                                     = vlSelfRef.PE_tb__DOT__b;
@@ -249,7 +249,7 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.PE_tb__DOT__rst_n = 0U;
     vlSelfRef.PE_tb__DOT__en = 0U;
-    vlSelfRef.PE_tb__DOT__in_valid = 0U;
+    vlSelfRef.PE_tb__DOT__w_load = 0U;
     vlSelfRef.PE_tb__DOT__load_slot = 0U;
     vlSelfRef.PE_tb__DOT__slot_in = 0U;
     vlSelfRef.PE_tb__DOT__a = 0U;
@@ -263,7 +263,7 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
                                                          45);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.PE_tb__DOT__en = 1U;
-    vlSelfRef.PE_tb__DOT__in_valid = 1U;
+    vlSelfRef.PE_tb__DOT__w_load = 1U;
     vlSelfRef.PE_tb__DOT__load_slot = 0U;
     vlSelfRef.PE_tb__DOT__slot_in = 1U;
     vlSelfRef.PE_tb__DOT__a = 8U;
@@ -290,7 +290,7 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
                      , '#',10,(IData)(vlSelfRef.PE_tb__DOT__result));
         VL_STOP_MT("PE_tb.sv", 59, "");
     }
-    vlSelfRef.PE_tb__DOT__in_valid = 1U;
+    vlSelfRef.PE_tb__DOT__w_load = 1U;
     vlSelfRef.PE_tb__DOT__load_slot = 1U;
     vlSelfRef.PE_tb__DOT__slot_in = 0U;
     vlSelfRef.PE_tb__DOT__a = 1U;
@@ -318,7 +318,7 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
         VL_STOP_MT("PE_tb.sv", 72, "");
     }
     vlSelfRef.PE_tb__DOT__rst_n = 1U;
-    vlSelfRef.PE_tb__DOT__in_valid = 1U;
+    vlSelfRef.PE_tb__DOT__w_load = 1U;
     vlSelfRef.PE_tb__DOT__load_slot = 0U;
     vlSelfRef.PE_tb__DOT__b = 2U;
     if ((vlSelfRef.PE_tb__DOT__errors == vlSelfRef.PE_tb__DOT__test_errors)) {
@@ -431,7 +431,7 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
                                                          137);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.PE_tb__DOT__en = 0U;
-    vlSelfRef.PE_tb__DOT__in_valid = 1U;
+    vlSelfRef.PE_tb__DOT__w_load = 1U;
     vlSelfRef.PE_tb__DOT__rst_n = 1U;
     vlSelfRef.PE_tb__DOT__slot_in = 1U;
     vlSelfRef.PE_tb__DOT__load_slot = 0U;
@@ -445,7 +445,7 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
                                                          145);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.PE_tb__DOT__en = 1U;
-    vlSelfRef.PE_tb__DOT__in_valid = 1U;
+    vlSelfRef.PE_tb__DOT__w_load = 1U;
     vlSelfRef.PE_tb__DOT__slot_in = 0U;
     vlSelfRef.PE_tb__DOT__load_slot = 1U;
     vlSelfRef.PE_tb__DOT__a = 1U;
@@ -514,7 +514,7 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
                                                                  178);
             vlSelfRef.__Vm_traceActivity[2U] = 1U;
             vlSelfRef.PE_tb__DOT__en = 0U;
-            vlSelfRef.PE_tb__DOT__in_valid = 1U;
+            vlSelfRef.PE_tb__DOT__w_load = 1U;
             vlSelfRef.PE_tb__DOT__load_slot = (1U & PE_tb__DOT__unnamedblk1__DOT__s);
             vlSelfRef.PE_tb__DOT__b = (0x0000000fU 
                                        & vlSelfRef.PE_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__w);
@@ -526,7 +526,7 @@ VlCoroutine VPE_tb___024root___eval_initial__TOP__Vtiming__1(VPE_tb___024root* v
                                                                  "PE_tb.sv", 
                                                                  184);
             vlSelfRef.__Vm_traceActivity[2U] = 1U;
-            vlSelfRef.PE_tb__DOT__in_valid = 0U;
+            vlSelfRef.PE_tb__DOT__w_load = 0U;
             vlSelfRef.PE_tb__DOT__slot_in = (1U & PE_tb__DOT__unnamedblk1__DOT__s);
             vlSelfRef.PE_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__unnamedblk3__DOT__av = 0U;
             while (VL_GTS_III(32, 0x00000010U, vlSelfRef.PE_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__unnamedblk3__DOT__av)) {

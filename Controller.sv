@@ -1,6 +1,8 @@
 `timescale 1ns/1ps
 module Controller #(parameter SIZE = 3, parameter NUM_MATR = 2) (
-    input logic clk, rst_n, start,
+    input logic clk, rst_n, job_ready,
+
+    input logic [1:0] entry_valid,
 
     output logic w_load, en, load_slot, row_slot, done, feed, //group a: en, row_slot, / group b: load_slot, w_load, 
     output logic [$clog2(SIZE) - 1:0] row_idx // which row of A to feed this cycle
@@ -47,7 +49,7 @@ module Controller #(parameter SIZE = 3, parameter NUM_MATR = 2) (
 
         case(state)
             IDLE: begin
-                if(start) begin
+                if(entry_valid[0]) begin
                     next_state = LOAD;
                 end
             end
@@ -66,10 +68,12 @@ module Controller #(parameter SIZE = 3, parameter NUM_MATR = 2) (
                     load_slot = 1'b1;
                 end
 
-                if(cycle_count == CW'(SIZE - 1)) begin
-                    next_state = FEED_1;
-                end else begin
-                    next_state = FEED_0;
+                if((cycle_count == CW'(SIZE - 1))) begin
+                    if(entry_valid[1]) begin
+                        next_state = FEED_1;
+                    end else begin
+                        next_state = DRAIN;
+                    end
                 end
             end
             FEED_1: begin // Matrix 2

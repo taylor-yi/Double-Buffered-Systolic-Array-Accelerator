@@ -63,7 +63,7 @@ module Controller #(parameter SIZE = 3, parameter NUM_MATR = 2) (
                 feed = 1'b1;
                 row_slot = 1'b0;
 
-                if (cycle_count == CW'(PRELOAD_AT)) begin //case when you are preloading the NEXT cycle of weights
+                if (entry_valid[1]) begin //case when you are preloading the NEXT cycle of weights
                     w_load = 1'b1;
                     load_slot = 1'b1;
                 end

@@ -398,7 +398,7 @@ VL_ATTR_COLD bool VController_tb___024root___trigger_anySet__stl(const VlUnpacke
     return (0U);
 }
 
-extern const VlUnpacked<CData/*0:0*/, 128> VController_tb__ConstPool__TABLE_hb7eea91c_0;
+extern const VlUnpacked<CData/*0:0*/, 128> VController_tb__ConstPool__TABLE_h82a00311_0;
 extern const VlUnpacked<CData/*0:0*/, 128> VController_tb__ConstPool__TABLE_hbabea407_0;
 extern const VlUnpacked<CData/*0:0*/, 128> VController_tb__ConstPool__TABLE_h757529b2_0;
 extern const VlUnpacked<CData/*1:0*/, 128> VController_tb__ConstPool__TABLE_h35b5d552_0;
@@ -497,7 +497,7 @@ VL_ATTR_COLD void VController_tb___024root___stl_sequent__TOP__0(VController_tb_
         = (vlSelfRef.Controller_tb__DOT__dut__DOT__slot_wire[0U][0U]
             ? (IData)(vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__1__KET____DOT__PE__DOT__b2)
             : (IData)(vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__1__KET____DOT__PE__DOT__b1));
-    if (VController_tb__ConstPool__TABLE_hb7eea91c_0
+    if (VController_tb__ConstPool__TABLE_h82a00311_0
         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) {
         vlSelfRef.Controller_tb__DOT__b_in[0U][0U] 
             = vlSelfRef.Controller_tb__DOT__W2[0U][0U];

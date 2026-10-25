@@ -85,7 +85,7 @@ always_comb begin
             en = 1'b1;
             row_slot = 1'b1;
 
-            if (count == CW'(DRAIN_CYCLES - 1)) begin
+            if (cycle_count == CW'(DRAIN_CYCLES - 1)) begin
                 next_state = DONE;
             end
         end

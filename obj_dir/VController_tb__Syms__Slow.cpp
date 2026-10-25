@@ -12,7 +12,7 @@ VController_tb__Syms::VController_tb__Syms(VerilatedContext* contextp, const cha
     , TOP{this, namep}
 {
     // Check resources
-    Verilated::stackCheck(339);
+    Verilated::stackCheck(512);
     // Setup sub module instances
     TOP____024unit.ctor(this, "$unit");
     // Configure time unit / time precision

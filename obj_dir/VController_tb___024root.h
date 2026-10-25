@@ -23,8 +23,9 @@ class alignas(VL_CACHE_LINE_BYTES) VController_tb___024root final {
         CData/*0:0*/ Controller_tb__DOT__clk;
         CData/*0:0*/ Controller_tb__DOT__rst_n;
         CData/*0:0*/ Controller_tb__DOT__start;
-        CData/*0:0*/ Controller_tb__DOT__job_ready;
         CData/*1:0*/ Controller_tb__DOT__entry_valid;
+        CData/*0:0*/ Controller_tb__DOT__push0;
+        CData/*0:0*/ Controller_tb__DOT__push1;
         CData/*0:0*/ Controller_tb__DOT__cur_s;
         CData/*3:0*/ Controller_tb__DOT__dut__DOT____Vcellout__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__a_out;
         CData/*0:0*/ Controller_tb__DOT__dut__DOT____Vcellout__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__slot_out;
@@ -83,9 +84,9 @@ class alignas(VL_CACHE_LINE_BYTES) VController_tb___024root final {
         SData/*9:0*/ Controller_tb__DOT__dut__DOT____Vcellout__row__BRA__1__KET____DOT__col__BRA__2__KET____DOT__PE__result;
         SData/*9:0*/ Controller_tb__DOT__dut__DOT____Vcellout__row__BRA__2__KET____DOT__col__BRA__0__KET____DOT__PE__result;
         SData/*9:0*/ Controller_tb__DOT__dut__DOT____Vcellout__row__BRA__2__KET____DOT__col__BRA__1__KET____DOT__PE__result;
-        SData/*9:0*/ Controller_tb__DOT__dut__DOT____Vcellout__row__BRA__2__KET____DOT__col__BRA__2__KET____DOT__PE__result;
     };
     struct {
+        SData/*9:0*/ Controller_tb__DOT__dut__DOT____Vcellout__row__BRA__2__KET____DOT__col__BRA__2__KET____DOT__PE__result;
         IData/*31:0*/ Controller_tb__DOT__errors;
         IData/*31:0*/ Controller_tb__DOT__checks;
         IData/*31:0*/ Controller_tb__DOT__test_errors;
@@ -113,6 +114,16 @@ class alignas(VL_CACHE_LINE_BYTES) VController_tb___024root final {
         VlUnpacked<IData/*31:0*/, 14> Controller_tb__DOT__e_row_idx;
         VlUnpacked<IData/*31:0*/, 14> Controller_tb__DOT__e_done;
         VlUnpacked<IData/*31:0*/, 14> Controller_tb__DOT__e_state;
+        VlUnpacked<IData/*31:0*/, 11> Controller_tb__DOT__s_w_load;
+        VlUnpacked<IData/*31:0*/, 11> Controller_tb__DOT__s_load_slot;
+        VlUnpacked<IData/*31:0*/, 11> Controller_tb__DOT__s_en;
+        VlUnpacked<IData/*31:0*/, 11> Controller_tb__DOT__s_feed;
+        VlUnpacked<IData/*31:0*/, 11> Controller_tb__DOT__s_row_slot;
+        VlUnpacked<IData/*31:0*/, 11> Controller_tb__DOT__s_row_idx;
+        VlUnpacked<IData/*31:0*/, 11> Controller_tb__DOT__s_done;
+        VlUnpacked<IData/*31:0*/, 11> Controller_tb__DOT__s_state;
+        VlUnpacked<IData/*31:0*/, 14> Controller_tb__DOT__l_w_load;
+        VlUnpacked<IData/*31:0*/, 14> Controller_tb__DOT__l_load_slot;
         VlUnpacked<CData/*3:0*/, 3> Controller_tb__DOT__cur_a;
         VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 2> Controller_tb__DOT__dly_a;
         VlUnpacked<CData/*0:0*/, 2> Controller_tb__DOT__dly_s;

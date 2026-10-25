@@ -196,18 +196,97 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
     // Locals
     IData/*31:0*/ Controller_tb__DOT__unnamedblk1_1__DOT____Vrepeat0;
     Controller_tb__DOT__unnamedblk1_1__DOT____Vrepeat0 = 0;
-    IData/*31:0*/ Controller_tb__DOT__unnamedblk7__DOT__t;
-    Controller_tb__DOT__unnamedblk7__DOT__t = 0;
+    IData/*31:0*/ Controller_tb__DOT__unnamedblk8__DOT__t;
+    Controller_tb__DOT__unnamedblk8__DOT__t = 0;
     IData/*31:0*/ Controller_tb__DOT__unnamedblk1_2__DOT____Vrepeat1;
     Controller_tb__DOT__unnamedblk1_2__DOT____Vrepeat1 = 0;
     IData/*31:0*/ Controller_tb__DOT__unnamedblk9__DOT__t;
     Controller_tb__DOT__unnamedblk9__DOT__t = 0;
     IData/*31:0*/ Controller_tb__DOT__unnamedblk1_3__DOT____Vrepeat2;
     Controller_tb__DOT__unnamedblk1_3__DOT____Vrepeat2 = 0;
+    IData/*31:0*/ Controller_tb__DOT__unnamedblk10__DOT__t;
+    Controller_tb__DOT__unnamedblk10__DOT__t = 0;
     IData/*31:0*/ Controller_tb__DOT__unnamedblk1_4__DOT____Vrepeat3;
     Controller_tb__DOT__unnamedblk1_4__DOT____Vrepeat3 = 0;
+    IData/*31:0*/ Controller_tb__DOT__unnamedblk1_5__DOT____Vrepeat4;
+    Controller_tb__DOT__unnamedblk1_5__DOT____Vrepeat4 = 0;
+    IData/*31:0*/ Controller_tb__DOT__unnamedblk1_6__DOT____Vrepeat5;
+    Controller_tb__DOT__unnamedblk1_6__DOT____Vrepeat5 = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__0__t;
+    __Vtask_Controller_tb__DOT__check_ctrl__0__t = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__0__ew;
+    __Vtask_Controller_tb__DOT__check_ctrl__0__ew = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__0__els;
+    __Vtask_Controller_tb__DOT__check_ctrl__0__els = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__0__een;
+    __Vtask_Controller_tb__DOT__check_ctrl__0__een = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__0__efd;
+    __Vtask_Controller_tb__DOT__check_ctrl__0__efd = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__0__ers;
+    __Vtask_Controller_tb__DOT__check_ctrl__0__ers = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__0__eri;
+    __Vtask_Controller_tb__DOT__check_ctrl__0__eri = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__0__edn;
+    __Vtask_Controller_tb__DOT__check_ctrl__0__edn = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__0__est;
+    __Vtask_Controller_tb__DOT__check_ctrl__0__est = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_results__1__t;
+    __Vtask_Controller_tb__DOT__check_results__1__t = 0;
+    CData/*0:0*/ __Vtask_Controller_tb__DOT__check_results__1__two_jobs;
+    __Vtask_Controller_tb__DOT__check_results__1__two_jobs = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_results__1__m;
+    __Vtask_Controller_tb__DOT__check_results__1__m = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__2__t;
+    __Vtask_Controller_tb__DOT__check_ctrl__2__t = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__2__ew;
+    __Vtask_Controller_tb__DOT__check_ctrl__2__ew = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__2__els;
+    __Vtask_Controller_tb__DOT__check_ctrl__2__els = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__2__een;
+    __Vtask_Controller_tb__DOT__check_ctrl__2__een = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__2__efd;
+    __Vtask_Controller_tb__DOT__check_ctrl__2__efd = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__2__ers;
+    __Vtask_Controller_tb__DOT__check_ctrl__2__ers = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__2__eri;
+    __Vtask_Controller_tb__DOT__check_ctrl__2__eri = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__2__edn;
+    __Vtask_Controller_tb__DOT__check_ctrl__2__edn = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__2__est;
+    __Vtask_Controller_tb__DOT__check_ctrl__2__est = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_results__3__t;
+    __Vtask_Controller_tb__DOT__check_results__3__t = 0;
+    CData/*0:0*/ __Vtask_Controller_tb__DOT__check_results__3__two_jobs;
+    __Vtask_Controller_tb__DOT__check_results__3__two_jobs = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_results__3__m;
+    __Vtask_Controller_tb__DOT__check_results__3__m = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__4__t;
+    __Vtask_Controller_tb__DOT__check_ctrl__4__t = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__4__ew;
+    __Vtask_Controller_tb__DOT__check_ctrl__4__ew = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__4__els;
+    __Vtask_Controller_tb__DOT__check_ctrl__4__els = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__4__een;
+    __Vtask_Controller_tb__DOT__check_ctrl__4__een = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__4__efd;
+    __Vtask_Controller_tb__DOT__check_ctrl__4__efd = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__4__ers;
+    __Vtask_Controller_tb__DOT__check_ctrl__4__ers = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__4__eri;
+    __Vtask_Controller_tb__DOT__check_ctrl__4__eri = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__4__edn;
+    __Vtask_Controller_tb__DOT__check_ctrl__4__edn = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_ctrl__4__est;
+    __Vtask_Controller_tb__DOT__check_ctrl__4__est = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_results__5__t;
+    __Vtask_Controller_tb__DOT__check_results__5__t = 0;
+    CData/*0:0*/ __Vtask_Controller_tb__DOT__check_results__5__two_jobs;
+    __Vtask_Controller_tb__DOT__check_results__5__two_jobs = 0;
+    IData/*31:0*/ __Vtask_Controller_tb__DOT__check_results__5__m;
+    __Vtask_Controller_tb__DOT__check_results__5__m = 0;
     std::string __Vtemp_55;
     std::string __Vtemp_56;
+    std::string __Vtemp_57;
     // Body
     vlSelfRef.Controller_tb__DOT__A[0U][0U] = 1U;
     vlSelfRef.Controller_tb__DOT__A[0U][1U] = 2U;
@@ -489,7 +568,7 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                                                              nullptr, 
                                                              "@(negedge Controller_tb.clk)", 
                                                              "Controller_tb.sv", 
-                                                             116);
+                                                             198);
         vlSelfRef.__Vm_traceActivity[3U] = 1U;
         Controller_tb__DOT__unnamedblk1_1__DOT____Vrepeat0 
             = (Controller_tb__DOT__unnamedblk1_1__DOT____Vrepeat0 
@@ -497,73 +576,78 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
     }
     vlSelfRef.Controller_tb__DOT__rst_n = 1U;
     vlSelfRef.Controller_tb__DOT__test_errors = vlSelfRef.Controller_tb__DOT__errors;
-    Controller_tb__DOT__unnamedblk7__DOT__t = 0U;
-    while (VL_GTS_III(32, 0x0000000eU, Controller_tb__DOT__unnamedblk7__DOT__t)) {
+    vlSelfRef.Controller_tb__DOT__push0 = 1U;
+    vlSelfRef.Controller_tb__DOT__push1 = 1U;
+    Controller_tb__DOT__unnamedblk8__DOT__t = 0U;
+    while (VL_GTS_III(32, 0x0000000eU, Controller_tb__DOT__unnamedblk8__DOT__t)) {
         VController_tb___024root____VbeforeTrig_hb8a3c5d6__0(vlSelf, 
                                                              "@(negedge Controller_tb.clk)");
         co_await vlSelfRef.__VtrigSched_hb8a3c5d6__0.trigger(0U, 
                                                              nullptr, 
                                                              "@(negedge Controller_tb.clk)", 
                                                              "Controller_tb.sv", 
-                                                             124);
+                                                             208);
         vlSelfRef.__Vm_traceActivity[3U] = 1U;
+        if ((0x0dU >= (0x0000000fU & Controller_tb__DOT__unnamedblk8__DOT__t))) {
+            __Vtask_Controller_tb__DOT__check_ctrl__0__est 
+                = vlSelfRef.Controller_tb__DOT__e_state
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk8__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__0__edn 
+                = vlSelfRef.Controller_tb__DOT__e_done
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk8__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__0__eri 
+                = vlSelfRef.Controller_tb__DOT__e_row_idx
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk8__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__0__ers 
+                = vlSelfRef.Controller_tb__DOT__e_row_slot
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk8__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__0__efd 
+                = vlSelfRef.Controller_tb__DOT__e_feed
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk8__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__0__een 
+                = vlSelfRef.Controller_tb__DOT__e_en
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk8__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__0__els 
+                = vlSelfRef.Controller_tb__DOT__e_load_slot
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk8__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__0__ew 
+                = vlSelfRef.Controller_tb__DOT__e_w_load
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk8__DOT__t)];
+        } else {
+            __Vtask_Controller_tb__DOT__check_ctrl__0__est = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__0__edn = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__0__eri = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__0__ers = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__0__efd = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__0__een = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__0__els = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__0__ew = 0U;
+        }
+        __Vtask_Controller_tb__DOT__check_ctrl__0__t 
+            = Controller_tb__DOT__unnamedblk8__DOT__t;
         vlSelfRef.Controller_tb__DOT__checks = ((IData)(1U) 
                                                 + vlSelfRef.Controller_tb__DOT__checks);
         if (VL_UNLIKELY(((((((VController_tb__ConstPool__TABLE_h0cc0fcf8_0
                               [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
-                              != ((0x0dU >= (0x0000000fU 
-                                             & Controller_tb__DOT__unnamedblk7__DOT__t))
-                                   ? (1U & vlSelfRef.Controller_tb__DOT__e_w_load
-                                      [(0x0000000fU 
-                                        & Controller_tb__DOT__unnamedblk7__DOT__t)])
-                                   : 0U)) | (VController_tb__ConstPool__TABLE_h028f018c_0
-                                             [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
-                                             != ((0x0dU 
-                                                  >= 
-                                                  (0x0000000fU 
-                                                   & Controller_tb__DOT__unnamedblk7__DOT__t))
-                                                  ? 
-                                                 (1U 
-                                                  & vlSelfRef.Controller_tb__DOT__e_en
-                                                  [
-                                                  (0x0000000fU 
-                                                   & Controller_tb__DOT__unnamedblk7__DOT__t)])
-                                                  : 0U))) 
+                              != (1U & __Vtask_Controller_tb__DOT__check_ctrl__0__ew)) 
+                             | (VController_tb__ConstPool__TABLE_h028f018c_0
+                                [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
+                                != (1U & __Vtask_Controller_tb__DOT__check_ctrl__0__een))) 
                             | (VController_tb__ConstPool__TABLE_hbabea407_0
                                [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
-                               != ((0x0dU >= (0x0000000fU 
-                                              & Controller_tb__DOT__unnamedblk7__DOT__t))
-                                    ? (1U & vlSelfRef.Controller_tb__DOT__e_feed
-                                       [(0x0000000fU 
-                                         & Controller_tb__DOT__unnamedblk7__DOT__t)])
-                                    : 0U))) | (VController_tb__ConstPool__TABLE_h757529b2_0
-                                               [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
-                                               != (
-                                                   (0x0dU 
-                                                    >= 
-                                                    (0x0000000fU 
-                                                     & Controller_tb__DOT__unnamedblk7__DOT__t))
-                                                    ? 
-                                                   (1U 
-                                                    & vlSelfRef.Controller_tb__DOT__e_row_slot
-                                                    [
-                                                    (0x0000000fU 
-                                                     & Controller_tb__DOT__unnamedblk7__DOT__t)])
-                                                    : 0U))) 
+                               != (1U & __Vtask_Controller_tb__DOT__check_ctrl__0__efd))) 
+                           | (VController_tb__ConstPool__TABLE_h757529b2_0
+                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
+                              != (1U & __Vtask_Controller_tb__DOT__check_ctrl__0__ers))) 
                           | (VController_tb__ConstPool__TABLE_h0c797d14_0
                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
-                             != ((0x0dU >= (0x0000000fU 
-                                            & Controller_tb__DOT__unnamedblk7__DOT__t))
-                                  ? (1U & vlSelfRef.Controller_tb__DOT__e_done
-                                     [(0x0000000fU 
-                                       & Controller_tb__DOT__unnamedblk7__DOT__t)])
-                                  : 0U)))))) {
+                             != (1U & __Vtask_Controller_tb__DOT__check_ctrl__0__edn)))))) {
             vlSelfRef.Controller_tb__DOT__errors = 
                 ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
-            VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:131: Assertion failed in %m: [%0t] t=%0d: w_load=%0d en=%0d feed=%0d row_slot=%0d done=%0d, expected %0d %0d %0d %0d %0d\n",15, 'M',vlSymsp->name(),"Controller_tb.unnamedblk7", 'T',-9
+            VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:119: Assertion failed in %m: [%0t] t=%0d: w_load=%0d en=%0d feed=%0d row_slot=%0d done=%0d, expected %0d %0d %0d %0d %0d\n",15, 'M',vlSymsp->name(),"Controller_tb.check_ctrl", 'T',-9
                          , '#',64,VL_TIME_UNITED_Q(1000)
                          , '#',64,VL_TIME_UNITED_Q(1000)
-                         , '~',32,Controller_tb__DOT__unnamedblk7__DOT__t
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__0__t
                          , '#',1,VController_tb__ConstPool__TABLE_h0cc0fcf8_0
                          [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                          , '#',1,VController_tb__ConstPool__TABLE_h028f018c_0
@@ -574,40 +658,12 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                          [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                          , '#',1,VController_tb__ConstPool__TABLE_h0c797d14_0
                          [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
-                         , '~',32,((0x0dU >= (0x0000000fU 
-                                              & Controller_tb__DOT__unnamedblk7__DOT__t))
-                                    ? vlSelfRef.Controller_tb__DOT__e_w_load
-                                   [(0x0000000fU & Controller_tb__DOT__unnamedblk7__DOT__t)]
-                                    : 0U), '~',32,(
-                                                   (0x0dU 
-                                                    >= 
-                                                    (0x0000000fU 
-                                                     & Controller_tb__DOT__unnamedblk7__DOT__t))
-                                                    ? vlSelfRef.Controller_tb__DOT__e_en
-                                                   [
-                                                   (0x0000000fU 
-                                                    & Controller_tb__DOT__unnamedblk7__DOT__t)]
-                                                    : 0U)
-                         , '~',32,((0x0dU >= (0x0000000fU 
-                                              & Controller_tb__DOT__unnamedblk7__DOT__t))
-                                    ? vlSelfRef.Controller_tb__DOT__e_feed
-                                   [(0x0000000fU & Controller_tb__DOT__unnamedblk7__DOT__t)]
-                                    : 0U), '~',32,(
-                                                   (0x0dU 
-                                                    >= 
-                                                    (0x0000000fU 
-                                                     & Controller_tb__DOT__unnamedblk7__DOT__t))
-                                                    ? vlSelfRef.Controller_tb__DOT__e_row_slot
-                                                   [
-                                                   (0x0000000fU 
-                                                    & Controller_tb__DOT__unnamedblk7__DOT__t)]
-                                                    : 0U)
-                         , '~',32,((0x0dU >= (0x0000000fU 
-                                              & Controller_tb__DOT__unnamedblk7__DOT__t))
-                                    ? vlSelfRef.Controller_tb__DOT__e_done
-                                   [(0x0000000fU & Controller_tb__DOT__unnamedblk7__DOT__t)]
-                                    : 0U));
-            VL_STOP_MT("Controller_tb.sv", 131, "");
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__0__ew
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__0__een
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__0__efd
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__0__ers
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__0__edn);
+            VL_STOP_MT("Controller_tb.sv", 119, "");
         }
         if (VController_tb__ConstPool__TABLE_h0cc0fcf8_0
             [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) {
@@ -615,27 +671,17 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                 ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
             if (VL_UNLIKELY(((VController_tb__ConstPool__TABLE_hb7eea91c_0
                               [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
-                              != ((0x0dU >= (0x0000000fU 
-                                             & Controller_tb__DOT__unnamedblk7__DOT__t))
-                                   ? (1U & vlSelfRef.Controller_tb__DOT__e_load_slot
-                                      [(0x0000000fU 
-                                        & Controller_tb__DOT__unnamedblk7__DOT__t)])
-                                   : 0U))))) {
+                              != (1U & __Vtask_Controller_tb__DOT__check_ctrl__0__els))))) {
                 vlSelfRef.Controller_tb__DOT__errors 
                     = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
-                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:140: Assertion failed in %m: [%0t] t=%0d: load_slot=%0d, expected %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.unnamedblk7", 'T',-9
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:127: Assertion failed in %m: [%0t] t=%0d: load_slot=%0d, expected %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_ctrl", 'T',-9
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',64,VL_TIME_UNITED_Q(1000)
-                             , '~',32,Controller_tb__DOT__unnamedblk7__DOT__t
+                             , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__0__t
                              , '#',1,VController_tb__ConstPool__TABLE_hb7eea91c_0
                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
-                             , '~',32,((0x0dU >= (0x0000000fU 
-                                                  & Controller_tb__DOT__unnamedblk7__DOT__t))
-                                        ? vlSelfRef.Controller_tb__DOT__e_load_slot
-                                       [(0x0000000fU 
-                                         & Controller_tb__DOT__unnamedblk7__DOT__t)]
-                                        : 0U));
-                VL_STOP_MT("Controller_tb.sv", 140, "");
+                             , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__0__els);
+                VL_STOP_MT("Controller_tb.sv", 127, "");
             }
         }
         if (VController_tb__ConstPool__TABLE_hbabea407_0
@@ -644,215 +690,205 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                 ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
             if (VL_UNLIKELY(((VController_tb__ConstPool__TABLE_h35b5d552_0
                               [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
-                              != ((0x0dU >= (0x0000000fU 
-                                             & Controller_tb__DOT__unnamedblk7__DOT__t))
-                                   ? (3U & vlSelfRef.Controller_tb__DOT__e_row_idx
-                                      [(0x0000000fU 
-                                        & Controller_tb__DOT__unnamedblk7__DOT__t)])
-                                   : 0U))))) {
+                              != (3U & __Vtask_Controller_tb__DOT__check_ctrl__0__eri))))) {
                 vlSelfRef.Controller_tb__DOT__errors 
                     = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
-                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:148: Assertion failed in %m: [%0t] t=%0d: row_idx=%0d, expected %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.unnamedblk7", 'T',-9
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:135: Assertion failed in %m: [%0t] t=%0d: row_idx=%0d, expected %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_ctrl", 'T',-9
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',64,VL_TIME_UNITED_Q(1000)
-                             , '~',32,Controller_tb__DOT__unnamedblk7__DOT__t
+                             , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__0__t
                              , '#',2,VController_tb__ConstPool__TABLE_h35b5d552_0
                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
-                             , '~',32,((0x0dU >= (0x0000000fU 
-                                                  & Controller_tb__DOT__unnamedblk7__DOT__t))
-                                        ? vlSelfRef.Controller_tb__DOT__e_row_idx
-                                       [(0x0000000fU 
-                                         & Controller_tb__DOT__unnamedblk7__DOT__t)]
-                                        : 0U));
-                VL_STOP_MT("Controller_tb.sv", 148, "");
-            }
-        }
-        vlSelfRef.Controller_tb__DOT__m = (Controller_tb__DOT__unnamedblk7__DOT__t 
-                                           - (IData)(5U));
-        if ((VL_LTES_III(32, 0U, vlSelfRef.Controller_tb__DOT__m) 
-             & VL_GTS_III(32, 3U, vlSelfRef.Controller_tb__DOT__m))) {
-            vlSelfRef.Controller_tb__DOT__checks = 
-                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
-            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[0U] 
-                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp
-                                  [((2U >= (3U & vlSelfRef.Controller_tb__DOT__m))
-                                     ? (3U & vlSelfRef.Controller_tb__DOT__m)
-                                     : 0U)][0U]))))) {
-                vlSelfRef.Controller_tb__DOT__errors 
-                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
-                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:159: Assertion failed in %m: [%0t] A C[%0d][0]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.unnamedblk7.unnamedblk8", 'T',-9
-                             , '#',64,VL_TIME_UNITED_Q(1000)
-                             , '#',64,VL_TIME_UNITED_Q(1000)
-                             , '~',32,vlSelfRef.Controller_tb__DOT__m
-                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp
-                             [((2U >= (3U & vlSelfRef.Controller_tb__DOT__m))
-                                ? (3U & vlSelfRef.Controller_tb__DOT__m)
-                                : 0U)][0U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[0U]);
-                VL_STOP_MT("Controller_tb.sv", 159, "");
-            }
-        } else if ((VL_LTES_III(32, 3U, vlSelfRef.Controller_tb__DOT__m) 
-                    & VL_GTS_III(32, 6U, vlSelfRef.Controller_tb__DOT__m))) {
-            vlSelfRef.Controller_tb__DOT__checks = 
-                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
-            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[0U] 
-                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp2
-                                  [((2U >= (3U & (vlSelfRef.Controller_tb__DOT__m 
-                                                  - (IData)(3U))))
-                                     ? (3U & (vlSelfRef.Controller_tb__DOT__m 
-                                              - (IData)(3U)))
-                                     : 0U)][0U]))))) {
-                vlSelfRef.Controller_tb__DOT__errors 
-                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
-                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:166: Assertion failed in %m: [%0t] A2 C[%0d][0]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.unnamedblk7.unnamedblk8", 'T',-9
-                             , '#',64,VL_TIME_UNITED_Q(1000)
-                             , '#',64,VL_TIME_UNITED_Q(1000)
-                             , '~',32,(vlSelfRef.Controller_tb__DOT__m 
-                                       - (IData)(3U))
-                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp2
-                             [((2U >= (3U & (vlSelfRef.Controller_tb__DOT__m 
-                                             - (IData)(3U))))
-                                ? (3U & (vlSelfRef.Controller_tb__DOT__m 
-                                         - (IData)(3U)))
-                                : 0U)][0U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[0U]);
-                VL_STOP_MT("Controller_tb.sv", 166, "");
-            }
-        }
-        vlSelfRef.Controller_tb__DOT__m = ((Controller_tb__DOT__unnamedblk7__DOT__t 
-                                            - (IData)(5U)) 
-                                           - (IData)(1U));
-        if ((VL_LTES_III(32, 0U, vlSelfRef.Controller_tb__DOT__m) 
-             & VL_GTS_III(32, 3U, vlSelfRef.Controller_tb__DOT__m))) {
-            vlSelfRef.Controller_tb__DOT__checks = 
-                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
-            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[1U] 
-                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp
-                                  [((2U >= (3U & vlSelfRef.Controller_tb__DOT__m))
-                                     ? (3U & vlSelfRef.Controller_tb__DOT__m)
-                                     : 0U)][1U]))))) {
-                vlSelfRef.Controller_tb__DOT__errors 
-                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
-                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:159: Assertion failed in %m: [%0t] A C[%0d][1]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.unnamedblk7.unnamedblk8", 'T',-9
-                             , '#',64,VL_TIME_UNITED_Q(1000)
-                             , '#',64,VL_TIME_UNITED_Q(1000)
-                             , '~',32,vlSelfRef.Controller_tb__DOT__m
-                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp
-                             [((2U >= (3U & vlSelfRef.Controller_tb__DOT__m))
-                                ? (3U & vlSelfRef.Controller_tb__DOT__m)
-                                : 0U)][1U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[1U]);
-                VL_STOP_MT("Controller_tb.sv", 159, "");
-            }
-        } else if ((VL_LTES_III(32, 3U, vlSelfRef.Controller_tb__DOT__m) 
-                    & VL_GTS_III(32, 6U, vlSelfRef.Controller_tb__DOT__m))) {
-            vlSelfRef.Controller_tb__DOT__checks = 
-                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
-            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[1U] 
-                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp2
-                                  [((2U >= (3U & (vlSelfRef.Controller_tb__DOT__m 
-                                                  - (IData)(3U))))
-                                     ? (3U & (vlSelfRef.Controller_tb__DOT__m 
-                                              - (IData)(3U)))
-                                     : 0U)][1U]))))) {
-                vlSelfRef.Controller_tb__DOT__errors 
-                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
-                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:166: Assertion failed in %m: [%0t] A2 C[%0d][1]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.unnamedblk7.unnamedblk8", 'T',-9
-                             , '#',64,VL_TIME_UNITED_Q(1000)
-                             , '#',64,VL_TIME_UNITED_Q(1000)
-                             , '~',32,(vlSelfRef.Controller_tb__DOT__m 
-                                       - (IData)(3U))
-                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp2
-                             [((2U >= (3U & (vlSelfRef.Controller_tb__DOT__m 
-                                             - (IData)(3U))))
-                                ? (3U & (vlSelfRef.Controller_tb__DOT__m 
-                                         - (IData)(3U)))
-                                : 0U)][1U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[1U]);
-                VL_STOP_MT("Controller_tb.sv", 166, "");
-            }
-        }
-        vlSelfRef.Controller_tb__DOT__m = ((Controller_tb__DOT__unnamedblk7__DOT__t 
-                                            - (IData)(5U)) 
-                                           - (IData)(2U));
-        if ((VL_LTES_III(32, 0U, vlSelfRef.Controller_tb__DOT__m) 
-             & VL_GTS_III(32, 3U, vlSelfRef.Controller_tb__DOT__m))) {
-            vlSelfRef.Controller_tb__DOT__checks = 
-                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
-            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[2U] 
-                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp
-                                  [((2U >= (3U & vlSelfRef.Controller_tb__DOT__m))
-                                     ? (3U & vlSelfRef.Controller_tb__DOT__m)
-                                     : 0U)][2U]))))) {
-                vlSelfRef.Controller_tb__DOT__errors 
-                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
-                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:159: Assertion failed in %m: [%0t] A C[%0d][2]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.unnamedblk7.unnamedblk8", 'T',-9
-                             , '#',64,VL_TIME_UNITED_Q(1000)
-                             , '#',64,VL_TIME_UNITED_Q(1000)
-                             , '~',32,vlSelfRef.Controller_tb__DOT__m
-                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp
-                             [((2U >= (3U & vlSelfRef.Controller_tb__DOT__m))
-                                ? (3U & vlSelfRef.Controller_tb__DOT__m)
-                                : 0U)][2U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[2U]);
-                VL_STOP_MT("Controller_tb.sv", 159, "");
-            }
-        } else if ((VL_LTES_III(32, 3U, vlSelfRef.Controller_tb__DOT__m) 
-                    & VL_GTS_III(32, 6U, vlSelfRef.Controller_tb__DOT__m))) {
-            vlSelfRef.Controller_tb__DOT__checks = 
-                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
-            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[2U] 
-                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp2
-                                  [((2U >= (3U & (vlSelfRef.Controller_tb__DOT__m 
-                                                  - (IData)(3U))))
-                                     ? (3U & (vlSelfRef.Controller_tb__DOT__m 
-                                              - (IData)(3U)))
-                                     : 0U)][2U]))))) {
-                vlSelfRef.Controller_tb__DOT__errors 
-                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
-                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:166: Assertion failed in %m: [%0t] A2 C[%0d][2]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.unnamedblk7.unnamedblk8", 'T',-9
-                             , '#',64,VL_TIME_UNITED_Q(1000)
-                             , '#',64,VL_TIME_UNITED_Q(1000)
-                             , '~',32,(vlSelfRef.Controller_tb__DOT__m 
-                                       - (IData)(3U))
-                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp2
-                             [((2U >= (3U & (vlSelfRef.Controller_tb__DOT__m 
-                                             - (IData)(3U))))
-                                ? (3U & (vlSelfRef.Controller_tb__DOT__m 
-                                         - (IData)(3U)))
-                                : 0U)][2U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[2U]);
-                VL_STOP_MT("Controller_tb.sv", 166, "");
+                             , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__0__eri);
+                VL_STOP_MT("Controller_tb.sv", 135, "");
             }
         }
         vlSelfRef.Controller_tb__DOT__checks = ((IData)(1U) 
                                                 + vlSelfRef.Controller_tb__DOT__checks);
         if (VL_UNLIKELY((((IData)(vlSelfRef.Controller_tb__DOT__ctrl__DOT__state) 
-                          != ((0x0dU >= (0x0000000fU 
-                                         & Controller_tb__DOT__unnamedblk7__DOT__t))
-                               ? vlSelfRef.Controller_tb__DOT__e_state
-                              [(0x0000000fU & Controller_tb__DOT__unnamedblk7__DOT__t)]
-                               : 0U))))) {
+                          != __Vtask_Controller_tb__DOT__check_ctrl__0__est)))) {
             vlSelfRef.Controller_tb__DOT__errors = 
                 ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
             __Vtemp_55 = VController_tb___024unit::__Venumtab_enum_name15
                 [vlSelfRef.Controller_tb__DOT__ctrl__DOT__state];
-            VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:174: Assertion failed in %m: [%0t] t=%0d: state=%s, expected %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.unnamedblk7", 'T',-9
+            VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:142: Assertion failed in %m: [%0t] t=%0d: state=%s, expected %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_ctrl", 'T',-9
                          , '#',64,VL_TIME_UNITED_Q(1000)
                          , '#',64,VL_TIME_UNITED_Q(1000)
-                         , '~',32,Controller_tb__DOT__unnamedblk7__DOT__t
-                         , 'S',&(__Vtemp_55), '~',32,
-                         ((0x0dU >= (0x0000000fU & Controller_tb__DOT__unnamedblk7__DOT__t))
-                           ? vlSelfRef.Controller_tb__DOT__e_state
-                          [(0x0000000fU & Controller_tb__DOT__unnamedblk7__DOT__t)]
-                           : 0U));
-            VL_STOP_MT("Controller_tb.sv", 174, "");
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__0__t
+                         , 'S',&(__Vtemp_55), '~',32,__Vtask_Controller_tb__DOT__check_ctrl__0__est);
+            VL_STOP_MT("Controller_tb.sv", 142, "");
         }
-        vlSelfRef.Controller_tb__DOT__start = (0U == Controller_tb__DOT__unnamedblk7__DOT__t);
-        Controller_tb__DOT__unnamedblk7__DOT__t = ((IData)(1U) 
-                                                   + Controller_tb__DOT__unnamedblk7__DOT__t);
+        __Vtask_Controller_tb__DOT__check_results__1__two_jobs = 1U;
+        __Vtask_Controller_tb__DOT__check_results__1__t 
+            = Controller_tb__DOT__unnamedblk8__DOT__t;
+        __Vtask_Controller_tb__DOT__check_results__1__m = 0U;
+        __Vtask_Controller_tb__DOT__check_results__1__m 
+            = (__Vtask_Controller_tb__DOT__check_results__1__t 
+               - (IData)(5U));
+        if ((VL_LTES_III(32, 0U, __Vtask_Controller_tb__DOT__check_results__1__m) 
+             & VL_GTS_III(32, 3U, __Vtask_Controller_tb__DOT__check_results__1__m))) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[0U] 
+                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp
+                                  [((2U >= (3U & __Vtask_Controller_tb__DOT__check_results__1__m))
+                                     ? (3U & __Vtask_Controller_tb__DOT__check_results__1__m)
+                                     : 0U)][0U]))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:155: Assertion failed in %m: [%0t] A C[%0d][0]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_results.unnamedblk4", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,__Vtask_Controller_tb__DOT__check_results__1__m
+                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp
+                             [((2U >= (3U & __Vtask_Controller_tb__DOT__check_results__1__m))
+                                ? (3U & __Vtask_Controller_tb__DOT__check_results__1__m)
+                                : 0U)][0U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[0U]);
+                VL_STOP_MT("Controller_tb.sv", 155, "");
+            }
+        } else if ((((IData)(__Vtask_Controller_tb__DOT__check_results__1__two_jobs) 
+                     & VL_LTES_III(32, 3U, __Vtask_Controller_tb__DOT__check_results__1__m)) 
+                    & VL_GTS_III(32, 6U, __Vtask_Controller_tb__DOT__check_results__1__m))) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[0U] 
+                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp2
+                                  [((2U >= (3U & (__Vtask_Controller_tb__DOT__check_results__1__m 
+                                                  - (IData)(3U))))
+                                     ? (3U & (__Vtask_Controller_tb__DOT__check_results__1__m 
+                                              - (IData)(3U)))
+                                     : 0U)][0U]))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:162: Assertion failed in %m: [%0t] A2 C[%0d][0]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_results.unnamedblk4", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,(__Vtask_Controller_tb__DOT__check_results__1__m 
+                                       - (IData)(3U))
+                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp2
+                             [((2U >= (3U & (__Vtask_Controller_tb__DOT__check_results__1__m 
+                                             - (IData)(3U))))
+                                ? (3U & (__Vtask_Controller_tb__DOT__check_results__1__m 
+                                         - (IData)(3U)))
+                                : 0U)][0U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[0U]);
+                VL_STOP_MT("Controller_tb.sv", 162, "");
+            }
+        }
+        __Vtask_Controller_tb__DOT__check_results__1__m 
+            = ((__Vtask_Controller_tb__DOT__check_results__1__t 
+                - (IData)(5U)) - (IData)(1U));
+        if ((VL_LTES_III(32, 0U, __Vtask_Controller_tb__DOT__check_results__1__m) 
+             & VL_GTS_III(32, 3U, __Vtask_Controller_tb__DOT__check_results__1__m))) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[1U] 
+                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp
+                                  [((2U >= (3U & __Vtask_Controller_tb__DOT__check_results__1__m))
+                                     ? (3U & __Vtask_Controller_tb__DOT__check_results__1__m)
+                                     : 0U)][1U]))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:155: Assertion failed in %m: [%0t] A C[%0d][1]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_results.unnamedblk4", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,__Vtask_Controller_tb__DOT__check_results__1__m
+                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp
+                             [((2U >= (3U & __Vtask_Controller_tb__DOT__check_results__1__m))
+                                ? (3U & __Vtask_Controller_tb__DOT__check_results__1__m)
+                                : 0U)][1U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[1U]);
+                VL_STOP_MT("Controller_tb.sv", 155, "");
+            }
+        } else if ((((IData)(__Vtask_Controller_tb__DOT__check_results__1__two_jobs) 
+                     & VL_LTES_III(32, 3U, __Vtask_Controller_tb__DOT__check_results__1__m)) 
+                    & VL_GTS_III(32, 6U, __Vtask_Controller_tb__DOT__check_results__1__m))) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[1U] 
+                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp2
+                                  [((2U >= (3U & (__Vtask_Controller_tb__DOT__check_results__1__m 
+                                                  - (IData)(3U))))
+                                     ? (3U & (__Vtask_Controller_tb__DOT__check_results__1__m 
+                                              - (IData)(3U)))
+                                     : 0U)][1U]))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:162: Assertion failed in %m: [%0t] A2 C[%0d][1]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_results.unnamedblk4", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,(__Vtask_Controller_tb__DOT__check_results__1__m 
+                                       - (IData)(3U))
+                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp2
+                             [((2U >= (3U & (__Vtask_Controller_tb__DOT__check_results__1__m 
+                                             - (IData)(3U))))
+                                ? (3U & (__Vtask_Controller_tb__DOT__check_results__1__m 
+                                         - (IData)(3U)))
+                                : 0U)][1U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[1U]);
+                VL_STOP_MT("Controller_tb.sv", 162, "");
+            }
+        }
+        __Vtask_Controller_tb__DOT__check_results__1__m 
+            = ((__Vtask_Controller_tb__DOT__check_results__1__t 
+                - (IData)(5U)) - (IData)(2U));
+        if ((VL_LTES_III(32, 0U, __Vtask_Controller_tb__DOT__check_results__1__m) 
+             & VL_GTS_III(32, 3U, __Vtask_Controller_tb__DOT__check_results__1__m))) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[2U] 
+                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp
+                                  [((2U >= (3U & __Vtask_Controller_tb__DOT__check_results__1__m))
+                                     ? (3U & __Vtask_Controller_tb__DOT__check_results__1__m)
+                                     : 0U)][2U]))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:155: Assertion failed in %m: [%0t] A C[%0d][2]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_results.unnamedblk4", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,__Vtask_Controller_tb__DOT__check_results__1__m
+                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp
+                             [((2U >= (3U & __Vtask_Controller_tb__DOT__check_results__1__m))
+                                ? (3U & __Vtask_Controller_tb__DOT__check_results__1__m)
+                                : 0U)][2U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[2U]);
+                VL_STOP_MT("Controller_tb.sv", 155, "");
+            }
+        } else if ((((IData)(__Vtask_Controller_tb__DOT__check_results__1__two_jobs) 
+                     & VL_LTES_III(32, 3U, __Vtask_Controller_tb__DOT__check_results__1__m)) 
+                    & VL_GTS_III(32, 6U, __Vtask_Controller_tb__DOT__check_results__1__m))) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[2U] 
+                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp2
+                                  [((2U >= (3U & (__Vtask_Controller_tb__DOT__check_results__1__m 
+                                                  - (IData)(3U))))
+                                     ? (3U & (__Vtask_Controller_tb__DOT__check_results__1__m 
+                                              - (IData)(3U)))
+                                     : 0U)][2U]))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:162: Assertion failed in %m: [%0t] A2 C[%0d][2]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_results.unnamedblk4", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,(__Vtask_Controller_tb__DOT__check_results__1__m 
+                                       - (IData)(3U))
+                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp2
+                             [((2U >= (3U & (__Vtask_Controller_tb__DOT__check_results__1__m 
+                                             - (IData)(3U))))
+                                ? (3U & (__Vtask_Controller_tb__DOT__check_results__1__m 
+                                         - (IData)(3U)))
+                                : 0U)][2U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[2U]);
+                VL_STOP_MT("Controller_tb.sv", 162, "");
+            }
+        }
+        vlSelfRef.Controller_tb__DOT__push0 = 0U;
+        vlSelfRef.Controller_tb__DOT__push1 = 0U;
+        Controller_tb__DOT__unnamedblk8__DOT__t = ((IData)(1U) 
+                                                   + Controller_tb__DOT__unnamedblk8__DOT__t);
     }
-    vlSelfRef.Controller_tb__DOT__start = 0U;
     vlSelfRef.Controller_tb__DOT__rst_n = 0U;
     Controller_tb__DOT__unnamedblk1_2__DOT____Vrepeat1 = 2U;
     if ((vlSelfRef.Controller_tb__DOT__errors == vlSelfRef.Controller_tb__DOT__test_errors)) {
-        VL_WRITEF_NX("Test 1 passed: controller sequence and back to back results\n",0);
+        VL_WRITEF_NX("Test 1 passed: two jobs back to back\n",0);
     } else {
-        VL_WRITEF_NX("Test 1 FAILED: controller sequence\n",0);
+        VL_WRITEF_NX("Test 1 FAILED: two jobs back to back\n",0);
     }
     while (VL_LTS_III(32, 0U, Controller_tb__DOT__unnamedblk1_2__DOT____Vrepeat1)) {
         VController_tb___024root____VbeforeTrig_hb8a3c5d6__0(vlSelf, 
@@ -861,7 +897,7 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                                                              nullptr, 
                                                              "@(negedge Controller_tb.clk)", 
                                                              "Controller_tb.sv", 
-                                                             186);
+                                                             221);
         vlSelfRef.__Vm_traceActivity[3U] = 1U;
         Controller_tb__DOT__unnamedblk1_2__DOT____Vrepeat1 
             = (Controller_tb__DOT__unnamedblk1_2__DOT____Vrepeat1 
@@ -869,109 +905,9 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
     }
     vlSelfRef.Controller_tb__DOT__rst_n = 1U;
     vlSelfRef.Controller_tb__DOT__test_errors = vlSelfRef.Controller_tb__DOT__errors;
+    vlSelfRef.Controller_tb__DOT__push0 = 1U;
     Controller_tb__DOT__unnamedblk9__DOT__t = 0U;
-    while (VL_GTS_III(32, 0x00000010U, Controller_tb__DOT__unnamedblk9__DOT__t)) {
-        VController_tb___024root____VbeforeTrig_hb8a3c5d6__0(vlSelf, 
-                                                             "@(negedge Controller_tb.clk)");
-        co_await vlSelfRef.__VtrigSched_hb8a3c5d6__0.trigger(0U, 
-                                                             nullptr, 
-                                                             "@(negedge Controller_tb.clk)", 
-                                                             "Controller_tb.sv", 
-                                                             193);
-        vlSelfRef.__Vm_traceActivity[3U] = 1U;
-        vlSelfRef.Controller_tb__DOT__checks = ((IData)(1U) 
-                                                + vlSelfRef.Controller_tb__DOT__checks);
-        if (VL_UNLIKELY(((VController_tb__ConstPool__TABLE_h0c797d14_0
-                          [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
-                          != (0x0000000cU == Controller_tb__DOT__unnamedblk9__DOT__t))))) {
-            vlSelfRef.Controller_tb__DOT__errors = 
-                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
-            VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:198: Assertion failed in %m: [%0t] t=%0d: done=%0d, expected %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.unnamedblk9", 'T',-9
-                         , '#',64,VL_TIME_UNITED_Q(1000)
-                         , '#',64,VL_TIME_UNITED_Q(1000)
-                         , '~',32,Controller_tb__DOT__unnamedblk9__DOT__t
-                         , '#',1,VController_tb__ConstPool__TABLE_h0c797d14_0
-                         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
-                         , '#',1,(0x0000000cU == Controller_tb__DOT__unnamedblk9__DOT__t));
-            VL_STOP_MT("Controller_tb.sv", 198, "");
-        }
-        if (VL_LTS_III(32, 0x0000000cU, Controller_tb__DOT__unnamedblk9__DOT__t)) {
-            vlSelfRef.Controller_tb__DOT__checks = 
-                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
-            if (VL_UNLIKELY(((VController_tb__ConstPool__TABLE_h0cc0fcf8_0
-                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
-                              | VController_tb__ConstPool__TABLE_h028f018c_0
-                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])))) {
-                vlSelfRef.Controller_tb__DOT__errors 
-                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
-                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:206: Assertion failed in %m: [%0t] t=%0d: controller restarted, w_load=%0d en=%0d\n",7, 'M',vlSymsp->name(),"Controller_tb.unnamedblk9", 'T',-9
-                             , '#',64,VL_TIME_UNITED_Q(1000)
-                             , '#',64,VL_TIME_UNITED_Q(1000)
-                             , '~',32,Controller_tb__DOT__unnamedblk9__DOT__t
-                             , '#',1,VController_tb__ConstPool__TABLE_h0cc0fcf8_0
-                             [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
-                             , '#',1,VController_tb__ConstPool__TABLE_h028f018c_0
-                             [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]);
-                VL_STOP_MT("Controller_tb.sv", 206, "");
-            }
-        }
-        vlSelfRef.Controller_tb__DOT__checks = ((IData)(1U) 
-                                                + vlSelfRef.Controller_tb__DOT__checks);
-        if (VL_UNLIKELY((((IData)(vlSelfRef.Controller_tb__DOT__ctrl__DOT__state) 
-                          != ((0x0dU >= (0x0000000fU 
-                                         & Controller_tb__DOT__unnamedblk9__DOT__t))
-                               ? vlSelfRef.Controller_tb__DOT__e_state
-                              [(0x0000000fU & Controller_tb__DOT__unnamedblk9__DOT__t)]
-                               : 0U))))) {
-            vlSelfRef.Controller_tb__DOT__errors = 
-                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
-            __Vtemp_56 = VController_tb___024unit::__Venumtab_enum_name15
-                [vlSelfRef.Controller_tb__DOT__ctrl__DOT__state];
-            VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:213: Assertion failed in %m: [%0t] t=%0d: state=%s, expected %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.unnamedblk9", 'T',-9
-                         , '#',64,VL_TIME_UNITED_Q(1000)
-                         , '#',64,VL_TIME_UNITED_Q(1000)
-                         , '~',32,Controller_tb__DOT__unnamedblk9__DOT__t
-                         , 'S',&(__Vtemp_56), '~',32,
-                         ((0x0dU >= (0x0000000fU & Controller_tb__DOT__unnamedblk9__DOT__t))
-                           ? vlSelfRef.Controller_tb__DOT__e_state
-                          [(0x0000000fU & Controller_tb__DOT__unnamedblk9__DOT__t)]
-                           : 0U));
-            VL_STOP_MT("Controller_tb.sv", 213, "");
-        }
-        vlSelfRef.Controller_tb__DOT__start = ((0U 
-                                                == Controller_tb__DOT__unnamedblk9__DOT__t) 
-                                               | (4U 
-                                                  == Controller_tb__DOT__unnamedblk9__DOT__t));
-        Controller_tb__DOT__unnamedblk9__DOT__t = ((IData)(1U) 
-                                                   + Controller_tb__DOT__unnamedblk9__DOT__t);
-    }
-    vlSelfRef.Controller_tb__DOT__start = 0U;
-    if ((vlSelfRef.Controller_tb__DOT__errors == vlSelfRef.Controller_tb__DOT__test_errors)) {
-        VL_WRITEF_NX("Test 2 passed: start ignored while busy\n",0);
-    } else {
-        VL_WRITEF_NX("Test 2 FAILED: start while busy\n",0);
-    }
-    vlSelfRef.Controller_tb__DOT__test_errors = vlSelfRef.Controller_tb__DOT__errors;
-    VController_tb___024root____VbeforeTrig_hb8a3c5d6__0(vlSelf, 
-                                                         "@(negedge Controller_tb.clk)");
-    co_await vlSelfRef.__VtrigSched_hb8a3c5d6__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(negedge Controller_tb.clk)", 
-                                                         "Controller_tb.sv", 
-                                                         226);
-    vlSelfRef.__Vm_traceActivity[3U] = 1U;
-    vlSelfRef.Controller_tb__DOT__start = 1U;
-    VController_tb___024root____VbeforeTrig_hb8a3c5d6__0(vlSelf, 
-                                                         "@(negedge Controller_tb.clk)");
-    co_await vlSelfRef.__VtrigSched_hb8a3c5d6__0.trigger(0U, 
-                                                         nullptr, 
-                                                         "@(negedge Controller_tb.clk)", 
-                                                         "Controller_tb.sv", 
-                                                         228);
-    vlSelfRef.__Vm_traceActivity[3U] = 1U;
-    vlSelfRef.Controller_tb__DOT__start = 0U;
-    Controller_tb__DOT__unnamedblk1_3__DOT____Vrepeat2 = 4U;
-    while (VL_LTS_III(32, 0U, Controller_tb__DOT__unnamedblk1_3__DOT____Vrepeat2)) {
+    while (VL_GTS_III(32, 0x0000000bU, Controller_tb__DOT__unnamedblk9__DOT__t)) {
         VController_tb___024root____VbeforeTrig_hb8a3c5d6__0(vlSelf, 
                                                              "@(negedge Controller_tb.clk)");
         co_await vlSelfRef.__VtrigSched_hb8a3c5d6__0.trigger(0U, 
@@ -980,8 +916,675 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                                                              "Controller_tb.sv", 
                                                              230);
         vlSelfRef.__Vm_traceActivity[3U] = 1U;
+        if ((0x0aU >= (0x0000000fU & Controller_tb__DOT__unnamedblk9__DOT__t))) {
+            __Vtask_Controller_tb__DOT__check_ctrl__2__est 
+                = vlSelfRef.Controller_tb__DOT__s_state
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk9__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__2__edn 
+                = vlSelfRef.Controller_tb__DOT__s_done
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk9__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__2__eri 
+                = vlSelfRef.Controller_tb__DOT__s_row_idx
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk9__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__2__ers 
+                = vlSelfRef.Controller_tb__DOT__s_row_slot
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk9__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__2__efd 
+                = vlSelfRef.Controller_tb__DOT__s_feed
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk9__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__2__een 
+                = vlSelfRef.Controller_tb__DOT__s_en
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk9__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__2__els 
+                = vlSelfRef.Controller_tb__DOT__s_load_slot
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk9__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__2__ew 
+                = vlSelfRef.Controller_tb__DOT__s_w_load
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk9__DOT__t)];
+        } else {
+            __Vtask_Controller_tb__DOT__check_ctrl__2__est = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__2__edn = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__2__eri = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__2__ers = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__2__efd = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__2__een = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__2__els = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__2__ew = 0U;
+        }
+        __Vtask_Controller_tb__DOT__check_ctrl__2__t 
+            = Controller_tb__DOT__unnamedblk9__DOT__t;
+        vlSelfRef.Controller_tb__DOT__checks = ((IData)(1U) 
+                                                + vlSelfRef.Controller_tb__DOT__checks);
+        if (VL_UNLIKELY(((((((VController_tb__ConstPool__TABLE_h0cc0fcf8_0
+                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
+                              != (1U & __Vtask_Controller_tb__DOT__check_ctrl__2__ew)) 
+                             | (VController_tb__ConstPool__TABLE_h028f018c_0
+                                [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
+                                != (1U & __Vtask_Controller_tb__DOT__check_ctrl__2__een))) 
+                            | (VController_tb__ConstPool__TABLE_hbabea407_0
+                               [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
+                               != (1U & __Vtask_Controller_tb__DOT__check_ctrl__2__efd))) 
+                           | (VController_tb__ConstPool__TABLE_h757529b2_0
+                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
+                              != (1U & __Vtask_Controller_tb__DOT__check_ctrl__2__ers))) 
+                          | (VController_tb__ConstPool__TABLE_h0c797d14_0
+                             [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
+                             != (1U & __Vtask_Controller_tb__DOT__check_ctrl__2__edn)))))) {
+            vlSelfRef.Controller_tb__DOT__errors = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+            VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:119: Assertion failed in %m: [%0t] t=%0d: w_load=%0d en=%0d feed=%0d row_slot=%0d done=%0d, expected %0d %0d %0d %0d %0d\n",15, 'M',vlSymsp->name(),"Controller_tb.check_ctrl", 'T',-9
+                         , '#',64,VL_TIME_UNITED_Q(1000)
+                         , '#',64,VL_TIME_UNITED_Q(1000)
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__2__t
+                         , '#',1,VController_tb__ConstPool__TABLE_h0cc0fcf8_0
+                         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
+                         , '#',1,VController_tb__ConstPool__TABLE_h028f018c_0
+                         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
+                         , '#',1,VController_tb__ConstPool__TABLE_hbabea407_0
+                         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
+                         , '#',1,VController_tb__ConstPool__TABLE_h757529b2_0
+                         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
+                         , '#',1,VController_tb__ConstPool__TABLE_h0c797d14_0
+                         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__2__ew
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__2__een
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__2__efd
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__2__ers
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__2__edn);
+            VL_STOP_MT("Controller_tb.sv", 119, "");
+        }
+        if (VController_tb__ConstPool__TABLE_h0cc0fcf8_0
+            [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((VController_tb__ConstPool__TABLE_hb7eea91c_0
+                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
+                              != (1U & __Vtask_Controller_tb__DOT__check_ctrl__2__els))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:127: Assertion failed in %m: [%0t] t=%0d: load_slot=%0d, expected %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_ctrl", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__2__t
+                             , '#',1,VController_tb__ConstPool__TABLE_hb7eea91c_0
+                             [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
+                             , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__2__els);
+                VL_STOP_MT("Controller_tb.sv", 127, "");
+            }
+        }
+        if (VController_tb__ConstPool__TABLE_hbabea407_0
+            [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((VController_tb__ConstPool__TABLE_h35b5d552_0
+                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
+                              != (3U & __Vtask_Controller_tb__DOT__check_ctrl__2__eri))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:135: Assertion failed in %m: [%0t] t=%0d: row_idx=%0d, expected %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_ctrl", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__2__t
+                             , '#',2,VController_tb__ConstPool__TABLE_h35b5d552_0
+                             [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
+                             , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__2__eri);
+                VL_STOP_MT("Controller_tb.sv", 135, "");
+            }
+        }
+        vlSelfRef.Controller_tb__DOT__checks = ((IData)(1U) 
+                                                + vlSelfRef.Controller_tb__DOT__checks);
+        if (VL_UNLIKELY((((IData)(vlSelfRef.Controller_tb__DOT__ctrl__DOT__state) 
+                          != __Vtask_Controller_tb__DOT__check_ctrl__2__est)))) {
+            vlSelfRef.Controller_tb__DOT__errors = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+            __Vtemp_56 = VController_tb___024unit::__Venumtab_enum_name15
+                [vlSelfRef.Controller_tb__DOT__ctrl__DOT__state];
+            VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:142: Assertion failed in %m: [%0t] t=%0d: state=%s, expected %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_ctrl", 'T',-9
+                         , '#',64,VL_TIME_UNITED_Q(1000)
+                         , '#',64,VL_TIME_UNITED_Q(1000)
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__2__t
+                         , 'S',&(__Vtemp_56), '~',32,__Vtask_Controller_tb__DOT__check_ctrl__2__est);
+            VL_STOP_MT("Controller_tb.sv", 142, "");
+        }
+        __Vtask_Controller_tb__DOT__check_results__3__two_jobs = 0U;
+        __Vtask_Controller_tb__DOT__check_results__3__t 
+            = Controller_tb__DOT__unnamedblk9__DOT__t;
+        __Vtask_Controller_tb__DOT__check_results__3__m = 0U;
+        __Vtask_Controller_tb__DOT__check_results__3__m 
+            = (__Vtask_Controller_tb__DOT__check_results__3__t 
+               - (IData)(5U));
+        if ((VL_LTES_III(32, 0U, __Vtask_Controller_tb__DOT__check_results__3__m) 
+             & VL_GTS_III(32, 3U, __Vtask_Controller_tb__DOT__check_results__3__m))) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[0U] 
+                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp
+                                  [((2U >= (3U & __Vtask_Controller_tb__DOT__check_results__3__m))
+                                     ? (3U & __Vtask_Controller_tb__DOT__check_results__3__m)
+                                     : 0U)][0U]))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:155: Assertion failed in %m: [%0t] A C[%0d][0]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_results.unnamedblk4", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,__Vtask_Controller_tb__DOT__check_results__3__m
+                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp
+                             [((2U >= (3U & __Vtask_Controller_tb__DOT__check_results__3__m))
+                                ? (3U & __Vtask_Controller_tb__DOT__check_results__3__m)
+                                : 0U)][0U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[0U]);
+                VL_STOP_MT("Controller_tb.sv", 155, "");
+            }
+        } else if ((((IData)(__Vtask_Controller_tb__DOT__check_results__3__two_jobs) 
+                     & VL_LTES_III(32, 3U, __Vtask_Controller_tb__DOT__check_results__3__m)) 
+                    & VL_GTS_III(32, 6U, __Vtask_Controller_tb__DOT__check_results__3__m))) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[0U] 
+                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp2
+                                  [((2U >= (3U & (__Vtask_Controller_tb__DOT__check_results__3__m 
+                                                  - (IData)(3U))))
+                                     ? (3U & (__Vtask_Controller_tb__DOT__check_results__3__m 
+                                              - (IData)(3U)))
+                                     : 0U)][0U]))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:162: Assertion failed in %m: [%0t] A2 C[%0d][0]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_results.unnamedblk4", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,(__Vtask_Controller_tb__DOT__check_results__3__m 
+                                       - (IData)(3U))
+                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp2
+                             [((2U >= (3U & (__Vtask_Controller_tb__DOT__check_results__3__m 
+                                             - (IData)(3U))))
+                                ? (3U & (__Vtask_Controller_tb__DOT__check_results__3__m 
+                                         - (IData)(3U)))
+                                : 0U)][0U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[0U]);
+                VL_STOP_MT("Controller_tb.sv", 162, "");
+            }
+        }
+        __Vtask_Controller_tb__DOT__check_results__3__m 
+            = ((__Vtask_Controller_tb__DOT__check_results__3__t 
+                - (IData)(5U)) - (IData)(1U));
+        if ((VL_LTES_III(32, 0U, __Vtask_Controller_tb__DOT__check_results__3__m) 
+             & VL_GTS_III(32, 3U, __Vtask_Controller_tb__DOT__check_results__3__m))) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[1U] 
+                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp
+                                  [((2U >= (3U & __Vtask_Controller_tb__DOT__check_results__3__m))
+                                     ? (3U & __Vtask_Controller_tb__DOT__check_results__3__m)
+                                     : 0U)][1U]))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:155: Assertion failed in %m: [%0t] A C[%0d][1]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_results.unnamedblk4", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,__Vtask_Controller_tb__DOT__check_results__3__m
+                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp
+                             [((2U >= (3U & __Vtask_Controller_tb__DOT__check_results__3__m))
+                                ? (3U & __Vtask_Controller_tb__DOT__check_results__3__m)
+                                : 0U)][1U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[1U]);
+                VL_STOP_MT("Controller_tb.sv", 155, "");
+            }
+        } else if ((((IData)(__Vtask_Controller_tb__DOT__check_results__3__two_jobs) 
+                     & VL_LTES_III(32, 3U, __Vtask_Controller_tb__DOT__check_results__3__m)) 
+                    & VL_GTS_III(32, 6U, __Vtask_Controller_tb__DOT__check_results__3__m))) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[1U] 
+                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp2
+                                  [((2U >= (3U & (__Vtask_Controller_tb__DOT__check_results__3__m 
+                                                  - (IData)(3U))))
+                                     ? (3U & (__Vtask_Controller_tb__DOT__check_results__3__m 
+                                              - (IData)(3U)))
+                                     : 0U)][1U]))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:162: Assertion failed in %m: [%0t] A2 C[%0d][1]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_results.unnamedblk4", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,(__Vtask_Controller_tb__DOT__check_results__3__m 
+                                       - (IData)(3U))
+                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp2
+                             [((2U >= (3U & (__Vtask_Controller_tb__DOT__check_results__3__m 
+                                             - (IData)(3U))))
+                                ? (3U & (__Vtask_Controller_tb__DOT__check_results__3__m 
+                                         - (IData)(3U)))
+                                : 0U)][1U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[1U]);
+                VL_STOP_MT("Controller_tb.sv", 162, "");
+            }
+        }
+        __Vtask_Controller_tb__DOT__check_results__3__m 
+            = ((__Vtask_Controller_tb__DOT__check_results__3__t 
+                - (IData)(5U)) - (IData)(2U));
+        if ((VL_LTES_III(32, 0U, __Vtask_Controller_tb__DOT__check_results__3__m) 
+             & VL_GTS_III(32, 3U, __Vtask_Controller_tb__DOT__check_results__3__m))) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[2U] 
+                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp
+                                  [((2U >= (3U & __Vtask_Controller_tb__DOT__check_results__3__m))
+                                     ? (3U & __Vtask_Controller_tb__DOT__check_results__3__m)
+                                     : 0U)][2U]))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:155: Assertion failed in %m: [%0t] A C[%0d][2]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_results.unnamedblk4", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,__Vtask_Controller_tb__DOT__check_results__3__m
+                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp
+                             [((2U >= (3U & __Vtask_Controller_tb__DOT__check_results__3__m))
+                                ? (3U & __Vtask_Controller_tb__DOT__check_results__3__m)
+                                : 0U)][2U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[2U]);
+                VL_STOP_MT("Controller_tb.sv", 155, "");
+            }
+        } else if ((((IData)(__Vtask_Controller_tb__DOT__check_results__3__two_jobs) 
+                     & VL_LTES_III(32, 3U, __Vtask_Controller_tb__DOT__check_results__3__m)) 
+                    & VL_GTS_III(32, 6U, __Vtask_Controller_tb__DOT__check_results__3__m))) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[2U] 
+                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp2
+                                  [((2U >= (3U & (__Vtask_Controller_tb__DOT__check_results__3__m 
+                                                  - (IData)(3U))))
+                                     ? (3U & (__Vtask_Controller_tb__DOT__check_results__3__m 
+                                              - (IData)(3U)))
+                                     : 0U)][2U]))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:162: Assertion failed in %m: [%0t] A2 C[%0d][2]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_results.unnamedblk4", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,(__Vtask_Controller_tb__DOT__check_results__3__m 
+                                       - (IData)(3U))
+                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp2
+                             [((2U >= (3U & (__Vtask_Controller_tb__DOT__check_results__3__m 
+                                             - (IData)(3U))))
+                                ? (3U & (__Vtask_Controller_tb__DOT__check_results__3__m 
+                                         - (IData)(3U)))
+                                : 0U)][2U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[2U]);
+                VL_STOP_MT("Controller_tb.sv", 162, "");
+            }
+        }
+        vlSelfRef.Controller_tb__DOT__push0 = 0U;
+        Controller_tb__DOT__unnamedblk9__DOT__t = ((IData)(1U) 
+                                                   + Controller_tb__DOT__unnamedblk9__DOT__t);
+    }
+    vlSelfRef.Controller_tb__DOT__rst_n = 0U;
+    Controller_tb__DOT__unnamedblk1_3__DOT____Vrepeat2 = 2U;
+    if ((vlSelfRef.Controller_tb__DOT__errors == vlSelfRef.Controller_tb__DOT__test_errors)) {
+        VL_WRITEF_NX("Test 2 passed: single job\n",0);
+    } else {
+        VL_WRITEF_NX("Test 2 FAILED: single job\n",0);
+    }
+    while (VL_LTS_III(32, 0U, Controller_tb__DOT__unnamedblk1_3__DOT____Vrepeat2)) {
+        VController_tb___024root____VbeforeTrig_hb8a3c5d6__0(vlSelf, 
+                                                             "@(negedge Controller_tb.clk)");
+        co_await vlSelfRef.__VtrigSched_hb8a3c5d6__0.trigger(0U, 
+                                                             nullptr, 
+                                                             "@(negedge Controller_tb.clk)", 
+                                                             "Controller_tb.sv", 
+                                                             241);
+        vlSelfRef.__Vm_traceActivity[3U] = 1U;
         Controller_tb__DOT__unnamedblk1_3__DOT____Vrepeat2 
             = (Controller_tb__DOT__unnamedblk1_3__DOT____Vrepeat2 
+               - (IData)(1U));
+    }
+    vlSelfRef.Controller_tb__DOT__rst_n = 1U;
+    vlSelfRef.Controller_tb__DOT__test_errors = vlSelfRef.Controller_tb__DOT__errors;
+    vlSelfRef.Controller_tb__DOT__push0 = 1U;
+    Controller_tb__DOT__unnamedblk10__DOT__t = 0U;
+    while (VL_GTS_III(32, 0x0000000eU, Controller_tb__DOT__unnamedblk10__DOT__t)) {
+        VController_tb___024root____VbeforeTrig_hb8a3c5d6__0(vlSelf, 
+                                                             "@(negedge Controller_tb.clk)");
+        co_await vlSelfRef.__VtrigSched_hb8a3c5d6__0.trigger(0U, 
+                                                             nullptr, 
+                                                             "@(negedge Controller_tb.clk)", 
+                                                             "Controller_tb.sv", 
+                                                             250);
+        vlSelfRef.__Vm_traceActivity[3U] = 1U;
+        if ((0x0dU >= (0x0000000fU & Controller_tb__DOT__unnamedblk10__DOT__t))) {
+            __Vtask_Controller_tb__DOT__check_ctrl__4__est 
+                = vlSelfRef.Controller_tb__DOT__e_state
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk10__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__4__edn 
+                = vlSelfRef.Controller_tb__DOT__e_done
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk10__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__4__eri 
+                = vlSelfRef.Controller_tb__DOT__e_row_idx
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk10__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__4__ers 
+                = vlSelfRef.Controller_tb__DOT__e_row_slot
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk10__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__4__efd 
+                = vlSelfRef.Controller_tb__DOT__e_feed
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk10__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__4__een 
+                = vlSelfRef.Controller_tb__DOT__e_en
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk10__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__4__els 
+                = vlSelfRef.Controller_tb__DOT__l_load_slot
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk10__DOT__t)];
+            __Vtask_Controller_tb__DOT__check_ctrl__4__ew 
+                = vlSelfRef.Controller_tb__DOT__l_w_load
+                [(0x0000000fU & Controller_tb__DOT__unnamedblk10__DOT__t)];
+        } else {
+            __Vtask_Controller_tb__DOT__check_ctrl__4__est = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__4__edn = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__4__eri = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__4__ers = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__4__efd = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__4__een = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__4__els = 0U;
+            __Vtask_Controller_tb__DOT__check_ctrl__4__ew = 0U;
+        }
+        __Vtask_Controller_tb__DOT__check_ctrl__4__t 
+            = Controller_tb__DOT__unnamedblk10__DOT__t;
+        vlSelfRef.Controller_tb__DOT__checks = ((IData)(1U) 
+                                                + vlSelfRef.Controller_tb__DOT__checks);
+        if (VL_UNLIKELY(((((((VController_tb__ConstPool__TABLE_h0cc0fcf8_0
+                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
+                              != (1U & __Vtask_Controller_tb__DOT__check_ctrl__4__ew)) 
+                             | (VController_tb__ConstPool__TABLE_h028f018c_0
+                                [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
+                                != (1U & __Vtask_Controller_tb__DOT__check_ctrl__4__een))) 
+                            | (VController_tb__ConstPool__TABLE_hbabea407_0
+                               [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
+                               != (1U & __Vtask_Controller_tb__DOT__check_ctrl__4__efd))) 
+                           | (VController_tb__ConstPool__TABLE_h757529b2_0
+                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
+                              != (1U & __Vtask_Controller_tb__DOT__check_ctrl__4__ers))) 
+                          | (VController_tb__ConstPool__TABLE_h0c797d14_0
+                             [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
+                             != (1U & __Vtask_Controller_tb__DOT__check_ctrl__4__edn)))))) {
+            vlSelfRef.Controller_tb__DOT__errors = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+            VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:119: Assertion failed in %m: [%0t] t=%0d: w_load=%0d en=%0d feed=%0d row_slot=%0d done=%0d, expected %0d %0d %0d %0d %0d\n",15, 'M',vlSymsp->name(),"Controller_tb.check_ctrl", 'T',-9
+                         , '#',64,VL_TIME_UNITED_Q(1000)
+                         , '#',64,VL_TIME_UNITED_Q(1000)
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__4__t
+                         , '#',1,VController_tb__ConstPool__TABLE_h0cc0fcf8_0
+                         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
+                         , '#',1,VController_tb__ConstPool__TABLE_h028f018c_0
+                         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
+                         , '#',1,VController_tb__ConstPool__TABLE_hbabea407_0
+                         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
+                         , '#',1,VController_tb__ConstPool__TABLE_h757529b2_0
+                         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
+                         , '#',1,VController_tb__ConstPool__TABLE_h0c797d14_0
+                         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__4__ew
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__4__een
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__4__efd
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__4__ers
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__4__edn);
+            VL_STOP_MT("Controller_tb.sv", 119, "");
+        }
+        if (VController_tb__ConstPool__TABLE_h0cc0fcf8_0
+            [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((VController_tb__ConstPool__TABLE_hb7eea91c_0
+                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
+                              != (1U & __Vtask_Controller_tb__DOT__check_ctrl__4__els))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:127: Assertion failed in %m: [%0t] t=%0d: load_slot=%0d, expected %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_ctrl", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__4__t
+                             , '#',1,VController_tb__ConstPool__TABLE_hb7eea91c_0
+                             [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
+                             , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__4__els);
+                VL_STOP_MT("Controller_tb.sv", 127, "");
+            }
+        }
+        if (VController_tb__ConstPool__TABLE_hbabea407_0
+            [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((VController_tb__ConstPool__TABLE_h35b5d552_0
+                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
+                              != (3U & __Vtask_Controller_tb__DOT__check_ctrl__4__eri))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:135: Assertion failed in %m: [%0t] t=%0d: row_idx=%0d, expected %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_ctrl", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__4__t
+                             , '#',2,VController_tb__ConstPool__TABLE_h35b5d552_0
+                             [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
+                             , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__4__eri);
+                VL_STOP_MT("Controller_tb.sv", 135, "");
+            }
+        }
+        vlSelfRef.Controller_tb__DOT__checks = ((IData)(1U) 
+                                                + vlSelfRef.Controller_tb__DOT__checks);
+        if (VL_UNLIKELY((((IData)(vlSelfRef.Controller_tb__DOT__ctrl__DOT__state) 
+                          != __Vtask_Controller_tb__DOT__check_ctrl__4__est)))) {
+            vlSelfRef.Controller_tb__DOT__errors = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+            __Vtemp_57 = VController_tb___024unit::__Venumtab_enum_name15
+                [vlSelfRef.Controller_tb__DOT__ctrl__DOT__state];
+            VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:142: Assertion failed in %m: [%0t] t=%0d: state=%s, expected %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_ctrl", 'T',-9
+                         , '#',64,VL_TIME_UNITED_Q(1000)
+                         , '#',64,VL_TIME_UNITED_Q(1000)
+                         , '~',32,__Vtask_Controller_tb__DOT__check_ctrl__4__t
+                         , 'S',&(__Vtemp_57), '~',32,__Vtask_Controller_tb__DOT__check_ctrl__4__est);
+            VL_STOP_MT("Controller_tb.sv", 142, "");
+        }
+        __Vtask_Controller_tb__DOT__check_results__5__two_jobs = 1U;
+        __Vtask_Controller_tb__DOT__check_results__5__t 
+            = Controller_tb__DOT__unnamedblk10__DOT__t;
+        __Vtask_Controller_tb__DOT__check_results__5__m = 0U;
+        __Vtask_Controller_tb__DOT__check_results__5__m 
+            = (__Vtask_Controller_tb__DOT__check_results__5__t 
+               - (IData)(5U));
+        if ((VL_LTES_III(32, 0U, __Vtask_Controller_tb__DOT__check_results__5__m) 
+             & VL_GTS_III(32, 3U, __Vtask_Controller_tb__DOT__check_results__5__m))) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[0U] 
+                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp
+                                  [((2U >= (3U & __Vtask_Controller_tb__DOT__check_results__5__m))
+                                     ? (3U & __Vtask_Controller_tb__DOT__check_results__5__m)
+                                     : 0U)][0U]))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:155: Assertion failed in %m: [%0t] A C[%0d][0]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_results.unnamedblk4", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,__Vtask_Controller_tb__DOT__check_results__5__m
+                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp
+                             [((2U >= (3U & __Vtask_Controller_tb__DOT__check_results__5__m))
+                                ? (3U & __Vtask_Controller_tb__DOT__check_results__5__m)
+                                : 0U)][0U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[0U]);
+                VL_STOP_MT("Controller_tb.sv", 155, "");
+            }
+        } else if ((((IData)(__Vtask_Controller_tb__DOT__check_results__5__two_jobs) 
+                     & VL_LTES_III(32, 3U, __Vtask_Controller_tb__DOT__check_results__5__m)) 
+                    & VL_GTS_III(32, 6U, __Vtask_Controller_tb__DOT__check_results__5__m))) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[0U] 
+                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp2
+                                  [((2U >= (3U & (__Vtask_Controller_tb__DOT__check_results__5__m 
+                                                  - (IData)(3U))))
+                                     ? (3U & (__Vtask_Controller_tb__DOT__check_results__5__m 
+                                              - (IData)(3U)))
+                                     : 0U)][0U]))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:162: Assertion failed in %m: [%0t] A2 C[%0d][0]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_results.unnamedblk4", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,(__Vtask_Controller_tb__DOT__check_results__5__m 
+                                       - (IData)(3U))
+                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp2
+                             [((2U >= (3U & (__Vtask_Controller_tb__DOT__check_results__5__m 
+                                             - (IData)(3U))))
+                                ? (3U & (__Vtask_Controller_tb__DOT__check_results__5__m 
+                                         - (IData)(3U)))
+                                : 0U)][0U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[0U]);
+                VL_STOP_MT("Controller_tb.sv", 162, "");
+            }
+        }
+        __Vtask_Controller_tb__DOT__check_results__5__m 
+            = ((__Vtask_Controller_tb__DOT__check_results__5__t 
+                - (IData)(5U)) - (IData)(1U));
+        if ((VL_LTES_III(32, 0U, __Vtask_Controller_tb__DOT__check_results__5__m) 
+             & VL_GTS_III(32, 3U, __Vtask_Controller_tb__DOT__check_results__5__m))) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[1U] 
+                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp
+                                  [((2U >= (3U & __Vtask_Controller_tb__DOT__check_results__5__m))
+                                     ? (3U & __Vtask_Controller_tb__DOT__check_results__5__m)
+                                     : 0U)][1U]))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:155: Assertion failed in %m: [%0t] A C[%0d][1]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_results.unnamedblk4", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,__Vtask_Controller_tb__DOT__check_results__5__m
+                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp
+                             [((2U >= (3U & __Vtask_Controller_tb__DOT__check_results__5__m))
+                                ? (3U & __Vtask_Controller_tb__DOT__check_results__5__m)
+                                : 0U)][1U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[1U]);
+                VL_STOP_MT("Controller_tb.sv", 155, "");
+            }
+        } else if ((((IData)(__Vtask_Controller_tb__DOT__check_results__5__two_jobs) 
+                     & VL_LTES_III(32, 3U, __Vtask_Controller_tb__DOT__check_results__5__m)) 
+                    & VL_GTS_III(32, 6U, __Vtask_Controller_tb__DOT__check_results__5__m))) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[1U] 
+                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp2
+                                  [((2U >= (3U & (__Vtask_Controller_tb__DOT__check_results__5__m 
+                                                  - (IData)(3U))))
+                                     ? (3U & (__Vtask_Controller_tb__DOT__check_results__5__m 
+                                              - (IData)(3U)))
+                                     : 0U)][1U]))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:162: Assertion failed in %m: [%0t] A2 C[%0d][1]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_results.unnamedblk4", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,(__Vtask_Controller_tb__DOT__check_results__5__m 
+                                       - (IData)(3U))
+                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp2
+                             [((2U >= (3U & (__Vtask_Controller_tb__DOT__check_results__5__m 
+                                             - (IData)(3U))))
+                                ? (3U & (__Vtask_Controller_tb__DOT__check_results__5__m 
+                                         - (IData)(3U)))
+                                : 0U)][1U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[1U]);
+                VL_STOP_MT("Controller_tb.sv", 162, "");
+            }
+        }
+        __Vtask_Controller_tb__DOT__check_results__5__m 
+            = ((__Vtask_Controller_tb__DOT__check_results__5__t 
+                - (IData)(5U)) - (IData)(2U));
+        if ((VL_LTES_III(32, 0U, __Vtask_Controller_tb__DOT__check_results__5__m) 
+             & VL_GTS_III(32, 3U, __Vtask_Controller_tb__DOT__check_results__5__m))) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[2U] 
+                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp
+                                  [((2U >= (3U & __Vtask_Controller_tb__DOT__check_results__5__m))
+                                     ? (3U & __Vtask_Controller_tb__DOT__check_results__5__m)
+                                     : 0U)][2U]))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:155: Assertion failed in %m: [%0t] A C[%0d][2]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_results.unnamedblk4", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,__Vtask_Controller_tb__DOT__check_results__5__m
+                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp
+                             [((2U >= (3U & __Vtask_Controller_tb__DOT__check_results__5__m))
+                                ? (3U & __Vtask_Controller_tb__DOT__check_results__5__m)
+                                : 0U)][2U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[2U]);
+                VL_STOP_MT("Controller_tb.sv", 155, "");
+            }
+        } else if ((((IData)(__Vtask_Controller_tb__DOT__check_results__5__two_jobs) 
+                     & VL_LTES_III(32, 3U, __Vtask_Controller_tb__DOT__check_results__5__m)) 
+                    & VL_GTS_III(32, 6U, __Vtask_Controller_tb__DOT__check_results__5__m))) {
+            vlSelfRef.Controller_tb__DOT__checks = 
+                ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
+            if (VL_UNLIKELY(((vlSelfRef.Controller_tb__DOT__result_matrix[2U] 
+                              != (0x000003ffU & vlSelfRef.Controller_tb__DOT__C_exp2
+                                  [((2U >= (3U & (__Vtask_Controller_tb__DOT__check_results__5__m 
+                                                  - (IData)(3U))))
+                                     ? (3U & (__Vtask_Controller_tb__DOT__check_results__5__m 
+                                              - (IData)(3U)))
+                                     : 0U)][2U]))))) {
+                vlSelfRef.Controller_tb__DOT__errors 
+                    = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
+                VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:162: Assertion failed in %m: [%0t] A2 C[%0d][2]: expected %0d, got %0d\n",7, 'M',vlSymsp->name(),"Controller_tb.check_results.unnamedblk4", 'T',-9
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '#',64,VL_TIME_UNITED_Q(1000)
+                             , '~',32,(__Vtask_Controller_tb__DOT__check_results__5__m 
+                                       - (IData)(3U))
+                             , '~',32,vlSelfRef.Controller_tb__DOT__C_exp2
+                             [((2U >= (3U & (__Vtask_Controller_tb__DOT__check_results__5__m 
+                                             - (IData)(3U))))
+                                ? (3U & (__Vtask_Controller_tb__DOT__check_results__5__m 
+                                         - (IData)(3U)))
+                                : 0U)][2U], '#',10,vlSelfRef.Controller_tb__DOT__result_matrix[2U]);
+                VL_STOP_MT("Controller_tb.sv", 162, "");
+            }
+        }
+        vlSelfRef.Controller_tb__DOT__push0 = 0U;
+        vlSelfRef.Controller_tb__DOT__push1 = (3U == Controller_tb__DOT__unnamedblk10__DOT__t);
+        Controller_tb__DOT__unnamedblk10__DOT__t = 
+            ((IData)(1U) + Controller_tb__DOT__unnamedblk10__DOT__t);
+    }
+    vlSelfRef.Controller_tb__DOT__push1 = 0U;
+    vlSelfRef.Controller_tb__DOT__rst_n = 0U;
+    Controller_tb__DOT__unnamedblk1_4__DOT____Vrepeat3 = 2U;
+    if ((vlSelfRef.Controller_tb__DOT__errors == vlSelfRef.Controller_tb__DOT__test_errors)) {
+        VL_WRITEF_NX("Test 3 passed: second job arrives late in feed_0\n",0);
+    } else {
+        VL_WRITEF_NX("Test 3 FAILED: second job arrives late\n",0);
+    }
+    while (VL_LTS_III(32, 0U, Controller_tb__DOT__unnamedblk1_4__DOT____Vrepeat3)) {
+        VController_tb___024root____VbeforeTrig_hb8a3c5d6__0(vlSelf, 
+                                                             "@(negedge Controller_tb.clk)");
+        co_await vlSelfRef.__VtrigSched_hb8a3c5d6__0.trigger(0U, 
+                                                             nullptr, 
+                                                             "@(negedge Controller_tb.clk)", 
+                                                             "Controller_tb.sv", 
+                                                             263);
+        vlSelfRef.__Vm_traceActivity[3U] = 1U;
+        Controller_tb__DOT__unnamedblk1_4__DOT____Vrepeat3 
+            = (Controller_tb__DOT__unnamedblk1_4__DOT____Vrepeat3 
+               - (IData)(1U));
+    }
+    vlSelfRef.Controller_tb__DOT__rst_n = 1U;
+    vlSelfRef.Controller_tb__DOT__test_errors = vlSelfRef.Controller_tb__DOT__errors;
+    vlSelfRef.Controller_tb__DOT__push0 = 1U;
+    vlSelfRef.Controller_tb__DOT__push1 = 1U;
+    VController_tb___024root____VbeforeTrig_hb8a3c5d6__0(vlSelf, 
+                                                         "@(negedge Controller_tb.clk)");
+    co_await vlSelfRef.__VtrigSched_hb8a3c5d6__0.trigger(0U, 
+                                                         nullptr, 
+                                                         "@(negedge Controller_tb.clk)", 
+                                                         "Controller_tb.sv", 
+                                                         271);
+    vlSelfRef.__Vm_traceActivity[3U] = 1U;
+    vlSelfRef.Controller_tb__DOT__push0 = 0U;
+    vlSelfRef.Controller_tb__DOT__push1 = 0U;
+    Controller_tb__DOT__unnamedblk1_5__DOT____Vrepeat4 = 5U;
+    while (VL_LTS_III(32, 0U, Controller_tb__DOT__unnamedblk1_5__DOT____Vrepeat4)) {
+        VController_tb___024root____VbeforeTrig_hb8a3c5d6__0(vlSelf, 
+                                                             "@(negedge Controller_tb.clk)");
+        co_await vlSelfRef.__VtrigSched_hb8a3c5d6__0.trigger(0U, 
+                                                             nullptr, 
+                                                             "@(negedge Controller_tb.clk)", 
+                                                             "Controller_tb.sv", 
+                                                             274);
+        vlSelfRef.__Vm_traceActivity[3U] = 1U;
+        Controller_tb__DOT__unnamedblk1_5__DOT____Vrepeat4 
+            = (Controller_tb__DOT__unnamedblk1_5__DOT____Vrepeat4 
                - (IData)(1U));
     }
     vlSelfRef.Controller_tb__DOT__rst_n = 0U;
@@ -991,21 +1594,22 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                                                          nullptr, 
                                                          "@(negedge Controller_tb.clk)", 
                                                          "Controller_tb.sv", 
-                                                         233);
+                                                         277);
     vlSelfRef.__Vm_traceActivity[3U] = 1U;
     vlSelfRef.Controller_tb__DOT__checks = ((IData)(1U) 
                                             + vlSelfRef.Controller_tb__DOT__checks);
-    if (VL_UNLIKELY(((((VController_tb__ConstPool__TABLE_h0cc0fcf8_0
-                        [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
-                        | VController_tb__ConstPool__TABLE_h028f018c_0
+    if (VL_UNLIKELY((((((VController_tb__ConstPool__TABLE_h0cc0fcf8_0
+                         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
+                         | VController_tb__ConstPool__TABLE_h028f018c_0
+                         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) 
+                        | VController_tb__ConstPool__TABLE_hbabea407_0
                         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) 
-                       | VController_tb__ConstPool__TABLE_hbabea407_0
+                       | VController_tb__ConstPool__TABLE_h0c797d14_0
                        [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) 
-                      | VController_tb__ConstPool__TABLE_h0c797d14_0
-                      [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])))) {
+                      | (0U != (IData)(vlSelfRef.Controller_tb__DOT__entry_valid)))))) {
         vlSelfRef.Controller_tb__DOT__errors = ((IData)(1U) 
                                                 + vlSelfRef.Controller_tb__DOT__errors);
-        VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:237: Assertion failed in %m: [%0t] reset didn't clear outputs: w_load=%0d en=%0d feed=%0d done=%0d\n",8, 'M',vlSymsp->name(),"Controller_tb", 'T',-9
+        VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:281: Assertion failed in %m: [%0t] reset didn't clear: w_load=%0d en=%0d feed=%0d done=%0d entry_valid=%b\n",9, 'M',vlSymsp->name(),"Controller_tb", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',1,VController_tb__ConstPool__TABLE_h0cc0fcf8_0
@@ -1015,19 +1619,20 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                      , '#',1,VController_tb__ConstPool__TABLE_hbabea407_0
                      [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                      , '#',1,VController_tb__ConstPool__TABLE_h0c797d14_0
-                     [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]);
-        VL_STOP_MT("Controller_tb.sv", 237, "");
+                     [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
+                     , '#',2,vlSelfRef.Controller_tb__DOT__entry_valid);
+        VL_STOP_MT("Controller_tb.sv", 281, "");
     }
     vlSelfRef.Controller_tb__DOT__rst_n = 1U;
-    Controller_tb__DOT__unnamedblk1_4__DOT____Vrepeat3 = 3U;
-    while (VL_LTS_III(32, 0U, Controller_tb__DOT__unnamedblk1_4__DOT____Vrepeat3)) {
+    Controller_tb__DOT__unnamedblk1_6__DOT____Vrepeat5 = 3U;
+    while (VL_LTS_III(32, 0U, Controller_tb__DOT__unnamedblk1_6__DOT____Vrepeat5)) {
         VController_tb___024root____VbeforeTrig_hb8a3c5d6__0(vlSelf, 
                                                              "@(negedge Controller_tb.clk)");
         co_await vlSelfRef.__VtrigSched_hb8a3c5d6__0.trigger(0U, 
                                                              nullptr, 
                                                              "@(negedge Controller_tb.clk)", 
                                                              "Controller_tb.sv", 
-                                                             243);
+                                                             288);
         vlSelfRef.__Vm_traceActivity[3U] = 1U;
         vlSelfRef.Controller_tb__DOT__checks = ((IData)(1U) 
                                                 + vlSelfRef.Controller_tb__DOT__checks);
@@ -1041,19 +1646,19 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                           [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])))) {
             vlSelfRef.Controller_tb__DOT__errors = 
                 ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
-            VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:247: Assertion failed in %m: [%0t] controller left idle without start\n",4, 'M',vlSymsp->name(),"Controller_tb.unnamedblk1_4", 'T',-9
+            VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:292: Assertion failed in %m: [%0t] controller left idle with an empty buffer\n",4, 'M',vlSymsp->name(),"Controller_tb.unnamedblk1_6", 'T',-9
                          , '#',64,VL_TIME_UNITED_Q(1000)
                          , '#',64,VL_TIME_UNITED_Q(1000));
-            VL_STOP_MT("Controller_tb.sv", 247, "");
+            VL_STOP_MT("Controller_tb.sv", 292, "");
         }
-        Controller_tb__DOT__unnamedblk1_4__DOT____Vrepeat3 
-            = (Controller_tb__DOT__unnamedblk1_4__DOT____Vrepeat3 
+        Controller_tb__DOT__unnamedblk1_6__DOT____Vrepeat5 
+            = (Controller_tb__DOT__unnamedblk1_6__DOT____Vrepeat5 
                - (IData)(1U));
     }
     if ((vlSelfRef.Controller_tb__DOT__errors == vlSelfRef.Controller_tb__DOT__test_errors)) {
-        VL_WRITEF_NX("Test 3 passed: reset mid run\n",0);
+        VL_WRITEF_NX("Test 4 passed: reset mid run\n",0);
     } else {
-        VL_WRITEF_NX("Test 3 FAILED: reset mid run\n",0);
+        VL_WRITEF_NX("Test 4 FAILED: reset mid run\n",0);
     }
     if ((0U == vlSelfRef.Controller_tb__DOT__errors)) {
         VL_WRITEF_NX("PASS: %0d checks\n",1, '~',32,vlSelfRef.Controller_tb__DOT__checks);
@@ -1062,7 +1667,7 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                      , '~',32,vlSelfRef.Controller_tb__DOT__errors
                      , '~',32,vlSelfRef.Controller_tb__DOT__checks);
     }
-    VL_FINISH_MT("Controller_tb.sv", 257, "");
+    VL_FINISH_MT("Controller_tb.sv", 302, "");
     vlSelfRef.__Vm_traceActivity[3U] = 1U;
     co_return;
 }
@@ -1482,6 +2087,20 @@ void VController_tb___024root___nba_sequent__TOP__0(VController_tb___024root* vl
         vlSelfRef.Controller_tb__DOT__dut__DOT____Vcellout__row__BRA__1__KET____DOT__col__BRA__1__KET____DOT__PE__result = 0U;
         vlSelfRef.Controller_tb__DOT__ctrl__DOT__state = 0U;
     }
+    if ((1U & ((~ (IData)(vlSelfRef.Controller_tb__DOT__rst_n)) 
+               | VController_tb__ConstPool__TABLE_h0c797d14_0
+               [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]))) {
+        vlSelfRef.Controller_tb__DOT__entry_valid = 0U;
+    } else {
+        if (vlSelfRef.Controller_tb__DOT__push0) {
+            vlSelfRef.Controller_tb__DOT__entry_valid 
+                = (1U | (IData)(vlSelfRef.Controller_tb__DOT__entry_valid));
+        }
+        if (vlSelfRef.Controller_tb__DOT__push1) {
+            vlSelfRef.Controller_tb__DOT__entry_valid 
+                = (2U | (IData)(vlSelfRef.Controller_tb__DOT__entry_valid));
+        }
+    }
     if (__VdlySet__Controller_tb__DOT__dly_s__v0) {
         vlSelfRef.Controller_tb__DOT__dly_s[1U] = __VdlyVal__Controller_tb__DOT__dly_s__v0;
         vlSelfRef.Controller_tb__DOT__dly_s[0U] = __VdlyVal__Controller_tb__DOT__dly_s__v1;
@@ -1692,6 +2311,8 @@ void VController_tb___024root____VbeforeTrig_hb8a3c5d6__0(VController_tb___024ro
     vlSelfRef.__Vtrigprevexpr___TOP__Controller_tb__DOT__clk__0 
         = vlSelfRef.Controller_tb__DOT__clk;
     if ((4ULL & __VTmp[0U])) {
+        vlSelfRef.__VtrigSched_hb8a3c5d6__0.ready(__VeventDescription);
+        vlSelfRef.__VtrigSched_hb8a3c5d6__0.ready(__VeventDescription);
         vlSelfRef.__VtrigSched_hb8a3c5d6__0.ready(__VeventDescription);
         vlSelfRef.__VtrigSched_hb8a3c5d6__0.ready(__VeventDescription);
         vlSelfRef.__VtrigSched_hb8a3c5d6__0.ready(__VeventDescription);

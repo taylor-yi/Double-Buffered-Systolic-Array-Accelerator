@@ -181,13 +181,13 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__0(VController
 }
 
 void VController_tb___024root____VbeforeTrig_hb8a3c5d6__0(VController_tb___024root* vlSelf, const char* __VeventDescription);
-extern const VlUnpacked<CData/*0:0*/, 64> VController_tb__ConstPool__TABLE_h3240c103_0;
-extern const VlUnpacked<CData/*0:0*/, 64> VController_tb__ConstPool__TABLE_h8076f1af_0;
-extern const VlUnpacked<CData/*0:0*/, 64> VController_tb__ConstPool__TABLE_had63aeb2_0;
-extern const VlUnpacked<CData/*0:0*/, 64> VController_tb__ConstPool__TABLE_h75a3cb7f_0;
-extern const VlUnpacked<CData/*0:0*/, 64> VController_tb__ConstPool__TABLE_h9721b957_0;
-extern const VlUnpacked<CData/*0:0*/, 64> VController_tb__ConstPool__TABLE_hf1a212c7_0;
-extern const VlUnpacked<CData/*1:0*/, 64> VController_tb__ConstPool__TABLE_hd2401f8a_0;
+extern const VlUnpacked<CData/*0:0*/, 128> VController_tb__ConstPool__TABLE_h0cc0fcf8_0;
+extern const VlUnpacked<CData/*0:0*/, 128> VController_tb__ConstPool__TABLE_h028f018c_0;
+extern const VlUnpacked<CData/*0:0*/, 128> VController_tb__ConstPool__TABLE_hbabea407_0;
+extern const VlUnpacked<CData/*0:0*/, 128> VController_tb__ConstPool__TABLE_h757529b2_0;
+extern const VlUnpacked<CData/*0:0*/, 128> VController_tb__ConstPool__TABLE_h0c797d14_0;
+extern const VlUnpacked<CData/*0:0*/, 128> VController_tb__ConstPool__TABLE_hb7eea91c_0;
+extern const VlUnpacked<CData/*1:0*/, 128> VController_tb__ConstPool__TABLE_h35b5d552_0;
 
 VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController_tb___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VController_tb___024root___eval_initial__TOP__Vtiming__1\n"); );
@@ -509,14 +509,14 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
         vlSelfRef.__Vm_traceActivity[3U] = 1U;
         vlSelfRef.Controller_tb__DOT__checks = ((IData)(1U) 
                                                 + vlSelfRef.Controller_tb__DOT__checks);
-        if (VL_UNLIKELY(((((((VController_tb__ConstPool__TABLE_h3240c103_0
+        if (VL_UNLIKELY(((((((VController_tb__ConstPool__TABLE_h0cc0fcf8_0
                               [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
                               != ((0x0dU >= (0x0000000fU 
                                              & Controller_tb__DOT__unnamedblk7__DOT__t))
                                    ? (1U & vlSelfRef.Controller_tb__DOT__e_w_load
                                       [(0x0000000fU 
                                         & Controller_tb__DOT__unnamedblk7__DOT__t)])
-                                   : 0U)) | (VController_tb__ConstPool__TABLE_h8076f1af_0
+                                   : 0U)) | (VController_tb__ConstPool__TABLE_h028f018c_0
                                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
                                              != ((0x0dU 
                                                   >= 
@@ -529,14 +529,14 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                                                   (0x0000000fU 
                                                    & Controller_tb__DOT__unnamedblk7__DOT__t)])
                                                   : 0U))) 
-                            | (VController_tb__ConstPool__TABLE_had63aeb2_0
+                            | (VController_tb__ConstPool__TABLE_hbabea407_0
                                [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
                                != ((0x0dU >= (0x0000000fU 
                                               & Controller_tb__DOT__unnamedblk7__DOT__t))
                                     ? (1U & vlSelfRef.Controller_tb__DOT__e_feed
                                        [(0x0000000fU 
                                          & Controller_tb__DOT__unnamedblk7__DOT__t)])
-                                    : 0U))) | (VController_tb__ConstPool__TABLE_h75a3cb7f_0
+                                    : 0U))) | (VController_tb__ConstPool__TABLE_h757529b2_0
                                                [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
                                                != (
                                                    (0x0dU 
@@ -550,7 +550,7 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                                                     (0x0000000fU 
                                                      & Controller_tb__DOT__unnamedblk7__DOT__t)])
                                                     : 0U))) 
-                          | (VController_tb__ConstPool__TABLE_h9721b957_0
+                          | (VController_tb__ConstPool__TABLE_h0c797d14_0
                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
                              != ((0x0dU >= (0x0000000fU 
                                             & Controller_tb__DOT__unnamedblk7__DOT__t))
@@ -564,15 +564,15 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                          , '#',64,VL_TIME_UNITED_Q(1000)
                          , '#',64,VL_TIME_UNITED_Q(1000)
                          , '~',32,Controller_tb__DOT__unnamedblk7__DOT__t
-                         , '#',1,VController_tb__ConstPool__TABLE_h3240c103_0
+                         , '#',1,VController_tb__ConstPool__TABLE_h0cc0fcf8_0
                          [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
-                         , '#',1,VController_tb__ConstPool__TABLE_h8076f1af_0
+                         , '#',1,VController_tb__ConstPool__TABLE_h028f018c_0
                          [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
-                         , '#',1,VController_tb__ConstPool__TABLE_had63aeb2_0
+                         , '#',1,VController_tb__ConstPool__TABLE_hbabea407_0
                          [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
-                         , '#',1,VController_tb__ConstPool__TABLE_h75a3cb7f_0
+                         , '#',1,VController_tb__ConstPool__TABLE_h757529b2_0
                          [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
-                         , '#',1,VController_tb__ConstPool__TABLE_h9721b957_0
+                         , '#',1,VController_tb__ConstPool__TABLE_h0c797d14_0
                          [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                          , '~',32,((0x0dU >= (0x0000000fU 
                                               & Controller_tb__DOT__unnamedblk7__DOT__t))
@@ -609,11 +609,11 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                                     : 0U));
             VL_STOP_MT("Controller_tb.sv", 131, "");
         }
-        if (VController_tb__ConstPool__TABLE_h3240c103_0
+        if (VController_tb__ConstPool__TABLE_h0cc0fcf8_0
             [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) {
             vlSelfRef.Controller_tb__DOT__checks = 
                 ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
-            if (VL_UNLIKELY(((VController_tb__ConstPool__TABLE_hf1a212c7_0
+            if (VL_UNLIKELY(((VController_tb__ConstPool__TABLE_hb7eea91c_0
                               [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
                               != ((0x0dU >= (0x0000000fU 
                                              & Controller_tb__DOT__unnamedblk7__DOT__t))
@@ -627,7 +627,7 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '~',32,Controller_tb__DOT__unnamedblk7__DOT__t
-                             , '#',1,VController_tb__ConstPool__TABLE_hf1a212c7_0
+                             , '#',1,VController_tb__ConstPool__TABLE_hb7eea91c_0
                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                              , '~',32,((0x0dU >= (0x0000000fU 
                                                   & Controller_tb__DOT__unnamedblk7__DOT__t))
@@ -638,11 +638,11 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                 VL_STOP_MT("Controller_tb.sv", 140, "");
             }
         }
-        if (VController_tb__ConstPool__TABLE_had63aeb2_0
+        if (VController_tb__ConstPool__TABLE_hbabea407_0
             [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) {
             vlSelfRef.Controller_tb__DOT__checks = 
                 ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
-            if (VL_UNLIKELY(((VController_tb__ConstPool__TABLE_hd2401f8a_0
+            if (VL_UNLIKELY(((VController_tb__ConstPool__TABLE_h35b5d552_0
                               [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
                               != ((0x0dU >= (0x0000000fU 
                                              & Controller_tb__DOT__unnamedblk7__DOT__t))
@@ -656,7 +656,7 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '~',32,Controller_tb__DOT__unnamedblk7__DOT__t
-                             , '#',2,VController_tb__ConstPool__TABLE_hd2401f8a_0
+                             , '#',2,VController_tb__ConstPool__TABLE_h35b5d552_0
                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                              , '~',32,((0x0dU >= (0x0000000fU 
                                                   & Controller_tb__DOT__unnamedblk7__DOT__t))
@@ -881,7 +881,7 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
         vlSelfRef.__Vm_traceActivity[3U] = 1U;
         vlSelfRef.Controller_tb__DOT__checks = ((IData)(1U) 
                                                 + vlSelfRef.Controller_tb__DOT__checks);
-        if (VL_UNLIKELY(((VController_tb__ConstPool__TABLE_h9721b957_0
+        if (VL_UNLIKELY(((VController_tb__ConstPool__TABLE_h0c797d14_0
                           [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
                           != (0x0000000cU == Controller_tb__DOT__unnamedblk9__DOT__t))))) {
             vlSelfRef.Controller_tb__DOT__errors = 
@@ -890,7 +890,7 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                          , '#',64,VL_TIME_UNITED_Q(1000)
                          , '#',64,VL_TIME_UNITED_Q(1000)
                          , '~',32,Controller_tb__DOT__unnamedblk9__DOT__t
-                         , '#',1,VController_tb__ConstPool__TABLE_h9721b957_0
+                         , '#',1,VController_tb__ConstPool__TABLE_h0c797d14_0
                          [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                          , '#',1,(0x0000000cU == Controller_tb__DOT__unnamedblk9__DOT__t));
             VL_STOP_MT("Controller_tb.sv", 198, "");
@@ -898,9 +898,9 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
         if (VL_LTS_III(32, 0x0000000cU, Controller_tb__DOT__unnamedblk9__DOT__t)) {
             vlSelfRef.Controller_tb__DOT__checks = 
                 ((IData)(1U) + vlSelfRef.Controller_tb__DOT__checks);
-            if (VL_UNLIKELY(((VController_tb__ConstPool__TABLE_h3240c103_0
+            if (VL_UNLIKELY(((VController_tb__ConstPool__TABLE_h0cc0fcf8_0
                               [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
-                              | VController_tb__ConstPool__TABLE_h8076f1af_0
+                              | VController_tb__ConstPool__TABLE_h028f018c_0
                               [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])))) {
                 vlSelfRef.Controller_tb__DOT__errors 
                     = ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
@@ -908,9 +908,9 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '#',64,VL_TIME_UNITED_Q(1000)
                              , '~',32,Controller_tb__DOT__unnamedblk9__DOT__t
-                             , '#',1,VController_tb__ConstPool__TABLE_h3240c103_0
+                             , '#',1,VController_tb__ConstPool__TABLE_h0cc0fcf8_0
                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
-                             , '#',1,VController_tb__ConstPool__TABLE_h8076f1af_0
+                             , '#',1,VController_tb__ConstPool__TABLE_h028f018c_0
                              [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]);
                 VL_STOP_MT("Controller_tb.sv", 206, "");
             }
@@ -995,26 +995,26 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
     vlSelfRef.__Vm_traceActivity[3U] = 1U;
     vlSelfRef.Controller_tb__DOT__checks = ((IData)(1U) 
                                             + vlSelfRef.Controller_tb__DOT__checks);
-    if (VL_UNLIKELY(((((VController_tb__ConstPool__TABLE_h3240c103_0
+    if (VL_UNLIKELY(((((VController_tb__ConstPool__TABLE_h0cc0fcf8_0
                         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
-                        | VController_tb__ConstPool__TABLE_h8076f1af_0
+                        | VController_tb__ConstPool__TABLE_h028f018c_0
                         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) 
-                       | VController_tb__ConstPool__TABLE_had63aeb2_0
+                       | VController_tb__ConstPool__TABLE_hbabea407_0
                        [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) 
-                      | VController_tb__ConstPool__TABLE_h9721b957_0
+                      | VController_tb__ConstPool__TABLE_h0c797d14_0
                       [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])))) {
         vlSelfRef.Controller_tb__DOT__errors = ((IData)(1U) 
                                                 + vlSelfRef.Controller_tb__DOT__errors);
         VL_WRITEF_NX("[%0t] %%Error: Controller_tb.sv:237: Assertion failed in %m: [%0t] reset didn't clear outputs: w_load=%0d en=%0d feed=%0d done=%0d\n",8, 'M',vlSymsp->name(),"Controller_tb", 'T',-9
                      , '#',64,VL_TIME_UNITED_Q(1000)
                      , '#',64,VL_TIME_UNITED_Q(1000)
-                     , '#',1,VController_tb__ConstPool__TABLE_h3240c103_0
+                     , '#',1,VController_tb__ConstPool__TABLE_h0cc0fcf8_0
                      [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
-                     , '#',1,VController_tb__ConstPool__TABLE_h8076f1af_0
+                     , '#',1,VController_tb__ConstPool__TABLE_h028f018c_0
                      [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
-                     , '#',1,VController_tb__ConstPool__TABLE_had63aeb2_0
+                     , '#',1,VController_tb__ConstPool__TABLE_hbabea407_0
                      [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
-                     , '#',1,VController_tb__ConstPool__TABLE_h9721b957_0
+                     , '#',1,VController_tb__ConstPool__TABLE_h0c797d14_0
                      [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]);
         VL_STOP_MT("Controller_tb.sv", 237, "");
     }
@@ -1031,13 +1031,13 @@ VlCoroutine VController_tb___024root___eval_initial__TOP__Vtiming__1(VController
         vlSelfRef.__Vm_traceActivity[3U] = 1U;
         vlSelfRef.Controller_tb__DOT__checks = ((IData)(1U) 
                                                 + vlSelfRef.Controller_tb__DOT__checks);
-        if (VL_UNLIKELY(((((VController_tb__ConstPool__TABLE_h3240c103_0
+        if (VL_UNLIKELY(((((VController_tb__ConstPool__TABLE_h0cc0fcf8_0
                             [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
-                            | VController_tb__ConstPool__TABLE_h8076f1af_0
+                            | VController_tb__ConstPool__TABLE_h028f018c_0
                             [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) 
-                           | VController_tb__ConstPool__TABLE_had63aeb2_0
+                           | VController_tb__ConstPool__TABLE_hbabea407_0
                            [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) 
-                          | VController_tb__ConstPool__TABLE_h9721b957_0
+                          | VController_tb__ConstPool__TABLE_h0c797d14_0
                           [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])))) {
             vlSelfRef.Controller_tb__DOT__errors = 
                 ((IData)(1U) + vlSelfRef.Controller_tb__DOT__errors);
@@ -1102,12 +1102,7 @@ void VController_tb___024root___act_sequent__TOP__0(VController_tb___024root* vl
     VController_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    vlSelfRef.__VdfgRegularize_hebeb780c_0_0 = (((IData)(vlSelfRef.Controller_tb__DOT__start) 
-                                                 << 5U) 
-                                                | (((IData)(vlSelfRef.Controller_tb__DOT__ctrl__DOT__cycle_count) 
-                                                    << 3U) 
-                                                   | (IData)(vlSelfRef.Controller_tb__DOT__ctrl__DOT__state)));
-    if (VController_tb__ConstPool__TABLE_hf1a212c7_0
+    if (VController_tb__ConstPool__TABLE_hb7eea91c_0
         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) {
         vlSelfRef.Controller_tb__DOT__b_in[0U][0U] 
             = vlSelfRef.Controller_tb__DOT__W2[0U][0U];
@@ -1147,54 +1142,54 @@ void VController_tb___024root___act_sequent__TOP__0(VController_tb___024root* vl
         vlSelfRef.Controller_tb__DOT__b_in[2U][2U] 
             = vlSelfRef.Controller_tb__DOT__W[2U][2U];
     }
-    if (VController_tb__ConstPool__TABLE_had63aeb2_0
+    if (VController_tb__ConstPool__TABLE_hbabea407_0
         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) {
-        if (VController_tb__ConstPool__TABLE_h75a3cb7f_0
+        if (VController_tb__ConstPool__TABLE_h757529b2_0
             [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) {
             vlSelfRef.Controller_tb__DOT__cur_a[0U] 
                 = vlSelfRef.Controller_tb__DOT__A2[
-                ((2U >= VController_tb__ConstPool__TABLE_hd2401f8a_0
+                ((2U >= VController_tb__ConstPool__TABLE_h35b5d552_0
                   [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])
-                  ? VController_tb__ConstPool__TABLE_hd2401f8a_0
+                  ? VController_tb__ConstPool__TABLE_h35b5d552_0
                  [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                   : 0U)][0U];
             vlSelfRef.Controller_tb__DOT__cur_a[1U] 
                 = vlSelfRef.Controller_tb__DOT__A2[
-                ((2U >= VController_tb__ConstPool__TABLE_hd2401f8a_0
+                ((2U >= VController_tb__ConstPool__TABLE_h35b5d552_0
                   [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])
-                  ? VController_tb__ConstPool__TABLE_hd2401f8a_0
+                  ? VController_tb__ConstPool__TABLE_h35b5d552_0
                  [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                   : 0U)][1U];
             vlSelfRef.Controller_tb__DOT__cur_a[2U] 
                 = vlSelfRef.Controller_tb__DOT__A2[
-                ((2U >= VController_tb__ConstPool__TABLE_hd2401f8a_0
+                ((2U >= VController_tb__ConstPool__TABLE_h35b5d552_0
                   [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])
-                  ? VController_tb__ConstPool__TABLE_hd2401f8a_0
+                  ? VController_tb__ConstPool__TABLE_h35b5d552_0
                  [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                   : 0U)][2U];
         } else {
             vlSelfRef.Controller_tb__DOT__cur_a[0U] 
                 = vlSelfRef.Controller_tb__DOT__A[(
                                                    (2U 
-                                                    >= VController_tb__ConstPool__TABLE_hd2401f8a_0
+                                                    >= VController_tb__ConstPool__TABLE_h35b5d552_0
                                                     [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])
-                                                    ? VController_tb__ConstPool__TABLE_hd2401f8a_0
+                                                    ? VController_tb__ConstPool__TABLE_h35b5d552_0
                                                    [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                                                     : 0U)][0U];
             vlSelfRef.Controller_tb__DOT__cur_a[1U] 
                 = vlSelfRef.Controller_tb__DOT__A[(
                                                    (2U 
-                                                    >= VController_tb__ConstPool__TABLE_hd2401f8a_0
+                                                    >= VController_tb__ConstPool__TABLE_h35b5d552_0
                                                     [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])
-                                                    ? VController_tb__ConstPool__TABLE_hd2401f8a_0
+                                                    ? VController_tb__ConstPool__TABLE_h35b5d552_0
                                                    [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                                                     : 0U)][1U];
             vlSelfRef.Controller_tb__DOT__cur_a[2U] 
                 = vlSelfRef.Controller_tb__DOT__A[(
                                                    (2U 
-                                                    >= VController_tb__ConstPool__TABLE_hd2401f8a_0
+                                                    >= VController_tb__ConstPool__TABLE_h35b5d552_0
                                                     [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])
-                                                    ? VController_tb__ConstPool__TABLE_hd2401f8a_0
+                                                    ? VController_tb__ConstPool__TABLE_h35b5d552_0
                                                    [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                                                     : 0U)][2U];
         }
@@ -1206,11 +1201,6 @@ void VController_tb___024root___act_sequent__TOP__0(VController_tb___024root* vl
     vlSelfRef.Controller_tb__DOT__a_in[0U] = vlSelfRef.Controller_tb__DOT__cur_a[0U];
     vlSelfRef.Controller_tb__DOT__a_in[1U] = vlSelfRef.Controller_tb__DOT__dly_a[0U][1U];
     vlSelfRef.Controller_tb__DOT__a_in[2U] = vlSelfRef.Controller_tb__DOT__dly_a[1U][2U];
-    vlSelfRef.Controller_tb__DOT__cur_s = VController_tb__ConstPool__TABLE_h75a3cb7f_0
-        [vlSelfRef.__VdfgRegularize_hebeb780c_0_0];
-    vlSelfRef.Controller_tb__DOT__slot_in[0U] = vlSelfRef.Controller_tb__DOT__cur_s;
-    vlSelfRef.Controller_tb__DOT__slot_in[1U] = vlSelfRef.Controller_tb__DOT__dly_s[0U];
-    vlSelfRef.Controller_tb__DOT__slot_in[2U] = vlSelfRef.Controller_tb__DOT__dly_s[1U];
     vlSelfRef.Controller_tb__DOT____Vcellinp__dut__b_in[0U][0U] 
         = vlSelfRef.Controller_tb__DOT__b_in[0U][0U];
     vlSelfRef.Controller_tb__DOT____Vcellinp__dut__b_in[0U][1U] 
@@ -1235,27 +1225,9 @@ void VController_tb___024root___act_sequent__TOP__0(VController_tb___024root* vl
         = vlSelfRef.Controller_tb__DOT__a_in[1U];
     vlSelfRef.Controller_tb__DOT____Vcellinp__dut__a_in[2U] 
         = vlSelfRef.Controller_tb__DOT__a_in[2U];
-    vlSelfRef.Controller_tb__DOT____Vcellinp__dut__slot_in[0U] 
-        = vlSelfRef.Controller_tb__DOT__slot_in[0U];
-    vlSelfRef.Controller_tb__DOT____Vcellinp__dut__slot_in[1U] 
-        = vlSelfRef.Controller_tb__DOT__slot_in[1U];
-    vlSelfRef.Controller_tb__DOT____Vcellinp__dut__slot_in[2U] 
-        = vlSelfRef.Controller_tb__DOT__slot_in[2U];
-    vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__2__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__w 
-        = (vlSelfRef.Controller_tb__DOT____Vcellinp__dut__slot_in[2U]
-            ? (IData)(vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__2__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b2)
-            : (IData)(vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__2__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b1));
-    vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__1__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__w 
-        = (vlSelfRef.Controller_tb__DOT____Vcellinp__dut__slot_in[1U]
-            ? (IData)(vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__1__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b2)
-            : (IData)(vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__1__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b1));
-    vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__w 
-        = (vlSelfRef.Controller_tb__DOT____Vcellinp__dut__slot_in[0U]
-            ? (IData)(vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b2)
-            : (IData)(vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b1));
 }
 
-extern const VlUnpacked<CData/*2:0*/, 64> VController_tb__ConstPool__TABLE_h910e9f33_0;
+extern const VlUnpacked<CData/*2:0*/, 128> VController_tb__ConstPool__TABLE_hf261e1ac_0;
 
 void VController_tb___024root___nba_sequent__TOP__0(VController_tb___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VController_tb___024root___nba_sequent__TOP__0\n"); );
@@ -1292,7 +1264,7 @@ void VController_tb___024root___nba_sequent__TOP__0(VController_tb___024root* vl
     __VdlySet__Controller_tb__DOT__dly_a__v0 = 0U;
     __VdlySet__Controller_tb__DOT__dly_a__v6 = 0U;
     if (vlSelfRef.Controller_tb__DOT__rst_n) {
-        if (VController_tb__ConstPool__TABLE_h8076f1af_0
+        if (VController_tb__ConstPool__TABLE_h028f018c_0
             [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) {
             __VdlyVal__Controller_tb__DOT__dly_s__v0 
                 = vlSelfRef.Controller_tb__DOT__dly_s[0U];
@@ -1407,13 +1379,13 @@ void VController_tb___024root___nba_sequent__TOP__0(VController_tb___024root* vl
                                          * (IData)(vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__1__KET____DOT__col__BRA__1__KET____DOT__PE__DOT__w)))));
         }
         vlSelfRef.Controller_tb__DOT__ctrl__DOT__cycle_count 
-            = ((VController_tb__ConstPool__TABLE_h910e9f33_0
+            = ((VController_tb__ConstPool__TABLE_hf261e1ac_0
                 [vlSelfRef.__VdfgRegularize_hebeb780c_0_0] 
                 != (IData)(vlSelfRef.Controller_tb__DOT__ctrl__DOT__state))
                 ? 0U : (3U & ((IData)(1U) + (IData)(vlSelfRef.Controller_tb__DOT__ctrl__DOT__cycle_count))));
-        if (VController_tb__ConstPool__TABLE_h3240c103_0
+        if (VController_tb__ConstPool__TABLE_h0cc0fcf8_0
             [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) {
-            if ((1U & (~ (IData)(VController_tb__ConstPool__TABLE_hf1a212c7_0
+            if ((1U & (~ (IData)(VController_tb__ConstPool__TABLE_hb7eea91c_0
                                  [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])))) {
                 vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__2__KET____DOT__col__BRA__2__KET____DOT__PE__DOT__b1 
                     = vlSelfRef.Controller_tb__DOT____Vcellinp__dut__b_in[2U][2U];
@@ -1434,7 +1406,7 @@ void VController_tb___024root___nba_sequent__TOP__0(VController_tb___024root* vl
                 vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b1 
                     = vlSelfRef.Controller_tb__DOT____Vcellinp__dut__b_in[0U][0U];
             }
-            if (VController_tb__ConstPool__TABLE_hf1a212c7_0
+            if (VController_tb__ConstPool__TABLE_hb7eea91c_0
                 [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) {
                 vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__2__KET____DOT__col__BRA__2__KET____DOT__PE__DOT__b2 
                     = vlSelfRef.Controller_tb__DOT____Vcellinp__dut__b_in[2U][2U];
@@ -1457,7 +1429,7 @@ void VController_tb___024root___nba_sequent__TOP__0(VController_tb___024root* vl
             }
         }
         vlSelfRef.Controller_tb__DOT__ctrl__DOT__state 
-            = VController_tb__ConstPool__TABLE_h910e9f33_0
+            = VController_tb__ConstPool__TABLE_hf261e1ac_0
             [vlSelfRef.__VdfgRegularize_hebeb780c_0_0];
     } else {
         __VdlySet__Controller_tb__DOT__dly_s__v2 = 1U;
@@ -1624,12 +1596,40 @@ void VController_tb___024root___nba_sequent__TOP__0(VController_tb___024root* vl
         = vlSelfRef.Controller_tb__DOT__dut__DOT__p_wire[2U][1U];
     vlSelfRef.Controller_tb__DOT____Vcellout__dut__result_matrix[2U] 
         = vlSelfRef.Controller_tb__DOT__dut__DOT__p_wire[2U][2U];
+    vlSelfRef.__VdfgRegularize_hebeb780c_0_0 = (((IData)(vlSelfRef.Controller_tb__DOT__entry_valid) 
+                                                 << 5U) 
+                                                | (((IData)(vlSelfRef.Controller_tb__DOT__ctrl__DOT__cycle_count) 
+                                                    << 3U) 
+                                                   | (IData)(vlSelfRef.Controller_tb__DOT__ctrl__DOT__state)));
     vlSelfRef.Controller_tb__DOT__result_matrix[0U] 
         = vlSelfRef.Controller_tb__DOT____Vcellout__dut__result_matrix[0U];
     vlSelfRef.Controller_tb__DOT__result_matrix[1U] 
         = vlSelfRef.Controller_tb__DOT____Vcellout__dut__result_matrix[1U];
     vlSelfRef.Controller_tb__DOT__result_matrix[2U] 
         = vlSelfRef.Controller_tb__DOT____Vcellout__dut__result_matrix[2U];
+    vlSelfRef.Controller_tb__DOT__cur_s = VController_tb__ConstPool__TABLE_h757529b2_0
+        [vlSelfRef.__VdfgRegularize_hebeb780c_0_0];
+    vlSelfRef.Controller_tb__DOT__slot_in[0U] = vlSelfRef.Controller_tb__DOT__cur_s;
+    vlSelfRef.Controller_tb__DOT__slot_in[1U] = vlSelfRef.Controller_tb__DOT__dly_s[0U];
+    vlSelfRef.Controller_tb__DOT__slot_in[2U] = vlSelfRef.Controller_tb__DOT__dly_s[1U];
+    vlSelfRef.Controller_tb__DOT____Vcellinp__dut__slot_in[0U] 
+        = vlSelfRef.Controller_tb__DOT__slot_in[0U];
+    vlSelfRef.Controller_tb__DOT____Vcellinp__dut__slot_in[1U] 
+        = vlSelfRef.Controller_tb__DOT__slot_in[1U];
+    vlSelfRef.Controller_tb__DOT____Vcellinp__dut__slot_in[2U] 
+        = vlSelfRef.Controller_tb__DOT__slot_in[2U];
+    vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__2__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__w 
+        = (vlSelfRef.Controller_tb__DOT____Vcellinp__dut__slot_in[2U]
+            ? (IData)(vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__2__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b2)
+            : (IData)(vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__2__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b1));
+    vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__1__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__w 
+        = (vlSelfRef.Controller_tb__DOT____Vcellinp__dut__slot_in[1U]
+            ? (IData)(vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__1__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b2)
+            : (IData)(vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__1__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b1));
+    vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__w 
+        = (vlSelfRef.Controller_tb__DOT____Vcellinp__dut__slot_in[0U]
+            ? (IData)(vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b2)
+            : (IData)(vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b1));
 }
 
 void VController_tb___024root___timing_ready(VController_tb___024root* vlSelf) {

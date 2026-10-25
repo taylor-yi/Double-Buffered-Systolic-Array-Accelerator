@@ -23,6 +23,8 @@ class alignas(VL_CACHE_LINE_BYTES) VController_tb___024root final {
         CData/*0:0*/ Controller_tb__DOT__clk;
         CData/*0:0*/ Controller_tb__DOT__rst_n;
         CData/*0:0*/ Controller_tb__DOT__start;
+        CData/*0:0*/ Controller_tb__DOT__job_ready;
+        CData/*1:0*/ Controller_tb__DOT__entry_valid;
         CData/*0:0*/ Controller_tb__DOT__cur_s;
         CData/*3:0*/ Controller_tb__DOT__dut__DOT____Vcellout__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__a_out;
         CData/*0:0*/ Controller_tb__DOT__dut__DOT____Vcellout__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__slot_out;
@@ -71,7 +73,7 @@ class alignas(VL_CACHE_LINE_BYTES) VController_tb___024root final {
         CData/*3:0*/ Controller_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__w;
         CData/*2:0*/ Controller_tb__DOT__ctrl__DOT__state;
         CData/*1:0*/ Controller_tb__DOT__ctrl__DOT__cycle_count;
-        CData/*5:0*/ __VdfgRegularize_hebeb780c_0_0;
+        CData/*6:0*/ __VdfgRegularize_hebeb780c_0_0;
         CData/*0:0*/ __Vtrigprevexpr___TOP__Controller_tb__DOT__clk__0;
         SData/*9:0*/ Controller_tb__DOT__dut__DOT____Vcellout__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__result;
         SData/*9:0*/ Controller_tb__DOT__dut__DOT____Vcellout__row__BRA__0__KET____DOT__col__BRA__1__KET____DOT__PE__result;
@@ -82,10 +84,10 @@ class alignas(VL_CACHE_LINE_BYTES) VController_tb___024root final {
         SData/*9:0*/ Controller_tb__DOT__dut__DOT____Vcellout__row__BRA__2__KET____DOT__col__BRA__0__KET____DOT__PE__result;
         SData/*9:0*/ Controller_tb__DOT__dut__DOT____Vcellout__row__BRA__2__KET____DOT__col__BRA__1__KET____DOT__PE__result;
         SData/*9:0*/ Controller_tb__DOT__dut__DOT____Vcellout__row__BRA__2__KET____DOT__col__BRA__2__KET____DOT__PE__result;
-        IData/*31:0*/ Controller_tb__DOT__errors;
-        IData/*31:0*/ Controller_tb__DOT__checks;
     };
     struct {
+        IData/*31:0*/ Controller_tb__DOT__errors;
+        IData/*31:0*/ Controller_tb__DOT__checks;
         IData/*31:0*/ Controller_tb__DOT__test_errors;
         IData/*31:0*/ Controller_tb__DOT__m;
         IData/*31:0*/ __Vi;

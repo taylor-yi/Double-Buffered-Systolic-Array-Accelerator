@@ -1,8 +1,8 @@
 `timescale 1ns/1ps
 module Controller_tb();
     logic clk, rst_n, start;
-    logic w_load, en, load_slot, row_slot, done, feed; //group a: w_load, en, feed / group b: load_slot, row_slot,
-    logic [1:0] row_idx; // which row of A to feed this cycle
+    logic w_load, en, load_slot, row_slot, done, feed, job_ready; //group a: w_load, en, feed / group b: load_slot, row_slot,
+    logic [1:0] row_idx, entry_valid; // which row of A to feed this cycle
 
     logic slot_in [3];
     logic [3:0] a_in[3];
@@ -33,11 +33,10 @@ module Controller_tb();
     int C_exp [3][3];
     int C_exp2 [3][3];
 
-    // expected controller outputs, t = cycles after start
-    // t: 0 idle, 1 load, 2-4 feed_0, 5-7 feed_1, 8-11 drain, 12 done, 13 idle
-
-    int e_w_load[14] = '{0,1,0,1,0,0,0,0,0,0,0,0,0,0};
-    int e_load_slot[14] = '{0,0,0,1,0,0,0,0,0,0,0,0,0,0}; // only checked when w_load is high
+    // Test 1 and 3: both jobs. t: 0 idle, 1 load, 2-4 feed_0, 5-7 feed_1, 8-11 drain, 12 done, 13 idle
+    // w_load is high in load, and every feed_0 cycle where job 2 is in the buffer
+    int e_w_load[14] = '{0,1,1,1,1,0,0,0,0,0,0,0,0,0};
+    int e_load_slot[14] = '{0,0,1,1,1,0,0,0,0,0,0,0,0,0}; // only checked when w_load is high
     int e_en[14] = '{0,0,1,1,1,1,1,1,1,1,1,1,0,0};
     int e_feed[14] = '{0,0,1,1,1,1,1,1,0,0,0,0,0,0};
     int e_row_slot[14] = '{0,0,0,0,0,1,1,1,1,1,1,1,0,0};
@@ -45,11 +44,39 @@ module Controller_tb();
     int e_done[14] = '{0,0,0,0,0,0,0,0,0,0,0,0,1,0};
     int e_state[14] = '{0,1,2,2,2,3,3,3,4,4,4,4,5,0};
 
+    // Test 2: single job. t: 0 idle, 1 load, 2-4 feed_0, 5-8 drain, 9 done, 10 idle
+    int s_w_load[11] = '{0,1,0,0,0,0,0,0,0,0,0};
+    int s_load_slot[11] = '{0,0,0,0,0,0,0,0,0,0,0};
+    int s_en[11] = '{0,0,1,1,1,1,1,1,1,0,0};
+    int s_feed[11] = '{0,0,1,1,1,0,0,0,0,0,0};
+    int s_row_slot[11] = '{0,0,0,0,0,1,1,1,1,0,0};
+    int s_row_idx[11] = '{0,0,0,1,2,0,0,0,0,0,0};
+    int s_done[11] = '{0,0,0,0,0,0,0,0,0,1,0};
+    int s_state[11] = '{0,1,2,2,2,4,4,4,4,5,0};
+
+    // Test 3: job 2 shows up late in feed_0, so it only gets preloaded at t = 4
+    int l_w_load[14] = '{0,1,0,0,1,0,0,0,0,0,0,0,0,0};
+    int l_load_slot[14] = '{0,0,0,0,1,0,0,0,0,0,0,0,0,0};
+
     // placeholders for mem_interface
+    // push0 / push1 stand in for in_valid capturing a job into spot 0 / spot 1
+    logic push0, push1;
+
+    always_ff @(posedge clk) begin
+        if (!rst_n || done) begin
+            entry_valid <= 2'b00;
+        end else begin
+            if (push0) entry_valid[0] <= 1'b1;
+            if (push1) entry_valid[1] <= 1'b1;
+        end
+    end
+
+    assign job_ready = entry_valid[0];
     logic [3:0] cur_a [3];
     logic cur_s;
     logic [3:0] dly_a [2][3];
     logic dly_s [2];
+
 
     always_comb begin
         for(int i = 0; i < 3; i++) begin
@@ -82,6 +109,61 @@ module Controller_tb();
             dly_s[0] <= cur_s;
         end
     end
+
+    // check every controller output and the state against one row of a table
+    task automatic check_ctrl(input int t, input int ew, input int els, input int een, input int efd,
+                              input int ers, input int eri, input int edn, input int est);
+        checks++;
+        if (w_load !== 1'(ew) || en !== 1'(een) || feed !== 1'(efd) || row_slot !== 1'(ers) || done !== 1'(edn)) begin
+            errors++;
+            $error("[%0t] t=%0d: w_load=%0d en=%0d feed=%0d row_slot=%0d done=%0d, expected %0d %0d %0d %0d %0d",
+                   $time, t, w_load, en, feed, row_slot, done, ew, een, efd, ers, edn);
+        end
+
+        if (w_load) begin
+            checks++;
+            if (load_slot !== 1'(els)) begin
+                errors++;
+                $error("[%0t] t=%0d: load_slot=%0d, expected %0d", $time, t, load_slot, els);
+            end
+        end
+
+        if (feed) begin
+            checks++;
+            if (row_idx !== 2'(eri)) begin
+                errors++;
+                $error("[%0t] t=%0d: row_idx=%0d, expected %0d", $time, t, row_idx, eri);
+            end
+        end
+
+        checks++;
+        if (int'(ctrl.state) !== est) begin
+            errors++;
+            $error("[%0t] t=%0d: state=%s, expected %0d", $time, t, ctrl.state.name(), est);
+        end
+    endtask
+
+    // results, stream row m is fed at t = m + 2 and comes out of column c at t = m + c + 5
+    task automatic check_results(input int t, input bit two_jobs);
+        int m;
+        for (int c = 0; c < 3; c++) begin
+            m = t - 5 - c;
+            if (m >= 0 && m < 3) begin
+                checks++;
+                if (result_matrix[c] !== 10'(C_exp[m][c])) begin
+                    errors++;
+                    $error("[%0t] A C[%0d][%0d]: expected %0d, got %0d", $time, m, c, C_exp[m][c], result_matrix[c]);
+                end
+            end
+            else if (two_jobs && m >= 3 && m < 6) begin
+                checks++;
+                if (result_matrix[c] !== 10'(C_exp2[m-3][c])) begin
+                    errors++;
+                    $error("[%0t] A2 C[%0d][%0d]: expected %0d, got %0d", $time, m-3, c, C_exp2[m-3][c], result_matrix[c]);
+                end
+            end
+        end
+    endtask
 
     initial begin
         A = '{'{4'h1, 4'h2, 4'h3},
@@ -119,144 +201,105 @@ module Controller_tb();
         // Test 1: full back to back run, check every control output each cycle
         // and check both result matrices as they come out the bottom
         test_errors = errors;
+        push0 = 1;
+        push1 = 1;
 
         for (int t = 0; t < 14; t++) begin
             @(negedge clk);
-
-            // control outputs
-            checks++;
-            if (w_load !== 1'(e_w_load[t]) || en !== 1'(e_en[t]) || feed !== 1'(e_feed[t]) ||
-                row_slot !== 1'(e_row_slot[t]) || done !== 1'(e_done[t])) begin
-                errors++;
-                $error("[%0t] t=%0d: w_load=%0d en=%0d feed=%0d row_slot=%0d done=%0d, expected %0d %0d %0d %0d %0d",
-                       $time, t, w_load, en, feed, row_slot, done,
-                       e_w_load[t], e_en[t], e_feed[t], e_row_slot[t], e_done[t]);
-            end
-
-            if (w_load) begin
-                checks++;
-                if (load_slot !== 1'(e_load_slot[t])) begin
-                    errors++;
-                    $error("[%0t] t=%0d: load_slot=%0d, expected %0d", $time, t, load_slot, e_load_slot[t]);
-                end
-            end
-
-            if (feed) begin
-                checks++;
-                if (row_idx !== 2'(e_row_idx[t])) begin
-                    errors++;
-                    $error("[%0t] t=%0d: row_idx=%0d, expected %0d", $time, t, row_idx, e_row_idx[t]);
-                end
-            end
-
-            // results, stream row m is fed at t = m + 2 and comes out of column c at t = m + c + 5
-            for (int c = 0; c < 3; c++) begin
-                m = t - 5 - c;
-                if (m >= 0 && m < 3) begin
-                    checks++;
-                    if (result_matrix[c] !== 10'(C_exp[m][c])) begin
-                        errors++;
-                        $error("[%0t] A C[%0d][%0d]: expected %0d, got %0d", $time, m, c, C_exp[m][c], result_matrix[c]);
-                    end
-                end
-                else if (m >= 3 && m < 6) begin
-                    checks++;
-                    if (result_matrix[c] !== 10'(C_exp2[m-3][c])) begin
-                        errors++;
-                        $error("[%0t] A2 C[%0d][%0d]: expected %0d, got %0d", $time, m-3, c, C_exp2[m-3][c], result_matrix[c]);
-                    end
-                end
-            end
-
-            checks++;
-            if (int'(ctrl.state) !== e_state[t]) begin
-                errors++;
-                $error("[%0t] t=%0d: state=%s, expected %0d", $time, t, ctrl.state.name(), e_state[t]);
-            end
-
-            start = (t == 0);
+            check_ctrl(t, e_w_load[t], e_load_slot[t], e_en[t], e_feed[t],
+                       e_row_slot[t], e_row_idx[t], e_done[t], e_state[t]);
+            check_results(t, 1'b1);
+            push0 = 0;
+            push1 = 0;
         end
-        start = 0;
 
-        if (errors == test_errors) $display("Test 1 passed: controller sequence and back to back results");
-        else $display("Test 1 FAILED: controller sequence");
+        if (errors == test_errors) $display("Test 1 passed: two jobs back to back");
+        else $display("Test 1 FAILED: two jobs back to back");
 
         // reset between runs, avoids the stale slot false alarm on the preload
         rst_n = 0;
         repeat(2) @(negedge clk);
         rst_n = 1;
 
-        // Test 2: start pulse in the middle of a run should be ignored
+        // Test 2: only one job, should skip feed_1 and go straight to drain
         test_errors = errors;
 
-        for (int t = 0; t < 16; t++) begin
+        push0 = 1;
+
+        for (int t = 0; t < 11; t++) begin
             @(negedge clk);
-
-            checks++;
-            if (done !== (t == 12)) begin
-                errors++;
-                $error("[%0t] t=%0d: done=%0d, expected %0d", $time, t, done, (t == 12));
-            end
-
-            // nothing should restart after done
-            if (t > 12) begin
-                checks++;
-                if (w_load !== 1'b0 || en !== 1'b0) begin
-                    errors++;
-                    $error("[%0t] t=%0d: controller restarted, w_load=%0d en=%0d", $time, t, w_load, en);
-                end
-            end
-
-            checks++;
-            if (int'(ctrl.state) !== e_state[t]) begin
-                errors++;
-                $error("[%0t] t=%0d: state=%s, expected %0d", $time, t, ctrl.state.name(), e_state[t]);
-            end
-
-            start = (t == 0 || t == 4); // second pulse lands during feed_0
+            check_ctrl(t, s_w_load[t], s_load_slot[t], s_en[t], s_feed[t],
+                       s_row_slot[t], s_row_idx[t], s_done[t], s_state[t]);
+            check_results(t, 1'b0);
+            push0 = 0;
         end
-        start = 0;
 
-        if (errors == test_errors) $display("Test 2 passed: start ignored while busy");
-        else $display("Test 2 FAILED: start while busy");
+        if (errors == test_errors) $display("Test 2 passed: single job");
+        else $display("Test 2 FAILED: single job");
 
-        // Test 3: reset in the middle of a run
+        rst_n = 0;
+        repeat(2) @(negedge clk);
+        rst_n = 1;
+
+        // Test 3: job 2 arrives on the last feed_0 cycle, should still preload and run with zero gap
         test_errors = errors;
 
+        push0 = 1;
+
+        for (int t = 0; t < 14; t++) begin
+            @(negedge clk);
+            check_ctrl(t, l_w_load[t], l_load_slot[t], e_en[t], e_feed[t],
+                       e_row_slot[t], e_row_idx[t], e_done[t], e_state[t]);
+            check_results(t, 1'b1);
+            push0 = 0;
+            push1 = (t == 3); // lands in the buffer at t = 4, count 2 of feed_0
+        end
+        push1 = 0;
+
+        if (errors == test_errors) $display("Test 3 passed: second job arrives late in feed_0");
+        else $display("Test 3 FAILED: second job arrives late");
+
+        rst_n = 0;
+        repeat(2) @(negedge clk);
+        rst_n = 1;
+
+        // Test 4: reset in the middle of a run
+        test_errors = errors;
+
+        push0 = 1;
+        push1 = 1;
         @(negedge clk);
-        start = 1;
-        @(negedge clk);
-        start = 0;
-        repeat(4) @(negedge clk); // somewhere in feed_1
+        push0 = 0;
+        push1 = 0;
+        repeat(5) @(negedge clk); // somewhere in feed_1
 
         rst_n = 0;
         @(negedge clk);
         checks++;
-        if (w_load !== 1'b0 || en !== 1'b0 || feed !== 1'b0 || done !== 1'b0) begin
+        if (w_load !== 1'b0 || en !== 1'b0 || feed !== 1'b0 || done !== 1'b0 || entry_valid !== 2'b00) begin
             errors++;
-            $error("[%0t] reset didn't clear outputs: w_load=%0d en=%0d feed=%0d done=%0d", $time, w_load, en, feed, done);
+            $error("[%0t] reset didn't clear: w_load=%0d en=%0d feed=%0d done=%0d entry_valid=%b",
+                   $time, w_load, en, feed, done, entry_valid);
         end
 
-        // after reset it should sit in idle until the next start
+        // after reset the buffer is empty, so it should sit in idle
         rst_n = 1;
         repeat(3) begin
             @(negedge clk);
             checks++;
             if (w_load !== 1'b0 || en !== 1'b0 || feed !== 1'b0 || done !== 1'b0) begin
                 errors++;
-                $error("[%0t] controller left idle without start", $time);
+                $error("[%0t] controller left idle with an empty buffer", $time);
             end
         end
 
-        if (errors == test_errors) $display("Test 3 passed: reset mid run");
-        else $display("Test 3 FAILED: reset mid run");
+        if (errors == test_errors) $display("Test 4 passed: reset mid run");
+        else $display("Test 4 FAILED: reset mid run");
 
         if (errors == 0) $display("PASS: %0d checks", checks);
         else $display("FAIL: %0d errors in %0d checks", errors, checks);
 
         $finish;
     end
-
-
 
 endmodule

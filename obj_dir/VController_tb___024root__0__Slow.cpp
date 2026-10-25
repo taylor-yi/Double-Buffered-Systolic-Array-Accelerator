@@ -282,10 +282,10 @@ VL_ATTR_COLD bool VController_tb___024root___trigger_anySet__stl(const VlUnpacke
     return (0U);
 }
 
-extern const VlUnpacked<CData/*0:0*/, 64> VController_tb__ConstPool__TABLE_hf1a212c7_0;
-extern const VlUnpacked<CData/*0:0*/, 64> VController_tb__ConstPool__TABLE_had63aeb2_0;
-extern const VlUnpacked<CData/*0:0*/, 64> VController_tb__ConstPool__TABLE_h75a3cb7f_0;
-extern const VlUnpacked<CData/*1:0*/, 64> VController_tb__ConstPool__TABLE_hd2401f8a_0;
+extern const VlUnpacked<CData/*0:0*/, 128> VController_tb__ConstPool__TABLE_hb7eea91c_0;
+extern const VlUnpacked<CData/*0:0*/, 128> VController_tb__ConstPool__TABLE_hbabea407_0;
+extern const VlUnpacked<CData/*0:0*/, 128> VController_tb__ConstPool__TABLE_h757529b2_0;
+extern const VlUnpacked<CData/*1:0*/, 128> VController_tb__ConstPool__TABLE_h35b5d552_0;
 
 VL_ATTR_COLD void VController_tb___024root___stl_sequent__TOP__0(VController_tb___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VController_tb___024root___stl_sequent__TOP__0\n"); );
@@ -346,7 +346,7 @@ VL_ATTR_COLD void VController_tb___024root___stl_sequent__TOP__0(VController_tb_
         = vlSelfRef.Controller_tb__DOT__dut__DOT____Vcellout__row__BRA__2__KET____DOT__col__BRA__1__KET____DOT__PE__slot_out;
     vlSelfRef.Controller_tb__DOT__dut__DOT__slot_wire[2U][2U] 
         = vlSelfRef.Controller_tb__DOT__dut__DOT____Vcellout__row__BRA__2__KET____DOT__col__BRA__2__KET____DOT__PE__slot_out;
-    vlSelfRef.__VdfgRegularize_hebeb780c_0_0 = (((IData)(vlSelfRef.Controller_tb__DOT__start) 
+    vlSelfRef.__VdfgRegularize_hebeb780c_0_0 = (((IData)(vlSelfRef.Controller_tb__DOT__entry_valid) 
                                                  << 5U) 
                                                 | (((IData)(vlSelfRef.Controller_tb__DOT__ctrl__DOT__cycle_count) 
                                                     << 3U) 
@@ -381,7 +381,7 @@ VL_ATTR_COLD void VController_tb___024root___stl_sequent__TOP__0(VController_tb_
         = (vlSelfRef.Controller_tb__DOT__dut__DOT__slot_wire[0U][0U]
             ? (IData)(vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__1__KET____DOT__PE__DOT__b2)
             : (IData)(vlSelfRef.Controller_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__1__KET____DOT__PE__DOT__b1));
-    if (VController_tb__ConstPool__TABLE_hf1a212c7_0
+    if (VController_tb__ConstPool__TABLE_hb7eea91c_0
         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) {
         vlSelfRef.Controller_tb__DOT__b_in[0U][0U] 
             = vlSelfRef.Controller_tb__DOT__W2[0U][0U];
@@ -421,54 +421,54 @@ VL_ATTR_COLD void VController_tb___024root___stl_sequent__TOP__0(VController_tb_
         vlSelfRef.Controller_tb__DOT__b_in[2U][2U] 
             = vlSelfRef.Controller_tb__DOT__W[2U][2U];
     }
-    if (VController_tb__ConstPool__TABLE_had63aeb2_0
+    if (VController_tb__ConstPool__TABLE_hbabea407_0
         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) {
-        if (VController_tb__ConstPool__TABLE_h75a3cb7f_0
+        if (VController_tb__ConstPool__TABLE_h757529b2_0
             [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]) {
             vlSelfRef.Controller_tb__DOT__cur_a[0U] 
                 = vlSelfRef.Controller_tb__DOT__A2[
-                ((2U >= VController_tb__ConstPool__TABLE_hd2401f8a_0
+                ((2U >= VController_tb__ConstPool__TABLE_h35b5d552_0
                   [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])
-                  ? VController_tb__ConstPool__TABLE_hd2401f8a_0
+                  ? VController_tb__ConstPool__TABLE_h35b5d552_0
                  [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                   : 0U)][0U];
             vlSelfRef.Controller_tb__DOT__cur_a[1U] 
                 = vlSelfRef.Controller_tb__DOT__A2[
-                ((2U >= VController_tb__ConstPool__TABLE_hd2401f8a_0
+                ((2U >= VController_tb__ConstPool__TABLE_h35b5d552_0
                   [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])
-                  ? VController_tb__ConstPool__TABLE_hd2401f8a_0
+                  ? VController_tb__ConstPool__TABLE_h35b5d552_0
                  [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                   : 0U)][1U];
             vlSelfRef.Controller_tb__DOT__cur_a[2U] 
                 = vlSelfRef.Controller_tb__DOT__A2[
-                ((2U >= VController_tb__ConstPool__TABLE_hd2401f8a_0
+                ((2U >= VController_tb__ConstPool__TABLE_h35b5d552_0
                   [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])
-                  ? VController_tb__ConstPool__TABLE_hd2401f8a_0
+                  ? VController_tb__ConstPool__TABLE_h35b5d552_0
                  [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                   : 0U)][2U];
         } else {
             vlSelfRef.Controller_tb__DOT__cur_a[0U] 
                 = vlSelfRef.Controller_tb__DOT__A[(
                                                    (2U 
-                                                    >= VController_tb__ConstPool__TABLE_hd2401f8a_0
+                                                    >= VController_tb__ConstPool__TABLE_h35b5d552_0
                                                     [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])
-                                                    ? VController_tb__ConstPool__TABLE_hd2401f8a_0
+                                                    ? VController_tb__ConstPool__TABLE_h35b5d552_0
                                                    [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                                                     : 0U)][0U];
             vlSelfRef.Controller_tb__DOT__cur_a[1U] 
                 = vlSelfRef.Controller_tb__DOT__A[(
                                                    (2U 
-                                                    >= VController_tb__ConstPool__TABLE_hd2401f8a_0
+                                                    >= VController_tb__ConstPool__TABLE_h35b5d552_0
                                                     [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])
-                                                    ? VController_tb__ConstPool__TABLE_hd2401f8a_0
+                                                    ? VController_tb__ConstPool__TABLE_h35b5d552_0
                                                    [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                                                     : 0U)][1U];
             vlSelfRef.Controller_tb__DOT__cur_a[2U] 
                 = vlSelfRef.Controller_tb__DOT__A[(
                                                    (2U 
-                                                    >= VController_tb__ConstPool__TABLE_hd2401f8a_0
+                                                    >= VController_tb__ConstPool__TABLE_h35b5d552_0
                                                     [vlSelfRef.__VdfgRegularize_hebeb780c_0_0])
-                                                    ? VController_tb__ConstPool__TABLE_hd2401f8a_0
+                                                    ? VController_tb__ConstPool__TABLE_h35b5d552_0
                                                    [vlSelfRef.__VdfgRegularize_hebeb780c_0_0]
                                                     : 0U)][2U];
         }
@@ -480,7 +480,7 @@ VL_ATTR_COLD void VController_tb___024root___stl_sequent__TOP__0(VController_tb_
     vlSelfRef.Controller_tb__DOT__a_in[0U] = vlSelfRef.Controller_tb__DOT__cur_a[0U];
     vlSelfRef.Controller_tb__DOT__a_in[1U] = vlSelfRef.Controller_tb__DOT__dly_a[0U][1U];
     vlSelfRef.Controller_tb__DOT__a_in[2U] = vlSelfRef.Controller_tb__DOT__dly_a[1U][2U];
-    vlSelfRef.Controller_tb__DOT__cur_s = VController_tb__ConstPool__TABLE_h75a3cb7f_0
+    vlSelfRef.Controller_tb__DOT__cur_s = VController_tb__ConstPool__TABLE_h757529b2_0
         [vlSelfRef.__VdfgRegularize_hebeb780c_0_0];
     vlSelfRef.Controller_tb__DOT__slot_in[0U] = vlSelfRef.Controller_tb__DOT__cur_s;
     vlSelfRef.Controller_tb__DOT__slot_in[1U] = vlSelfRef.Controller_tb__DOT__dly_s[0U];
@@ -580,6 +580,8 @@ VL_ATTR_COLD void VController_tb___024root___ctor_var_reset(VController_tb___024
     vlSelf->Controller_tb__DOT__clk = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 16472362457320313746ull);
     vlSelf->Controller_tb__DOT__rst_n = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 15470033625732903150ull);
     vlSelf->Controller_tb__DOT__start = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 14444462797707788332ull);
+    vlSelf->Controller_tb__DOT__job_ready = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 10357698736251958036ull);
+    vlSelf->Controller_tb__DOT__entry_valid = VL_SCOPED_RAND_RESET_I(2, __VscopeHash, 1121544518955158546ull);
     for (int __Vi0 = 0; __Vi0 < 3; ++__Vi0) {
         vlSelf->Controller_tb__DOT__slot_in[__Vi0] = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 2102094341880973476ull);
     }

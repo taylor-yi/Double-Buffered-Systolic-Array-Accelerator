@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module Controller #(parameter SIZE = 3, parameter NUM_MATR = 2) (
+module Controller #(parameter SIZE = 3) (
     input logic clk, rst_n, job_ready,
 
     input logic [1:0] entry_valid,
@@ -18,7 +18,6 @@ module Controller #(parameter SIZE = 3, parameter NUM_MATR = 2) (
     localparam CW = $clog2((DRAIN_CYCLES > SIZE) ? DRAIN_CYCLES : SIZE); //CountWidth
 
     logic [CW-1:0] cycle_count;
-    // logic [$clog2(NUM_MATR+1)-1:0] mat_compl;
 
     // state driver
     always_ff @(posedge clk) begin

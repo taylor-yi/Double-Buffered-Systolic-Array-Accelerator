@@ -49,6 +49,6 @@ module Processing_Element(
         end
     end
 
-    // simulation safety check to make sure we aren't loading into the same slot we are computing from
-    // assert property (@(posedge clk) disable iff (!rst_n) !(w_load && en && (load_slot == compute_slot))) else $error("Loading into the compute slot.");
+    // simulation safety check to ensure not loading into the same slot we are computing from
+    assert property (@(posedge clk) disable iff (!rst_n) !(w_load && en && (load_slot == slot_in))) else $error("Loading into the compute slot");
 endmodule

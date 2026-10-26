@@ -41,8 +41,8 @@ module Mem_interface #(parameter SIZE = 3)(
         if(!rst_n || done) begin
             entry_valid <= 2'b00;
             wr_ptr <= 1'b0;
-            A_buf <= '{default: '{default: 0}};
-            B_buf <= '{default: '{default: 0}};
+            A_buf <= '{default: '{default: '{default: '0}}};
+            B_buf <= '{default: '{default: '{default: '0}}};
         end else if(in_valid && !entry_valid[wr_ptr]) begin
             A_buf[wr_ptr] <= a_internal;
             B_buf[wr_ptr] <= b_internal;

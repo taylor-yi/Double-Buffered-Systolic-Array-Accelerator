@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 module Controller #(parameter SIZE = 3) (
-    input logic clk, rst_n, job_ready,
+    input logic clk, rst_n,
 
     input logic [1:0] entry_valid,
 

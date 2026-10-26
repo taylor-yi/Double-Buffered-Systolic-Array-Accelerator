@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 module Controller_tb();
     logic clk, rst_n, start;
-    logic w_load, en, load_slot, row_slot, done, feed, job_ready; //group a: w_load, en, feed / group b: load_slot, row_slot,
+    logic w_load, en, load_slot, row_slot, done, feed; //group a: w_load, en, feed / group b: load_slot, row_slot,
     logic [1:0] row_idx, entry_valid; // which row of A to feed this cycle
 
     logic slot_in [3];
@@ -71,7 +71,7 @@ module Controller_tb();
         end
     end
 
-    assign job_ready = entry_valid[0];
+    // assign job_ready = entry_valid[0];
     logic [3:0] cur_a [3];
     logic cur_s;
     logic [3:0] dly_a [2][3];

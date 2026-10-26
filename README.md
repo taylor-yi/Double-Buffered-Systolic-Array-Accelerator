@@ -7,13 +7,13 @@ Block Diagram:
 
 How to run it:
 1. Generate the tests
-    'python3 gen_tests.py'
+    `python3 gen_tests.py`
 2. Compile using Verilator
-    'verilator --binary --trace -j 0 *.sv --top-module systolic_tb'
+    `verilator --binary --trace -j 0 *.sv --top-module systolic_tb`
 3. Execute it
-    './obj_dir/Vsystolic_tb'
+    `./obj_dir/Vsystolic_tb`
 4. Use surfer to view the dump
-    'surfer dump.vcd'
+    `surfer dump.vcd`
 
 Tested using Verilator 5.052 and Surfer 0.7.0
 Note: surfer_layouts/final_viewer.ron is a useful layout to follow the data, a, b1, and b2 waveforms are shown in row major format.
@@ -36,3 +36,14 @@ This design assumes inputs will always be unsigned 4-bits, and outputs will alwa
 
 **Design choices:**
 This design is a weight stationary architecture. This is defined as weights sitting in processing elements and activations flowing over them. The weights are loaded using direct load, rather than shifting down columns. The slot signals travel with data. So for loading weights, the weights and a bit indicating weight slot 1 or 2 travel into each PE. Similarly, the signal for which register to read from to compute A[i][j] x B[i][j] travels with matrix A pipelined across the array, since a global compute slot would force a 4 cycle gap between matrix multiplications. Mem_interface controls the skew and deskew of A and results, and takes in the whole matrix at once.
+
+**Verification:**
+Testbenches are provided for each module.
+PE_tb covers basic multiplication accumulation behavior of a processing element.
+SA_tb ensures data can be processed through the systolic array.
+controller_tb checks that correct states are being achieved provided signals.
+mem_interface_tb tests that data is being properly fed in and skewed correctly.
+systolic_tb drives the overall unit and runs full matrix multiplication tests with verification.
+
+**Waveform Screenshot**
+![Back to back matmul waveform](images/waveform.png)

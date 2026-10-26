@@ -37,7 +37,7 @@ module Mem_interface_tb();
         logic [35:0] p;
         for (int i = 0; i < 3; i++) begin
             for(int j = 0; j < 3; j++) begin
-                p[4*(3*i + j) + 3: 4*(3*i + j)] = M[i][j];
+                p[4*(3*i + j) +: 4] = M[i][j];
             end
         end
         return p;
@@ -215,7 +215,7 @@ module Mem_interface_tb();
                             checks++;
                             if (results_packed[10*(3*i + j) +: 10] !== 10'(10*i + j + 1)) begin
                                 errors++;
-                                $error("[%0t] C[%0d][%0d]: got %0d, expected %0d",
+                                $display("[%0t] C[%0d][%0d]: got %0d, expected %0d",
                                     $time, i, j, results_packed[10*(3*i + j) +: 10], 10*i + j + 1);
                             end
                         end

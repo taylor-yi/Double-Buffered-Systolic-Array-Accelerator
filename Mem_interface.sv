@@ -146,7 +146,7 @@ module Mem_interface #(parameter SIZE = 3)(
     generate
         for(i = 0; i < SIZE; i++) begin : repack
             for (j = 0; j < SIZE; j++) begin
-                assign results_packed[10*SIZE*i + 10*j + 9 : 10*SIZE*i + 10*j] = results_internal[i][j];
+                assign results_packed[10*SIZE*i + 10*j + 9 : 10*SIZE*i + 10*j] = results_internal[SIZE - 1 - i][j];
             end
         end
     endgenerate

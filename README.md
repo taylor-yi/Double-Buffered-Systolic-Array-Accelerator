@@ -47,3 +47,7 @@ systolic_tb drives the overall unit and runs full matrix multiplication tests wi
 
 **Waveform Screenshot**
 ![Back to back matmul waveform](images/waveform.png)
+This waveform shows the correct behavior of all modules on a back to back matrix multiplicaiton. Matrix A and B are shown as inputs coming in at the top (green and blue respectively) The first set of matrix B is loaded into the b1 registers (yellow) and the second into b2 registers (purple). Matrix A1 is skewed and sent into the array, followed by matrix A2 upon completion of A1 as shown in red. Individual A elements can be observed traveling across the rows of the processing elements. Results flow out in groups of 3, draining from the bottom row of the array, shown in green at the bottom. out_valid goes high when all 9 results from the current run are recieved, shown as signaling twice in the waveform screenshot at the bottom. 
+
+**Limitations and Future Work**
+To keep computing matrices back to back after 2 instances, a third slot would need to be added to each processing element as a placeholder so there can be one for each load, compute, and drain state. The current implementation only works with 2 matrices back to back. The next step would most likely be to add a FIFO with a ready signal and a valid bit traveling with the data.

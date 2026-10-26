@@ -43,7 +43,7 @@ PE_tb covers basic multiplication accumulation behavior of a processing element.
 SA_tb ensures data can be processed through the systolic array.\
 controller_tb checks that correct states are being achieved provided signals.\
 mem_interface_tb tests that data is being properly fed in and skewed correctly.\
-systolic_tb drives the overall unit and runs full matrix multiplication tests with verification.\
+systolic_tb drives the overall unit and runs full matrix multiplication tests with verification.
 
 **Waveform Screenshot:**
 ![Back to back matmul waveform](images/waveform.png)

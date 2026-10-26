@@ -1,8 +1,9 @@
 `timescale 1ns/1ps
 
 module Mem_interface #(parameter SIZE = 3)(
-    input logic clk, rst_n, load_slot, feed, row_idx, row_slot, en, job_done, // internal control signals
-    output entry_valid[1:0], // to controller
+    input logic clk, rst_n, load_slot, feed, row_slot, en, done,
+    input logic [$clog2(SIZE)-1:0] row_idx,
+    output logic [1:0] entry_valid, // to controller
     
     input in_valid, // external signals
     input [SIZE * SIZE * 4 - 1:0] a_packed, b_packed,
@@ -13,30 +14,43 @@ module Mem_interface #(parameter SIZE = 3)(
     
     input logic [9:0] results_in [SIZE], // From SA
     
-    output logic [(4 * SIZE * SIZE * 2) - 1:0] results_packed, //4 bits by size^2 * 2 matrices bits
+    output logic [(10 * SIZE * SIZE) - 1:0] results_packed, //4 bits by size^2 * 2 matrices bits
     output logic out_valid
 );
+    localparam RW = $clog2(SIZE);
 
-    logic [3:0] a_in [SIZE];
-    logic [3:0] b_internal [SIZE - 1:0][SIZE - 1:0];
-
+    logic [3:0] a_internal [SIZE][SIZE];
+    logic [3:0] b_internal [SIZE][SIZE];
 
     genvar i, j;
     generate
-        for(i = 0; i < SIZE; i++) begin : unpack_a
-            assign a_in[i] = a_packed[(4*(i+1) - 1) : 4*i];
-            for (j = 0; j < SIZE; j++) begin : unpack_b
-                assign b_internal[i][j] = b_packed[(12*j + 4*i + 3) : (12*j + 4*i)];
+        for(i = 0; i < SIZE; i++) begin : unpack
+            for (j = 0; j < SIZE; j++) begin
+                assign a_internal[i] = a_packed[(4*SIZE*i + 4*j + 3) : (4*SIZE*i + 4*j)];
+                assign b_internal[i][j] = b_packed[(4*SIZE*i + 4*j + 3) : (4*SIZE*i + 4*j)];
             end
         end
     endgenerate
 
+    logic [3:0] A_buf [2][SIZE][SIZE];
+    logic [3:0] B_buf [2][SIZE][SIZE];
+
+    logic wr_ptr;
+
     always_ff @(posedge clk) begin
         if(!rst_n) begin
-            b_out <= '{default: '{default: '0}};
-        end else if(in_valid) begin
-            b_out <= b_internal;
+            entry_valid <= 2'b00;
+            wr_ptr <= 1'b0;
+        end else if(in_valid && !entry_valid[wr_ptr]) begin
+            A_buf[wr_ptr] <= a_internal;
+            B_buf[wr_ptr] <= b_internal;
+            entry_valid[wr_ptr] <= 1'b1;
+            wr_ptr <= ~wr_ptr;
         end
+    end
+
+    always_comb begin
+        b_out = B_buf[load_slot];
     end
 
     //skew buffer for a
@@ -46,7 +60,7 @@ module Mem_interface #(parameter SIZE = 3)(
     generate
         for (r = 0; r < SIZE; r++) begin
             if (r == 0) begin
-                assign a_skewed[r] = a_in[r];
+                assign a_skewed[r] = a_internal[r][0];
                 assign skewed_slot[r] = row_slot;
             end else begin
                 logic [3:0] a_dly[r];

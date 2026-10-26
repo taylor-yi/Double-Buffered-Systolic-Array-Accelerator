@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-// Systolic Array Testbench
+// Systolic Array Testbench, NO LONGER WORKS after slight changes in PE when working on higher levels
 module SA_tb ();
     logic clk, rst_n, en, w_load, load_slot;
     logic slot_in [3];

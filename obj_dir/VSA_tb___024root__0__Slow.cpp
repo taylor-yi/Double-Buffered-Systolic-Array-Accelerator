@@ -523,6 +523,17 @@ VL_ATTR_COLD void VSA_tb___024root___ctor_var_reset(VSA_tb___024root* vlSelf) {
     vlSelf->SA_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b1 = VL_SCOPED_RAND_RESET_I(4, __VscopeHash, 17271450722932505661ull);
     vlSelf->SA_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b2 = VL_SCOPED_RAND_RESET_I(4, __VscopeHash, 6975568810565014985ull);
     vlSelf->SA_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__w = VL_SCOPED_RAND_RESET_I(4, __VscopeHash, 5045493215159357563ull);
+    vlSelf->__Vsampled_TOP__SA_tb__DOT__w_load = 0;
+    vlSelf->__Vsampled_TOP__SA_tb__DOT__en = 0;
+    vlSelf->__Vsampled_TOP__SA_tb__DOT__load_slot = 0;
+    for (int __Vi0 = 0; __Vi0 < 3; ++__Vi0) {
+        for (int __Vi1 = 0; __Vi1 < 3; ++__Vi1) {
+            vlSelf->__Vsampled_TOP__SA_tb__DOT__dut__DOT__slot_wire[__Vi0][__Vi1] = 0;
+        }
+    }
+    for (int __Vi0 = 0; __Vi0 < 3; ++__Vi0) {
+        vlSelf->__Vsampled_TOP__SA_tb__DOT____Vcellinp__dut__slot_in[__Vi0] = 0;
+    }
     for (int __Vi0 = 0; __Vi0 < 1; ++__Vi0) {
         vlSelf->__VstlTriggered[__Vi0] = 0;
     }

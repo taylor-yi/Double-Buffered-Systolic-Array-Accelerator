@@ -230,8 +230,7 @@ VlCoroutine Vsystolic_tb___024root___eval_initial__TOP__Vtiming__1(Vsystolic_tb_
                       , "r"s);
     ;
     if (VL_UNLIKELY(((0U == vlSelfRef.systolic_tb__DOT__unnamedblk3__DOT__fd)))) {
-        VL_WRITEF_NX("Could not open %s. Run python3 gen_tests.py first.\n",1
-                     , 'S',&(vlSelfRef.systolic_tb__DOT__unnamedblk3__DOT__path));
+        VL_WRITEF_NX("Could not open %s.\n",1, 'S',&(vlSelfRef.systolic_tb__DOT__unnamedblk3__DOT__path));
         VL_FINISH_MT("systolic_tb.sv", 73, "");
     }
     vlSelfRef.systolic_tb__DOT__unnamedblk3__DOT__n 
@@ -424,7 +423,7 @@ VlCoroutine Vsystolic_tb___024root___eval_initial__TOP__Vtiming__1(Vsystolic_tb_
                                                                  nullptr, 
                                                                  "@(negedge systolic_tb.clk)", 
                                                                  "systolic_tb.sv", 
-                                                                 97);
+                                                                 107);
             vlSelfRef.__Vm_traceActivity[2U] = 1U;
             systolic_tb__DOT__unnamedblk3__DOT__unnamedblk4__DOT__unnamedblk1_1__DOT____Vrepeat0 
                 = (systolic_tb__DOT__unnamedblk3__DOT__unnamedblk4__DOT__unnamedblk1_1__DOT____Vrepeat0 
@@ -438,7 +437,7 @@ VlCoroutine Vsystolic_tb___024root___eval_initial__TOP__Vtiming__1(Vsystolic_tb_
                                                              nullptr, 
                                                              "@(negedge systolic_tb.clk)", 
                                                              "systolic_tb.sv", 
-                                                             102);
+                                                             112);
         vlSelfRef.__Vm_traceActivity[2U] = 1U;
         __Vtask_systolic_tb__DOT__set_pins__1__k = 0U;
         vlSelfRef.systolic_tb__DOT__a11 = vlSelfRef.systolic_tb__DOT__A
@@ -484,7 +483,7 @@ VlCoroutine Vsystolic_tb___024root___eval_initial__TOP__Vtiming__1(Vsystolic_tb_
                                                              nullptr, 
                                                              "@(negedge systolic_tb.clk)", 
                                                              "systolic_tb.sv", 
-                                                             105);
+                                                             115);
         vlSelfRef.__Vm_traceActivity[2U] = 1U;
         vlSelfRef.systolic_tb__DOT__in_valid = 0U;
         if ((2U == vlSelfRef.systolic_tb__DOT__jobs)) {
@@ -498,7 +497,7 @@ VlCoroutine Vsystolic_tb___024root___eval_initial__TOP__Vtiming__1(Vsystolic_tb_
                                                                      nullptr, 
                                                                      "@(negedge systolic_tb.clk)", 
                                                                      "systolic_tb.sv", 
-                                                                     110);
+                                                                     120);
                 vlSelfRef.__Vm_traceActivity[2U] = 1U;
                 systolic_tb__DOT__unnamedblk3__DOT__unnamedblk4__DOT__unnamedblk1_2__DOT____Vrepeat1 
                     = (systolic_tb__DOT__unnamedblk3__DOT__unnamedblk4__DOT__unnamedblk1_2__DOT____Vrepeat1 
@@ -548,7 +547,7 @@ VlCoroutine Vsystolic_tb___024root___eval_initial__TOP__Vtiming__1(Vsystolic_tb_
                                                                  nullptr, 
                                                                  "@(negedge systolic_tb.clk)", 
                                                                  "systolic_tb.sv", 
-                                                                 113);
+                                                                 123);
             vlSelfRef.__Vm_traceActivity[2U] = 1U;
             vlSelfRef.systolic_tb__DOT__in_valid = 0U;
         }
@@ -579,7 +578,7 @@ VlCoroutine Vsystolic_tb___024root___eval_initial__TOP__Vtiming__1(Vsystolic_tb_
                                                                  nullptr, 
                                                                  "@(negedge systolic_tb.clk)", 
                                                                  "systolic_tb.sv", 
-                                                                 122);
+                                                                 133);
             vlSelfRef.__Vm_traceActivity[2U] = 1U;
             vlSelfRef.systolic_tb__DOT__unnamedblk3__DOT__unnamedblk4__DOT__unnamedblk9__DOT__w 
                 = ((IData)(1U) + vlSelfRef.systolic_tb__DOT__unnamedblk3__DOT__unnamedblk4__DOT__unnamedblk9__DOT__w);
@@ -592,7 +591,7 @@ VlCoroutine Vsystolic_tb___024root___eval_initial__TOP__Vtiming__1(Vsystolic_tb_
                                                                  nullptr, 
                                                                  "@(negedge systolic_tb.clk)", 
                                                                  "systolic_tb.sv", 
-                                                                 125);
+                                                                 137);
             vlSelfRef.__Vm_traceActivity[2U] = 1U;
             systolic_tb__DOT__unnamedblk3__DOT__unnamedblk4__DOT__unnamedblk1_3__DOT____Vrepeat2 
                 = (systolic_tb__DOT__unnamedblk3__DOT__unnamedblk4__DOT__unnamedblk1_3__DOT____Vrepeat2 
@@ -604,12 +603,12 @@ VlCoroutine Vsystolic_tb___024root___eval_initial__TOP__Vtiming__1(Vsystolic_tb_
                           != vlSelfRef.systolic_tb__DOT__jobs)))) {
             vlSelfRef.systolic_tb__DOT__errors = ((IData)(1U) 
                                                   + vlSelfRef.systolic_tb__DOT__errors);
-            VL_WRITEF_NX("[%0t] %%Error: systolic_tb.sv:130: Assertion failed in %m: test %0d: got %0d out_valid pulses, expected %0d\n",6, 'M',vlSymsp->name(),"systolic_tb.unnamedblk3.unnamedblk4", 'T',-9
+            VL_WRITEF_NX("[%0t] %%Error: systolic_tb.sv:142: Assertion failed in %m: test %0d: got %0d out_valid pulses, expected %0d\n",6, 'M',vlSymsp->name(),"systolic_tb.unnamedblk3.unnamedblk4", 'T',-9
                          , '#',64,VL_TIME_UNITED_Q(1000)
                          , '~',32,systolic_tb__DOT__unnamedblk3__DOT__unnamedblk4__DOT__t
                          , '~',32,vlSelfRef.systolic_tb__DOT__outs_seen
                          , '~',32,vlSelfRef.systolic_tb__DOT__jobs);
-            VL_STOP_MT("systolic_tb.sv", 130, "");
+            VL_STOP_MT("systolic_tb.sv", 142, "");
         }
         if ((vlSelfRef.systolic_tb__DOT__errors == vlSelfRef.systolic_tb__DOT__test_errors)) {
             VL_WRITEF_NX("Test %0d passed: %0d job(s), gap %0d\n",3
@@ -636,7 +635,7 @@ VlCoroutine Vsystolic_tb___024root___eval_initial__TOP__Vtiming__1(Vsystolic_tb_
                      , '~',32,vlSelfRef.systolic_tb__DOT__errors
                      , '~',32,vlSelfRef.systolic_tb__DOT__checks);
     }
-    VL_FINISH_MT("systolic_tb.sv", 142, "");
+    VL_FINISH_MT("systolic_tb.sv", 154, "");
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     co_return;
 }

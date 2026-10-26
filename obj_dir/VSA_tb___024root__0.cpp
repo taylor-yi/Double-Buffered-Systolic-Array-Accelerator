@@ -26,6 +26,15 @@ void VSA_tb___024root___eval_sample(VSA_tb___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VSA_tb___024root___eval_sample\n"); );
     VSA_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Body
+    vlSelfRef.__Vsampled_TOP__SA_tb__DOT__w_load = vlSelfRef.SA_tb__DOT__w_load;
+    vlSelfRef.__Vsampled_TOP__SA_tb__DOT__en = vlSelfRef.SA_tb__DOT__en;
+    vlSelfRef.__Vsampled_TOP__SA_tb__DOT__load_slot 
+        = vlSelfRef.SA_tb__DOT__load_slot;
+    vlSelfRef.__Vsampled_TOP__SA_tb__DOT__dut__DOT__slot_wire 
+        = vlSelfRef.SA_tb__DOT__dut__DOT__slot_wire;
+    vlSelfRef.__Vsampled_TOP__SA_tb__DOT____Vcellinp__dut__slot_in 
+        = vlSelfRef.SA_tb__DOT____Vcellinp__dut__slot_in;
 }
 
 #ifdef VL_DEBUG
@@ -3246,6 +3255,84 @@ void VSA_tb___024root___nba_sequent__TOP__0(VSA_tb___024root* vlSelf) {
     VSA_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
+    if (vlSymsp->_vm_contextp__->assertCtlGet(VerilatedAssertCtlQuery::ASSERT_CTL_ON, 1, 1)) {
+        if (vlSymsp->_vm_contextp__->assertCtlGet(VerilatedAssertCtlQuery::ASSERT_CTL_FAIL_ON, 1, 1)) {
+            if (vlSelfRef.SA_tb__DOT__rst_n) {
+                if (VL_UNLIKELY(((((IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__w_load) 
+                                   & (IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__en)) 
+                                  & ((IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__load_slot) 
+                                     == vlSelfRef.__Vsampled_TOP__SA_tb__DOT____Vcellinp__dut__slot_in[2U]))))) {
+                    VL_WRITEF_NX("[%0t] %%Error: processing_element.sv:53: Assertion failed in %m: Loading into the compute slot\n",3, 'M',vlSymsp->name(),"SA_tb.dut.row[2].col[0].PE", 'T',-9
+                                 , '#',64,VL_TIME_UNITED_Q(1000));
+                    VL_STOP_MT("processing_element.sv", 53, "");
+                }
+                if (VL_UNLIKELY(((((IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__w_load) 
+                                   & (IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__en)) 
+                                  & ((IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__load_slot) 
+                                     == vlSelfRef.__Vsampled_TOP__SA_tb__DOT____Vcellinp__dut__slot_in[1U]))))) {
+                    VL_WRITEF_NX("[%0t] %%Error: processing_element.sv:53: Assertion failed in %m: Loading into the compute slot\n",3, 'M',vlSymsp->name(),"SA_tb.dut.row[1].col[0].PE", 'T',-9
+                                 , '#',64,VL_TIME_UNITED_Q(1000));
+                    VL_STOP_MT("processing_element.sv", 53, "");
+                }
+                if (VL_UNLIKELY(((((IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__w_load) 
+                                   & (IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__en)) 
+                                  & ((IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__load_slot) 
+                                     == vlSelfRef.__Vsampled_TOP__SA_tb__DOT____Vcellinp__dut__slot_in[0U]))))) {
+                    VL_WRITEF_NX("[%0t] %%Error: processing_element.sv:53: Assertion failed in %m: Loading into the compute slot\n",3, 'M',vlSymsp->name(),"SA_tb.dut.row[0].col[0].PE", 'T',-9
+                                 , '#',64,VL_TIME_UNITED_Q(1000));
+                    VL_STOP_MT("processing_element.sv", 53, "");
+                }
+                if (VL_UNLIKELY(((((IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__w_load) 
+                                   & (IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__en)) 
+                                  & ((IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__load_slot) 
+                                     == vlSelfRef.__Vsampled_TOP__SA_tb__DOT__dut__DOT__slot_wire[2U][1U]))))) {
+                    VL_WRITEF_NX("[%0t] %%Error: processing_element.sv:53: Assertion failed in %m: Loading into the compute slot\n",3, 'M',vlSymsp->name(),"SA_tb.dut.row[2].col[2].PE", 'T',-9
+                                 , '#',64,VL_TIME_UNITED_Q(1000));
+                    VL_STOP_MT("processing_element.sv", 53, "");
+                }
+                if (VL_UNLIKELY(((((IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__w_load) 
+                                   & (IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__en)) 
+                                  & ((IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__load_slot) 
+                                     == vlSelfRef.__Vsampled_TOP__SA_tb__DOT__dut__DOT__slot_wire[2U][0U]))))) {
+                    VL_WRITEF_NX("[%0t] %%Error: processing_element.sv:53: Assertion failed in %m: Loading into the compute slot\n",3, 'M',vlSymsp->name(),"SA_tb.dut.row[2].col[1].PE", 'T',-9
+                                 , '#',64,VL_TIME_UNITED_Q(1000));
+                    VL_STOP_MT("processing_element.sv", 53, "");
+                }
+                if (VL_UNLIKELY(((((IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__w_load) 
+                                   & (IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__en)) 
+                                  & ((IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__load_slot) 
+                                     == vlSelfRef.__Vsampled_TOP__SA_tb__DOT__dut__DOT__slot_wire[1U][1U]))))) {
+                    VL_WRITEF_NX("[%0t] %%Error: processing_element.sv:53: Assertion failed in %m: Loading into the compute slot\n",3, 'M',vlSymsp->name(),"SA_tb.dut.row[1].col[2].PE", 'T',-9
+                                 , '#',64,VL_TIME_UNITED_Q(1000));
+                    VL_STOP_MT("processing_element.sv", 53, "");
+                }
+                if (VL_UNLIKELY(((((IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__w_load) 
+                                   & (IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__en)) 
+                                  & ((IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__load_slot) 
+                                     == vlSelfRef.__Vsampled_TOP__SA_tb__DOT__dut__DOT__slot_wire[1U][0U]))))) {
+                    VL_WRITEF_NX("[%0t] %%Error: processing_element.sv:53: Assertion failed in %m: Loading into the compute slot\n",3, 'M',vlSymsp->name(),"SA_tb.dut.row[1].col[1].PE", 'T',-9
+                                 , '#',64,VL_TIME_UNITED_Q(1000));
+                    VL_STOP_MT("processing_element.sv", 53, "");
+                }
+                if (VL_UNLIKELY(((((IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__w_load) 
+                                   & (IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__en)) 
+                                  & ((IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__load_slot) 
+                                     == vlSelfRef.__Vsampled_TOP__SA_tb__DOT__dut__DOT__slot_wire[0U][1U]))))) {
+                    VL_WRITEF_NX("[%0t] %%Error: processing_element.sv:53: Assertion failed in %m: Loading into the compute slot\n",3, 'M',vlSymsp->name(),"SA_tb.dut.row[0].col[2].PE", 'T',-9
+                                 , '#',64,VL_TIME_UNITED_Q(1000));
+                    VL_STOP_MT("processing_element.sv", 53, "");
+                }
+                if (VL_UNLIKELY(((((IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__w_load) 
+                                   & (IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__en)) 
+                                  & ((IData)(vlSelfRef.__Vsampled_TOP__SA_tb__DOT__load_slot) 
+                                     == vlSelfRef.__Vsampled_TOP__SA_tb__DOT__dut__DOT__slot_wire[0U][0U]))))) {
+                    VL_WRITEF_NX("[%0t] %%Error: processing_element.sv:53: Assertion failed in %m: Loading into the compute slot\n",3, 'M',vlSymsp->name(),"SA_tb.dut.row[0].col[1].PE", 'T',-9
+                                 , '#',64,VL_TIME_UNITED_Q(1000));
+                    VL_STOP_MT("processing_element.sv", 53, "");
+                }
+            }
+        }
+    }
     if (vlSelfRef.SA_tb__DOT__rst_n) {
         if (vlSelfRef.SA_tb__DOT__w_load) {
             if ((1U & (~ (IData)(vlSelfRef.SA_tb__DOT__load_slot)))) {

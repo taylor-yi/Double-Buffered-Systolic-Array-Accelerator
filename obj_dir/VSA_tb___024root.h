@@ -68,6 +68,9 @@ class alignas(VL_CACHE_LINE_BYTES) VSA_tb___024root final {
         CData/*3:0*/ SA_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b1;
         CData/*3:0*/ SA_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__b2;
         CData/*3:0*/ SA_tb__DOT__dut__DOT__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__DOT__w;
+        CData/*0:0*/ __Vsampled_TOP__SA_tb__DOT__w_load;
+        CData/*0:0*/ __Vsampled_TOP__SA_tb__DOT__en;
+        CData/*0:0*/ __Vsampled_TOP__SA_tb__DOT__load_slot;
         CData/*0:0*/ __Vtrigprevexpr___TOP__SA_tb__DOT__clk__0;
         SData/*9:0*/ SA_tb__DOT__dut__DOT____Vcellout__row__BRA__0__KET____DOT__col__BRA__0__KET____DOT__PE__result;
         SData/*9:0*/ SA_tb__DOT__dut__DOT____Vcellout__row__BRA__0__KET____DOT__col__BRA__1__KET____DOT__PE__result;
@@ -78,11 +81,11 @@ class alignas(VL_CACHE_LINE_BYTES) VSA_tb___024root final {
         SData/*9:0*/ SA_tb__DOT__dut__DOT____Vcellout__row__BRA__2__KET____DOT__col__BRA__0__KET____DOT__PE__result;
         SData/*9:0*/ SA_tb__DOT__dut__DOT____Vcellout__row__BRA__2__KET____DOT__col__BRA__1__KET____DOT__PE__result;
         SData/*9:0*/ SA_tb__DOT__dut__DOT____Vcellout__row__BRA__2__KET____DOT__col__BRA__2__KET____DOT__PE__result;
+    };
+    struct {
         IData/*31:0*/ SA_tb__DOT__errors;
         IData/*31:0*/ SA_tb__DOT__checks;
         IData/*31:0*/ SA_tb__DOT__test_errors;
-    };
-    struct {
         IData/*31:0*/ SA_tb__DOT__m;
         IData/*31:0*/ SA_tb__DOT__test_num;
         IData/*31:0*/ __Vi;
@@ -107,6 +110,8 @@ class alignas(VL_CACHE_LINE_BYTES) VSA_tb___024root final {
         VlUnpacked<VlUnpacked<CData/*3:0*/, 3>, 3> SA_tb__DOT__dut__DOT__a_wire;
         VlUnpacked<VlUnpacked<SData/*9:0*/, 3>, 3> SA_tb__DOT__dut__DOT__p_wire;
         VlUnpacked<VlUnpacked<CData/*0:0*/, 3>, 3> SA_tb__DOT__dut__DOT__slot_wire;
+        VlUnpacked<VlUnpacked<CData/*0:0*/, 3>, 3> __Vsampled_TOP__SA_tb__DOT__dut__DOT__slot_wire;
+        VlUnpacked<CData/*0:0*/, 3> __Vsampled_TOP__SA_tb__DOT____Vcellinp__dut__slot_in;
         VlUnpacked<QData/*63:0*/, 1> __VstlTriggered;
         VlUnpacked<QData/*63:0*/, 1> __VicoTriggered;
         VlUnpacked<QData/*63:0*/, 1> __VactTriggered;

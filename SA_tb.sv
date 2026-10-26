@@ -7,7 +7,7 @@ module SA_tb ();
     logic [3:0] b_in [3][3];
     logic [9:0] result_matrix [3];
 
-    Systolic_Array dut (.*);
+    systolic_array dut (.*);
 
     initial begin
         clk = 0;

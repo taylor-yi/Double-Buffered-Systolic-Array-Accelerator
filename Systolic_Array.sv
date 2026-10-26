@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module Systolic_Array #(parameter SIZE = 3)(
+module systolic_array #(parameter SIZE = 3)(
     input logic clk, rst_n, en, w_load, load_slot,
     input logic slot_in [SIZE],
     input logic [3:0] a_in [SIZE],

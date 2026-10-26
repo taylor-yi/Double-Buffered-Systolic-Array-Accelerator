@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module Systolic #(parameter SIZE = 3) (
+module systolic #(parameter SIZE = 3) (
     input clk, rst_n, 
 
     input logic [3:0] a11, a12, a13, a21, a22, a23, a31, a32, a33,
@@ -47,7 +47,7 @@ module Systolic #(parameter SIZE = 3) (
         C33 = results_packed[89:80];
     end
 
-    Controller #(.SIZE(SIZE)) (
+    controller #(.SIZE(SIZE)) controlla (
         .clk(clk), .rst_n(rst_n),
         .entry_valid(entry_valid),
         .w_load(w_load), //to SA
@@ -59,7 +59,7 @@ module Systolic #(parameter SIZE = 3) (
         .row_idx(row_idx) //to MI  
     );
 
-    Mem_interface #(.SIZE(SIZE))(
+    mem_interface #(.SIZE(SIZE)) memi (
         .clk(clk), .rst_n(rst_n),
         .load_slot(load_slot),
         .feed(feed),
@@ -76,10 +76,10 @@ module Systolic #(parameter SIZE = 3) (
         .b_out(b_wires),
         .results_in(result_matrix),
         .results_packed(results_packed),
-        .out_valid(out_valid);
+        .out_valid(out_valid)
     );
 
-    Systolic_Array #(.SIZE(SIZE))(
+    systolic_array #(.SIZE(SIZE)) array (
         .clk(clk), .rst_n(rst_n),
         .en(en),
         .w_load(w_load),

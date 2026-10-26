@@ -10,7 +10,7 @@ module PE_tb ();
 
     logic new_test;
 
-    Processing_Element dut(.*);
+    processing_element dut(.*);
 
     int errors = 0, checks = 0, test_errors;
 

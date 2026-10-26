@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module Mem_interface #(parameter SIZE = 3)(
+module mem_interface #(parameter SIZE = 3)(
     input logic clk, rst_n, load_slot, feed, row_slot, en, done,
     input logic [$clog2(SIZE)-1:0] row_idx,
     output logic [1:0] entry_valid, // to controller

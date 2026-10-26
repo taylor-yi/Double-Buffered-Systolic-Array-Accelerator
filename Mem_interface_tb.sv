@@ -1,4 +1,4 @@
-module Mem_interface_tb();
+module mem_interface_tb();
     logic clk, rst_n;
     logic load_slot, feed, row_slot, en, done;
     logic [1:0] row_idx;
@@ -12,7 +12,7 @@ module Mem_interface_tb();
     logic [89:0] results_packed;
     logic out_valid;
 
-    Mem_interface dut (.*);
+    mem_interface dut (.*);
 
     initial begin
         clk = 0;

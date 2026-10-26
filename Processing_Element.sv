@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 // Linter line: verilator --lint-only Processing_Element.sv --top-module PE
 // compute slot being replaced by slot_in and slot_out
-module Processing_Element(
+module processing_element(
     input logic clk, rst_n, w_load, load_slot, slot_in, en,
     input logic [3:0] a, b,
     input logic [9:0] above_result,

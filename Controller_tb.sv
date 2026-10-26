@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module Controller_tb();
+module controller_tb();
     logic clk, rst_n, start;
     logic w_load, en, load_slot, row_slot, done, feed; //group a: w_load, en, feed / group b: load_slot, row_slot,
     logic [1:0] row_idx, entry_valid; // which row of A to feed this cycle
@@ -9,8 +9,8 @@ module Controller_tb();
     logic [3:0] b_in[3][3];
     logic [9:0] result_matrix [3];
 
-    Controller ctrl (.*);
-    Systolic_Array dut(.*);
+    controller ctrl (.*);
+    systolic_array dut(.*);
 
     initial begin
         clk = 0;

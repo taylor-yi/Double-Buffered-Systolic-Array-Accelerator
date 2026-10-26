@@ -5,20 +5,20 @@ module Mem_interface #(parameter SIZE = 3)(
     output entry_valid[1:0], // to controller
     
     input in_valid, // external signals
-    input [N * N * 4 - 1:0] a_packed, b_packed,
+    input [SIZE * SIZE * 4 - 1:0] a_packed, b_packed,
 
-    output logic [3:0] a_skewed, [SIZE]; // To SA
-    output logic [3:0] b_out [SIZE][SIZE];
+    output logic [3:0] a_skewed [SIZE], // To SA
+    output logic skewed_slot[SIZE], // "slot in" in SA
+    output logic [3:0] b_out [SIZE][SIZE],
     
-    input logic [9:0] results_in [(SIZE * 2) - 1:0]; // From SA
+    input logic [9:0] results_in [SIZE], // From SA
     
-    output logic [(4 * SIZE * SIZE * 2) - 1:0] results_packed; //4 bits by size^2 * 2 matrices bits
-    output logic out_valid;
-
+    output logic [(4 * SIZE * SIZE * 2) - 1:0] results_packed, //4 bits by size^2 * 2 matrices bits
+    output logic out_valid
 );
 
-    logic [3:0] a_in [SIZE - 1:0];
-    logic [3:0] b_internal [SIZE - 1:][SIZE - 1:0];
+    logic [3:0] a_in [SIZE];
+    logic [3:0] b_internal [SIZE - 1:0][SIZE - 1:0];
 
 
     genvar i, j;
@@ -26,7 +26,7 @@ module Mem_interface #(parameter SIZE = 3)(
         for(i = 0; i < SIZE; i++) begin : unpack_a
             assign a_in[i] = a_packed[(4*(i+1) - 1) : 4*i];
             for (j = 0; j < SIZE; j++) begin : unpack_b
-                assign b_internal[i][j] = b_packed[12*j + 4i + 3 : 12*j + 4i];
+                assign b_internal[i][j] = b_packed[(12*j + 4*i + 3) : (12*j + 4*i)];
             end
         end
     endgenerate
@@ -40,33 +40,73 @@ module Mem_interface #(parameter SIZE = 3)(
     end
 
     //skew buffer for a
-    logic [3:0] skew_a [SIZE - 1:0][SIZE - 1:0];
+    logic [3:0] skew_a [SIZE][SIZE];
 
     genvar r, c, d;
     generate
         for (r = 0; r < SIZE; r++) begin
-            always_ff @(posedge clk) begin
-                if(!rst_n) begin
-                    skew_a[r][0] <= 4'h0;
-                end else if(in_valid) begin
-                    skew_a[r][0] <= a_in[r];
-                end
-            end
-
-            always_ff @(posedge clk) begin
-                for(d = 1; d < SIZE; d++) begin
-                    if(!rst_n) begin
-                        skew_a[r][d] <= 4'h0;
-                    end else if(in_valid) begin
-                        skew_a[r][d] <= skew[r][d-1]
+            if (r == 0) begin
+                assign a_skewed[r] = a_in[r];
+                assign skewed_slot[r] = row_slot;
+            end else begin
+                logic [3:0] a_dly[r];
+                logic slot_dly[r];
+                always_ff @(posedge clk) begin
+                    if (!rst_n) begin
+                    a_dly <= '{default: '0};
+                    slot_dly <= '{default: 1'b0};
+                    end else if (en) begin
+                        a_dly[0] <= a_row[r];
+                        slot_dly[0] <= row_slot;
+                        for (int d = 1; d < r; d++) begin
+                            a_dly[d]    <= a_dly[d-1];
+                            slot_dly[d] <= slot_dly[d-1];
+                        end
                     end
                 end
+                assign a_skewed[r] = a_dly[r-1];
+                assign slot_skewed[r] = slot_dly[r-1];
             end
-
-            assign a_skewed[r] = skew_a[r][r];
         end
     endgenerate
 
+    logic [9:0] results_internal [SIZE - 1:0][SIZE - 1:0];
+
+    // results wiring, chain vertically from results
+    generate
+        for (c = 0; c < SIZE; c++)begin
+            always_ff @(posedge clk) begin
+                if(!rst_n) begin
+                    results_internal[0][c] <= 10'b00_0000_0000;
+                end else begin
+                    results_internal[0][c] <= results_in[c];
+                end
+            end 
+
+            for (d = 1; d < SIZE; d++) begin
+                always_ff @(posedge clk) begin
+                    if(!rst_n) begin
+                        out_valid <= 1'b0;
+                        results_internal[d][c] <= 10'b00_0000_0000;
+                    end else begin
+                        results_internal[d][c] <= results_internal[d][c-1];
+                        if(results_internal[SIZE - 1][SIZE - 1] != '0) begin
+                            out_valid <= 1'b1;
+                        end
+                    end
+                end 
+            end
+        end
+    endgenerate
+
+    generate
+        for(i = 0; i < SIZE; i++) begin : repack
+            for (j = 0; j < SIZE; j++) begin
+                assign results_packed[30*j + 10*i + 9 : 30*j + 10*i] = results_internal[i][j];
+            end
+        end
+    endgenerate
+    
     
 
 

@@ -26,7 +26,7 @@ module Mem_interface #(parameter SIZE = 3)(
     generate
         for(i = 0; i < SIZE; i++) begin : unpack
             for (j = 0; j < SIZE; j++) begin
-                assign a_internal[i] = a_packed[(4*SIZE*i + 4*j + 3) : (4*SIZE*i + 4*j)];
+                assign a_internal[i][j] = a_packed[(4*SIZE*i + 4*j + 3) : (4*SIZE*i + 4*j)];
                 assign b_internal[i][j] = b_packed[(4*SIZE*i + 4*j + 3) : (4*SIZE*i + 4*j)];
             end
         end
@@ -38,9 +38,11 @@ module Mem_interface #(parameter SIZE = 3)(
     logic wr_ptr;
 
     always_ff @(posedge clk) begin
-        if(!rst_n) begin
+        if(!rst_n || done) begin
             entry_valid <= 2'b00;
             wr_ptr <= 1'b0;
+            A_buf <= '{default: '{default: 0}};
+            B_buf <= '{default: '{default: 0}};
         end else if(in_valid && !entry_valid[wr_ptr]) begin
             A_buf[wr_ptr] <= a_internal;
             B_buf[wr_ptr] <= b_internal;
@@ -86,12 +88,12 @@ module Mem_interface #(parameter SIZE = 3)(
                     end
                 end
                 assign a_skewed[r] = a_dly[r-1];
-                assign slot_skewed[r] = slot_dly[r-1];
+                assign skewed_slot[r] = slot_dly[r-1];
             end
         end
     endgenerate
 
-    logic [9:0] results_internal [SIZE - 1:0][SIZE - 1:0];
+    logic [9:0] results_internal [SIZE][SIZE];
     logic [9:0] deskewed[SIZE];
 
     // results wiring, chain vertically from results
@@ -131,7 +133,7 @@ module Mem_interface #(parameter SIZE = 3)(
     logic mark[MARK_DLY];
     always_ff @(posedge clk) begin
         if(!rst_n) begin
-            mrak <= '{default: 1'b0};
+            mark <= '{default: 1'b0};
         end else begin
             mark[0] <= feed && (row_idx == $bits(row_idx)'(SIZE-1));
             for(int k = 1; k < MARK_DLY; k++) begin

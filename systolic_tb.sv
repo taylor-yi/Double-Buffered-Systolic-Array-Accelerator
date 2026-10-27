@@ -21,7 +21,7 @@ module systolic_tb();
 
     int errors = 0, checks = 0, test_errors;
 
-    // one test from the file: up to 2 jobs
+    // one test from the file up to 2 jobs
     int jobs, gap;
     logic [3:0] A [2][3][3];
     logic [3:0] B [2][3][3];

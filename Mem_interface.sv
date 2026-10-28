@@ -129,7 +129,7 @@ module mem_interface #(parameter SIZE = 3)(
         end
     end 
 
-    localparam MARK_DLY = 2*SIZE;
+    localparam MARK_DLY = 2*SIZE; //shift register
     logic mark[MARK_DLY];
     always_ff @(posedge clk) begin
         if(!rst_n) begin

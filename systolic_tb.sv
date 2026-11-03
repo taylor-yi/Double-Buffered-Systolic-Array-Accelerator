@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module systolic_tb();
+module systolic_top_tb();
     logic rst_n, clk;
     logic [3:0] a11, a12, a13, a21, a22, a23, a31, a32, a33;
     logic [3:0] b11, b12, b13, b21, b22, b23, b31, b32, b33;
@@ -7,7 +7,7 @@ module systolic_tb();
     logic [9:0] C11, C12, C13, C21, C22, C23, C31, C32, C33;
     logic out_valid;
 
-    systolic dut (.*);
+    systolic_top dut (.*);
 
     initial begin
         clk = 0;

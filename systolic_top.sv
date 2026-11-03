@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module systolic #(parameter SIZE = 3) (
+module systolic_top #(parameter SIZE = 3) (
     input clk, rst_n, 
 
     input logic [3:0] a11, a12, a13, a21, a22, a23, a31, a32, a33,

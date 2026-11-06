@@ -1,0 +1,54 @@
+`timescale 1ns/1ps
+// Linter line: verilator --lint-only Processing_Element.sv --top-module PE
+// compute slot being replaced by slot_in and slot_out
+module processing_element(
+    input logic clk, rst_n, w_load, load_slot, slot_in, en,
+    input logic [3:0] a, b,
+    input logic [9:0] above_result,
+    output logic slot_out,
+    output logic [3:0] a_out,
+    output logic [9:0] result
+);
+
+    logic [3:0] b1, b2, w; //w = weight
+
+    // adding a zero check can save heat by not firing a flip flop, right now it only checks if both are zero.
+    // in full optimization it will also check if respective b1 or b2 is zero and make the whole sum zero
+    logic zeroed;
+    assign w = slot_in ? b2 : b1;
+    assign zeroed = (a == '0) || (w == '0);
+
+    // b assignment based on slot
+    always_ff @(posedge clk) begin
+        if(!rst_n) begin
+            b1 <= 4'h0;
+            b2 <= 4'h0;
+        end else begin
+            if(w_load) begin
+                if(load_slot) begin
+                    b2 <= b;
+                end else begin
+                    b1 <= b;
+                end
+            end
+        end
+    end
+
+    // add to the accumulator
+    always_ff @(posedge clk) begin
+        if(!rst_n) begin
+            result <= '0;
+            a_out <= '0;
+            slot_out <= 1'b0;
+        end else begin
+            if(en) begin
+                a_out <= a;
+                slot_out <= slot_in;
+                result <= zeroed ? above_result : above_result + (a * w) ;
+            end
+        end
+    end
+
+    // simulation safety check to ensure not loading into the same slot we are computing from
+    assert property (@(posedge clk) disable iff (!rst_n) !(w_load && en && (load_slot == slot_in))) else $error("Loading into the compute slot");
+endmodule

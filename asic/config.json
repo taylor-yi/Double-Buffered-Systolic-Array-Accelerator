@@ -1,0 +1,6 @@
+{
+  "DESIGN_NAME": "systolic_top",
+  "VERILOG_FILES": "dir::src/*.sv",
+  "CLOCK_PORT": "clk",
+  "CLOCK_PERIOD": 20
+}

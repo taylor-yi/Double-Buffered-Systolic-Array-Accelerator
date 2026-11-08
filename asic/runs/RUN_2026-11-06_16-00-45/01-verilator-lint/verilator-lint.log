@@ -1,0 +1,83 @@
+%Warning-WIDTHEXPAND: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v:392:22: Operator VAR 'sv2v_uu_PE_ext_above_result_0' expects 10 bits on the Initial value, but Initial value's CONST '1'sh0' generates 1 bits.
+                                                                                                                         : ... note: In instance 'systolic_top.array'
+  392 |     localparam [9:0] sv2v_uu_PE_ext_above_result_0 = 1'sb0;
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.044
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v:351:11: Operator ASSIGNDLY expects 10 bits on the Assign RHS, but Assign RHS's CONST '1'sh0' generates 1 bits.
+                                                                                                                         : ... note: In instance 'systolic_top.array.row[2].col[2].PE'
+  351 |    result <= 1'sb0;
+      |           ^~
+%Warning-WIDTHEXPAND: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v:352:10: Operator ASSIGNDLY expects 4 bits on the Assign RHS, but Assign RHS's CONST '1'sh0' generates 1 bits.
+                                                                                                                         : ... note: In instance 'systolic_top.array.row[2].col[2].PE'
+  352 |    a_out <= 1'sb0;
+      |          ^~
+%Warning-ASCRANGE: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v:378:13: Ascending bit range vector: left < right of bit range: [0:2]
+                                                                                                                      : ... note: In instance 'systolic_top.array'
+  378 |  input wire [0:SIZE - 1] slot_in;
+      |             ^
+                   ... For warning description see https://verilator.org/warn/ASCRANGE?v=5.044
+                   ... Use "/* verilator lint_off ASCRANGE */" and lint_on around source to disable this message.
+%Warning-ASCRANGE: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v:143:14: Ascending bit range vector: left < right of bit range: [0:2]
+                                                                                                                      : ... note: In instance 'systolic_top.memi'
+  143 |  output wire [0:SIZE - 1] skewed_slot;
+      |              ^
+%Warning-WIDTHEXPAND: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v:182:26: Operator SUB expects 32 or 3 bits on the RHS, but RHS's VARREF 'wr_ptr' generates 1 bits.
+                                                                                                                         : ... note: In instance 'systolic_top.memi'
+  182 |    A_buf[4 * (SIZE * ((1 - wr_ptr) * SIZE))+:4 * (SIZE * SIZE)] <= a_internal;
+      |                          ^
+%Warning-WIDTHEXPAND: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v:183:26: Operator SUB expects 32 or 3 bits on the RHS, but RHS's VARREF 'wr_ptr' generates 1 bits.
+                                                                                                                         : ... note: In instance 'systolic_top.memi'
+  183 |    B_buf[4 * (SIZE * ((1 - wr_ptr) * SIZE))+:4 * (SIZE * SIZE)] <= b_internal;
+      |                          ^
+%Warning-WIDTHEXPAND: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v:190:33: Operator SUB expects 32 or 3 bits on the RHS, but RHS's VARREF 'load_slot' generates 1 bits.
+                                                                                                                         : ... note: In instance 'systolic_top.memi'
+  190 |   b_out = B_buf[4 * (SIZE * ((1 - load_slot) * SIZE))+:4 * (SIZE * SIZE)];
+      |                                 ^
+%Warning-WIDTHEXPAND: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v:199:37: Operator SUB expects 32 bits on the RHS, but RHS's VARREF 'row_slot' generates 1 bits.
+                                                                                                                         : ... note: In instance 'systolic_top.memi'
+  199 |     a_row[c] = (feed ? A_buf[(((((1 - row_slot) * SIZE) + ((SIZE - 1) - row_idx)) * SIZE) + ((SIZE - 1) - c)) * 4+:4] : 4'h0);
+      |                                     ^
+%Warning-WIDTHEXPAND: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v:199:71: Operator SUB expects 32 bits on the RHS, but RHS's VARREF 'row_idx' generates 2 bits.
+                                                                                                                         : ... note: In instance 'systolic_top.memi'
+  199 |     a_row[c] = (feed ? A_buf[(((((1 - row_slot) * SIZE) + ((SIZE - 1) - row_idx)) * SIZE) + ((SIZE - 1) - c)) * 4+:4] : 4'h0);
+      |                                                                       ^
+%Warning-ASCRANGE: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v:214:9: Ascending bit range vector: left < right of bit range: [0:1]
+                                                                                                                     : ... note: In instance 'systolic_top.memi'
+  214 |     reg [0:r - 1] slot_dly;
+      |         ^
+%Warning-ASCRANGE: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v:278:6: Ascending bit range vector: left < right of bit range: [0:5]
+                                                                                                                     : ... note: In instance 'systolic_top.memi'
+  278 |  reg [0:MARK_DLY - 1] mark;
+      |      ^
+%Warning-WIDTHEXPAND: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v:34:16: Operator ASSIGNDLY expects 2 bits on the Assign RHS, but Assign RHS's CONST '1'sh0' generates 1 bits.
+                                                                                                                        : ... note: In instance 'systolic_top.controlla'
+   34 |    cycle_count <= 1'sb0;
+      |                ^~
+%Warning-WIDTHEXPAND: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v:39:17: Operator ASSIGNDLY expects 2 bits on the Assign RHS, but Assign RHS's CONST '1'sh0' generates 1 bits.
+                                                                                                                        : ... note: In instance 'systolic_top.controlla'
+   39 |     cycle_count <= 1'sb0;
+      |                 ^~
+%Warning-ASCRANGE: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v:497:7: Ascending bit range vector: left < right of bit range: [0:2]
+                                                                                                                     : ... note: In instance 'systolic_top'
+  497 |  wire [0:SIZE - 1] slot_data;
+      |       ^
+%Warning-UNUSEDPARAM: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v:28:13: Parameter is not used: 'PRELOAD_AT'
+                                                                                                                        : ... note: In instance 'systolic_top.controlla'
+   28 |  localparam PRELOAD_AT = 1;
+      |             ^~~~~~~~~~
+                      ... For warning description see https://verilator.org/warn/UNUSEDPARAM?v=5.044
+                      ... Use "/* verilator lint_off UNUSEDPARAM */" and lint_on around source to disable this message.
+%Warning-UNUSEDPARAM: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v:148:13: Parameter is not used: 'RW'
+                                                                                                                         : ... note: In instance 'systolic_top.memi'
+  148 |  localparam RW = $clog2(SIZE);
+      |             ^~
+%Warning-UNUSEDSIGNAL: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v:202:13: Signal is not driven, nor used: 'skew_a'
+                                                                                                                          : ... note: In instance 'systolic_top.memi'
+  202 |  wire [3:0] skew_a [0:SIZE - 1][0:SIZE - 1];
+      |             ^~~~~~
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.044
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.
+- V e r i l a t i o n   R e p o r t: Verilator 5.044 2026-01-01 rev v5.040
+- Verilator: Built from 0.450 MB sources in 452 modules, into 0.107 MB in 3 C++ files needing 0.000 MB
+- Verilator: Walltime 0.065 s (elab=0.018, cvt=0.020, bld=0.000); cpu 0.049 s on 1 threads; alloced 20.438 MB

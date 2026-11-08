@@ -1,0 +1,14 @@
+{
+    "json_h": "/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/runs/RUN_2026-11-06_16-00-45/05-yosys-jsonheader/systolic_top.h.json",
+    "nl": "/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/runs/RUN_2026-11-06_16-00-45/06-yosys-synthesis/systolic_top.nl.v",
+    "metrics": {
+        "design__lint_error__count": 0,
+        "design__lint_timing_construct__count": 0,
+        "design__lint_warning__count": 18,
+        "design__inferred_latch__count": 0,
+        "design__instance__count": 2252,
+        "design__instance__area": 26008.6944,
+        "design__instance_unmapped__count": 0,
+        "synthesis__check_error__count": 0
+    }
+}

@@ -1,0 +1,1 @@
+openroad -exit -no_splash -metrics /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/runs/RUN_2026-11-06_16-00-45/43-openroad-stamidpnr-3/or_metrics_out.json /nix/store/9r6sm8m4az2hh487f1lk01w87c2gz4cn-python3-3.13.9-env/lib/python3.13/site-packages/librelane/scripts/openroad/sta/corner.tcl

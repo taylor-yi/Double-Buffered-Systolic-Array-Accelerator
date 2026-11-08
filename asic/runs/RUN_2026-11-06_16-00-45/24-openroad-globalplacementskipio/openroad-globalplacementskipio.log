@@ -1,0 +1,118 @@
+Reading timing models for corner nom_tt_025C_1v80…
+Reading timing library for the 'nom_tt_025C_1v80' corner at '/Users/tayloryi/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading OpenROAD database at '/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/runs/RUN_2026-11-06_16-00-45/21-openroad-generatepdn/systolic_top.odb'…
+Reading design constraints file at '/nix/store/9r6sm8m4az2hh487f1lk01w87c2gz4cn-python3-3.13.9-env/lib/python3.13/site-packages/librelane/scripts/base.sdc'…
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 4.0
+[INFO] Setting input delay to: 4.0
+[INFO] Setting load to: 0.033442
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5.0%
++ global_placement -density 0.6235240000000001 -skip_io -pad_right 0 -pad_left 0 -init_wirelength_coef 0.25
+[INFO GPL-0001] ---- Initialize GPL Main Data Structures
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.460  2.720 ) um
+[INFO GPL-0004] CoreBBox: (  5.520 10.880 ) ( 233.220 236.640 ) um
+[INFO GPL-0036] Movable instances area:      26008.694 um^2
+[INFO GPL-0037] Total instances area:        27535.158 um^2
+[INFO GPL-0035] Pin density area adjust:      3875.434 um^2
+[INFO GPL-0032] ---- Initialize Region: Top-level
+[INFO GPL-0006] Number of instances:              3140
+[INFO GPL-0007] Movable instances:                2252
+[INFO GPL-0008] Fixed instances:                   888
+[INFO GPL-0009] Dummy instances:                     0
+[INFO GPL-0010] Number of nets:                   2327
+[INFO GPL-0011] Number of pins:                   8090
+[INFO GPL-0012] Die BBox:  (  0.000  0.000 ) ( 239.115 249.835 ) um
+[INFO GPL-0013] Core BBox: (  5.520 10.880 ) ( 233.220 236.640 ) um
+[INFO GPL-0016] Core area:                   51405.552 um^2
+[INFO GPL-0014] Region name: top-level.
+[INFO GPL-0015] Region area:                 51405.552 um^2
+[INFO GPL-0017] Fixed instances area:         1526.464 um^2
+[INFO GPL-0018] Movable instances area:      29884.129 um^2
+[INFO GPL-0019] Utilization:                    59.913 %
+[INFO GPL-0020] Standard cells area:         29884.129 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[INFO GPL-0005] ---- Execute Conjugate Gradient Initial Placement.
+[INFO GPL-0051] Source of initial instance position counters:
+	Odb location = 0	Core center = 2252	Region center = 0
+[INFO GPL-0033] ---- Initialize Nesterov Region: Top-level
+[INFO GPL-0023] Placement target density:       0.6235
+[INFO GPL-0024] Movable insts average area:     13.270 um^2
+[INFO GPL-0025] Ideal bin area:                 21.282 um^2
+[INFO GPL-0026] Ideal bin count:                  2415
+[INFO GPL-0027] Total bin area:              51405.552 um^2
+[INFO GPL-0028] Bin count (X, Y):          32 ,     32
+[INFO GPL-0029] Bin size (W * H):       7.116 *  7.055 um
+[INFO GPL-0030] Number of bins:                   1024
+[INFO GPL-0007] ---- Execute Nesterov Global Placement.
+[INFO GPL-0031] HPWL: Half-Perimeter Wirelength
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+        0 |   0.9956 |  6.761747e+03 |   +0.00% |  4.46e-15 |      
+       10 |   0.9915 |  4.755416e+03 |  -29.67% |  7.26e-15 |      
+       20 |   0.9895 |  4.545742e+03 |   -4.41% |  1.18e-14 |      
+       30 |   0.9875 |  4.408628e+03 |   -3.02% |  1.93e-14 |      
+       40 |   0.9874 |  4.327542e+03 |   -1.84% |  3.14e-14 |      
+       50 |   0.9867 |  4.286476e+03 |   -0.95% |  5.11e-14 |      
+       60 |   0.9863 |  4.269447e+03 |   -0.40% |  8.33e-14 |      
+       70 |   0.9862 |  4.263069e+03 |   -0.15% |  1.36e-13 |      
+       80 |   0.9861 |  4.260631e+03 |   -0.06% |  2.21e-13 |      
+       90 |   0.9857 |  4.262252e+03 |   +0.04% |  3.60e-13 |      
+      100 |   0.9851 |  4.277023e+03 |   +0.35% |  5.86e-13 |      
+      110 |   0.9826 |  4.342828e+03 |   +1.54% |  9.55e-13 |      
+      120 |   0.9784 |  4.533856e+03 |   +4.40% |  1.56e-12 |      
+      130 |   0.9696 |  4.919169e+03 |   +8.50% |  2.53e-12 |      
+      140 |   0.9591 |  5.588366e+03 |  +13.60% |  4.13e-12 |      
+      150 |   0.9445 |  6.787860e+03 |  +21.46% |  6.72e-12 |      
+      160 |   0.9143 |  8.516904e+03 |  +25.47% |  1.09e-11 |      
+      170 |   0.8762 |  1.005424e+04 |  +18.05% |  1.78e-11 |      
+      180 |   0.8430 |  1.101071e+04 |   +9.51% |  2.90e-11 |      
+      190 |   0.8127 |  1.202744e+04 |   +9.23% |  4.73e-11 |      
+      200 |   0.7681 |  1.354741e+04 |  +12.64% |  7.70e-11 |      
+      210 |   0.7240 |  1.508256e+04 |  +11.33% |  1.25e-10 |      
+      220 |   0.6908 |  1.653537e+04 |   +9.63% |  2.04e-10 |      
+      230 |   0.6475 |  1.810895e+04 |   +9.52% |  3.33e-10 |      
+      240 |   0.5958 |  1.947070e+04 |   +7.52% |  5.42e-10 |      
+      250 |   0.5535 |  2.084960e+04 |   +7.08% |  8.82e-10 |      
+      260 |   0.5150 |  2.214672e+04 |   +6.22% |  1.44e-09 |      
+      270 |   0.4607 |  2.327438e+04 |   +5.09% |  2.34e-09 |      
+      280 |   0.4221 |  2.401353e+04 |   +3.18% |  3.81e-09 |      
+      290 |   0.3680 |  2.463801e+04 |   +2.60% |  6.21e-09 |      
+      300 |   0.3254 |  2.507076e+04 |   +1.76% |  9.71e-09 |      
+      310 |   0.2980 |  2.513915e+04 |   +0.27% |  1.43e-08 |      
+      320 |   0.2622 |  2.541184e+04 |   +1.08% |  2.11e-08 |      
+      330 |   0.2315 |  2.573507e+04 |   +1.27% |  3.11e-08 |      
+      340 |   0.2068 |  2.597944e+04 |   +0.95% |  4.57e-08 |      
+      350 |   0.1836 |  2.616492e+04 |   +0.71% |  6.74e-08 |      
+      360 |   0.1628 |  2.626289e+04 |   +0.37% |  9.93e-08 |      
+      370 |   0.1443 |  2.637901e+04 |   +0.44% |  1.46e-07 |      
+      380 |   0.1226 |  2.647752e+04 |   +0.37% |  2.15e-07 |      
+      390 |   0.1051 |  2.657708e+04 |   +0.38% |  3.17e-07 |      
+      394 |   0.0996 |  2.662765e+04 |          |  3.85e-07 |      
+---------------------------------------------------------------
+[INFO GPL-1001] Global placement finished at iteration 394
+[INFO GPL-1002] Placed Cell Area            29884.1286
+[INFO GPL-1003] Available Free Area         49879.0880
+[INFO GPL-1004] Minimum Feasible Density        0.6000 (cell_area / free_area)
+[INFO GPL-1006]   Suggested Target Densities:
+[INFO GPL-1007]     - For 90% usage of free space: 0.6657
+[INFO GPL-1008]     - For 80% usage of free space: 0.7489
+[INFO GPL-1014] Final placement area: 29884.13 (+0.00%)
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+[INFO ODB-0403] 0 connections made, 0 conflicts skipped.
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                               166     623.10
+  Tap cell                                722     903.37
+  Inverter                                 19      71.32
+  Sequential cell                         474   10082.17
+  Multi-Input combinational cell         1759   15855.21
+  Total                                  3140   27535.16
+Writing OpenROAD database to '/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/runs/RUN_2026-11-06_16-00-45/24-openroad-globalplacementskipio/systolic_top.odb'…
+Writing netlist to '/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/runs/RUN_2026-11-06_16-00-45/24-openroad-globalplacementskipio/systolic_top.nl.v'…
+Writing powered netlist to '/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/runs/RUN_2026-11-06_16-00-45/24-openroad-globalplacementskipio/systolic_top.pnl.v'…
+Writing layout to '/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/runs/RUN_2026-11-06_16-00-45/24-openroad-globalplacementskipio/systolic_top.def'…
+Writing timing constraints to '/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/runs/RUN_2026-11-06_16-00-45/24-openroad-globalplacementskipio/systolic_top.sdc'…

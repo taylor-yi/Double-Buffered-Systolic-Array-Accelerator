@@ -1,0 +1,9 @@
+{
+    "json_h": "/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/runs/RUN_2026-11-06_16-00-45/05-yosys-jsonheader/systolic_top.h.json",
+    "metrics": {
+        "design__lint_error__count": 0,
+        "design__lint_timing_construct__count": 0,
+        "design__lint_warning__count": 18,
+        "design__inferred_latch__count": 0
+    }
+}

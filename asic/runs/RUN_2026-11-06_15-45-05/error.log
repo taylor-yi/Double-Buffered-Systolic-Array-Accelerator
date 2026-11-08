@@ -1,0 +1,14 @@
+Subprocess had a non-zero exit.
+Last 10 line(s):
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/src/controller.sv
+Parsing SystemVerilog input from `/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/src/controller.sv' to AST representation.
+Storing AST representation for module `$abstract\controller'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/src/mem_interface.sv
+Parsing SystemVerilog input from `/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/src/mem_interface.sv' to AST representation.
+/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/src/mem_interface.sv:11: ERROR: syntax error, unexpected '[', expecting ')' or ',' or '='
+
+Full log file: 'runs/RUN_2026-11-06_15-45-05/05-yosys-jsonheader/yosys-jsonheader.log'

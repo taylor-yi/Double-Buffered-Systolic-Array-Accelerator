@@ -1,0 +1,61 @@
+// DESCRIPTION: Verilator output: Waivers generated with --waiver-output
+
+`verilator_config
+
+// Below are suggested waivers. You have three options:
+//   1. Fix the reason for the linter warning in the Verilog sources
+//   2. Keep the waiver permanently if you are sure it is okay
+//   3. Keep the waiver temporarily to suppress the output
+
+// lint_off -rule WIDTHEXPAND -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Operator VAR 'sv2v_uu_PE_ext_above_result_0' expects 10 bits on the Initial value, but Initial value's CONST '1'sh0' generates 1 bits.*"
+
+// lint_off -rule WIDTHEXPAND -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Operator VAR 'sv2v_uu_PE_ext_above_result_0' expects 10 bits on the Initial value, but Initial value's CONST '1'sh0' generates 1 bits.*"
+
+// lint_off -rule WIDTHEXPAND -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Operator VAR 'sv2v_uu_PE_ext_above_result_0' expects 10 bits on the Initial value, but Initial value's CONST '1'sh0' generates 1 bits.*"
+
+// lint_off -rule WIDTHEXPAND -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Operator VAR 'sv2v_uu_PE_ext_above_result_0' expects 10 bits on the Initial value, but Initial value's CONST '1'sh0' generates 1 bits.*"
+
+// lint_off -rule WIDTHEXPAND -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Operator VAR 'sv2v_uu_PE_ext_above_result_0' expects 10 bits on the Initial value, but Initial value's CONST '1'sh0' generates 1 bits.*"
+
+// lint_off -rule WIDTHEXPAND -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Operator VAR 'sv2v_uu_PE_ext_above_result_0' expects 10 bits on the Initial value, but Initial value's CONST '1'sh0' generates 1 bits.*"
+
+// lint_off -rule WIDTHEXPAND -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Operator VAR 'sv2v_uu_PE_ext_above_result_0' expects 10 bits on the Initial value, but Initial value's CONST '1'sh0' generates 1 bits.*"
+
+// lint_off -rule WIDTHEXPAND -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Operator VAR 'sv2v_uu_PE_ext_above_result_0' expects 10 bits on the Initial value, but Initial value's CONST '1'sh0' generates 1 bits.*"
+
+// lint_off -rule WIDTHEXPAND -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Operator VAR 'sv2v_uu_PE_ext_above_result_0' expects 10 bits on the Initial value, but Initial value's CONST '1'sh0' generates 1 bits.*"
+
+// lint_off -rule WIDTHEXPAND -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Operator ASSIGNDLY expects 10 bits on the Assign RHS, but Assign RHS's CONST '1'sh0' generates 1 bits.*"
+
+// lint_off -rule WIDTHEXPAND -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Operator ASSIGNDLY expects 4 bits on the Assign RHS, but Assign RHS's CONST '1'sh0' generates 1 bits.*"
+
+// lint_off -rule ASCRANGE -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Ascending bit range vector: left < right of bit range: [0:2]*"
+
+// lint_off -rule ASCRANGE -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Ascending bit range vector: left < right of bit range: [0:2]*"
+
+// lint_off -rule WIDTHEXPAND -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Operator SUB expects 32 or 3 bits on the RHS, but RHS's VARREF 'wr_ptr' generates 1 bits.*"
+
+// lint_off -rule WIDTHEXPAND -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Operator SUB expects 32 or 3 bits on the RHS, but RHS's VARREF 'wr_ptr' generates 1 bits.*"
+
+// lint_off -rule WIDTHEXPAND -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Operator SUB expects 32 or 3 bits on the RHS, but RHS's VARREF 'load_slot' generates 1 bits.*"
+
+// lint_off -rule WIDTHEXPAND -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Operator SUB expects 32 bits on the RHS, but RHS's VARREF 'row_slot' generates 1 bits.*"
+
+// lint_off -rule WIDTHEXPAND -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Operator SUB expects 32 bits on the RHS, but RHS's VARREF 'row_idx' generates 2 bits.*"
+
+// lint_off -rule ASCRANGE -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Ascending bit range vector: left < right of bit range: [0:1]*"
+
+// lint_off -rule ASCRANGE -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Ascending bit range vector: left < right of bit range: [0:5]*"
+
+// lint_off -rule WIDTHEXPAND -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Operator ASSIGNDLY expects 2 bits on the Assign RHS, but Assign RHS's CONST '1'sh0' generates 1 bits.*"
+
+// lint_off -rule WIDTHEXPAND -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Operator ASSIGNDLY expects 2 bits on the Assign RHS, but Assign RHS's CONST '1'sh0' generates 1 bits.*"
+
+// lint_off -rule ASCRANGE -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Ascending bit range vector: left < right of bit range: [0:2]*"
+
+// lint_off -rule UNUSEDPARAM -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Parameter is not used: 'PRELOAD_AT'*"
+
+// lint_off -rule UNUSEDPARAM -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Parameter is not used: 'RW'*"
+
+// lint_off -rule UNUSEDSIGNAL -file "*/Users/tayloryi/Documents/Double-Buffered-3x3-Systolic-Array-Accelerator/asic/build/design.v" -match "Signal is not driven, nor used: 'skew_a'*"
+

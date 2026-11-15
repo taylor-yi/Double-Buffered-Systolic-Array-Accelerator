@@ -1,0 +1,43 @@
+122. Printing statistics.
+
+=== systolic_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     2153 wires
+     2712 wire bits
+       86 public wires
+      641 public wire bits
+       31 ports
+      166 port bits
+     2594 cells
+      558   $_ANDNOT_
+       81   $_AND_
+      403   $_MUX_
+       34   $_NAND_
+       92   $_NOR_
+      176   $_NOT_
+       81   $_ORNOT_
+      351   $_OR_
+      196   $_SDFFE_PN0P_
+      147   $_SDFFE_PP0P_
+      129   $_SDFF_PN0_
+        2   $_SDFF_PP0_
+      105   $_XNOR_
+      239   $_XOR_
+
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_SDFFE_PN0P_ is unknown!
+   Area for cell type $_SDFFE_PP0P_ is unknown!
+   Area for cell type $_SDFF_PN0_ is unknown!
+   Area for cell type $_SDFF_PP0_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+

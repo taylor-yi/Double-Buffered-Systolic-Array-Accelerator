@@ -51,3 +51,7 @@ This waveform shows the correct behavior of all modules on a back to back matrix
 
 **Limitations and Future Work:**
 To keep computing matrices back to back after 2 instances, a third slot would need to be added to each processing element as a placeholder so there can be one for each load, compute, and drain state. The current implementation only works with 2 matrices back to back. The next step would most likely be to add a FIFO with a ready signal and a valid bit traveling with the data.
+
+**Extra Work**
+Just for general understanding and proof of concept, this design was taken to GDSII using OpenLane with Sky130. ALthough timing was not yet closed, a first draft of the layout was generated. 
+![GDSII](images/gates.jpeg)
